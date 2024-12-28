@@ -9,16 +9,24 @@
     filter: invert(69%) sepia(48%) saturate(302%) hue-rotate(115deg) brightness(89%) contrast(86%);
 }
 
+.blueButton:hover svg {
+    filter: invert(47%) sepia(6%) saturate(2504%) hue-rotate(115deg) brightness(98%) contrast(88%);
+}
+
 .orangeButton svg {
     filter: invert(68%) sepia(85%) saturate(803%) hue-rotate(340deg) brightness(98%) contrast(92%);
+}
+
+.orangeButton:hover svg {
+    filter: invert(48%) sepia(98%) saturate(331%) hue-rotate(357deg) brightness(88%) contrast(103%);
 }
 
 .purpleButton svg {
     filter: invert(41%) sepia(10%) saturate(1215%) hue-rotate(212deg) brightness(96%) contrast(92%);
 }
 
-.blueButton:hover svg {
-    filter: invert(47%) sepia(6%) saturate(2504%) hue-rotate(115deg) brightness(98%) contrast(88%);
+.purpleButton:hover svg {
+    filter: invert(23%) sepia(3%) saturate(5622%) hue-rotate(211deg) brightness(93%) contrast(88%);
 }
 
 .btn:hover svg {

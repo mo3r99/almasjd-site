@@ -12,12 +12,12 @@ export default function Button ({colour, href, children, ...props}) {
         c = 'text-tradewind hover:text-[#458878] transition-all duration-300'
         color = '#458878'
     } else if (colour === 'orange') {
-        style = style + ' text-weborange hover:text-weborange ' + styles.orangeButton
-        c = 'text-weborange hover:text-weborange transition-all duration-300 ' 
+        style = style + ' text-weborange hover:text-[#bb7d21] ' + styles.orangeButton
+        c = 'text-weborange hover:text-[#bb7d21] transition-all duration-300 ' 
         color = '#458878'
     } else if (colour === 'purple') {
         style = style + ' text-dolphin ' + styles.purpleButton
-        c = 'text-dolphin transition-all duration-300'
+        c = 'text-dolphin hover:text-[#423c5a] transition-all duration-300'
         color = '#458878'
     }
 

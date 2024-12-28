@@ -14,20 +14,22 @@ export default function Header() {
 
   return (
     <nav className="p-2 flex flex-col items-center text-sm font-[family-name:var(--font-raleway)]">
-      <Image
-        className="pb-5 pointer-events-none hidden md:block w-auto h-auto"
-        src="/logo.png"
-        width={68}
-        height={75}
-        alt={"Almasjid logo"}
-      />
-      <Image
-        className="pb-5 pointer-events-none block md:hidden w-auto h-auto"
-        src="/logo.png"
-        width={60}
-        height={66.07899255867201}
-        alt={"Almasjid logo"}
-      />
+      <Link href={"/"}>
+        <Image
+          className="pb-5 pointer-events-none hidden md:block w-auto h-auto"
+          src="/logo.png"
+          width={66}
+          height={73}
+          alt={"Almasjid logo"}
+        />
+        <Image
+          className="pb-5 pointer-events-none block md:hidden w-auto h-auto"
+          src="/logo.png"
+          width={60}
+          height={66.07899255867201}
+          alt={"Almasjid logo"}
+        />
+      </Link>
       <div>
         <ul className="hidden md:flex flex-row font-medium uppercase tracking-wide max-w-screen-lg w-[90vw] justify-evenly nav-ul flex-wrap">
           <Link
@@ -88,7 +90,7 @@ export default function Header() {
           <li key={"Home"}>
             <Link
               className={`transition-all duration-500 ${
-                pathname == '/' ? "text-teal-200 font-bold" : "text-white"
+                pathname == "/" ? "text-teal-200 font-bold" : "text-white"
               }`}
               href={"/"}
               onClick={() => {
