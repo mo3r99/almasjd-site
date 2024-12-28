@@ -7,6 +7,7 @@ import CarouselCard from "./carouselCard";
 import { useRef, useState } from "react";
 
 import styles from './carousel.module.css'
+import Link from "next/link";
 
 export default function Carousel() {
   const [showR, setShowR] = useState(true);
@@ -27,7 +28,6 @@ export default function Carousel() {
 
   const onClickScroll = function (direction) {
     const { scrollLeft } = scroller.current;
-    console.log("Current scrollLeft:", scrollLeft);
     switch (direction) {
       case "forwards":
         // Scroll right by 500 pixels
@@ -90,7 +90,7 @@ export default function Carousel() {
               AlMasjid is a nonprofit organisation committed to supporting
               families who face barriers to accessing mosque services.
               <br />
-              All of our services are free for the family of the Prophet ﷺ.
+              All of our services are free for the family of the Prophet ﷺ. <br/><Link className="underline" href='/about/saadat'>Learn more.</Link>
             </p>
             <Button href="/classes" colour="blue" style={{ zIndex: 1 }}>
               See our Classes
