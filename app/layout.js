@@ -15,8 +15,12 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: "Almasjid",
-  description: "Serving the community",
+  title: {
+    template: "%s | AlMasjid",
+    default: "AlMasjid",
+  },
+  description: "Serving the Community",
+  metadataBase: new URL("https://almasjid.co.uk"),
 };
 
 export default function RootLayout({ children }) {

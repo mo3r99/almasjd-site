@@ -11,12 +11,8 @@ import CarouselCard from "./ui/carouselCard/carouselCard";
 import Carousel from "./ui/carouselCard/carousel";
 
 export const metadata = {
-  title: {
-    template: "%s | Almasjid",
-    default: "Almasjid",
-  },
+  title: 'AlMasjid - Empowering Faith, Building Community, Inspiring Harmony',
   description: "Serving the Community",
-  metadataBase: new URL("https://almasjid.co.uk"),
 };
 
 export default function Home() {

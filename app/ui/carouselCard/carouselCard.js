@@ -32,14 +32,7 @@ export default function CarouselCard({
       style={{ scrollSnapAlign: "start" }}
       className="min-h-[770px] lg:min-h-[70vh] lg:max-h-[500px] md:h-[80vh] min-w-[100%] max-w-5xl mx-auto"
     >
-      <Image
-        src={"/bsm.png"}
-        width={500}
-        height={200}
-        alt="bismillah"
-        className="mix-blend-multiply pointer-events-none pt-5 mx-auto"
-      />
-
+      
       <div
         className={`flex flex-col ${direction} smd:items-center smd:justify-between smd:flex-nowrap`}
       >

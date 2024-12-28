@@ -1,7 +1,7 @@
 import Image from "next/image";
 
 export const metadata = {
-  title: 'Services | Almasjid',
+  title: 'Services',
 };
 
 export default function Services() {

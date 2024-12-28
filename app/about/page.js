@@ -1,8 +1,7 @@
-import Image from "next/image";
 import Container from "../ui/container/container";
 
 export const metadata = {
-  title: "About | Almasjid",
+  title: "About",
 };
 
 export default function About() {
