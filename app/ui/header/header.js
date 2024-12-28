@@ -34,24 +34,26 @@ export default function Header() {
         <ul className="hidden md:flex flex-row font-medium uppercase tracking-wide max-w-screen-lg w-[90vw] justify-evenly nav-ul flex-wrap">
           <Link
             href="/"
-            className={`duration-500 transition-all ${
+            className={`duration-250 transition-all hover:text-weborange group  ease-in-out ${
               pathname == "/" && "text-teal-600 font-bold"
             } px-3`}
           >
+            <span className="bg-left-bottom bg-gradient-to-r from-tradewind to-weborange bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">
             Home
+            </span>
           </Link>
           {links.map((link) => {
             return (
               <Link
                 key={link.name}
                 href={link.href}
-                className={`px-3 transition-all duration-500 ${
+                className={`px-3 group transition-all duration-250 hover:text-weborange hover:font-bold ease-in-out ${
                   pathname == link.href
                     ? "text-teal-600 font-bold"
                     : "text-black"
                 }`}
               >
-                <p className="hidden md:block">{link.name}</p>
+                <p className="hidden md:block bg-left-bottom bg-gradient-to-r from-tradewind to-weborange bg-[length:0%_2px] bg-no-repeat group-hover:bg-[length:100%_2px] transition-all duration-500 ease-out">{link.name}</p>
               </Link>
             );
           })}
@@ -77,7 +79,7 @@ export default function Header() {
       <div
         className={`${styles.mobNav} ${
           mobNav ? styles.mobNavOpen : styles.mobNavClosed
-        } absolute top-0 left-0 w-[100vw] flex-col items-center h-[100vh] bg-gray-700 z-10 justify-center text-white flex md:hidden`}
+        } fixed top-0 left-0 w-[100vw] flex-col items-center h-[100vh] bg-gray-700 z-10 justify-center text-white flex md:hidden`}
       >
         <Image
           className="pb-5 pointer-events-none block md:hidden w-auto h-auto"

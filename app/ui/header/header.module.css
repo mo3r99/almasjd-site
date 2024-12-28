@@ -37,6 +37,7 @@
 
 .menuToggle span:first-child {
   transform-origin: 0% 0%;
+  background: #6bbaa7;
 }
 
 .menuToggle span:nth-last-child(1) {
@@ -51,12 +52,18 @@
   opacity: 1;
   transform: rotate(-45deg) translate(2px, 1px);
   background: #6bbaa7;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 .mobNavOpen3 {
   opacity: 1;
   transform: rotate(45deg) translate(1px, -3px);
   background: #6bbaa7;
+  position: sticky;
+  top: 0;
+  left: 0;
 }
 
 /*
