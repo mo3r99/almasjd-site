@@ -6,12 +6,12 @@ import Button from "../button/button";
 import CarouselCard from "./carouselCard";
 import { useRef, useState } from "react";
 
-import styles from './carousel.module.css'
+import styles from "./carousel.module.css";
 import Link from "next/link";
 
 export default function Carousel() {
   const [showR, setShowR] = useState(true);
-  const [showL, setShowL] = useState(true);
+  const [showL, setShowL] = useState(false);
 
   const scroller = useRef(null);
 
@@ -72,7 +72,7 @@ export default function Carousel() {
       <div
         ref={scroller}
         onScroll={onClickScroll}
-        className="lg:min-h-[60vh] max-h-[70vh] min-h-[700px] lg:max-h-[500px] max-w-5xl mx-auto relative overflow-x-scroll overflow-y-hidden flex"
+        className="lg:min-h-[60vh] max-h-[60vh] min-h-[700px] md:min-h-[600px] lg:max-h-[500px] max-w-5xl mx-auto relative overflow-x-scroll overflow-y-hidden flex"
         style={{
           scrollSnapType: "x mandatory",
           scrollBehavior: "smooth",
@@ -90,7 +90,11 @@ export default function Carousel() {
               AlMasjid is a nonprofit organisation committed to supporting
               families who face barriers to accessing mosque services.
               <br />
-              All of our services are free for the family of the Prophet ﷺ. <br/><Link className="underline" href='/about/saadat'>Learn more.</Link>
+              All of our services are free for the family of the Prophet ﷺ.{" "}
+              <br />
+              <Link className="underline" href="/about/saadat">
+                Learn more.
+              </Link>
             </p>
             <Button href="/classes" colour="blue" style={{ zIndex: 1 }}>
               See our Classes
@@ -131,15 +135,18 @@ export default function Carousel() {
           caption="Limited spaces"
           image={"/quran.png"}
         >
-          Learn the basics of Arabic grammar and syntax to understand the
-          Qur’an, hadith, as well as key texts in Islamic jurisprudence for
-          teens aged 12-14.
+          A well-structured program for children aged 7-14, guided by
+          experienced teachers to nurture faith and learning.
         </CarouselCard>
       </div>
 
       {/* Forwards Button */}
 
-      <div className={`${showR ? 'opacity-100' : 'opacity-0'} ${styles.arrows} transition-all duration-300 absolute cursor-pointer right-[1em] top-[80%] smd:top-[50%] scale-[2] mr-2`}>
+      <div
+        className={`${showR ? "opacity-100" : "opacity-0"} ${
+          styles.arrows
+        } transition-all duration-300 absolute cursor-pointer right-[1em] top-[80%] smd:top-[50%] scale-[2] mr-2`}
+      >
         <svg
           onClick={() => onClickScroll("forwards")}
           width="1em"
@@ -152,7 +159,11 @@ export default function Carousel() {
       </div>
 
       {/* Backwards Button */}
-      <div className={`${showL ? 'opacity-100' : 'opacity-0'} ${styles.arrows} transition-all duration-300 cursor-pointer absolute left-[1em] top-[80%] smd:top-[50%] scale-[2] ml-2`}>
+      <div
+        className={`${showL ? "opacity-100" : "opacity-0"} ${
+          styles.arrows
+        } transition-all duration-300 cursor-pointer absolute left-[1em] top-[80%] smd:top-[50%] scale-[2] ml-2`}
+      >
         <svg
           onClick={() => onClickScroll("backwards")}
           width="1em"

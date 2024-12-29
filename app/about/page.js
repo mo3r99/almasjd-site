@@ -1,3 +1,4 @@
+import Breadcrumbs from "../ui/breadcrumb/breadcrumbs";
 import Container from "../ui/container/container";
 
 export const metadata = {
@@ -6,7 +7,9 @@ export const metadata = {
 
 export default function About() {
   return (
-    <section className="mx-10 my-10 py-10">
+    <>
+    <Breadcrumbs className='mx-10 mt-10 pt-10 mb-4' />
+    <section className="mx-10 mb-10 pb-10">
       <Container>
         <h1 className="font-[family-name:var(--font-raleway)] font-medium text-5xl pb-7">
           About Almasjid
@@ -37,5 +40,6 @@ export default function About() {
         </p>
       </Container>
     </section>
+    </>
   );
 }

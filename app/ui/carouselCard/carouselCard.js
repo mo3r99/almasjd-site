@@ -62,6 +62,7 @@ export default function CarouselCard({
               height={320}
               className={`self-center mix-blend-multiply w-auto h-auto pointer-events-none mx-6 smd:relative bottom-[30vh]}`}
               alt={title}
+              priority={true}
             />
           </div>
         )}
