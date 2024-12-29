@@ -96,7 +96,7 @@ export default function Carousel() {
                 Learn more.
               </Link>
             </p>
-            <Button href="/classes" colour="blue" style={{ zIndex: 1 }}>
+            <Button href="/classes" colour="blue" className='mt-4' style={{ zIndex: 1 }}>
               See our Classes
             </Button>
             <Image

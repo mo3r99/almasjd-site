@@ -49,7 +49,7 @@ export default function CarouselCard({
             <br />
             <span className="uppercase mt-2 font-semibold text-weborange">{caption && caption}</span>
           </p>
-          <Button href={link} colour="blue" style={{ zIndex: 1 }}>
+          <Button href={link} colour="blue" className='mt-4' style={{ zIndex: 1 }}>
             Learn More
           </Button>
         </Container>
