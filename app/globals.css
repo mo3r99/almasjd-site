@@ -80,3 +80,12 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+a {
+  pointer-events: all;
+  cursor: pointer;
+}
+
+a p {
+  cursor: pointer;
+}

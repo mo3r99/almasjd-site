@@ -1,0 +1,10 @@
+.container {
+    background: #9de9dd58 url('/mosque-bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 0 top;
+}
+
+.containerNoBg {
+    background: none;
+}

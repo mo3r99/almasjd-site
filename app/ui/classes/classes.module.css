@@ -1,0 +1,10 @@
+.classesContaineBg {
+    background-image: url('/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: brightness(90%);
+}
+
+.classesContaineNoBg {
+    background: none;
+}

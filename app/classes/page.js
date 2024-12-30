@@ -1,4 +1,5 @@
-import Image from "next/image";
+import ClassesSection from "../ui/classes/classes";
+import Community from "../ui/community/community";
 
 export const metadata = {
   title: "Classes",
@@ -6,10 +7,9 @@ export const metadata = {
 
 export default function Classes() {
   return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-raleway)]">
-      <h1 className="text-2xl font-[family-name:var(--font-raleway)]">
-        Classes
-      </h1>
-    </div>
+    <>
+    <ClassesSection />
+    <Community>Stay up do date about our latest classes. We will never spam you.</Community>
+    </>
   );
 }

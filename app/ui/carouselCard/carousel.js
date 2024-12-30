@@ -10,6 +10,7 @@ import styles from "./carousel.module.css";
 import Link from "next/link";
 
 export default function Carousel() {
+  console.log("rerender")
   const [showR, setShowR] = useState(true);
   const [showL, setShowL] = useState(false);
 
@@ -25,6 +26,28 @@ export default function Carousel() {
       setShowR(true);
     }
   };
+
+  const autoScroll = function() {
+    const { scrollLeft } = scroller.current;
+
+    if (showR != false) {
+      scroller.current.scrollTo({
+        left: scrollLeft + (scroller.current.offsetWidth * 2) / 3,
+        behavior: "smooth",
+      });
+    } else {
+      scroller.current.scrollTo({
+        left: 0,
+        behavior: "smooth",
+      });
+      setShowL(false)
+      setShowR(true)
+    }
+  }
+
+  setTimeout(() => {
+    autoScroll()
+  }, 5000)
 
   const onClickScroll = function (direction) {
     const { scrollLeft } = scroller.current;

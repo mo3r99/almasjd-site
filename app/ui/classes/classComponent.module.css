@@ -12,21 +12,23 @@
     filter: blur(4px) brightness(105%);
     background-size: cover;
     background-repeat: no-repeat;
+    backdrop-filter: blur(130px);
 }
 
 .container:hover .img{
     filter: blur(7px) brightness(100%);
 }
 
-.container:hover .innerContainer {
+/* .container:hover .innerContainer {
     bottom: 0em;
-}
+} */
 
 .innerContainer {
     position: absolute;
     bottom: -1em;
     margin: 1.75em;
     transition: 900ms all cubic-bezier(0.77, 0.2, 0.05, 1);
+    backdrop-filter: blur(3px);
 }
 
 .mark {

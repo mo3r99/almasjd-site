@@ -27,7 +27,7 @@ export default function ClassComponent({
         <p className="text-sm mb-4 font-[family-name:var(--font-montserrat)]">
           {children}
         </p>
-        <Button href={href} colour="blue">
+        <Button href={href} colour="purple">
           Learn More
         </Button>
       </div>

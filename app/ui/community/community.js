@@ -5,7 +5,7 @@ import { Input } from "@/components/ui/input";
 import Button from "../button/button";
 import { useState } from "react";
 
-export default function Community() {
+export default function Community({children}) {
   const [userData, setUserData] = useState({
     fname: '',
     sname: '',
@@ -64,11 +64,10 @@ export default function Community() {
     <section className="flex flex-col justify-center items-center p-5 bg-dolphin text-white">
       <Heading className="pt-8 pb-2 text-center">Join Our Community</Heading>
       <p className="text-center font-[family-name:var(--font-montserrat)] pb-8">
-        Stay up to date about the latest that Almasjid is doing in your
-        community. We will never spam you.
+        {!children ? 'Stay up to date about the latest that Almasjid is doing in your community. We will never spam you.' : children}
       </p>
       <form onSubmit={handleSubmit} className="flex flex-col md:flex-row items-center mb-5 relative">
-        <div className="flex flex-row items-center md:w-[120%]">
+        <div className=" flex-row items-center md:w-[120%] hidden">
         <Input onBlur={(event)=>handleInputBlur('fname', event)} onChange={(event)=>handleInputChange('fname', event.target.value)} type="text" minLength={2} required placeholder="First Name" className='ml-0 mr-2 md:mr-2 my-0'/>
         <Input onBlur={(event)=>handleInputBlur('sname', event)} onChange={(event)=>handleInputChange('sname', event.target.value)} type="text" minLength={2} required placeholder="Surname" className='ml-2 mr-0 md:ml-2 my-0'/>
         </div>

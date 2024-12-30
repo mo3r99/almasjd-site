@@ -1,4 +1,6 @@
 import Image from "next/image";
+import ServicesSection from "../ui/services/services";
+import Community from "../ui/community/community";
 
 export const metadata = {
   title: 'Services',
@@ -6,8 +8,9 @@ export const metadata = {
 
 export default function Services() {
   return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-raleway)]">
-      <h1 className="text-2xl font-[family-name:var(--font-raleway)]">Services</h1>
-    </div>
+    <>
+    <ServicesSection />
+    <Community>Stay up to date about our latest services. We will never spam you.</Community>
+    </>
   );
 }
