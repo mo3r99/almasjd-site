@@ -1,0 +1,47 @@
+.container {
+    position: relative;
+}
+
+.img {
+    position: relative;
+    mask-image: url('/mask.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+
+    transition: 900ms all cubic-bezier(0.77, 0.2, 0.05, 1);
+    filter: blur(4px) brightness(105%);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container:hover .img{
+    filter: blur(7px) brightness(100%);
+}
+
+.container:hover .innerContainer {
+    bottom: 0em;
+}
+
+.innerContainer {
+    position: absolute;
+    bottom: -1em;
+    margin: 1.75em;
+    transition: 900ms all cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+
+.mark {
+    margin: 0 -0.4em;
+    padding: 0.05em 0.4em;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      #f8dbaf30,
+      #f6cd8f3c 4%,
+      #ffdeac3d
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    transition: 900ms all cubic-bezier(0.77, 0.2, 0.05, 1);
+    opacity: 85%;
+  }
