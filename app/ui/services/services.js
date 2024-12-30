@@ -2,9 +2,9 @@ import Heading from "../heading/heading"
 import ClassComponent from "../classes/classComponent"
 import styles from './services.module.css'
 
-export default function ServicesSection ({bg}) {
+export default function ServicesSection ({bg, ...props}) {
     return (
-        <section className={`${bg ? styles.container: styles.containerNoBg} p-5`}>
+        <section className={`${bg ? styles.container: styles.containerNoBg} p-5`} {...props}>
         <Heading className="pt-8 pb-4 text-center">Our services</Heading>
         <p className="text-center font-[family-name:var(--font-montserrat)] pb-8">
           Services offered by Almasjid

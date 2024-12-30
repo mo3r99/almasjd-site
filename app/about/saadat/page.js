@@ -8,9 +8,9 @@ export const metadata = {
 export default function Saadah() {
   return (
     <section className="mx-10 my-10 py-10">
-          <Breadcrumbs className='mt-10 pt-10 mb-4' />
-      
       <Container>
+                <Breadcrumbs className='mt-10 mb-4' />
+        
         <h1 className="font-[family-name:var(--font-raleway)] font-medium text-5xl pb-7 max-w-3xl">
           The Sādāt/Ashrāf - Family of the Prophet ﷺ.
         </h1>

@@ -1,13 +1,18 @@
 import Heading from "../heading/heading";
 import ClassComponent from "./classComponent";
-
+import Breadcrumbs from "../breadcrumb/breadcrumbs";
 import styles from "./classes.module.css";
 
-export default function ClassesSection ({bg}) {
+export default function ClassesSection({ bg, ...props }) {
   return (
-    <section className={`${bg ? styles.classesContaineBg : styles.classesContaineNoBg} p-5`}>
+    <section
+      className={`${
+        bg ? styles.classesContaineBg : styles.classesContaineNoBg
+      } p-5 flex flex-col`}
+      {...props}
+    >
       <Heading className="pt-8 pb-4 text-center">Our Classes</Heading>
-      <p className="text-center font-[family-name:var(--font-montserrat)] pb-8">
+      <p className="text-center font-[family-name:var(--font-montserrat)] mb-4">
         Learn and grow with our comprehensive courses.
       </p>
       <div className="flex justify-center flex-wrap">
@@ -58,8 +63,8 @@ export default function ClassesSection ({bg}) {
         </ClassComponent>
 
         <p className="text-center mt-6 mb-4 text-md font-[family-name:var(--font-montserrat)] mx-6 md:mx-16">
-          Our services are as open to sisters as these are for brothers. We
-          make every effort to have a qualified female member serve our sisters.
+          Our services are as open to sisters as these are for brothers. We make
+          every effort to have a qualified female member serve our sisters.
           Girls over the age of 10 are only taught by a female teacher in a
           girls only class.
         </p>
