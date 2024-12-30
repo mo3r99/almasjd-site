@@ -8,11 +8,13 @@ import { useRef, useState } from "react";
 
 import styles from "./carousel.module.css";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
-export default function Carousel() {
-  console.log("rerender")
+export default function Carousel({ children, home, className }) {
+  console.log("rerender");
   const [showR, setShowR] = useState(true);
   const [showL, setShowL] = useState(false);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   const scroller = useRef(null);
 
@@ -27,27 +29,29 @@ export default function Carousel() {
     }
   };
 
-  const autoScroll = function() {
+  const autoScroll = function () {
     const { scrollLeft } = scroller.current;
 
-    if (showR != false) {
-      scroller.current.scrollTo({
-        left: scrollLeft + (scroller.current.offsetWidth * 2) / 3,
-        behavior: "smooth",
-      });
-    } else {
-      scroller.current.scrollTo({
-        left: 0,
-        behavior: "smooth",
-      });
-      setShowL(false)
-      setShowR(true)
+    if (!hasScrolled) {
+      if (showR != false) {
+        scroller.current.scrollTo({
+          left: scrollLeft + (scroller.current.offsetWidth * 2) / 3,
+          behavior: "smooth",
+        });
+      } else {
+        scroller.current.scrollTo({
+          left: 0,
+          behavior: "smooth",
+        });
+        setShowL(false);
+        setShowR(true);
+      }
     }
-  }
+  };
 
   setTimeout(() => {
-    autoScroll()
-  }, 5000)
+    autoScroll();
+  }, 10000);
 
   const onClickScroll = function (direction) {
     const { scrollLeft } = scroller.current;
@@ -76,91 +80,86 @@ export default function Carousel() {
 
   return (
     <main>
-      <Image
-        src={"/bsm.png"}
-        width={500}
-        height={200}
-        alt="bismillah"
-        className="hidden md:block mix-blend-multiply pointer-events-none pt-5 mx-auto"
-      />
+      {home && (
+        <>
+          <Image
+            src={"/bsm.png"}
+            width={500}
+            height={200}
+            alt="bismillah"
+            className="hidden md:block mix-blend-multiply pointer-events-none pt-5 mx-auto"
+          />
 
-      <Image
-        src={"/bsm.png"}
-        width={270}
-        height={108}
-        alt="bismillah"
-        className="block md:hidden mix-blend-multiply pointer-events-none pt-5 mx-auto"
-      />
+          <Image
+            src={"/bsm.png"}
+            width={270}
+            height={108}
+            alt="bismillah"
+            className="block md:hidden mix-blend-multiply pointer-events-none pt-5 mx-auto"
+          />
+        </>
+      )}
 
       <div
         ref={scroller}
-        onScroll={onClickScroll}
-        className="lg:min-h-[60vh] max-h-[60vh] min-h-[700px] md:min-h-[600px] lg:max-h-[500px] max-w-5xl mx-auto relative overflow-x-scroll overflow-y-hidden flex"
+        onScroll={(event) => {
+          onClickScroll(event);
+          setHasScrolled(true);
+        }}
+        className={cn(
+          "lg:min-h-[60vh] max-h-[60vh] min-h-[700px] md:min-h-[600px] lg:max-h-[500px] max-w-5xl mx-auto relative overflow-x-scroll overflow-y-hidden flex",
+          className
+        )}
         style={{
           scrollSnapType: "x mandatory",
           scrollBehavior: "smooth",
         }}
       >
-        <section
-          style={{ scrollSnapAlign: "start" }}
-          className="lg:min-h-[60vh] lg:max-h-[500px] min-w-[100%] max-w-5xl mx-auto relative"
-        >
-          <Container className="p-12">
-            <h1 className="font-[family-name:var(--font-raleway)] font-semibold text-5xl md:text-6xl pb-7 max-w-2xl">
-              Welcome to Your Masjid
-            </h1>
-            <p className="font-[family-name:var(--font-montserrat)] max-w-lg">
-              AlMasjid is a nonprofit organisation committed to supporting
-              families who face barriers to accessing mosque services.
-              <br />
-              All of our services are free for the family of the Prophet ﷺ.{" "}
-              <br />
-              <Link className="underline" href="/about/saadat">
-                Learn more.
-              </Link>
-            </p>
-            <Button href="/classes" colour="blue" className='mt-4' style={{ zIndex: 1 }}>
-              See our Classes
-            </Button>
-            <Image
-              src={"/hero.png"}
-              width={600}
-              height={600}
-              className="hidden md:block mix-blend-multiply w-auto h-auto absolute bottom-0 right-0 z-0 pointer-events-none"
-              alt="masjid"
-            />
-            <Image
-              src={"/hero.png"}
-              width={400}
-              height={400}
-              className="block md:hidden mix-blend-multiply w-auto h-auto absolute bottom-0 right-0 z-0 pointer-events-none"
-              alt="masjid"
-            />
-          </Container>
-        </section>
-
-        <CarouselCard
-          title={"Arabic for Kids"}
-          type="r"
-          link={"/classes/arabic-kids"}
-          caption="Limited spaces"
-          image={"/arabic-kids.png"}
-        >
-          Learn the basics of Arabic grammar and syntax to understand the
-          Qur’an, hadith, as well as key texts in Islamic jurisprudence for
-          teens aged 12-14.
-        </CarouselCard>
-
-        <CarouselCard
-          title={"Islamic Studies for Children"}
-          type="l"
-          link={"/classes/maktab"}
-          caption="Limited spaces"
-          image={"/quran.png"}
-        >
-          A well-structured program for children aged 7-14, guided by
-          experienced teachers to nurture faith and learning.
-        </CarouselCard>
+        {home && (
+          <section
+            style={{ scrollSnapAlign: "start" }}
+            className="lg:min-h-[60vh] lg:max-h-[500px] min-w-[100%] max-w-5xl mx-auto relative"
+          >
+            <Container className="p-12">
+              <h1 className="font-[family-name:var(--font-raleway)] font-semibold text-5xl md:text-6xl pb-7 max-w-2xl">
+                Welcome to Your Masjid
+              </h1>
+              <p className="font-[family-name:var(--font-montserrat)] max-w-lg">
+                AlMasjid is a nonprofit organisation committed to supporting
+                families who face barriers to accessing mosque services.
+                <br />
+                All of our services are free for the family of the Prophet ﷺ.{" "}
+                <br />
+                <Link className="underline" href="/about/saadat">
+                  Learn more.
+                </Link>
+              </p>
+              <Button
+                href="/classes"
+                colour="blue"
+                className="mt-4"
+                style={{ zIndex: 1 }}
+              >
+                See our Classes
+              </Button>
+              <Image
+                src={"/hero.png"}
+                width={600}
+                height={600}
+                className="hidden md:block mix-blend-multiply w-auto h-auto absolute bottom-0 right-0 z-0 pointer-events-none"
+                alt="masjid"
+              />
+              <Image
+                src={"/hero.png"}
+                width={400}
+                height={400}
+                className="block md:hidden mix-blend-multiply w-auto h-auto absolute bottom-0 right-0 z-0 pointer-events-none"
+                alt="masjid"
+              />
+            </Container>
+          </section>
+        )}
+        {children}
       </div>
 
       {/* Forwards Button */}

@@ -1,13 +1,134 @@
-import Image from "next/image";
+import Heading from "../ui/heading/heading";
+import Lesson from "../ui/lesson/lesson";
+import Container from "../ui/container/container";
+import Breadcrumbs from "../ui/breadcrumb/breadcrumbs";
+import Community from "../ui/community/community";
+import Carousel from "../ui/carouselCard/carousel";
+import CarouselCard from "../ui/carouselCard/carouselCard";
 
 export const metadata = {
-  title: 'Lessons',
+  title: "Lessons",
 };
 
 export default function Lessons() {
   return (
-    <div className="items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-raleway)]">
-      <h1 className="text-2xl font-[family-name:var(--font-raleway)]">Lessons</h1>
-    </div>
+    <>
+      <Breadcrumbs className="mx-auto my-8" />
+
+      <Carousel home={false}>
+        <CarouselCard
+          clip={true}
+          title={"Stories of the Four Greatest Muslims"}
+          type="r"
+          link={"/lessons/four-greatest-muslims"}
+          image={"/placeholder.png"}
+        >
+          The sacrifices they made and why the Muslim
+          ummah has held them in the highest regard for over 14 centuries
+        </CarouselCard>
+
+        <CarouselCard
+          clip={true}
+          title={"Video Lessons"}
+          type="l"
+          link={"https://youtube.com/almasjid"}
+          image={"/video-lessons.png"}
+        >
+          Explore our collection of Islamic video lessons designed to deepen
+          your understanding of the faith.
+        </CarouselCard>
+        <CarouselCard
+          clip={true}
+          title={"PDF Library"}
+          type="l"
+          link={"/lessons/pdf-library"}
+          image={"/pdf-library.png"}
+        >
+          Explore our collection of Islamic video lessons designed to deepen
+          your understanding of the faith.
+        </CarouselCard>
+      </Carousel>
+
+      <span className="w-[80vw] h-[1px] max-w-5xl bg-slate-300 mx-auto my-4"></span>
+
+      <Container>
+        <Heading className="relative mx-6 md:mx-0 mt-6 mb-8 text-center">
+          All Lessons
+        </Heading>
+
+
+        <section className="flex-wrap grid md:grid-cols-3 gap-x-8 gap-y-10 mb-10 mx-6 ">
+          <Lesson
+            href={"/lessons/four-greatest-muslims"}
+            title="Stories of the Four Greatest Muslims"
+          >
+            Learn why Allāh granted them the seal of approval and why the Muslim
+            ummah has held them in the highest regard for over 14 centuries.
+          </Lesson>
+
+          <Lesson
+            href={"https://youtube.com/almasjid"}
+            title="Video Lessons"
+            external={true}
+            image={"/video-lessons.png"}
+          >
+            Explore our collection of Islamic video lessons designed to deepen
+            your understanding of the faith.
+          </Lesson>
+
+          <Lesson
+            href={"/lessons/pdf-library"}
+            title="PDF Library"
+            image={"/pdf-library.png"}
+          >
+            Access our library of Islamic PDFs, featuring a variety of
+            resources.
+          </Lesson>
+
+          <Lesson
+            href={"/lessons/four-greatest-muslims"}
+            title="Tajweed Series"
+            image={"/tajweed-series.jpg"}
+          >
+            Enhance your Qur’anic recitation with our Tajweed Series, featuring audio lessons which will guide you through the rules and principles of Tajweed.
+          </Lesson>
+
+          <Lesson
+            href={"/lessons/reminders"}
+            title="Reminders"
+            image={"/reminders.jpg"}
+          >
+            Stay spiritually motivated with our collection of Islamic reminders.
+
+
+          </Lesson>
+
+          <Lesson
+            href={"/lessons/prophets-stories"}
+            title="Stories of the Prophets"
+            image={"/stories-prophets.jpg"}
+          >
+            Delve into the inspiring Stories of the Prophets, exploring their lives, lessons, and the timeless wisdom they offer.
+
+
+          </Lesson>
+
+          <Lesson
+            href={"/lessons/lectures"}
+            title="Lectures by Dr. Mawlana Nasser Rashid"
+            image={"/lectures.jpg"}
+          >
+            A collection of insightful lectures by Dr. Nasser Rashid, covering a wide range of Islamic topics.
+
+
+          </Lesson>
+
+        </section>
+      </Container>
+
+      <Community>
+        Stay up to date about our latest lessons. We will never spam you.
+      </Community>
+    </>
   );
 }

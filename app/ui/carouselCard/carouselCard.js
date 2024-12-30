@@ -9,6 +9,9 @@ export default function CarouselCard({
   link,
   image,
   type,
+  clip,
+  background,
+  home,
   ...props
 }) {
   let direction;
@@ -34,11 +37,12 @@ export default function CarouselCard({
     >
       
       <div
-        className={`flex flex-col ${direction} smd:items-center smd:justify-between smd:flex-nowrap`}
+        className={`flex flex-col ${direction} h-[80%] justify-center smd:items-center smd:justify-between smd:flex-nowrap`}
+        style={{backgroundColor: background ? background : '', padding: '4px'}}
       >
         <Container className={`p-12 flex items-center ${items} flex-col`}>
           <h1
-            className={`font-[family-name:var(--font-raleway)] text-center ${text} font-semibold text-5xl md:text-6xl pb-7 max-w-2xl`}
+            className={`font-[family-name:var(--font-raleway)] text-center ${text} font-semibold ${title.length > 23 ? 'text-3xl md:text-5xl' :'text-5xl md:text-6xl' }   pb-7 max-w-2xl`}
           >
             {title}
           </h1>
@@ -49,7 +53,7 @@ export default function CarouselCard({
             <br />
             <span className="uppercase mt-2 font-semibold text-weborange">{caption && caption}</span>
           </p>
-          <Button href={link} colour="blue" className='mt-4' style={{ zIndex: 1 }}>
+          <Button href={link} colour={home ? "blue":'purple'} className='mt-4' style={{ zIndex: 1 }}>
             Learn More
           </Button>
         </Container>
@@ -60,9 +64,10 @@ export default function CarouselCard({
               src={image}
               width={320}
               height={320}
-              className={`self-center mix-blend-multiply w-auto h-auto pointer-events-none mx-6 smd:relative bottom-[30vh]}`}
+              className={`self-center ${home && 'mix-blend-multiply'} w-auto h-auto pointer-events-none mx-6 smd:relative bottom-[30vh]}`}
               alt={title}
               priority={true}
+              style={{clipPath: clip && 'polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)'}}
             />
           </div>
         )}
