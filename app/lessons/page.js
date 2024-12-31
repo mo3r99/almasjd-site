@@ -57,7 +57,7 @@ export default function Lessons() {
         </Heading>
 
 
-        <section className="flex-wrap grid md:grid-cols-3 gap-x-8 gap-y-10 mb-10 mx-6 ">
+        <section className="flex-wrap grid md:grid-cols-3 gap-x-8 gap-y-3 mb-10 mx-6 ">
           <Lesson
             href={"/lessons/four-greatest-muslims"}
             title="Stories of the Four Greatest Muslims"

@@ -1,7 +1,7 @@
 "use client"
 
-import Heading from "@/app/ui/heading/heading";
-import { Input } from "@/components/ui/input";
+import Heading from "../../ui/heading/heading";
+import { Input } from "../../../components/ui/input";
 import Button from "../button/button";
 import { useState } from "react";
 

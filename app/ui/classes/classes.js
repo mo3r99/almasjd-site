@@ -12,10 +12,10 @@ export default function ClassesSection({ bg, ...props }) {
       {...props}
     >
       <Heading className="pt-8 pb-4 text-center">Our Classes</Heading>
-      <p className="text-center font-[family-name:var(--font-montserrat)] mb-4">
+      <p className="text-center font-[family-name:var(--font-montserrat)] mb-8">
         Learn and grow with our comprehensive courses.
       </p>
-      <div className="flex justify-center flex-wrap">
+      <div className="flex justify-center flex-wrap mx-auto">
         <ClassComponent
           className="mx-4"
           backgroundImage={"/1.png"}
@@ -44,6 +44,7 @@ export default function ClassesSection({ bg, ...props }) {
           title="Arabic for Kids"
           href="/classes/arabic-for-kids"
           kids={true}
+          advanced={true}
         >
           The basics of Arabic grammar and syntax to understand the Qur’an,
           hadith, as well as key texts in Islamic jurisprudence for teens aged
@@ -56,13 +57,12 @@ export default function ClassesSection({ bg, ...props }) {
           title="Qur’an Memorisation"
           href="/classes/hifz"
           kids={true}
-          advanced={true}
         >
           Learn and memorise the Qur'an from the comfort of home, perfect for
           those without access to local facilities, with one-to-one classes
         </ClassComponent>
 
-        <p className="text-center mt-6 mb-4 text-md font-[family-name:var(--font-montserrat)] mx-6 md:mx-16">
+        <p className="text-center mt-6 mb-4 text-md font-[family-name:var(--font-montserrat)] max-w-5xl mx-6 md:mx-16">
           Our services are as open to sisters as these are for brothers. We make
           every effort to have a qualified female member serve our sisters.
           Girls over the age of 10 are only taught by a female teacher in a

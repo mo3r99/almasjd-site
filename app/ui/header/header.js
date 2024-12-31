@@ -6,7 +6,7 @@ import { useState } from "react";
 import { usePathname } from "next/navigation";
 import styles from "./header.module.css";
 
-import links from "@/app/lib/links";
+import links from "../../lib/links";
 
 export default function Header() {
   const [mobNav, setMobNav] = useState(false);
