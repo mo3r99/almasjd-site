@@ -127,7 +127,7 @@ export default function Carousel({ children, home, className }) {
                 AlMasjid is your online hub for Islamic education, spiritual
                 development and growth, managed by a panel of qualified Imams
                 and experienced scholars. Explore our website to discover
-                something perfect for you.
+                something for you.
                 {/* <br />
                 All of our services are free for the family of the Prophet ﷺ.{" "}
                 <br />
