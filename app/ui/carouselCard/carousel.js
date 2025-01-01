@@ -11,7 +11,6 @@ import Link from "next/link";
 import { cn } from "@/lib/utils";
 
 export default function Carousel({ children, home, className }) {
-  console.log("rerender");
   const [showR, setShowR] = useState(true);
   const [showL, setShowL] = useState(false);
   const [hasScrolled, setHasScrolled] = useState(false);
@@ -125,14 +124,16 @@ export default function Carousel({ children, home, className }) {
                 Welcome to Your Masjid
               </h1>
               <p className="font-[family-name:var(--font-montserrat)] max-w-lg">
-                AlMasjid is a nonprofit organisation committed to supporting
-                families who face barriers to accessing mosque services.
-                <br />
+                AlMasjid is your online hub for Islamic education, spiritual
+                development and growth, managed by a panel of qualified Imams
+                and experienced scholars. Explore our website to discover
+                something perfect for you.
+                {/* <br />
                 All of our services are free for the family of the Prophet ﷺ.{" "}
                 <br />
                 <Link className="underline" href="/about/saadat">
                   Learn more.
-                </Link>
+                </Link> */}
               </p>
               <Button
                 href="/classes"

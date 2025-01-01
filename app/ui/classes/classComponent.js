@@ -1,3 +1,5 @@
+import { motion } from "motion/react"
+
 import Image from "next/image";
 import styles from "./classComponent.module.css";
 import Button from "../button/button";
@@ -13,7 +15,7 @@ export default function ClassComponent({
   ...props
 }) {
   return (
-    <div
+    <div initial={{ scale: 0 }} animate={{ scale: 1 }}
       className={`${styles.container} ${className} w-[300px] h-[400px] mb-6`}
     >
       <div
@@ -26,6 +28,7 @@ export default function ClassComponent({
           layout={"fill"}
           objectFit={"cover"}
           className={styles.image}
+          style={{pointerEvents: 'none'}}
         />
       </div>
       <div className={styles.innerContainer}>
