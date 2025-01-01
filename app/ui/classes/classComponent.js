@@ -10,7 +10,8 @@ export default function ClassComponent({
   title,
   children,
   advanced,
-  kids,
+  foundation,
+  intermediate,
   className,
   ...props
 }) {
@@ -37,10 +38,15 @@ export default function ClassComponent({
             Advanced
           </span>
         )}{" "}
-        {advanced && kids && <span>•</span>}{" "}
-        {kids && (
+        {/* {advanced && <span>•</span>}{" "} */}
+        {foundation && (
           <span className="uppercase font-[family-name:var(--font-montserrat)] text-xs font-bold text-dolphin">
-            Kids
+            Foundation
+          </span>
+        )}
+        {intermediate && (
+          <span className="uppercase font-[family-name:var(--font-montserrat)] text-xs font-bold text-dolphin">
+            Intermediate
           </span>
         )}
         <h2 className="text-2xl font-bold mb-1 font-[family-name:var(--font-raleway)]">

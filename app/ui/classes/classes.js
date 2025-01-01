@@ -32,7 +32,7 @@ export default function ClassesSection({ bg, ...props }) {
           backgroundImage={"/2.png"}
           title="Qur'an and Islamic Studies for kids"
           href="/classes/maktab"
-          kids={true}
+          foundation={true}
         >
           A well-structured program for children aged 7-14, guided by
           experienced teachers to nurture faith and learning.
@@ -43,7 +43,7 @@ export default function ClassesSection({ bg, ...props }) {
           backgroundImage={"/3.png"}
           title="Arabic for Kids"
           href="/classes/arabic-for-kids"
-          kids={true}
+          intermediate={true}
         >
           The basics of Arabic grammar and syntax to understand the Qur’an,
           hadith, as well as key texts in Islamic jurisprudence for teens aged
@@ -55,7 +55,6 @@ export default function ClassesSection({ bg, ...props }) {
           backgroundImage={"/4.png"}
           title="Qur’an Memorisation"
           href="/classes/hifz"
-          kids={true}
         >
           Learn and memorise the Qur'an from the comfort of home, perfect for
           those without access to local facilities, with one-to-one classes
