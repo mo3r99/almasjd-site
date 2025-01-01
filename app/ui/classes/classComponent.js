@@ -13,13 +13,33 @@ export default function ClassComponent({
   ...props
 }) {
   return (
-    <div className={`${styles.container} ${className} w-[300px] h-[400px] mb-6`}>
+    <div
+      className={`${styles.container} ${className} w-[300px] h-[400px] mb-6`}
+    >
       <div
-        className={`${styles.img} w-[100%] h-[100%] bg-[70%] hover:bg-[68%]`}
+        className={`${styles.img} w-[100%] h-[100%] relative`}
         style={{ backgroundImage: `url('${backgroundImage}')` }}
-      ></div>
+      >
+        <Image
+          src={backgroundImage}
+          alt={title}
+          layout={"fill"}
+          objectFit={"cover"}
+          className={styles.image}
+        />
+      </div>
       <div className={styles.innerContainer}>
-        {advanced && <span className="uppercase font-[family-name:var(--font-montserrat)] text-xs font-bold text-dolphin">Advanced</span>} {advanced && kids && <span>•</span>} {kids && <span className="uppercase font-[family-name:var(--font-montserrat)] text-xs font-bold text-dolphin">Kids</span>}
+        {advanced && (
+          <span className="uppercase font-[family-name:var(--font-montserrat)] text-xs font-bold text-dolphin">
+            Advanced
+          </span>
+        )}{" "}
+        {advanced && kids && <span>•</span>}{" "}
+        {kids && (
+          <span className="uppercase font-[family-name:var(--font-montserrat)] text-xs font-bold text-dolphin">
+            Kids
+          </span>
+        )}
         <h2 className="text-2xl font-bold mb-1 font-[family-name:var(--font-raleway)]">
           <mark className={styles.mark}>{title}</mark>
           {/* {title} */}

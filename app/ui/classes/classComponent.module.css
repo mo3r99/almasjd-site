@@ -8,15 +8,18 @@
     mask-size: contain;
     mask-repeat: no-repeat;
 
-    transition: 900ms all cubic-bezier(0.77, 0.2, 0.05, 1);
-    filter: blur(4px) brightness(105%);
-    background-size: cover;
+    transition: 300ms all cubic-bezier(0.77, 0.2, 0.05, 1);
+    filter: blur(2px) brightness(105%);
     background-repeat: no-repeat;
-    backdrop-filter: blur(130px);
+
+}
+
+.image {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;;
 }
 
 .container:hover .img{
-    filter: blur(7px) brightness(100%);
+    filter: blur(3px) brightness(100%);
 }
 
 /* .container:hover .innerContainer {
@@ -27,8 +30,8 @@
     position: absolute;
     bottom: -1em;
     margin: 1.75em;
-    transition: 900ms all cubic-bezier(0.77, 0.2, 0.05, 1);
-    backdrop-filter: blur(3px);
+    transition: 300ms all cubic-bezier(0.77, 0.2, 0.05, 1);
+    backdrop-filter: blur(2px);
 }
 
 .mark {
@@ -44,6 +47,6 @@
     );
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
-    transition: 900ms all cubic-bezier(0.77, 0.2, 0.05, 1);
+    transition: 300ms all cubic-bezier(0.77, 0.2, 0.05, 1);
     opacity: 85%;
   }

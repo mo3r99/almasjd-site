@@ -44,7 +44,6 @@ export default function ClassesSection({ bg, ...props }) {
           title="Arabic for Kids"
           href="/classes/arabic-for-kids"
           kids={true}
-          advanced={true}
         >
           The basics of Arabic grammar and syntax to understand the Qur’an,
           hadith, as well as key texts in Islamic jurisprudence for teens aged
@@ -63,10 +62,9 @@ export default function ClassesSection({ bg, ...props }) {
         </ClassComponent>
 
         <p className="text-center mt-6 mb-4 text-md font-[family-name:var(--font-montserrat)] max-w-5xl mx-6 md:mx-16">
-          Our services are as open to sisters as these are for brothers. We make
-          every effort to have a qualified female member serve our sisters.
-          Girls over the age of 10 are only taught by a female teacher in a
-          girls only class.
+          Our courses are as open to sisters as they are for brothers. Sisters
+          are taught by a qualified female ʿālimah. Girls over the age
+          of 10 are taught by a female teacher in a girls only class.
         </p>
       </div>
     </section>
