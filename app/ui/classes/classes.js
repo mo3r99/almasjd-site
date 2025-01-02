@@ -34,7 +34,7 @@ export default function ClassesSection({ bg, ...props }) {
           href="/classes/maktab"
           foundation={true}
         >
-          A well-structured program for children aged 7-14, guided by
+          A foundation program for children aged 7-14, guided by
           experienced teachers to nurture faith and learning.
         </ClassComponent>
 

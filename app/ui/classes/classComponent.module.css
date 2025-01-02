@@ -29,9 +29,27 @@
 .innerContainer {
     position: absolute;
     bottom: -1em;
+    left: -1.75em;
     margin: 1.75em;
     transition: 300ms all cubic-bezier(0.77, 0.2, 0.05, 1);
-    backdrop-filter: blur(2px);
+    padding: 1em;
+    z-index: 1;
+}
+
+.innerContainer:after {
+    content: '';
+    display: block;
+    backdrop-filter: blur(15px);
+    background-color: white;
+    width: 110%;
+    height: 100%;
+    opacity: 0.55;
+    border-radius: 1.5em;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    min-height: 232px;
 }
 
 .mark {

@@ -21,7 +21,6 @@ export default function ClassComponent({
     >
       <div
         className={`${styles.img} w-[100%] h-[100%] relative`}
-        style={{ backgroundImage: `url('${backgroundImage}')` }}
       >
         <Image
           src={backgroundImage}
@@ -46,6 +45,11 @@ export default function ClassComponent({
         )}
         {intermediate && (
           <span className="uppercase font-[family-name:var(--font-montserrat)] text-xs font-bold text-dolphin">
+            Intermediate
+          </span>
+        )}
+        {!intermediate && !advanced && !foundation && (
+          <span className="opacity-0 pointer-events-none">
             Intermediate
           </span>
         )}
