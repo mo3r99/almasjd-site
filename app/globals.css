@@ -134,6 +134,9 @@ a p {
   .embla {
     --slide-height: 79vh;
   }
+  .embla__slide__content {
+    min-height: 770px;
+  }
 }
 
 .embla__viewport {
@@ -155,7 +158,6 @@ a p {
   border-radius: 1rem;
   display: flex;
   height: var(--slide-height);
-  min-height: 730px;
   user-select: none;
 }
 .embla__controls {
