@@ -52,7 +52,7 @@ export default function ClassComponent({
           <span className="opacity-0 pointer-events-none">Intermediate</span>
         )}
         <h2 className="text-2xl font-bold mb-1 font-[family-name:var(--font-raleway)]">
-          <mark className={styles.mark}>{title}</mark>
+          {title}
           {/* {title} */}
         </h2>
         <p className="text-sm mb-4 font-[family-name:var(--font-montserrat)]">

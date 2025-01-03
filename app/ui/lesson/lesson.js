@@ -12,7 +12,7 @@ export default function Lesson({
   image,
 }) {
   return (
-    <div className={cn("max-h-[450px] md:h-[50vh] relative", className, href)}>
+    <div className={cn("max-h-[450px] md:h-[50vh] relative max-w-[300px] m-auto", className, href)}>
       <div className="w-[100%] h-[200px] mb-4 relative">
         <Image
           src={`${image ? image : "/placeholder.png"}`}
