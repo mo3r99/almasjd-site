@@ -32,17 +32,16 @@ export default function CarouselCard({
 
   return (
     <section
-      style={{ scrollSnapAlign: "start" }}
-      className="min-h-[770px] lg:min-h-[70vh] lg:max-h-[500px] md:h-[80vh] min-w-[100%] max-w-5xl mx-auto"
+      className="md:mt-[5%]"
     >
       
       <div
-        className={`flex flex-col ${direction} h-[80%] justify-center smd:items-center smd:justify-between smd:flex-nowrap`}
+        className={`flex flex-col ${direction} justify-center smd:items-center smd:justify-between smd:flex-nowrap`}
         style={{backgroundColor: background ? background : '', padding: '4px'}}
       >
         <Container className={`p-12 flex items-center ${items} flex-col`}>
           <h1
-            className={`font-[family-name:var(--font-raleway)] text-center ${text} font-semibold ${title.length > 23 ? 'text-3xl md:text-5xl' :'text-5xl md:text-6xl' }   pb-7 max-w-2xl`}
+            className={`font-[family-name:var(--font-raleway)] text-center ${text} font-semibold ${title.length > 23 ? 'text-5xl md:text-5xl' :'text-5xl md:text-6xl' }   pb-7 max-w-2xl`}
           >
             {title}
           </h1>
@@ -64,7 +63,16 @@ export default function CarouselCard({
               src={image}
               width={320}
               height={320}
-              className={`self-center ${home && 'mix-blend-multiply'} w-auto h-auto pointer-events-none mx-6 smd:relative bottom-[30vh]}`}
+              className={`hidden md:block self-center ${home && 'mix-blend-multiply'} w-auto h-auto pointer-events-none mx-6 smd:relative bottom-[30vh]}`}
+              alt={title}
+              priority={true}
+              style={{clipPath: clip && 'polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)'}}
+            />
+            <Image
+              src={image}
+              width={200}
+              height={200}
+              className={`block md:hidden self-center ${home && 'mix-blend-multiply'} w-auto h-auto pointer-events-none mx-6 smd:relative bottom-[30vh]}`}
               alt={title}
               priority={true}
               style={{clipPath: clip && 'polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)'}}

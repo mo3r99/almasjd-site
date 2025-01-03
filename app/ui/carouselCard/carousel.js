@@ -1,5 +1,6 @@
 "use client";
 
+
 import Image from "next/image";
 import Container from "../container/container";
 import Button from "../button/button";
@@ -120,7 +121,9 @@ export default function Carousel({ children, home, className }) {
             className="lg:min-h-[60vh] lg:max-h-[500px] min-w-[100%] max-w-5xl mx-auto relative"
           >
             <Container className="p-12">
-              <h1 className="font-[family-name:var(--font-raleway)] font-semibold text-5xl md:text-6xl pb-7 max-w-2xl">
+              <h1
+                className="font-[family-name:var(--font-raleway)] font-semibold text-5xl md:text-6xl pb-7 max-w-2xl"
+              >
                 Welcome to Your Masjid
               </h1>
               <p className="font-[family-name:var(--font-montserrat)] max-w-lg">

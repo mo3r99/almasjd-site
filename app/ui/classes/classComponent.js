@@ -1,4 +1,4 @@
-import { motion } from "motion/react"
+'use client'
 
 import Image from "next/image";
 import styles from "./classComponent.module.css";
@@ -16,7 +16,7 @@ export default function ClassComponent({
   ...props
 }) {
   return (
-    <div initial={{ scale: 0 }} animate={{ scale: 1 }}
+    <div
       className={`${styles.container} ${className} w-[300px] h-[400px] mb-6`}
     >
       <div
@@ -28,7 +28,7 @@ export default function ClassComponent({
           layout={"fill"}
           objectFit={"cover"}
           className={styles.image}
-          style={{pointerEvents: 'none'}}
+          style={{ pointerEvents: "none" }}
         />
       </div>
       <div className={styles.innerContainer}>
@@ -49,9 +49,7 @@ export default function ClassComponent({
           </span>
         )}
         {!intermediate && !advanced && !foundation && (
-          <span className="opacity-0 pointer-events-none">
-            Intermediate
-          </span>
+          <span className="opacity-0 pointer-events-none">Intermediate</span>
         )}
         <h2 className="text-2xl font-bold mb-1 font-[family-name:var(--font-raleway)]">
           <mark className={styles.mark}>{title}</mark>
