@@ -10,8 +10,9 @@ import {
 import Autoplay from 'embla-carousel-autoplay'
 import useEmblaCarousel from 'embla-carousel-react'
 import CarouselSlides from './CarouselSlides'
+import { cn } from '@/lib/utils'
 
-const EmblaCarousel = ({ slides, options, children }) => {
+const EmblaCarousel = ({ slides, options, children,className,  ...props }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(options, [Autoplay()])
 
   const onNavButtonClick = useCallback((emblaApi) => {
@@ -39,14 +40,14 @@ const EmblaCarousel = ({ slides, options, children }) => {
   } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   return (
-    <section className="embla md:px-8 md:pb-8 p-2">
+    <section className={cn("embla md:px-8 md:pb-8 p-2 relative", className)} {...props}>
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {children}
         </div>
       </div>
 
-      <div className="embla__controls px-4 md:px-0">
+      <div className="embla__controls">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />

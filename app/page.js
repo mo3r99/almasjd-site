@@ -39,7 +39,7 @@ export default function Home() {
           alt="bismillah"
           className="block md:hidden mix-blend-multiply pointer-events-none pt-5 mx-auto"
         />
-        <EmblaCarousel options={OPTIONS}>
+        <EmblaCarousel options={OPTIONS} className={'md:pt-0'}>
           <CarouselSlides key={1}>
             <Container className="p-12">
               <h1 className="font-[family-name:var(--font-raleway)] font-semibold text-5xl md:text-6xl pb-7 max-w-2xl">
