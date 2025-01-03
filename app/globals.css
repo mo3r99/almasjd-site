@@ -135,7 +135,7 @@ a p {
     --slide-height: 79vh;
   }
   .embla__slide__content {
-    min-height: 770px;
+    min-height: 680px;
   }
 }
 
