@@ -24,6 +24,21 @@ export default function Home() {
   return (
     <>
       <main className="items-center justify-items-center font-[family-name:var(--font-raleway)]">
+        <Image
+          src={"/bsm.png"}
+          width={500}
+          height={200}
+          alt="bismillah"
+          className="hidden md:block mix-blend-multiply pointer-events-none pt-5 mx-auto"
+        />
+
+        <Image
+          src={"/bsm.png"}
+          width={270}
+          height={108}
+          alt="bismillah"
+          className="block md:hidden mix-blend-multiply pointer-events-none pt-5 mx-auto"
+        />
         <EmblaCarousel options={OPTIONS}>
           <CarouselSlides key={1}>
             <Container className="p-12">

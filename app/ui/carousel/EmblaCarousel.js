@@ -39,14 +39,14 @@ const EmblaCarousel = ({ slides, options, children }) => {
   } = usePrevNextButtons(emblaApi, onNavButtonClick)
 
   return (
-    <section className="embla md:p-8 p-4">
+    <section className="embla md:px-8 md:pb-8 p-2">
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {children}
         </div>
       </div>
 
-      <div className="embla__controls">
+      <div className="embla__controls px-4 md:px-0">
         <div className="embla__buttons">
           <PrevButton onClick={onPrevButtonClick} disabled={prevBtnDisabled} />
           <NextButton onClick={onNextButtonClick} disabled={nextBtnDisabled} />

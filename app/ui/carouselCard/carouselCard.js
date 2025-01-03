@@ -36,10 +36,10 @@ export default function CarouselCard({
     >
       
       <div
-        className={`flex flex-col ${direction} justify-center smd:items-center smd:justify-between smd:flex-nowrap`}
-        style={{backgroundColor: background ? background : '', padding: '4px'}}
+        className={`flex flex-col ${direction} justify-center smd:items-center smd:justify-between smd:flex-nowrap px-4 pb-4 pt-4 md:pt-12`}
+        style={{backgroundColor: background ? background : ''}}
       >
-        <Container className={`p-12 flex items-center ${items} flex-col`}>
+        <Container className={`px-12 pb-12 pt-2 md:pt-12 flex items-center ${items} flex-col`}>
           <h1
             className={`font-[family-name:var(--font-raleway)] text-center ${text} font-semibold ${title.length > 23 ? 'text-5xl md:text-5xl' :'text-5xl md:text-6xl' }   pb-7 max-w-2xl`}
           >
