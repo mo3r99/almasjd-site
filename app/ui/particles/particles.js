@@ -79,7 +79,7 @@ export default function ParticlesComponent() {
             enable: true,
             mode: "bubble",
             parallax: {
-              enable: true,
+              enable: false,
               force: 10,
               smooth: 200,
             },
@@ -332,7 +332,7 @@ export default function ParticlesComponent() {
             mode: "delete",
             value: 0,
           },
-          value: 50,
+          value: 30,
         },
         opacity: {
           value: {
@@ -341,7 +341,7 @@ export default function ParticlesComponent() {
           },
           animation: {
             count: 0,
-            enable: true,
+            enable: false,
             speed: 1,
             decay: 0,
             delay: 0,
