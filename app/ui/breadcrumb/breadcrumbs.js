@@ -23,11 +23,28 @@ export default function Breadcrumbs({className}) {
           </BreadcrumbItem>
           <BreadcrumbSeparator />
           {pathNames.map((path, index) => {
+            const link = path;
+
+            switch (path) {
+              case 'arabicForKids':
+                path = 'Arabic for Kids'
+                break;
+              case 'alimiyyah':
+                path = 'Advanced Islamic Sciences'
+                break;
+              case 'maktab':
+                path = "Qur'an & Islamic Studies"
+                break;
+              case 'hifz':
+                path = "Qur'an Memorisation"
+                break;
+            }
+
             return (
               <Fragment key={index}>
                 <BreadcrumbItem>
                   {index != pathNames.length - 1 ? (
-                    <BreadcrumbLink href={`/${path}`}>
+                    <BreadcrumbLink href={`/${link}`}>
                       {String(path).charAt(0).toUpperCase() +
                         String(path).slice(1)}
                     </BreadcrumbLink>

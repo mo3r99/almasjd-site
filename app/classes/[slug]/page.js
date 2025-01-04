@@ -29,7 +29,7 @@ export default async function ClassPage({ params }) {
       <section className="h-auto max-w-5xl mx-auto my-4 mb-10 mt-16">
         <Breadcrumbs className="mt-8 mb-4" />
 
-        <Heading className="font-[800] text-5xl max-w-[80vw] m-aut p-0">
+        <Heading className="font-[800] text-5xl max-w-[80vw] m-auto p-0">
           {classes[whichClass].title}
         </Heading>
         <span className="w-16 h-2 bg-weborange mt-4 block"></span>
@@ -52,7 +52,7 @@ export default async function ClassPage({ params }) {
         return (
           <section
             key={index}
-            className={"pb-12"}
+            className={"pb-12 markdown"}
             style={{ background: item.background }}
           >
             <div className="max-w-5xl m-auto mx-auto" style={{ color: font }}>
