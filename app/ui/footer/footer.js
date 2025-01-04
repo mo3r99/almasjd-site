@@ -31,7 +31,7 @@ export default function Footer() {
           <p className="pb-2">
             © Copyright AlMasjid 2015-2024. All rights reserved.
           </p>
-          <p>Registered Charity <Link className="text-cyan-100 hover:text-cyan-300 transition-all ease-in-out duration-300 hover:underline" href={'https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC052744'}>SC052744</Link></p>
+          <p>Registered Charity <Link target='_blank' className="text-cyan-100 hover:text-cyan-300 transition-all ease-in-out duration-300 hover:underline" href={'https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC052744'}>SC052744</Link></p>
         </div>
       </div>
 

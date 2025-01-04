@@ -42,7 +42,7 @@ export default function ClassesSection({ bg, ...props }) {
           className="mx-4"
           backgroundImage={"/3.png"}
           title="Arabic for Kids"
-          href="/classes/arabic-for-kids"
+          href="/classes/arabicForKids"
           intermediate={true}
         >
           The basics of Arabic grammar and syntax to understand the Qur’an,

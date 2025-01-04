@@ -95,7 +95,7 @@ export default function Home() {
               home={true}
               title={"Arabic for Kids"}
               type="r"
-              link={"/classes/arabic-kids"}
+              link={"/classes/arabicForKids"}
               caption="Limited spaces"
               image={"/arabic-kids.png"}
             >
@@ -109,7 +109,7 @@ export default function Home() {
 
       <ClassesSection bg={true} />
 
-      <section className="w-[100vw] bg-zinc-900">
+      <section className="w-[98vw] bg-zinc-900">
         <Container className="text-white max-w-5xl mx-auto">
           <Heading className="relative mx-6 md:mx-0 mt-10 mb-8 text-center">
             Featured Lessons
