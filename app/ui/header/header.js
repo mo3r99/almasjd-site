@@ -13,7 +13,7 @@ export default function Header() {
   const pathname = usePathname();
 
   return (
-    <nav className="p-2 flex flex-col items-center text-sm font-[family-name:var(--font-raleway)]">
+    <nav className="p-2 flex flex-col items-center text-sm font-[family-name:var(--font-raleway)] z-20">
       <Link href={"/"}>
         <Image
           className="pb-5 pointer-events-none hidden md:block w-auto h-auto"

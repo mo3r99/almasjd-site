@@ -26,10 +26,10 @@ export default async function ClassPage({ params }) {
 
   return (
     <>
-      <section className="h-auto max-w-5xl mx-auto my-4 mb-10">
+      <section className="h-auto max-w-5xl mx-auto my-4 mb-10 mt-16">
         <Breadcrumbs className="mt-8 mb-4" />
 
-        <Heading className="font-extrabold max-w-[80vw] m-auto">
+        <Heading className="font-[800] text-5xl max-w-[80vw] m-aut p-0">
           {classes[whichClass].title}
         </Heading>
         <span className="w-16 h-2 bg-weborange mt-4 block"></span>
