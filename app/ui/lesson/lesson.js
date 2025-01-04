@@ -15,12 +15,12 @@ export default function Lesson({
     <div className={cn("max-h-[450px] md:h-[50vh] relative max-w-[300px] m-auto", className, href)}>
       <div className="w-[100%] h-[200px] mb-4 relative">
         <Image
+          alt={title}
           src={`${image ? image : "/placeholder.png"}`}
           style={{
             clipPath:
               "polygon(50% 0%, 80% 10%, 100% 35%, 100% 100%, 80% 100%, 50% 100%, 20% 100%, 0 100%, 0% 35%, 20% 10%)",
           }}
-          alt={image}
           layout={"fill"}
           objectFit={"cover"}
         />

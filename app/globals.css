@@ -11,7 +11,7 @@
 
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-image: url('/texture.png');
+  background-image: url("/texture.png");
   background-repeat: repeat;
   min-height: 100vh;
 }
@@ -119,7 +119,6 @@ a {
 a p {
   cursor: pointer;
 }
-
 
 /* embla */
 .embla {
@@ -248,8 +247,33 @@ a p {
   border-radius: 50%;
   display: flex;
   align-items: center;
-  content: '';
+  content: "";
 }
 .embla__dot--selected:after {
   box-shadow: inset 0 0 0 0.2rem #6bbaa7a5;
+}
+
+.foot {
+  display: block !important;
+}
+
+#mce-success-response {
+  color: rgb(137, 193, 163) !important;
+  width: 100% !important;
+  margin: 0 0 1em 0 !important;
+  text-align: center !important;
+  font-weight: 400 !important;
+  font-family: 'Montserrat', sans-serif !important;
+}
+
+#mc_embed_signup form {
+  margin: 0 0 1em 0 !important;
+}
+
+.mc-field-group {
+  padding: 0 !important;
+}
+
+.mce_inline_error[for='mce-EMAIL'] {
+  display: none !important;
 }

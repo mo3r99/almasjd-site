@@ -1,82 +1,110 @@
-"use client"
+"use client";
 
 import Heading from "../../ui/heading/heading";
+import Image from "next/image";
 import { Input } from "../../../components/ui/input";
 import Button from "../button/button";
 import { useState } from "react";
 
-export default function Community({children}) {
-  const [userData, setUserData] = useState({
-    fname: '',
-    sname: '',
-    email: ''
-  })
-
-  const [userDataValid, setUserDataValid] = useState({
-    fname: true,
-    sname: true,
-    email: true
-  })
-
-  function handleSubmit(e) {
-    e.preventDefault();
-    if (userDataValid.fname === true && userDataValid.sname === true && userDataValid.email === true && userData.fname != '') {
-      console.log(userData)
-      return;
-    }
-    // TODO: Finish form submission logic
-    
-  }
-
-  function handleInputChange(identifier, data) {
-    setUserData(prevData => ({
-      ...prevData,
-      [identifier]: data
-    }))
-    setUserDataValid(prevData => ({...prevData, [identifier]: true}))
-  }
-
-  function handleInputBlur(identifier, event) {
-    switch (identifier) {
-      case 'email':
-        if (event.target.value.includes('@') && !event.target.value.includes(' ') && event.target.value.length > 3) {
-          setUserDataValid(prevData => ({...prevData, email: true}))
-        } else {
-          setUserDataValid(prevData => ({...prevData, email: false}))
-        }
-        break;
-      case 'fname':
-        if(event.target.value.length > 1) {
-          setUserDataValid(prevData => ({...prevData, [identifier]: true}))
-        } else {
-          setUserDataValid(prevData => ({...prevData, [identifier]: false}))
-        }
-      case 'sname':
-        if(event.target.value.length > 1) {
-          setUserDataValid(prevData => ({...prevData, [identifier]: true}))
-        } else {
-          setUserDataValid(prevData => ({...prevData, [identifier]: false}))
-        }
-    }
-  }
-
+export default function Community({ children }) {
   return (
-    <section className="flex flex-col justify-center items-center p-5 bg-dolphin text-white">
+    <section className="flex flex-col justify-center items-center p-5 bg-dolphin text-white z-10">
       <Heading className="pt-8 pb-2 text-center">Join Our Community</Heading>
       <p className="text-center font-[family-name:var(--font-montserrat)] pb-8">
-        {!children ? 'Stay up to date about the latest that Almasjid is doing in your community. We will never spam you.' : children}
+        {!children
+          ? "Stay up to date about the latest that Almasjid is doing in your community. We will never spam you."
+          : children}
       </p>
-      <form onSubmit={handleSubmit} className="flex flex-col md:flex-row items-center mb-5 relative">
-        <div className=" flex-row items-center md:w-[120%] hidden">
-        <Input onBlur={(event)=>handleInputBlur('fname', event)} onChange={(event)=>handleInputChange('fname', event.target.value)} type="text" minLength={2} required placeholder="First Name" className='ml-0 mr-2 md:mr-2 my-0'/>
-        <Input onBlur={(event)=>handleInputBlur('sname', event)} onChange={(event)=>handleInputChange('sname', event.target.value)} type="text" minLength={2} required placeholder="Surname" className='ml-2 mr-0 md:ml-2 my-0'/>
+
+      <div id="mc_embed_shell" className="w-[100%] max-w-xl">
+        <link
+          href="//cdn-images.mailchimp.com/embedcode/classic-061523.css"
+          rel="stylesheet"
+          type="text/css"
+        />
+
+        <div id="mc_embed_signup">
+          <form
+            action="https://almasjid.us14.list-manage.com/subscribe/post?u=83f095a995cf71f9fed976406&amp;id=a83d31a9e1&amp;f_id=00c3f7e0f0"
+            method="post"
+            id="mc-embedded-subscribe-form"
+            name="mc-embedded-subscribe-form"
+            className="validate"
+            target="_blank"
+          >
+            <div id="mc_embed_signup_scroll">
+              <div className="mc-field-group w-[100%]">
+                <Input
+                  type="email"
+                  name="EMAIL"
+                  className="required email w-[100%]"
+                  id="mce-EMAIL"
+                  required
+                  placeholder="Email"
+                />
+              </div>
+              <div id="mce-responses" className="clear foot">
+                <div
+                  className="response"
+                  id="mce-error-response"
+                  style={{display: "none"}}
+                ></div>
+                <div
+                  className="response"
+                  id="mce-success-response"
+                  style={{display: "none"}}
+                ></div>
+              </div>
+              <div
+                aria-hidden="true"
+                style={{position: 'absolute', left: '-5000px'}}
+              >
+                <Input
+                  type="text"
+                  name="b_83f095a995cf71f9fed976406_a83d31a9e1"
+                  tabIndex="-1"
+                />
+              </div>
+              <div className="optionalParent w-[100%]">
+                <div className="clear w-[100%]">
+                  <Button
+                  colour='orange'
+                    type="submit"
+                    name="subscribe"
+                    id="mc-embedded-subscrib"
+                    className="m-auto"
+                    value="Subscribe"
+                  >Subscribe</Button>
+                 
+                  <p style={{margin: "0px auto"}}>
+                    <a
+                    className="hidden"
+                      href="http://eepurl.com/i4LSlU"
+                      title="Mailchimp - email marketing made easy and fun"
+                    >
+                      <span style={{display: "inline-block", backgroundColor: "transparent", borderrRadius: "4px"}}>
+                        <Image
+                          className="refferal_badge hidden"
+                          src="https://digitalasset.intuit.com/render/content/dam/intuit/mc-fe/en_us/images/intuit-mc-rewards-text-dark.svg"
+                          alt="Intuit Mailchimp"
+                          width={220}
+                          height={40}
+                          style={{width: '220px', height: '40px', display: 'flex', padding: '2px 0px', justifyContent: 'center', alignItems: "center"}}
+                        />
+                      </span>
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </form>
         </div>
-        <Input onBlur={(event)=>handleInputBlur('email', event)} onChange={(event)=>handleInputChange('email', event.target.value)} type="email" required placeholder="Email" className='md:mx-4 md:my-0 my-4'/>
-        <Button type='submit' className='mt-0 min-w-[100px]' colour='orange' onClick={handleSubmit}>Join us</Button>
-      </form>
-      {!userDataValid.fname && <p className="text-sm text-red-400 font-medium font-[family-name:var(--font-montserrat)]">Please enter a valid first name.</p>}
-      {userDataValid.fname && !userDataValid.sname && <p className="text-sm text-red-400 font-medium font-[family-name:var(--font-montserrat)]">Please enter a valid surname.</p>}
-      {userDataValid.fname && userDataValid.sname && !userDataValid.email && <p className="text-sm text-red-400 font-medium font-[family-name:var(--font-montserrat)]">Please enter a valid email address.</p>}
+        <script
+          type="text/javascript"
+          src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
+        ></script>
+        <script type="text/javascript" src="./mailchimp.js"></script>
+      </div>
     </section>
   );
 }

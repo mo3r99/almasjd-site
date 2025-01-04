@@ -11,7 +11,7 @@ export default function ClassesSection({ bg, ...props }) {
       } p-5 flex flex-col`}
       {...props}
     >
-      <Heading className="pt-8 pb-4 text-center">Our Classes</Heading>
+      <Heading className="pt-8 pb-4 text-center">Our Courses</Heading>
       <p className="text-center font-[family-name:var(--font-montserrat)] mb-8">
         Learn and grow with our comprehensive courses.
       </p>

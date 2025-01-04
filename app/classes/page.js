@@ -14,9 +14,11 @@ export default function Classes() {
       <Breadcrumbs className="mx-auto mt-8" />
       <ClassesSection style={{ marginTop: 0, paddingTop: 0 }} />
 
-      <Heading className='text-2xl text-center mb-8'>Self-paced Courses</Heading>
-      <p className="text-center font-[family-name:var(--font-montserrat)] mb-8">
-        Go through our short courses, workshops and webinars at your own pace.
+      <span className="w-[80vw] h-[1px] bg-zinc-300 m-auto my-8" />
+
+      <Heading className='text-2xl text-center mb-8 mt-4 max-w-[80vw] m-auto'>Workshops & Webinars</Heading>
+      <p className="text-center font-[family-name:var(--font-montserrat)] mb-8 max-w-[80vw] m-auto">
+        One-time courses covering a range of topics. Watch this space for new courses!
       </p>
       <section className="flex-wrap grid md:grid-cols-3 gap-x-8 gap-y-[3.3rem] mb-10 mx-6">
         <Lesson

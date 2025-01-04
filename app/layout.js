@@ -3,6 +3,7 @@ import "./globals.css";
 import Header from "./ui/header/header";
 import Footer from "./ui/footer/footer";
 import Head from "next/head";
+import ParticlesComponent from "./ui/particles/particles";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -32,6 +33,8 @@ export default function RootLayout({ children }) {
       <body
         className={`${raleway.variable} ${montserrat.variable} antialiased min-h-[100vh] flex flex-col`}
       >
+        <ParticlesComponent />
+
         <Header />
         {children}
         <Footer />

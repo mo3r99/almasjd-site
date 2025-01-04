@@ -37,10 +37,10 @@
 
 .img:hover ~ .innerContainer, .innerContainer:hover  {
     bottom: 0;
-    background-color: rgba(255, 255, 255, 0.55);
+    background-color: rgba(255, 255, 255, 0.65);
 }
 
-
+/* 
 .mark {
     margin: 0 -0.4em;
     padding: 0.05em 0.4em;
@@ -56,4 +56,4 @@
     box-decoration-break: clone;
     transition: 300ms all cubic-bezier(0.77, 0.2, 0.05, 1);
     opacity: 85%;
-  }
+  } */
