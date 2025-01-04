@@ -9,11 +9,18 @@ import {
   BreadcrumbPage,
   BreadcrumbSeparator,
 } from "../../../components/ui/breadcrumb";
+import path from "path";
 
 export default function Breadcrumbs({className}) {
   const paths = usePathname();
   const pathNames = paths.split("/").filter((path) => path);
-  console.log(paths, pathNames);
+  
+  let allPaths = [];
+  let currentPath = '';
+  for (let x = 0; x < pathNames.length; x++) {
+    currentPath += pathNames[x] + '/';
+    allPaths.push(currentPath);
+  }
 
   return (
       <Breadcrumb className={className}>
@@ -44,7 +51,7 @@ export default function Breadcrumbs({className}) {
               <Fragment key={index}>
                 <BreadcrumbItem>
                   {index != pathNames.length - 1 ? (
-                    <BreadcrumbLink href={`/${link}`}>
+                    <BreadcrumbLink href={`/${allPaths[index]}`}>
                       {String(path).charAt(0).toUpperCase() +
                         String(path).slice(1)}
                     </BreadcrumbLink>
