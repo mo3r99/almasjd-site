@@ -8,6 +8,8 @@ import classes from "@/store/classes/classes";
 import Button from "@/app/ui/button/button";
 
 import "./page.css";
+import Image from "next/image";
+import { url } from "inspector";
 
 function isDark(color) {
   if (!color) {
@@ -32,7 +34,13 @@ export default async function ClassPage({ params }) {
         <Heading className="font-[800] text-5xl max-w-[80vw] m-auto p-0">
           {classes[whichClass].title}
         </Heading>
-        <span className="w-16 h-2 bg-weborange mt-4 block"></span>
+
+        <span className="w-16 h-2 bg-weborange my-4 block"></span>
+        {!classes[whichClass].closed && (
+          <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
+            Admissions Open for {new Date().getFullYear()}
+          </span>)
+        }
         <p className="mt-6 font-[family-name:var(--font-montserrat)] mb-8 max-w-[80vw] m-auto">
           {classes[whichClass].description}
         </p>
@@ -61,12 +69,28 @@ export default async function ClassPage({ params }) {
                   components={{
                     table(props) {
                       const { node, ...rest } = props;
-                      return <div className="table-wrapper"><table {...rest} /></div>;
+                      return (
+                        <div className="table-wrapper">
+                          <table {...rest} />
+                        </div>
+                      );
                     },
                     // Rewrite `em`s (`*like so*`) to `i` with a red foreground color.
                     a(props) {
                       const { node, ...rest } = props;
                       return <a className="link" {...rest} />;
+                    },
+                    img(props) {
+                      const { node, src, ...rest } = props;
+                      return (
+                        <Image
+                          className="m-4 md:m-6"
+                          src={src}
+                          {...rest}
+                          width={300}
+                          height={300}
+                        />
+                      );
                     },
                   }}
                 >
