@@ -5,6 +5,9 @@ import Footer from "./ui/footer/footer";
 import Head from "next/head";
 import ParticlesComponent from "./ui/particles/particles";
 
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
+
 const raleway = Raleway({
   variable: "--font-raleway",
   subsets: ["latin"],
@@ -30,6 +33,7 @@ export default function RootLayout({ children }) {
       <Head>
         <meta name="apple-mobile-web-app-title" content="Almasjid" />
       </Head>
+      <SpeedInsights/>
       <body
         className={`${raleway.variable} ${montserrat.variable} antialiased min-h-[100vh] flex flex-col`}
       >
