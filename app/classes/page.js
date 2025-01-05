@@ -4,6 +4,8 @@ import Breadcrumbs from "../ui/breadcrumb/breadcrumbs";
 import Lesson from "../ui/lesson/lesson";
 import Heading from "../ui/heading/heading";
 
+import tajweedSeriesImg from '@/assets/tajweed-series.jpg';
+
 export const metadata = {
   title: "Classes",
 };
@@ -32,7 +34,7 @@ export default function Classes() {
         <Lesson
           href={"/lessons/four-greatest-muslims"}
           title="Tajweed Series"
-          image={"/tajweed-series.jpg"}
+          image={tajweedSeriesImg.src}
         >
           Enhance your Qur’anic recitation with our Tajweed Series, featuring
           audio lessons which will guide you through the rules and principles of

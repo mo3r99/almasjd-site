@@ -3,6 +3,11 @@ import ClassComponent from "./classComponent";
 import Breadcrumbs from "../breadcrumb/breadcrumbs";
 import styles from "./classes.module.css";
 
+import img1 from '@/assets/1.png'
+import img2 from '@/assets/2.png'
+import img3 from '@/assets/3.png'
+import img4 from '@/assets/4.png'
+
 export default function ClassesSection({ bg, ...props }) {
   return (
     <section
@@ -18,7 +23,7 @@ export default function ClassesSection({ bg, ...props }) {
       <div className="flex justify-center flex-wrap mx-auto">
         <ClassComponent
           className="mx-4"
-          backgroundImage={"/1.png"}
+          backgroundImage={img1.src}
           title="Advanced Islamic Studies"
           href="/classes/alimiyyah"
           advanced={true}
@@ -29,7 +34,7 @@ export default function ClassesSection({ bg, ...props }) {
 
         <ClassComponent
           className="mx-4"
-          backgroundImage={"/2.png"}
+          backgroundImage={img2.src}
           title="Qur'an and Islamic Studies for kids"
           href="/classes/maktab"
           foundation={true}
@@ -40,7 +45,7 @@ export default function ClassesSection({ bg, ...props }) {
 
         <ClassComponent
           className="mx-4"
-          backgroundImage={"/3.png"}
+          backgroundImage={img3.src}
           title="Arabic for Kids"
           href="/classes/arabicForKids"
           intermediate={true}
@@ -52,7 +57,7 @@ export default function ClassesSection({ bg, ...props }) {
 
         <ClassComponent
           className="mx-4"
-          backgroundImage={"/4.png"}
+          backgroundImage={img4.src}
           title="Qur’an Memorisation"
           href="/classes/hifz"
         >

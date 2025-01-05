@@ -8,6 +8,9 @@ import styles from "./header.module.css";
 
 import links from "../../lib/links";
 
+import logoImg from '@/assets/am-logos/logo.png'
+import smLogo from '@/assets/am-logos/sm-logo.png'
+
 export default function Header() {
   const [mobNav, setMobNav] = useState(false);
   const pathname = usePathname();
@@ -16,15 +19,15 @@ export default function Header() {
     <nav className="p-2 flex flex-col items-center text-sm font-[family-name:var(--font-raleway)] z-20">
       <Link href={"/"}>
         <Image
-          className="pb-5 pointer-events-none hidden md:block w-auto h-auto"
-          src="/logo.png"
+          className="pb-5 w-auto h-auto pointer-events-none hidden md:block"
+          src={logoImg}
           width={66}
           height={73}
           alt={"Almasjid logo"}
         />
         <Image
           className="pb-5 pointer-events-none block md:hidden w-auto h-auto"
-          src="/logo.png"
+          src={logoImg}
           width={60}
           height={66.07899255867201}
           alt={"Almasjid logo"}
@@ -83,7 +86,7 @@ export default function Header() {
       >
         <Image
           className="pb-5 pointer-events-none block md:hidden w-auto h-auto"
-          src="/sm-logo.png"
+          src={smLogo}
           width={60}
           height={66.07899255867201}
           alt={"Almasjid logo"}

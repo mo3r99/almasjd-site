@@ -3,12 +3,17 @@ import Lesson from "../ui/lesson/lesson";
 import Container from "../ui/container/container";
 import Breadcrumbs from "../ui/breadcrumb/breadcrumbs";
 import Community from "../ui/community/community";
-import Carousel from "../ui/carouselCard/carousel";
 import CarouselCard from "../ui/carouselCard/carouselCard";
 import EmblaCarousel from "../ui/carousel/EmblaCarousel";
 import CarouselSlides from "../ui/carousel/CarouselSlides";
-import Button from "../ui/button/button";
-import Image from "next/image";
+
+import placeholderImg from '@/assets/placeholder.png'
+import vidlessonsImg from '@/assets/video-lessons.png'
+import pdfLibaryImg from '@/assets/pdf-library.png'
+import tajweedSeriesImg from '@/assets/tajweed-series.jpg'
+import remindersImg from '@/assets/reminders.jpg'
+import storiesProphetsImg from '@/assets/stories-prophets.jpg'
+import lecturesImg from '@/assets/lectures.jpg'
 
 export const metadata = {
   title: "Lessons",
@@ -19,82 +24,47 @@ export default function Lessons() {
     <>
       <Breadcrumbs className="mx-auto my-8" />
 
-      {/* <Carousel home={false}>
-        <CarouselCard
-          clip={true}
-          title={"Stories of the Four Greatest Muslims"}
-          type="r"
-          link={"/lessons/four-greatest-muslims"}
-          image={"/placeholder.png"}
-        >
-          The sacrifices they made and why the Muslim ummah has held them in the
-          highest regard for over 14 centuries
-        </CarouselCard>
+      <main className="items-center justify-items-center font-[family-name:var(--font-raleway)]">
+        <EmblaCarousel options={{ loop: true }} className={"md:pt-0"}>
+          <CarouselSlides key={1}>
+            <CarouselCard
+              clip={true}
+              title={"Stories of the Four Greatest Muslims"}
+              type="r"
+              link={"/lessons/four-greatest-muslims"}
+              image={placeholderImg.src}
+            >
+              The sacrifices they made and why the Muslim ummah has held them in
+              the highest regard for over 14 centuries
+            </CarouselCard>
+          </CarouselSlides>
 
-        <CarouselCard
-          clip={true}
-          title={"Video Lessons"}
-          type="l"
-          link={"https://youtube.com/almasjid"}
-          image={"/video-lessons.png"}
-        >
-          Explore our collection of Islamic video lessons designed to deepen
-          your understanding of the faith.
-        </CarouselCard>
-        <CarouselCard
-          clip={true}
-          title={"PDF Library"}
-          type="l"
-          link={"/lessons/pdf-library"}
-          image={"/pdf-library.png"}
-        >
-          Explore our collection of Islamic video lessons designed to deepen
-          your understanding of the faith.
-        </CarouselCard>
-      </Carousel> */}
-            <main className="items-center justify-items-center font-[family-name:var(--font-raleway)]">
+          <CarouselSlides key={2}>
+            <CarouselCard
+              clip={true}
+              title={"Video Lessons"}
+              type="l"
+              link={"https://youtube.com/almasjid"}
+              image={vidlessonsImg.src}
+            >
+              Explore our collection of Islamic video lessons designed to deepen
+              your understanding of the faith.
+            </CarouselCard>
+          </CarouselSlides>
 
-
-      <EmblaCarousel options={{ loop: true }} className={"md:pt-0"}>
-        <CarouselSlides key={1}>
-          <CarouselCard
-            clip={true}
-            title={"Stories of the Four Greatest Muslims"}
-            type="r"
-            link={"/lessons/four-greatest-muslims"}
-            image={"/placeholder.png"}
-          >
-            The sacrifices they made and why the Muslim ummah has held them in
-            the highest regard for over 14 centuries
-          </CarouselCard>
-        </CarouselSlides>
-
-        <CarouselSlides key={2}>
-          <CarouselCard
-            clip={true}
-            title={"Video Lessons"}
-            type="l"
-            link={"https://youtube.com/almasjid"}
-            image={"/video-lessons.png"}
-          >
-            Explore our collection of Islamic video lessons designed to deepen
-            your understanding of the faith.
-          </CarouselCard>
-        </CarouselSlides>
-
-        <CarouselSlides key={3}>
-          <CarouselCard
-            clip={true}
-            title={"PDF Library"}
-            type="l"
-            link={"/lessons/pdf-library"}
-            image={"/pdf-library.png"}
-          >
-            Explore our collection of Islamic video lessons designed to deepen
-            your understanding of the faith.
-          </CarouselCard>
-        </CarouselSlides>
-      </EmblaCarousel>
+          <CarouselSlides key={3}>
+            <CarouselCard
+              clip={true}
+              title={"PDF Library"}
+              type="l"
+              link={"/lessons/pdf-library"}
+              image={pdfLibaryImg.src}
+            >
+              Explore our collection of Islamic video lessons designed to deepen
+              your understanding of the faith.
+            </CarouselCard>
+          </CarouselSlides>
+        </EmblaCarousel>
       </main>
 
       {/* <span className="w-[80vw] h-[1px] max-w-5xl bg-slate-300 mx-auto my-4"></span> */}
@@ -119,7 +89,7 @@ export default function Lessons() {
               href={"https://youtube.com/almasjid"}
               title="Video Lessons"
               external={true}
-              image={"/video-lessons.png"}
+              image={vidlessonsImg.src}
             >
               Explore our collection of Islamic video lessons designed to deepen
               your understanding of the faith.
@@ -128,7 +98,7 @@ export default function Lessons() {
             <Lesson
               href={"/lessons/pdf-library"}
               title="PDF Library"
-              image={"/pdf-library.png"}
+              image={pdfLibaryImg.src}
             >
               Access our library of Islamic PDFs, featuring a variety of
               resources.
@@ -137,7 +107,7 @@ export default function Lessons() {
             <Lesson
               href={"/lessons/four-greatest-muslims"}
               title="Tajweed Series"
-              image={"/tajweed-series.jpg"}
+              image={tajweedSeriesImg.src}
             >
               Enhance your Qur’anic recitation with our Tajweed Series,
               featuring audio lessons which will guide you through the rules and
@@ -147,7 +117,7 @@ export default function Lessons() {
             <Lesson
               href={"/lessons/reminders"}
               title="Reminders"
-              image={"/reminders.jpg"}
+              image={remindersImg.src}
             >
               Stay spiritually motivated with our collection of Islamic
               reminders.
@@ -156,7 +126,7 @@ export default function Lessons() {
             <Lesson
               href={"/lessons/prophets-stories"}
               title="Stories of the Prophets"
-              image={"/stories-prophets.jpg"}
+              image={storiesProphetsImg.src}
             >
               Delve into the inspiring Stories of the Prophets, exploring their
               lives, lessons, and the timeless wisdom they offer.
@@ -165,7 +135,7 @@ export default function Lessons() {
             <Lesson
               href={"/lessons/lectures"}
               title="Lectures by Dr. Mawlana Nasser Rashid"
-              image={"/lectures.jpg"}
+              image={lecturesImg.src}
             >
               A collection of insightful lectures by Dr. Nasser Rashid, covering
               a wide range of Islamic topics.

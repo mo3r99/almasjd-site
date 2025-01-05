@@ -20,12 +20,19 @@ export const metadata = {
 
 const OPTIONS = { loop: true };
 
+import bsmImg from '@/assets/bsm.png'
+import heroImg from '@/assets/hero.png'
+import quranImg from '@/assets/quran.png'
+import arabicKidsImg from '@/assets/arabic-kids.png'
+import vidLessonsImg from '@/assets/video-lessons.png'
+import pdfLibraryImg from '@/assets/pdf-library.png'
+
 export default function Home() {
   return (
     <>
       <main className="items-center justify-items-center font-[family-name:var(--font-raleway)]">
         <Image
-          src={"/bsm.png"}
+          src={bsmImg}
           width={500}
           height={200}
           alt="bismillah"
@@ -33,7 +40,7 @@ export default function Home() {
         />
 
         <Image
-          src={"/bsm.png"}
+          src={bsmImg}
           width={270}
           height={108}
           alt="bismillah"
@@ -60,14 +67,14 @@ export default function Home() {
                 See our Classes
               </Button>
               <Image
-                src={"/hero.png"}
+                src={heroImg}
                 width={600}
                 height={600}
                 className="hidden md:block mix-blend-multiply w-auto h-auto absolute bottom-0 right-[-4em] z-0 pointer-events-none"
                 alt="masjid"
               />
               <Image
-                src={"/hero.png"}
+                src={heroImg}
                 width={400}
                 height={400}
                 className="block md:hidden mix-blend-multiply w-auto h-auto absolute bottom-0 right-[-1em] z-0 pointer-events-none"
@@ -83,7 +90,7 @@ export default function Home() {
               type="l"
               link={"/classes/maktab"}
               caption="Limited spaces"
-              image={"/quran.png"}
+              image={quranImg}
             >
               A well-structured program for children aged 7-14, guided by
               experienced teachers to nurture faith and learning.
@@ -97,7 +104,7 @@ export default function Home() {
               type="r"
               link={"/classes/arabicForKids"}
               caption="Limited spaces"
-              image={"/arabic-kids.png"}
+              image={arabicKidsImg}
             >
               Learn the basics of Arabic grammar and syntax to understand the
               Qur’an, hadith, as well as key texts in Islamic jurisprudence for
@@ -109,7 +116,7 @@ export default function Home() {
 
       <ClassesSection bg={true} />
 
-      <section className="w-[98vw] bg-zinc-900">
+      <section className="w-[100%] bg-zinc-900">
         <Container className="text-white max-w-5xl mx-auto">
           <Heading className="relative mx-6 md:mx-0 mt-10 mb-8 text-center">
             Featured Lessons
@@ -128,7 +135,7 @@ export default function Home() {
               href={"https://youtube.com/almasjid"}
               title="Video Lessons"
               external={true}
-              image={"/video-lessons.png"}
+              image={vidLessonsImg.src}
             >
               Explore our collection of Islamic video lessons designed to deepen
               your understanding of the faith.
@@ -137,7 +144,7 @@ export default function Home() {
             <Lesson
               href={"/lessons/pdf-library"}
               title="PDF Library"
-              image={"/pdf-library.png"}
+              image={pdfLibraryImg.src}
             >
               Access our library of Islamic PDFs, featuring a variety of
               resources.
