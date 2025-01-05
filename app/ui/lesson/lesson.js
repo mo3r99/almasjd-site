@@ -3,6 +3,8 @@ import Button from "../button/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
+import placeholder from "@/assets/placeholder.png";
+
 export default function Lesson({
   children,
   title,
@@ -16,7 +18,7 @@ export default function Lesson({
       <div className="w-[100%] h-[200px] mb-4 relative">
         <Image
           alt={title}
-          src={`${image ? image : "/placeholder.png"}`}
+          src={image ? image : placeholder}
           style={{
             clipPath:
               "polygon(50% 0%, 80% 10%, 100% 35%, 100% 100%, 80% 100%, 50% 100%, 20% 100%, 0 100%, 0% 35%, 20% 10%)",
