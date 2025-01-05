@@ -45,6 +45,9 @@ export default function Breadcrumbs({className}) {
               case 'hifz':
                 path = "Qur'an Memorisation"
                 break;
+              case 'four-greatest-muslims':
+                path = "Stories of the Four Greatest Muslims"
+                break;
             }
 
             return (

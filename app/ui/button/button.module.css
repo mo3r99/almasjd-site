@@ -33,6 +33,15 @@
     transform: scale(1.2) translate(25%, 0);
 }
 
+.backwards {
+    transform: scale(1.2) translate(0, 0) rotate(180deg);
+    float: left;
+}
+
+.btn:hover .backwards {
+    transform: scale(1.2) translate(-25%, 0) rotate(180deg);
+}
+
 /* "weborange": "#f0a229",
         "tradewind": "#6bbaa7",
         "dolphin": "#6c648b", */

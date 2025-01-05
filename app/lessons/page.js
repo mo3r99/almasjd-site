@@ -5,6 +5,10 @@ import Breadcrumbs from "../ui/breadcrumb/breadcrumbs";
 import Community from "../ui/community/community";
 import Carousel from "../ui/carouselCard/carousel";
 import CarouselCard from "../ui/carouselCard/carouselCard";
+import EmblaCarousel from "../ui/carousel/EmblaCarousel";
+import CarouselSlides from "../ui/carousel/CarouselSlides";
+import Button from "../ui/button/button";
+import Image from "next/image";
 
 export const metadata = {
   title: "Lessons",
@@ -15,7 +19,7 @@ export default function Lessons() {
     <>
       <Breadcrumbs className="mx-auto my-8" />
 
-      <Carousel home={false}>
+      {/* <Carousel home={false}>
         <CarouselCard
           clip={true}
           title={"Stories of the Four Greatest Muslims"}
@@ -47,7 +51,48 @@ export default function Lessons() {
           Explore our collection of Islamic video lessons designed to deepen
           your understanding of the faith.
         </CarouselCard>
-      </Carousel>
+      </Carousel> */}
+
+      <EmblaCarousel options={{ loop: true }} className={"md:pt-0"}>
+        <CarouselSlides key={1}>
+          <CarouselCard
+            clip={true}
+            title={"Stories of the Four Greatest Muslims"}
+            type="r"
+            link={"/lessons/four-greatest-muslims"}
+            image={"/placeholder.png"}
+          >
+            The sacrifices they made and why the Muslim ummah has held them in
+            the highest regard for over 14 centuries
+          </CarouselCard>
+        </CarouselSlides>
+
+        <CarouselSlides key={2}>
+          <CarouselCard
+            clip={true}
+            title={"Video Lessons"}
+            type="l"
+            link={"https://youtube.com/almasjid"}
+            image={"/video-lessons.png"}
+          >
+            Explore our collection of Islamic video lessons designed to deepen
+            your understanding of the faith.
+          </CarouselCard>
+        </CarouselSlides>
+
+        <CarouselSlides key={3}>
+          <CarouselCard
+            clip={true}
+            title={"PDF Library"}
+            type="l"
+            link={"/lessons/pdf-library"}
+            image={"/pdf-library.png"}
+          >
+            Explore our collection of Islamic video lessons designed to deepen
+            your understanding of the faith.
+          </CarouselCard>
+        </CarouselSlides>
+      </EmblaCarousel>
 
       {/* <span className="w-[80vw] h-[1px] max-w-5xl bg-slate-300 mx-auto my-4"></span> */}
 
