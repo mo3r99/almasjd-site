@@ -4,7 +4,6 @@ import Heading from "../../ui/heading/heading";
 import Image from "next/image";
 import { Input } from "../../../components/ui/input";
 import Button from "../button/button";
-import { useState } from "react";
 
 export default function Community({ children }) {
   return (
@@ -103,7 +102,6 @@ export default function Community({ children }) {
           type="text/javascript"
           src="//s3.amazonaws.com/downloads.mailchimp.com/js/mc-validate.js"
         ></script>
-        <script type="text/javascript" src="./mailchimp.js"></script>
       </div>
     </section>
   );

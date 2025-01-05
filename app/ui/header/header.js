@@ -24,6 +24,7 @@ export default function Header() {
           width={66}
           height={73}
           alt={"Almasjid logo"}
+          priority
         />
         <Image
           className="pb-5 pointer-events-none block md:hidden w-auto h-auto"
@@ -31,6 +32,7 @@ export default function Header() {
           width={60}
           height={66.07899255867201}
           alt={"Almasjid logo"}
+          priority
         />
       </Link>
       <div>
@@ -51,7 +53,7 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 className={`px-3 group transition-all duration-250 hover:text-weborange hover:font-bold ease-in-out ${
-                  pathname == link.href
+                  pathname.startsWith( link.href )
                     ? "text-teal-600 font-bold"
                     : "text-black"
                 }`}

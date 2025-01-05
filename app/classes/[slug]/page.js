@@ -48,7 +48,6 @@ export default async function ClassPage({ params }) {
       {classes[whichClass].sections.map((item, index) => {
         const btnColour = isDark(item.background) ? "orange" : "blue";
         const font = isDark(item.background) ? "white" : "black";
-        console.log(font, item.background);
         return (
           <section
             key={index}

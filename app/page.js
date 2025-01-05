@@ -36,7 +36,8 @@ export default function Home() {
           width={500}
           height={200}
           alt="bismillah"
-          className="hidden md:block mix-blend-multiply pointer-events-none pt-5 mx-auto"
+          className="hidden w-auto h-auto md:block mix-blend-multiply pointer-events-none pt-5 mx-auto"
+          priority
         />
 
         <Image
@@ -44,7 +45,8 @@ export default function Home() {
           width={270}
           height={108}
           alt="bismillah"
-          className="block md:hidden mix-blend-multiply pointer-events-none pt-5 mx-auto"
+          className="block w-auto h-auto md:hidden mix-blend-multiply pointer-events-none pt-5 mx-auto"
+          priority
         />
         <EmblaCarousel options={OPTIONS} className={'md:pt-0'}>
           <CarouselSlides key={1}>

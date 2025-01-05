@@ -26,7 +26,7 @@ export default function ParticlesComponent() {
   }, []);
 
   const particlesLoaded = (container) => {
-    console.log(container);
+    return;
   };
 
   const options = useMemo(
