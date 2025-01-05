@@ -3,6 +3,8 @@ import Link from "next/link";
 import styles from "./footer.module.css";
 
 export default function Footer() {
+  const currentYear =  new Date().getFullYear();
+
   return (
     <footer
       className={`${styles.footer} flex-grow-1 px-[10vw] w-[100vw] p-5 text-white grid grid-cols-1 md:grid-cols-5`}
@@ -29,7 +31,7 @@ export default function Footer() {
         </div>
         <div className="font-[family-name:var(--font-montserrat)] pb-4">
           <p className="pb-2">
-            © Copyright AlMasjid 2015-2024. All rights reserved.
+            © Copyright AlMasjid 2015-{currentYear}. All rights reserved.
           </p>
           <p>Registered Charity <Link target='_blank' className="text-cyan-100 hover:text-cyan-300 transition-all ease-in-out duration-300 hover:underline" href={'https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC052744'}>SC052744</Link></p>
         </div>

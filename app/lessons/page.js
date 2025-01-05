@@ -52,6 +52,8 @@ export default function Lessons() {
           your understanding of the faith.
         </CarouselCard>
       </Carousel> */}
+            <main className="items-center justify-items-center font-[family-name:var(--font-raleway)]">
+
 
       <EmblaCarousel options={{ loop: true }} className={"md:pt-0"}>
         <CarouselSlides key={1}>
@@ -93,6 +95,7 @@ export default function Lessons() {
           </CarouselCard>
         </CarouselSlides>
       </EmblaCarousel>
+      </main>
 
       {/* <span className="w-[80vw] h-[1px] max-w-5xl bg-slate-300 mx-auto my-4"></span> */}
 
