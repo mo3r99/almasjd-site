@@ -1,7 +1,6 @@
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 import Button from "@/app/ui/button/button";
 import Heading from "@/app/ui/heading/heading";
-import next from "next";
 
 export default async function LessonPage({ params }) {
   const slug = await params.slug;

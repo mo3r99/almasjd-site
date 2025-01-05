@@ -1,9 +1,5 @@
-import Container from "@/app/ui/container/container";
 import Heading from "@/app/ui/heading/heading";
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
-import Image from "next/image";
-import Button from "@/app/ui/button/button";
-import Link from "next/link";
 import YTLesson from "./YTLesson";
 import Community from "@/app/ui/community/community";
 
