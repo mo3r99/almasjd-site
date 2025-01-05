@@ -2,6 +2,9 @@ import Heading from "../heading/heading";
 import ClassComponent from "../classes/classComponent";
 import styles from "./services.module.css";
 
+import s1Img from '@/assets/s1.png'
+import s2Img from '@/assets/s2.png'
+
 export default function ServicesSection({ bg, ...props }) {
   return (
     <section
@@ -16,7 +19,7 @@ export default function ServicesSection({ bg, ...props }) {
       <div className="flex justify-center flex-wrap">
         <ClassComponent
           className="mx-4"
-          backgroundImage={"/s1.png"}
+          backgroundImage={s1Img.src}
           href={"/services/careers"}
           title={"Careers Advice"}
         >
@@ -26,7 +29,7 @@ export default function ServicesSection({ bg, ...props }) {
 
         <ClassComponent
           className="mx-4"
-          backgroundImage={"/s2.png"}
+          backgroundImage={s2Img.src}
           href={"/services/remidners"}
           title={"Daily Reminders"}
         >

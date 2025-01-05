@@ -21,7 +21,7 @@ export default function Lesson({
             clipPath:
               "polygon(50% 0%, 80% 10%, 100% 35%, 100% 100%, 80% 100%, 50% 100%, 20% 100%, 0 100%, 0% 35%, 20% 10%)",
           }}
-          layout={"fill"}
+          fill
           //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
         />
       </div>

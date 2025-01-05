@@ -25,8 +25,8 @@ export default function ClassComponent({
         <Image
           src={backgroundImage}
           alt={title}
-          layout={"fill"}
-          //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          fill
+          sizes="300px"
           className={styles.image}
           style={{ pointerEvents: "none" }}
         />
