@@ -1,0 +1,85 @@
+/* https://codepen.io/lricci58/pen/YPKqEqe */
+
+.ghostload {
+  position: relative;
+  display: inline-block;
+  overflow: hidden;
+  color: transparent !important;
+  background-color: unset !important;
+  border: none !important;
+  border-radius: inherit;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.ghostload::before {
+  --_color: #f0f4ff80;
+  --_speed: 1.5s;
+
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: -webkit-gradient(
+    linear,
+    left top,
+    right top,
+    from(transparent),
+    color-stop(50%, var(--_color)),
+    to(transparent)
+  );
+  background: -o-linear-gradient(
+    left,
+    transparent 0%,
+    var(--_color) 50%,
+    transparent 100%
+  );
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--_color) 50%,
+    transparent 100%
+  );
+  background-size: 200% 100%;
+  -webkit-animation: ghostload-animation var(--_speed) infinite;
+  animation: ghostload-animation var(--_speed) infinite;
+}
+
+.ghostload > * {
+  opacity: 0;
+  visibility: hidden;
+}
+
+@-webkit-keyframes ghostload-animation {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+@keyframes ghostload-animation {
+  0% {
+    background-position: 100% 0;
+  }
+
+  100% {
+    background-position: -100% 0;
+  }
+}
+
+.ghostload::-moz-selection {
+  background: transparent;
+  color: transparent;
+}
+
+.ghostload::selection {
+  background: transparent;
+  color: transparent;
+}

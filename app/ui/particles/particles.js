@@ -220,7 +220,7 @@ export default function ParticlesComponent() {
           },
         },
         color: {
-          value: "#f0a229",
+          value: "#FFFFFF",
           animation: {
             h: {
               count: 0,
@@ -332,7 +332,7 @@ export default function ParticlesComponent() {
             mode: "delete",
             value: 0,
           },
-          value: 30,
+          value: 100,
         },
         opacity: {
           value: {
@@ -550,11 +550,11 @@ export default function ParticlesComponent() {
 
   if (init) {
     return (
-        <Particles
-          id="tsparticles"
-          particlesLoaded={particlesLoaded}
-          options={options}
-        />
+      <Particles
+        id="tsparticles"
+        particlesLoaded={particlesLoaded}
+        options={options}
+      />
     );
   }
 

@@ -33,6 +33,11 @@
     margin: 0.1em 0 0 1.5em;
 }
 
+.markdown blockquote {
+    margin-top: 2em;
+    font-size: small;;
+}
+
 table {
     font-family: 'Montserrat', sans-serif;
     text-align: left;

@@ -98,7 +98,7 @@ This program is open to both boys and girls (with girls taught by female teacher
 |Ādāb|Etiquettes of eating, drinking, sleeping, waking up, and using the bathroom.|Etiquettes of greeting, entering a house, speaking, sneezing and yawning.|Etiquettes of travelling, studying, Qur'an, walking, and the Masjid.|Etiquettes of Du'a, dressing, guests, sitting in a gathering, and Istinja'.|Etiquettes of ghusl, social interaction, writing, siwak, and visiting the sick.|Etiquettes of moderation in expenditure, importance of women in society, Adhan, Eidayn, Jumu'ah, and personal hygiene.|The 5 branches of Mu'āsharah; social manners; taking oaths; answering questions; using a mobile phone and the internet; walking with elders; beginning from the right; informing dependents of whereabouts; interactions with non-Muslims; condolences.|Etiquettes of debate and discussions; Nikah, transactions, buying and selling, as well as shopping|
 
 
-The curriculum is continuously evolving and being refined, and every effort has been made to have the most up-to-date information available. `,
+> The curriculum is continuously evolving and being refined, and every effort has been made to have the most up-to-date information available. `,
       },
       {
         background: "#333333",
@@ -147,7 +147,7 @@ This program is open to both young men and women (with sisters taught by female 
       {
         background: "#03736b",
         markdown: `# Curriculum
-The initial years of the course focus on building groundwork in Arabic, accessing key texts in the Ḥanafī school of thought, and learning to translate the Qur’an. Advanced years prepare scholars to provide general opinions across all Sunnī schools of thought, learning Ḥadith, Tafseer, and other key Islamic sciences.
+The first year of the course focus on building groundwork in Arabic, developing an understanding of Islamic studies, and learning to translate the Qur’an. The second year prepares learners to access key texts in Islamic jurisprudence, as well as translating the Qur'an using their skills (and the guidance of a teacher).
 
 ## Course Structure
 This course is split over two years:
@@ -164,7 +164,7 @@ By the end of the course, students will have a solid foundation in Arabic, enabl
 ###
 Entry at any point beyond year 1 is subject to an eligibility assessment.
 
-*The curriculum is continuously evolving and being refined, and every effort has been made to have the most up-to-date information available.*`,
+> The curriculum is continuously evolving and being refined, and every effort has been made to have the most up-to-date information available.`,
       },
       {
         background: "linear-gradient(0deg, #ffc161, #ffe4b9)",

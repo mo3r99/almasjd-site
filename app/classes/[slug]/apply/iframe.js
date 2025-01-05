@@ -1,6 +1,21 @@
+'use client'
+
+import { useState, useEffect } from "react";
+import './ghostload.css'
+
 export default function IFrame({ src }) {
+    const [ghostload, setGhostload] = useState(true);
+
+    // useEffect(() => {
+    //     setTimeout(() => {
+    //         setGhostload(false);
+    //     }, 2000);
+    // }
+    // , []);
+
   return (
     <iframe
+    className={ghostload ? "ghostload" : ""}
       width="640px"
       height="480px"
       src={src}
