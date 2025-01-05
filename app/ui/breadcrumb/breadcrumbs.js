@@ -10,6 +10,7 @@ import {
   BreadcrumbSeparator,
 } from "../../../components/ui/breadcrumb";
 import path from "path";
+import { cn } from "@/lib/utils";
 
 export default function Breadcrumbs({className}) {
   const paths = usePathname();
@@ -23,7 +24,7 @@ export default function Breadcrumbs({className}) {
   }
 
   return (
-      <Breadcrumb className={className}>
+      <Breadcrumb className={cn(className, 'max-w-[80vw]')}>
         <BreadcrumbList>
           <BreadcrumbItem>
             <BreadcrumbLink href="/">Home</BreadcrumbLink>
