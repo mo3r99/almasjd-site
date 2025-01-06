@@ -10,6 +10,7 @@ import Button from "@/app/ui/button/button";
 import "./page.css";
 import Image from "next/image";
 import { url } from "inspector";
+import { notFound } from "next/navigation";
 
 function isDark(color) {
   if (!color) {
@@ -25,6 +26,10 @@ function isDark(color) {
 
 export default async function ClassPage({ params }) {
   const whichClass = await params.slug;
+
+  if (!classes[whichClass]) {
+    notFound();
+  }
 
   return (
     <>
