@@ -41,7 +41,7 @@ The curriculum is continuously evolving and being refined, and every effort has 
       },
       {
         background: "linear-gradient(0deg, #ffc161, #ffe4b9)",
-        markdown: `# Unique Oppurtunities for Graduates
+        markdown: `# Unique Opportunities for Graduates
  Gain shahādah (certification) and ijāza (authorisation) in multiple Islamic disciplines and classical texts from qualified Muslim scholars and academics, and develop the skills to become significant contributors in preserving and upholding Islamic tradition.`,
       },
       {
@@ -166,7 +166,7 @@ Entry at any point beyond year 1 is subject to an eligibility assessment.
       },
       {
         background: "linear-gradient(0deg, #ffc161, #ffe4b9)",
-        markdown: `# Unique Oppurtunities for Graduates
+        markdown: `# Unique Opportunities for Graduates
 Develop the skills necessary to allow Islam to have a pivotal role in all aspects of life, with a good understanding of halal and haram.
 Have a solid foundation on which to continue studying more advanced Islamic concepts at Islamic institutions internationally.`,
       },

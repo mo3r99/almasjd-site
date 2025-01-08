@@ -12,7 +12,7 @@ export default function MobileNav({links}) {
   return (
     <>
       <div
-        className={`${styles.menuToggle} md:hidden absolute left-10 top-10 z-20`}
+        className={`${styles.menuToggle} md:hidden absolute left-10 top-10 z-50`}
       >
         <input
           type="checkbox"
@@ -31,7 +31,7 @@ export default function MobileNav({links}) {
       <div
         className={`${styles.mobNav} ${
           mobNav ? styles.mobNavOpen : styles.mobNavClosed
-        } fixed top-0 left-0 w-[100vw] flex-col items-center h-[100vh] bg-gray-700 z-10 justify-center text-white flex md:hidden`}
+        } fixed top-0 left-0 w-[100vw] z-40 flex-col items-center h-[100vh] bg-gray-700 justify-center text-white flex md:hidden`}
       >
         <Image
           className="pb-5 pointer-events-none block md:hidden w-auto h-auto"

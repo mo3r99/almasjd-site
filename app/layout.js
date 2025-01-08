@@ -7,6 +7,8 @@ import ParticlesComponent from "./ui/particles/particles";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import BackButton from "./ui/backButton/BackButton";
+import Container from "./ui/container/container";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -43,6 +45,7 @@ export default function RootLayout({ children }) {
         <ParticlesComponent />
 
         <Header />
+ 
         {children}
         <Footer />
       </body>
