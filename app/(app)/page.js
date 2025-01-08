@@ -1,17 +1,15 @@
-import { Metadata } from "next";
-
-import LiveStream from "./ui/liveStream/liveStream";
-import EmblaCarousel from "./ui/carousel/EmblaCarousel";
-import CarouselCard from "./ui/carouselCard/carouselCard";
-import CarouselSlides from "./ui/carousel/CarouselSlides";
+import LiveStream from "@/app/ui/liveStream/liveStream";
+import EmblaCarousel from "@/app/ui/carousel/EmblaCarousel";
+import CarouselCard from "@/app/ui/carouselCard/carouselCard";
+import CarouselSlides from "@/app/ui/carousel/CarouselSlides";
 import Image from "next/image";
-import Community from "./ui/community/community";
-import ClassesSection from "./ui/classes/classes";
-import ServicesSection from "./ui/services/services";
-import Heading from "./ui/heading/heading";
-import Lesson from "./ui/lesson/lesson";
-import Container from "./ui/container/container";
-import Button from "./ui/button/button";
+import Community from "@/app/ui/community/community";
+import ClassesSection from "@/app/ui/classes/classes";
+import ServicesSection from "@/app/ui/services/services";
+import Heading from "@/app/ui/heading/heading";
+import Lesson from "@/app/ui/lesson/lesson";
+import Container from "@/app/ui/container/container";
+import Button from "@/app/ui/button/button";
 
 export const metadata = {
   title: "AlMasjid - Empowering Faith, Building Community, Inspiring Harmony",

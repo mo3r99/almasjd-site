@@ -1,14 +1,12 @@
 import { Raleway, Montserrat } from "next/font/google";
-import "./globals.css";
-import Header from "./ui/header/header";
-import Footer from "./ui/footer/footer";
+import '@/app/globals.css'
+import Header from "../ui/header/header";
+import Footer from "../ui/footer/footer";
 import Head from "next/head";
-import ParticlesComponent from "./ui/particles/particles";
+import ParticlesComponent from "../ui/particles/particles";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-import BackButton from "./ui/backButton/BackButton";
-import Container from "./ui/container/container";
 
 const raleway = Raleway({
   variable: "--font-raleway",

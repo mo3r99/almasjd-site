@@ -1,4 +1,7 @@
 'use server'
+
+import 'server-only'
+
 import formatDate from "@/app/lib/formatDate";
 
 import MailerLite from '@mailerlite/mailerlite-nodejs';

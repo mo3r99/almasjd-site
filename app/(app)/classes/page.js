@@ -1,8 +1,8 @@
-import ClassesSection from "../ui/classes/classes";
-import Community from "../ui/community/community";
-import Breadcrumbs from "../ui/breadcrumb/breadcrumbs";
-import Lesson from "../ui/lesson/lesson";
-import Heading from "../ui/heading/heading";
+import ClassesSection from "../../ui/classes/classes";
+import Community from "../../ui/community/community";
+import Breadcrumbs from "../../ui/breadcrumb/breadcrumbs";
+import Lesson from "../../ui/lesson/lesson";
+import Heading from "../../ui/heading/heading";
 
 import tajweedSeriesImg from '@/assets/tajweed-series.jpg';
 

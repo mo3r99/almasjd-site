@@ -1,4 +1,4 @@
-import IFrame from "../classes/[slug]/apply/iframe";
+import IFrame from "../(app)/classes/[slug]/apply/iframe";
 import Breadcrumbs from "../ui/breadcrumb/breadcrumbs";
 import Heading from "../ui/heading/heading";
 
