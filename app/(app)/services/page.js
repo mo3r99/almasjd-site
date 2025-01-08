@@ -1,6 +1,6 @@
-import Breadcrumbs from "../ui/breadcrumb/breadcrumbs";
-import ServicesSection from "../ui/services/services";
-import Community from "../ui/community/community";
+import Breadcrumbs from "../../ui/breadcrumb/breadcrumbs";
+import ServicesSection from "../../ui/services/services";
+import Community from "../../ui/community/community";
 
 export const metadata = {
   title: 'Services',

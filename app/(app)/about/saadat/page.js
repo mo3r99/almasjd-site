@@ -1,4 +1,4 @@
-import Container from "../../ui/container/container";
+import Container from "../../../ui/container/container";
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 
 export const metadata = {

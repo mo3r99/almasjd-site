@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Heading from "./ui/heading/heading";
+import Heading from "../ui/heading/heading";
 
 export const metadata = {
     title: 'Page not Found',

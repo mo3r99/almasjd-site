@@ -1,5 +1,5 @@
-import Breadcrumbs from "../ui/breadcrumb/breadcrumbs";
-import Container from "../ui/container/container";
+import Breadcrumbs from "../../ui/breadcrumb/breadcrumbs";
+import Container from "../../ui/container/container";
 
 export const metadata = {
   title: "About",

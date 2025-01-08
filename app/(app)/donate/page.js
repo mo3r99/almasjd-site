@@ -1,5 +1,4 @@
-import Image from "next/image";
-import Heading from "../ui/heading/heading";
+import Heading from "../../ui/heading/heading";
 
 export const metadata = {
   title: 'Donate',
