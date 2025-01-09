@@ -1,12 +1,16 @@
-'use client'
-
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { signIn } from "next-auth/react";
+import { signIn } from "@/app/auth";
 
-export function LoginForm({ className, ...props }) {
+export async function LoginForm({ className, ...props }) {
+
+  const submitHandler = async () => {
+    "use server"
+    await signIn();
+  }
+
   return (
-    <form className={cn("flex flex-col gap-6", className)} {...props}>
+    <form className={cn("flex flex-col gap-6", className)} action={submitHandler} {...props}>
       <div className="flex flex-col items-center gap-2 text-center">
         <h1 className="text-2xl font-bold">Login to your account</h1>
       </div>
@@ -16,7 +20,11 @@ export function LoginForm({ className, ...props }) {
             Continue with your Microsoft account
           </span>
         </div>
-        <Button variant="outline" className="w-full" type="submit" onClick={() => signIn()}>
+        <Button
+          variant="outline"
+          className="w-full"
+          type="submit"
+        >
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="1024"

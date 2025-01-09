@@ -1,7 +1,7 @@
 import { auth } from "@/app/auth";
 import { redirect } from "next/navigation";
 
-export default async function LayoutDashboard() {
+export default async function Services() {
   const session = await auth();
   if (session) {console.log(session)}
 
@@ -9,5 +9,5 @@ export default async function LayoutDashboard() {
     redirect('/auth');
   }
 
-  return <div>hello</div>;
+  return <div>services</div>;
 }

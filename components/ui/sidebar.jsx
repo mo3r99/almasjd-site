@@ -2,7 +2,7 @@
 import * as React from "react"
 import { Slot } from "@radix-ui/react-slot"
 import { cva } from "class-variance-authority";
-import { PanelLeft } from "lucide-react"
+import { ChevronLeft, Menu } from "lucide-react"
 
 import { useIsMobile } from "@/hooks/use-mobile"
 import { cn } from "@/lib/utils"
@@ -218,7 +218,7 @@ const Sidebar = React.forwardRef((
 Sidebar.displayName = "Sidebar"
 
 const SidebarTrigger = React.forwardRef(({ className, onClick, ...props }, ref) => {
-  const { toggleSidebar } = useSidebar()
+  const { open, toggleSidebar } = useSidebar()
 
   return (
     (<Button
@@ -232,8 +232,9 @@ const SidebarTrigger = React.forwardRef(({ className, onClick, ...props }, ref) 
         toggleSidebar()
       }}
       {...props}>
-      <PanelLeft />
-      <span className="sr-only">Toggle Sidebar</span>
+      <ChevronLeft className="transition duration-175 ease-in-out hidden md:block" style={{transform: open ? 'rotate(0deg)' : 'rotate(180deg)'}}/>
+      <Menu className="block md:hidden scale-150 relative left-2 " />
+      <span className={`sr-only`}>Toggle Sidebar</span>
     </Button>)
   );
 })

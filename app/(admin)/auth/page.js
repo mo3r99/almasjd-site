@@ -12,13 +12,14 @@ export default async function LoginPage() {
   const session = await auth()
 
   if (session) {
-    if (session.user.email === 'm.rauf@almasjid.co.uk') {
+    console.log(session)
+    if (session) {
       redirect('/cloud')
     }
   }
 
   return (
-    <div className="grid min-h-svh lg:grid-cols-2">
+    <div className="grid min-h-svh lg:grid-cols-2 bg-white">
       <div className="flex flex-col gap-4 p-6 md:p-10">
         <div className="flex h-9 justify-center gap-2 md:justify-start">
           <Link href="/" className="flex h-9 items-center gap-2 font-medium">

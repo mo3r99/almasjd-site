@@ -10,7 +10,7 @@ export default function Layout({ children }) {
         <SidebarProvider>
           <AppSidebar />
           <main>
-            <SidebarTrigger />
+            <SidebarTrigger className="block md:hidden"/>
             {children}
           </main>
         </SidebarProvider>
