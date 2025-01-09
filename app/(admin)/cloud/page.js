@@ -5,9 +5,9 @@ export default async function LayoutDashboard() {
   const session = await auth();
 
   if (!session) {
-    redirect('/auth');
+    return redirect('/auth');
   } else {
-    redirect('/cloud/dashboard');
+    return redirect('/cloud/dashboard');
   }
 
   return (null)
