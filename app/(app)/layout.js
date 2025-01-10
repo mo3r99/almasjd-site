@@ -7,6 +7,7 @@ import ParticlesComponent from "../ui/particles/particles";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
+import Script from "next/script";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -32,6 +33,8 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <Head>
         <meta name="apple-mobile-web-app-title" content="Almasjid" />
+        <Script data-goatcounter="https://almasjid.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js" />
       </Head>
 
       <SpeedInsights />
