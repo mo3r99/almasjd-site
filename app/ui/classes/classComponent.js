@@ -19,10 +19,10 @@ export default function ClassComponent({
 }) {
   return (
     <motion.div
-      initial={{opacity: 0, y: -80}}
+      initial={{opacity: 0, y: 80}}
       whileInView={{opacity: 1, y: 0}}
       viewport={{ once: true }}
-      transition={{duration: 0.4}}
+      transition={{duration: 0.4, delay: 0.4}}
       className={`${styles.container} ${className} w-[300px] h-[400px] mb-6`}
     >
       <div

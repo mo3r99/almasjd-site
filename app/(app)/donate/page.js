@@ -48,7 +48,7 @@ const almasjid = (
       to our cause, you are taking part in this noble mission and are investing
       in Sadaqah Jariyah for yourself.
     </p>
-    <Button colour={"orange"} href={"#"} className={"max-w-72 mt-4 justify-center md:float-right"}>
+    <Button colour={"orange"} href={"/support-almasjid"} className={"max-w-72 mt-4 justify-center md:float-right"}>
       Support Al Masjid
     </Button>
     </div>
@@ -56,7 +56,7 @@ const almasjid = (
 );
 
 const sadqah = (
-  <section className="flex flex-col md:flex-row-reverse gap-6 mt-4 max-w-5xl text-center md:text-left bg-[rgb(249,243,230)] p-8 md:p-10 md:rounded-3xl">
+  <section className="md:mb-8 flex flex-col md:flex-row-reverse gap-6 md:mt-4 max-w-5xl text-center md:text-left bg-[rgb(249,243,230)] p-8 md:p-10 md:rounded-3xl">
     <Image
         src={charityHandImg}
         width={350}
@@ -86,7 +86,7 @@ const sadqah = (
       The Prophet ﷺ said: “The believer’s shade on the Day of Resurrection will
       be his Sadaqah.” (Al-Tirmidhi).
     </p>
-    <Button colour={"blue"} href={"#"} className={"max-w-72 mt-4 justify-center md:float-right md:justify-start"}>
+    <Button colour={"blue"} href={""} className={"max-w-72 mt-4 justify-center md:float-right md:justify-start"}>
       Give Sadaqah
     </Button>
     </div>
@@ -96,8 +96,9 @@ const sadqah = (
 export default function Donate() {
   return (
     <>
+    <div className="block md:hidden bg-[rgb(230,249,244)] w-screen h-[300px] absolute top-0 left-0 z-0"></div>
       <main className="md:max-w-[80vw] mx-auto">
-        <Breadcrumbs className={'mx-auto mt-4 w-[130px]'}/>
+        <Breadcrumbs className={'mx-auto mt-4 w-[130px] z-10 relative'}/>
         {/* <Tabs defaultValue="almasjid" className="mx-auto text-center mt-8">
           <TabsList className="font-[family-name:var(--font-montserrat)]">
             <TabsTrigger value="almasjid">Support Al Masjid</TabsTrigger>
