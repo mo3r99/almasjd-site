@@ -2,7 +2,7 @@ import Heading from '@/app/ui/heading/heading'
 
 export default function LiveStream() {
   return (
-    <section className="flex flex-col justify-center items-center p-5 bg-[#07100f] text-white">
+    <section id='livestream' className="flex flex-col justify-center items-center p-5 bg-[#07100f] text-white">
       <Heading className="pt-8 pb-2">Live Stream</Heading>
       <p className="font-[family-name:var(--font-montserrat)] pb-8">
         Join us when we go live!

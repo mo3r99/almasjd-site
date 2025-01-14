@@ -10,6 +10,8 @@ import useEmblaCarousel from "embla-carousel-react";
 import CarouselSlides from "./CarouselSlides";
 import { cn } from "@/lib/utils";
 
+import { motion } from "motion/react";
+
 const EmblaCarousel = ({ slides, options, children, className, ...props }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel(
     options,
@@ -46,7 +48,9 @@ const EmblaCarousel = ({ slides, options, children, className, ...props }) => {
   } = usePrevNextButtons(emblaApi, onNavButtonClick);
 
   return (
-    <section
+    <motion.section
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
       className={cn("embla md:px-8 md:pb-8 p-2 relative", className)}
       {...props}
     >
@@ -72,7 +76,7 @@ const EmblaCarousel = ({ slides, options, children, className, ...props }) => {
           ))}
         </div>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -1,3 +1,5 @@
+'use client'
+
 export default function CarouselSlides({ children, ...props }) {
   return (
     <div className="embla__slide" {...props}>

@@ -4,6 +4,8 @@ import Image from "next/image";
 import styles from "./classComponent.module.css";
 import Button from "../button/button";
 
+import { motion } from "motion/react";
+
 export default function ClassComponent({
   backgroundImage,
   href,
@@ -16,7 +18,11 @@ export default function ClassComponent({
   ...props
 }) {
   return (
-    <div
+    <motion.div
+      initial={{opacity: 0, y: -80}}
+      whileInView={{opacity: 1, y: 0}}
+      viewport={{ once: true }}
+      transition={{duration: 0.4}}
       className={`${styles.container} ${className} w-[300px] h-[400px] mb-6`}
     >
       <div
@@ -62,6 +68,6 @@ export default function ClassComponent({
           Learn More
         </Button>
       </div>
-    </div>
+    </motion.div>
   );
 }

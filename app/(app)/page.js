@@ -18,69 +18,39 @@ export const metadata = {
 
 const OPTIONS = { loop: true };
 
-import bsmImg from '@/assets/bsm.png'
-import heroImg from '@/assets/hero.png'
-import quranImg from '@/assets/quran.png'
-import arabicKidsImg from '@/assets/arabic-kids.png'
-import vidLessonsImg from '@/assets/video-lessons.png'
-import pdfLibraryImg from '@/assets/pdf-library.png'
+import bsmImg from "@/assets/bsm.png";
+import quranImg from "@/assets/quran.png";
+import arabicKidsImg from "@/assets/arabic-kids.png";
+import vidLessonsImg from "@/assets/video-lessons.png";
+import pdfLibraryImg from "@/assets/pdf-library.png";
+
+import Slide1 from "@/app/ui/carousel/slides/Slide1";
+
 
 export default function Home() {
   return (
     <>
       <main className="items-center justify-items-center font-[family-name:var(--font-raleway)]">
-        <Image
-          src={bsmImg}
-          width={500}
-          height={200}
-          alt="bismillah"
-          className="hidden w-auto h-auto md:block mix-blend-multiply pointer-events-none pt-5 mx-auto"
-          priority
-        />
+          <Image
+            src={bsmImg}
+            width={500}
+            height={200}
+            alt="bismillah"
+            className="hidden w-auto h-auto md:block mix-blend-multiply pointer-events-none pt-5 mx-auto"
+            priority
+          />
 
-        <Image
-          src={bsmImg}
-          width={270}
-          height={108}
-          alt="bismillah"
-          className="block w-auto h-auto md:hidden mix-blend-multiply pointer-events-none pt-5 mx-auto"
-          priority
-        />
-        <EmblaCarousel options={OPTIONS} className={'md:pt-0'}>
+          <Image
+            src={bsmImg}
+            width={270}
+            height={108}
+            alt="bismillah"
+            className="block w-auto h-auto md:hidden mix-blend-multiply pointer-events-none pt-5 mx-auto"
+            priority
+          />
+        <EmblaCarousel options={OPTIONS} className={"md:pt-0"}>
           <CarouselSlides key={1}>
-            <Container className="p-12">
-              <h1 className="font-[family-name:var(--font-raleway)] font-semibold text-5xl md:text-6xl pb-7 max-w-2xl">
-                Welcome to Your Masjid
-              </h1>
-              <p className="font-[family-name:var(--font-montserrat)] max-w-lg">
-                AlMasjid is your online hub for Islamic education, spiritual
-                development and growth, managed by a panel of qualified Imams
-                and experienced scholars. Explore our website to discover
-                something for you.
-              </p>
-              <Button
-                href="/classes"
-                colour="blue"
-                className="mt-4"
-                style={{ zIndex: 1 }}
-              >
-                See our Classes
-              </Button>
-              <Image
-                src={heroImg}
-                width={600}
-                height={600}
-                className="hidden md:block mix-blend-multiply w-auto h-auto absolute bottom-0 right-[-4em] z-0 pointer-events-none"
-                alt="masjid"
-              />
-              <Image
-                src={heroImg}
-                width={400}
-                height={400}
-                className="block md:hidden mix-blend-multiply w-auto h-auto absolute bottom-0 right-[-1em] z-0 pointer-events-none"
-                alt="masjid"
-              />
-            </Container>
+            <Slide1 />
           </CarouselSlides>
 
           <CarouselSlides key={2}>
