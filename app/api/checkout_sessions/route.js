@@ -44,7 +44,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 //   }
 // }
 
-import { NextRequest, NextResponse } from 'next/server';
+import { NextResponse } from 'next/server';
 
 export async function GET(req) {
   try {
