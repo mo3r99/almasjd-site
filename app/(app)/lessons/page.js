@@ -105,7 +105,7 @@ export default function Lessons() {
             </Lesson>
 
             <Lesson
-              href={"/lessons/four-greatest-muslims"}
+              href={"/lessons/tajweed-series"}
               title="Tajweed Series"
               image={tajweedSeriesImg.src}
             >

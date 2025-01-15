@@ -3,7 +3,7 @@ import logo from "@/assets/am-logos/logo.png";
 import image from "@/assets/3.png";
 
 import { LoginForm } from "./login-form";
-import Link from "next/link";
+import { Link } from 'next-view-transitions';
 import { redirect } from "next/navigation";
 
 import { auth } from "@/app/auth";

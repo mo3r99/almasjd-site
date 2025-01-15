@@ -22,6 +22,7 @@ export default function ServicesSection({ bg, ...props }) {
           backgroundImage={s1Img.src}
           href={"/services/careers"}
           title={"Careers Advice"}
+          buttonText={'Coming soon'}
         >
           Regular seminars across Scotland - Please register for your free space
           in our next seminar in your nearest city.

@@ -15,6 +15,7 @@ export default function ClassComponent({
   foundation,
   intermediate,
   className,
+  buttonText,
   ...props
 }) {
   return (
@@ -65,7 +66,7 @@ export default function ClassComponent({
           {children}
         </p>
         <Button href={href} colour="purple">
-          Learn More
+          {!buttonText ? 'Learn More' : buttonText}
         </Button>
       </div>
     </motion.div>

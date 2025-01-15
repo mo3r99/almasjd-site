@@ -16,7 +16,7 @@ import {
   SidebarMenuButton,
   SidebarMenuItem,
 } from "@/components/ui/sidebar";
-import Link from "next/link";
+import { Link } from 'next-view-transitions'
 import { SignOut } from "./sign-out";
 
 import logo from "@/assets/am-logos/logo.png";

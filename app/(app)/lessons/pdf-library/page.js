@@ -1,13 +1,13 @@
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 import Heading from "@/app/ui/heading/heading";
-import Link from "next/link";
+import { Link } from 'next-view-transitions'
 
 export default function PDFLib() {
     return (
         <>
             <Breadcrumbs />
             <Heading>PDF Library</Heading>
-            <Link href={'/lessons/pdf-library/1'}>Go to viewer</Link>
+            <Link href={'/pdf/1'}>Go to viewer</Link>
         </>
     )
 }

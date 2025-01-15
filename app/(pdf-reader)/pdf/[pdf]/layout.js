@@ -1,5 +1,4 @@
 import { ArrowLeft } from "lucide-react";
-import { revalidatePath } from "next/cache";
 
 export default function PDFLayout({ children }) {
   return (
