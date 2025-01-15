@@ -31,7 +31,7 @@ export default function ServicesSection({ bg, ...props }) {
         <ClassComponent
           className="mx-4"
           backgroundImage={s2Img.src}
-          href={"/services/reminders"}
+          href={"https://youtube.com/almasjid"}
           title={"Daily Reminders"}
         >
           Remain connected with your Creator, not only giving you food for

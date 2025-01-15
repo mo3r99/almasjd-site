@@ -1,4 +1,5 @@
 import { ArrowLeft } from "lucide-react";
+import '@/app/globals.css'
 
 export default function PDFLayout({ children }) {
   return (
