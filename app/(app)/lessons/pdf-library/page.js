@@ -4,17 +4,33 @@ import { Link } from "next-view-transitions";
 import Image from "next/image";
 
 import img from "@/assets/3.png";
-import booksImg from '@/assets/books.jpg'
+import booksImg from "@/assets/books.jpg";
+
+import styles from './pdf.module.css'
 
 function Book({ title, href, image, ...props }) {
   return (
-    <div className="w-[250px] h-[312px] smd:w-[200px] smd:h-[250px] bg-blue relative mb-12"> 
+    <div className={`${styles.book} w-[250px] h-[312px] smd:w-[200px] smd:h-[250px] bg-blue relative mb-12 book transition-all duration-200`}>
       <Link href={href}>
-        <Image src={image} className='hidden md:block z-[1]' width={200} height={300} alt={title}/>
-        <Image src={image} className='block md:hidden z-[1]' width={250} height={375} alt={title}/>
+        <Image
+          src={image}
+          className="hidden md:block z-[1]"
+          width={200}
+          height={300}
+          alt={title}
+        />
+        <Image
+          src={image}
+          className="block md:hidden z-[1]"
+          width={250}
+          height={375}
+          alt={title}
+        />
 
         <div className="h-full w-full bg-[rgb(65,132,116)] opacity-55 absolute top-0 right-0 z-[2]" />
-        <h3 className="z-[3] absolute top-[50%] right-[50%] translate-x-[50%] translate-y-[-50%] text-center text-white text-xl font-[family-name:var(--font-montserrat)] font-bold">{title}</h3>
+        <h3 className="z-[3] absolute top-[50%] right-[50%] translate-x-[50%] translate-y-[-50%] text-center text-white text-xl font-[family-name:var(--font-montserrat)] font-bold">
+          {title}
+        </h3>
       </Link>
     </div>
   );
@@ -23,10 +39,16 @@ function Book({ title, href, image, ...props }) {
 export default function PDFLib() {
   return (
     <>
-        <div className="absolute left-0 top-0 w-screen h-[60vh] z-[-1] bg-[rgb(240,162,41,0.5)]">
-            <div className="absolute left-0 top-0 w-screen h-[60vh] bg-gradient-to-t from-[rgba(242,231,212,0.82)] to-[rgb(255,245,231)] backdrop-blur-sm z-0" />
-            <Image src={booksImg} className="brightness-90 z-[-1]" fill sizes="1000px" alt='books background image'/>
-        </div>
+      <div className="absolute left-0 top-0 w-screen min-h-[525px] h-[calc(40vh+244px)] z-[-1] bg-[rgb(240,162,41,0.5)]">
+        <div className="absolute left-0 top-0 w-screen min-h-[525px] h-[calc(40vh+244px)] bg-gradient-to-t from-[rgb(255,255,255)] via-[rgba(242,231,212,0.82)] to-[rgba(255,245,231,0.75)] backdrop-blur-sm z-0" />
+        <Image
+          src={booksImg}
+          className="brightness-90 z-[-1]"
+          fill
+          sizes="1000px"
+          alt="books background image"
+        />
+      </div>
       <section className="h-auto max-w-5xl mx-auto my-4 mb-10 mt-16">
         <Breadcrumbs className="mt-8 mb-4" />
 
@@ -51,12 +73,32 @@ export default function PDFLib() {
 
       <main className="max-w-5xl mx-auto px-8">
         <div className="flex flex-row flex-wrap gap-8 justify-center w-full">
-          <Book href={"/pdf/salat-o-salam-2"} title="Salawāt on the Prophet ﷺ" image={img} />
+          <Book
+            href={"/pdf/salat-o-salam-2"}
+            title="Salawāt on the Prophet ﷺ"
+            image={img}
+          />
           <Book href={"/pdf/superstition"} title="Superstition" image={img} />
-          <Book href={"/pdf/taharah"} title="Taharah - 101 Ahādīth" image={img} />
-          <Book href={"/pdf/The-principles-on-wills-and-estate-distribution"} title="The Principles on Wills and Estate Distribution" image={img} />
-          <Book href={"/pdf/thefinaljourney"} title="The Final Journey" image={img} />
-          <Book href={"/pdf/1"} title="Between the God of the Prophets & God of the Philosophers" image={img} />
+          <Book
+            href={"/pdf/taharah"}
+            title="Taharah - 101 Ahādīth"
+            image={img}
+          />
+          <Book
+            href={"/pdf/The-principles-on-wills-and-estate-distribution"}
+            title="The Principles on Wills and Estate Distribution"
+            image={img}
+          />
+          <Book
+            href={"/pdf/thefinaljourney"}
+            title="The Final Journey"
+            image={img}
+          />
+          <Book
+            href={"/pdf/1"}
+            title="Between the God of the Prophets & God of the Philosophers"
+            image={img}
+          />
         </div>
       </main>
     </>
