@@ -1,6 +1,4 @@
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
-import Caption from "../../../ui/caption/caption";
-import Container from "../../../ui/container/container";
 import Heading from "../../../ui/heading/heading";
 import { NotebookPen } from "lucide-react";
 import Community from "@/app/ui/community/community";

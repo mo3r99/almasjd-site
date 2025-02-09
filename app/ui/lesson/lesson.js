@@ -3,7 +3,7 @@ import Button from "../button/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-import placeholder from "@/assets/placeholder.png";
+const placeholder = "https://almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png";
 
 export default function Lesson({
   children,

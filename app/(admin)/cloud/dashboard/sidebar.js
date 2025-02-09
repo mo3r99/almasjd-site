@@ -19,7 +19,6 @@ import {
 import { Link } from 'next-view-transitions'
 import { SignOut } from "./sign-out";
 
-import logo from "@/assets/am-logos/logo.png";
 import { auth } from "@/app/auth";
 
 // Menu items.
@@ -60,7 +59,7 @@ export async function AppSidebar() {
       <SidebarHeader className='relative top-4'>
         <ul>
           <li className="flex gap-2 items-center">
-            <Image src={logo} width={40} height={40} alt="almasjid logo" />
+            <Image src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/logo.png'} width={40} height={40} alt="almasjid logo" />
             <span className='truncate relative top-1'>
               <h2 className="font-semibold text-lg m-0 p-0">
                 Al Masjid Cloud

@@ -3,9 +3,6 @@ import Heading from "@/app/ui/heading/heading";
 import { Link } from "next-view-transitions";
 import Image from "next/image";
 
-import img from "@/assets/3.png";
-import booksImg from "@/assets/books.jpg";
-
 import styles from './pdf.module.css'
 
 function Book({ title, href, image, ...props }) {
@@ -13,14 +10,14 @@ function Book({ title, href, image, ...props }) {
     <div className={`${styles.book} w-[250px] h-[312px] smd:w-[200px] smd:h-[250px] bg-blue relative mb-12 book transition-all duration-200`}>
       <Link href={href}>
         <Image
-          src={image}
+          src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
           className="hidden md:block z-[1]"
           width={200}
           height={300}
           alt={title}
         />
         <Image
-          src={image}
+          src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
           className="block md:hidden z-[1]"
           width={250}
           height={375}
@@ -42,7 +39,7 @@ export default function PDFLib() {
       <div className="absolute left-0 top-0 w-screen min-h-[525px] h-[calc(40vh+244px)] z-[-1] bg-[rgb(240,162,41,0.5)]">
         <div className="absolute left-0 top-0 w-screen min-h-[525px] h-[calc(40vh+244px)] bg-gradient-to-t from-[rgb(255,255,255)] via-[rgba(242,231,212,0.82)] to-[rgba(255,245,231,0.75)] backdrop-blur-sm z-0" />
         <Image
-          src={booksImg}
+          src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/books.jpg'}
           className="brightness-90 z-[-1]"
           fill
           sizes="1000px"
@@ -76,28 +73,28 @@ export default function PDFLib() {
           <Book
             href={"/pdf/salat-o-salam-2"}
             title="Salawāt on the Prophet ﷺ"
-            image={img}
+            image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
           />
-          <Book href={"/pdf/superstition"} title="Superstition" image={img} />
+          <Book href={"/pdf/superstition"} title="Superstition" image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'} />
           <Book
             href={"/pdf/taharah"}
             title="Taharah - 101 Ahādīth"
-            image={img}
+            image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
           />
           <Book
             href={"/pdf/The-principles-on-wills-and-estate-distribution"}
             title="The Principles on Wills and Estate Distribution"
-            image={img}
+            image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
           />
           <Book
             href={"/pdf/thefinaljourney"}
             title="The Final Journey"
-            image={img}
+            image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
           />
           <Book
             href={"/pdf/1"}
             title="Between the God of the Prophets & God of the Philosophers"
-            image={img}
+            image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
           />
         </div>
       </main>

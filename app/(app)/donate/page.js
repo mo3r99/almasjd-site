@@ -6,8 +6,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Flower, Sprout } from "lucide-react";
 import Image from "next/image";
 
-import ottomanImg from "@/assets/ottoman.png";
-import charityHandImg from "@/assets/charity-hand.png";
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 
 export const metadata = {
@@ -17,14 +15,14 @@ export const metadata = {
 const almasjid = (
   <section className="mt-4 max-w-5xl bg-[rgb(230,249,244)] p-10 md:rounded-3xl flex flex-col md:flex-row gap-10 text-center md:text-right">
      <Image
-        src={ottomanImg}
+        src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/ottoman.png'}
         width={350}
         height={200}
         alt={"Support Al Masjid"}
         className="h-auto w-auto mix-blend-multiply hidden md:block"
       />
       <Image
-        src={ottomanImg}
+        src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/ottoman.png'}
         width={200}
         height={150}
         alt={"Support Al Masjid"}
@@ -58,14 +56,14 @@ const almasjid = (
 const sadqah = (
   <section className="md:mb-8 flex flex-col md:flex-row-reverse gap-6 md:mt-4 max-w-5xl text-center md:text-left bg-[rgb(249,243,230)] p-8 md:p-10 md:rounded-3xl">
     <Image
-        src={charityHandImg}
+        src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/charity-hand.png'}
         width={350}
         height={200}
         alt={"Support Al Masjid"}
         className="mix-blend-multiply hidden md:block"
       />
       <Image
-        src={charityHandImg}
+        src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/charity-hand.png'}
         width={200}
         height={200}
         alt={"Support Al Masjid"}

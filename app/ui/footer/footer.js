@@ -2,13 +2,6 @@ import Image from "next/image";
 import { Link } from 'next-view-transitions'
 import styles from "./footer.module.css";
 
-import fbImg from '@/assets/sm-logos/fb.png'
-import xImg from '@/assets/sm-logos/x.png'
-import mailImg from '@/assets/sm-logos/mail.png'
-
-import logoImg from '@/assets/am-logos/white-logo.png'
-import { log } from "console";
-
 export default function Footer() {
   const currentYear =  new Date().getFullYear();
 
@@ -20,14 +13,14 @@ export default function Footer() {
         <div className="flex relative w-[190px] md:w-[270px] mb-4">
           <Image
             className="pointer-events-none hidden md:block w-auto h-auto"
-            src={logoImg}
+            src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/white-logo.png'}
             width={75}
             height={83}
             alt={"Almasjid logo"}
           />
           <Image
             className="pointer-events-none block md:hidden w-auto h-auto"
-            src={logoImg}
+            src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/white-logo.png'}
             width={63}
             height={69}
             alt={"Almasjid logo"}
@@ -87,7 +80,7 @@ export default function Footer() {
           <a target="_blank" href={"https://facebook.com/almasjid.co.uk.official"}>
             <Image
               className="mx-1 w-auto h-auto"
-              src={fbImg}
+              src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/fb.png'}
               width={30}
               height={30}
               alt="facebook"
@@ -96,7 +89,7 @@ export default function Footer() {
           <a target="_blank" href={"https://x.com/AlMasjidOnline"}>
             <Image
               className="mx-1 w-auto h-auto"
-              src={xImg}
+              src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/x.png'}
               width={30}
               height={30}
               alt="Twitter/X"
@@ -105,7 +98,7 @@ export default function Footer() {
           <a target="_blank" href={"mailto:salam@almasjid.co.uk"}>
             <Image
               className="mx-1 w-auto h-auto"
-              src={mailImg}
+              src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/mail.png'}
               width={30}
               height={30}
               alt="E-Mail"

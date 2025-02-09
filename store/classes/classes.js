@@ -1,6 +1,9 @@
 const classes = {
   alimiyyah: {
     title: "Advanced Islamic Sciences",
+    href: '/classes/alimiyyah',
+    advanced: true,
+    blurb: 'ʿĀlimiyyah Programme offering advanced Islamic Theology education for self-driven individuals.',
     description:
       "The online ʿĀlimiyyah Programme, based on the traditional Dars-e-Nizāmi syllabus, is designed comprehensively for graduates, college and university students, and self-driven individuals who wish to pursue an advanced course in Islamic Theology. The programme seeks to empower Muslims around the world in the field of Islamic Scholarship. ",
     sections: [
@@ -94,9 +97,9 @@ This program is open to both boys and girls aged 7-15. Classes are separated by 
 The initial years focus on recognition of the Arabic alphabet, vowels, word formations and short Qur’anic verses along with basic rules of Tajweed, with extensive practice. At the end of this stage the student is expected to be able to recite the 30th Juz’ of the Holy Qur’an fluently. 
 ### 
 The following years reinforce the rules of Tajweed and develop confident recitation. At the end of this stage, students will have completed at least 15 Juz of the Noble Qur’an. They will be asked to memorize the last quarter of the 30th Juz.  In addition to the Qur’anic recitation, students will complete the rules of Tajweed book, from the Safar Learn to Read Series. 
-![](/safar.png)
+![](https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png/safar.png)
 At the same time, children will study the basics of Islam from the An-Nasihah series of books, which are engaging and span across 8 years, specifically designed for the young Muslims of today.
-![](/naseehah.png)
+![](https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png/naseehah.png)
 > The curriculum is continuously evolving and being refined, and every effort has been made to have the most up-to-date information available. `,
       },
       {

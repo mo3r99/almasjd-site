@@ -3,11 +3,6 @@ import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 import YTLesson from "./YTLesson";
 import Community from "@/app/ui/community/community";
 
-import abuBakrImg from '@/assets/abu-bakr.png'
-import umarImg from '@/assets/umar.png'
-import uthmanImg from '@/assets/uthman.png'
-import aliImg from '@/assets/placeholder.png'
-
 export default function FourGreatestMuslimsPage() {
   return (
     <>
@@ -25,10 +20,10 @@ export default function FourGreatestMuslimsPage() {
       </section>
       <section className="bg-[rgb(56,143,122)] p-8">
         <div className="flex flex-wrap justify-center gap-4">
-          <YTLesson title="Session 1: Abu Bakr (RA)" image={abuBakrImg.src} link={'/lessons/four-greatest-muslims/abu-bakr'} />
-          <YTLesson title="Session 2: Umar (RA)" image={umarImg.src} link={'/lessons/four-greatest-muslims/umar'} />
-          <YTLesson title="Session 3: Uthman (RA)" image={uthmanImg.src} link={'/lessons/four-greatest-muslims/uthman'} />
-          <YTLesson title="Session 4: Ali (RA)" image={aliImg.src} link={'/lessons/four-greatest-muslims/ali'} />
+          <YTLesson title="Session 1: Abu Bakr (RA)" image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/abu-bakr.png'} link={'/lessons/four-greatest-muslims/abu-bakr'} />
+          <YTLesson title="Session 2: Umar (RA)" image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/umar.png'} link={'/lessons/four-greatest-muslims/umar'} />
+          <YTLesson title="Session 3: Uthman (RA)" image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/uthman.png'} link={'/lessons/four-greatest-muslims/uthman'} />
+          <YTLesson title="Session 4: Ali (RA)" image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png'} link={'/lessons/four-greatest-muslims/ali'} />
         </div>
       </section>
 

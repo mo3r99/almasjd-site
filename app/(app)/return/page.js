@@ -6,7 +6,7 @@ import Container from "@/app/ui/container/container";
 import Heading from "@/app/ui/heading/heading";
 import Image from "next/image";
 
-import handsImg from "@/assets/charity.png";
+const handsImg = "https://almasjid-site.s3.eu-north-1.amazonaws.com/charity.png";
 
 export default function Return({}) {
   const [status, setStatus] = useState(null);

@@ -9,7 +9,6 @@ import Button from "@/app/ui/button/button";
 
 import "./page.css";
 import Image from "next/image";
-import { url } from "inspector";
 import { notFound } from "next/navigation";
 
 function isDark(color) {

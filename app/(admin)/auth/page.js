@@ -1,6 +1,4 @@
 import Image from "next/image";
-import logo from "@/assets/am-logos/logo.png";
-import image from "@/assets/3.png";
 
 import { LoginForm } from "./login-form";
 import { Link } from 'next-view-transitions';
@@ -24,7 +22,7 @@ export default async function LoginPage() {
         <div className="flex h-9 justify-center gap-2 md:justify-start">
           <Link href="/" className="flex h-9 items-center gap-2 font-medium">
             <div className="flex items-center justify-center rounded-md text-primary-foreground">
-              <Image src={logo} width={40} height={40} alt="almasjid logo" />
+              <Image src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/logo.png'} width={40} height={40} alt="almasjid logo" />
             </div>
             Al Masjid
           </Link>
@@ -37,7 +35,7 @@ export default async function LoginPage() {
       </div>
       <div className="relative hidden bg-muted lg:block">
         <Image
-          src={image}
+          src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
           fill
           alt="Image"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"

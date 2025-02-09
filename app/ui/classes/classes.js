@@ -1,12 +1,6 @@
 import Heading from "../heading/heading";
 import ClassComponent from "./classComponent";
-import Breadcrumbs from "../breadcrumb/breadcrumbs";
 import styles from "./classes.module.css";
-
-import img1 from '@/assets/1.png'
-import img2 from '@/assets/2.png'
-import img3 from '@/assets/3.png'
-import img4 from '@/assets/4.png'
 
 export default function ClassesSection({ bg, ...props }) {
   return (
@@ -23,7 +17,7 @@ export default function ClassesSection({ bg, ...props }) {
       <div className="flex justify-center flex-wrap mx-auto">
         <ClassComponent
           className="mx-4"
-          backgroundImage={img1.src}
+          backgroundImage={'https://almasjid-site.s3.eu-north-1.amazonaws.com/1.png'}
           title="Advanced Islamic Studies"
           href="/classes/alimiyyah"
           advanced={true}
@@ -34,7 +28,7 @@ export default function ClassesSection({ bg, ...props }) {
 
         <ClassComponent
           className="mx-4"
-          backgroundImage={img2.src}
+          backgroundImage={'https://almasjid-site.s3.eu-north-1.amazonaws.com/2.png'}
           title="Qur'an and Islamic Studies for kids"
           href="/classes/maktab"
           foundation={true}
@@ -45,7 +39,7 @@ export default function ClassesSection({ bg, ...props }) {
 
         <ClassComponent
           className="mx-4"
-          backgroundImage={img3.src}
+          backgroundImage={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
           title="Arabic for Kids"
           href="/classes/arabicForKids"
           intermediate={true}
@@ -57,7 +51,7 @@ export default function ClassesSection({ bg, ...props }) {
 
         <ClassComponent
           className="mx-4"
-          backgroundImage={img4.src}
+          backgroundImage={'https://almasjid-site.s3.eu-north-1.amazonaws.com/4.png'}
           title="Qur’an Memorisation"
           href="/classes/hifz"
         >

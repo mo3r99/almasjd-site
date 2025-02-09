@@ -44,9 +44,69 @@ https://drive.google.com/file/d/14i0070PK-c0ptpuDrqrGCxjMLAhNnVB_/view?usp=shari
 https://drive.google.com/file/d/1Uh1fpzG0WsNAfpXUKmsCmwfUE4XykN3X/view?usp=sharing
 
 ## The Acceptance of Du’aa (Part 3/3) – The Do’s (continued), Don’ts & FAQs of Making Du’aa
-https://drive.google.com/file/d/1crZWrJWRorP9XBFdIuKES8hvrHOKr5jM/view?usp=sharing`
-      },
+https://drive.google.com/file/d/1crZWrJWRorP9XBFdIuKES8hvrHOKr5jM/view?usp=sharing`,
+  },
 };
 
 
-export default LESSONS
+const LESSON = [
+  {
+    title: "Stories of the Four Greatest Muslims",
+    description:
+      "Learn why Allāh granted them the seal of approval and why the Muslim ummah has held them in the highest regard for over 14 centuries.",
+    slug: "four-greatest-muslims",
+    external: false,
+    image: null,
+  },
+  {
+    title: "Video Lessons",
+    description:
+      "Join our YouTube channel for regular video lessons which cover a range of topics.",
+    slug: "https://youtube.com/almasjid",
+    external: true,
+    image: "https://almasjid-site.s3.eu-north-1.amazonaws.com/video-lessons.png",
+  },
+  {
+    title: "PDF Library",
+    description:
+      "Browse our library of books in PDF format and read at your own convenience, featuring a variety of resources.",
+    slug: "pdf-library",
+    external: false,
+    image: "https://almasjid-site.s3.eu-north-1.amazonaws.com/video-lessons.png",
+  },
+  {
+    title: "Tajweed Series",
+    description:
+      "Enhance your Qur’anic recitation with audio lessons which will guide you through the rules and principles of Tajweed.",
+    slug: "tajweed-series",
+    external: false,
+    image: "https://almasjid-site.s3.eu-north-1.amazonaws.com/tajweed-series.jpg",
+  },
+  {
+    title: "Reminders",
+    description:
+      "Stay spiritually motivated with our collection of Islamic reminders.",
+    slug: "reminders",
+
+    external: false,
+    image: "https://almasjid-site.s3.eu-north-1.amazonaws.com/reminders.jpg",
+  },
+  {
+    title: "Stories of Prophets",
+    description:
+      "Delve into the inspiring Stories of the Prophets, with audio podcasts exploring their lives, lessons, and the timeless wisdom they offer.",
+    slug: "prophets-stories",
+    external: false,
+    image: "https://almasjid-site.s3.eu-north-1.amazonaws.com/stories-prophets.jpg",
+  },
+  {
+    title: "Lessons by Sheikh Nasser Rashid",
+    description:
+      "A collection of insightful lectures by Dr. Nasser Rashid, covering a wide range of Islamic topics.",
+    slug: "lectures",
+    external: false,
+    image: "https://almasjid-site.s3.eu-north-1.amazonaws.com/lectures.jpg",
+  },
+];
+
+export default { LESSONS, LESSON };

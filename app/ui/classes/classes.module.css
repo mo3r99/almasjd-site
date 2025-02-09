@@ -1,5 +1,5 @@
 .classesContaineBg {
-    background-image: url('/bg.png');
+    background-image: url('https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png/bg.png');
     background-repeat: no-repeat;
     background-size: cover;
     backdrop-filter: brightness(90%);

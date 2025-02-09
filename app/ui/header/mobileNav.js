@@ -3,7 +3,6 @@
 import { useState } from "react";
 import styles from "./header.module.css";
 import Image from "next/image";
-import smLogo from '@/assets/am-logos/sm-logo.png'
 import {NavLinksMobile} from "./navLink";
 
 export default function MobileNav({links}) {
@@ -35,7 +34,7 @@ export default function MobileNav({links}) {
       >
         <Image
           className="pb-5 pointer-events-none block md:hidden w-auto h-auto"
-          src={smLogo}
+          src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/sm-logo.png'}
           width={60}
           height={66.07899255867201}
           alt={"Almasjid logo"}

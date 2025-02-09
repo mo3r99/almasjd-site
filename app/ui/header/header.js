@@ -5,7 +5,6 @@ import Image from "next/image";
 
 import links from "../../lib/links";
 
-import logoImg from "@/assets/am-logos/logo.png";
 import { NavLinksDesktop, NavLinksMobile } from "./navLink";
 import MobileNav from "./mobileNav";
 
@@ -23,7 +22,7 @@ export default function Header() {
         <Link href={"/"}>
           <Image
             className="pb-5 w-auto h-auto pointer-events-none hidden md:block"
-            src={logoImg}
+            src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/logo.png'}
             width={66}
             height={73}
             alt={"Almasjid logo"}
@@ -31,7 +30,7 @@ export default function Header() {
           />
           <Image
             className="pb-5 pointer-events-none block md:hidden w-auto h-auto"
-            src={logoImg}
+            src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/logo.png'}
             width={60}
             height={66.07899255867201}
             alt={"Almasjid logo"}
