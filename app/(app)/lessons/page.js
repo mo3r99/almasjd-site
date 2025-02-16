@@ -7,13 +7,11 @@ import CarouselCard from "../../ui/carouselCard/carouselCard";
 import EmblaCarousel from "../../ui/carousel/EmblaCarousel";
 import CarouselSlides from "../../ui/carousel/CarouselSlides";
 
-const placeholderImg ='https://almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png'
-const vidlessonsImg = 'https://almasjid-site.s3.eu-north-1.amazonaws.com/video-lessons.png'
-const pdfLibaryImg = 'https://almasjid-site.s3.eu-north-1.amazonaws.com/pdf-library.png'
-const remindersImg = 'https://almasjid-site.s3.eu-north-1.amazonaws.com/reminders.jpg'
-const tajweedSeriesImg = 'https://almasjid-site.s3.eu-north-1.amazonaws.com/tajweed-series.jpg'
-const storiesProphetsImg = 'https://almasjid-site.s3.eu-north-1.amazonaws.com/stories-prophets.jpg'
-const lecturesImg = 'https://almasjid-site.s3.eu-north-1.amazonaws.com/lectures.jpg'
+import lesson from "@/store/lessons/lessons.js";
+const LESSON = lesson.LESSON;
+
+const placeholderImg =
+  "https://almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png";
 
 export const metadata = {
   title: "Lessons",
@@ -26,7 +24,21 @@ export default function Lessons() {
 
       <main className="items-center justify-items-center font-[family-name:var(--font-raleway)]">
         <EmblaCarousel options={{ loop: true }} className={"md:pt-0"}>
-          <CarouselSlides key={1}>
+          {LESSON.slice(0, 3).map((lesson) => {
+            return(
+            <CarouselSlides key={lesson.id}>
+              <CarouselCard
+                clip={true}
+                title={lesson.title}
+                type={lesson.id % 2 !== 0 ? 'r' : 'l'}
+                link={!lesson.external ? `/lessons/${lesson.slug}` : lesson.slug}
+                image={!lesson.image ? placeholderImg : lesson.image}
+              >
+                {lesson.description}
+              </CarouselCard>
+            </CarouselSlides>)
+          })}
+          {/* <CarouselSlides key={1}>
             <CarouselCard
               clip={true}
               title={"Stories of the Four Greatest Muslims"}
@@ -63,7 +75,7 @@ export default function Lessons() {
               Explore our collection of Islamic video lessons designed to deepen
               your understanding of the faith.
             </CarouselCard>
-          </CarouselSlides>
+          </CarouselSlides> */}
         </EmblaCarousel>
       </main>
 
@@ -76,70 +88,19 @@ export default function Lessons() {
           </Heading>
 
           <section className="flex-wrap grid md:grid-cols-3 gap-x-8 gap-y-[3.3rem] mb-10 mx-6">
-            <Lesson
-              href={"/lessons/four-greatest-muslims"}
-              title="Stories of the Four Greatest Muslims"
-            >
-              Learn why Allāh granted them the seal of approval and why the
-              Muslim ummah has held them in the highest regard for over 14
-              centuries.
-            </Lesson>
-
-            <Lesson
-              href={"https://youtube.com/almasjid"}
-              title="Video Lessons"
-              external={true}
-              image={vidlessonsImg}
-            >
-              Explore our collection of Islamic video lessons designed to deepen
-              your understanding of the faith.
-            </Lesson>
-
-            <Lesson
-              href={"/lessons/pdf-library"}
-              title="PDF Library"
-              image={pdfLibaryImg}
-            >
-              Access our library of Islamic PDFs, featuring a variety of
-              resources.
-            </Lesson>
-
-            <Lesson
-              href={"/lessons/tajweed-series"}
-              title="Tajweed Series"
-              image={tajweedSeriesImg}
-            >
-              Enhance your Qur’anic recitation with our Tajweed Series,
-              featuring audio lessons which will guide you through the rules and
-              principles of Tajweed.
-            </Lesson>
-
-            <Lesson
-              href={"/lessons/reminders"}
-              title="Reminders"
-              image={remindersImg}
-            >
-              Stay spiritually motivated with our collection of Islamic
-              reminders.
-            </Lesson>
-
-            <Lesson
-              href={"/lessons/prophets-stories"}
-              title="Stories of the Prophets"
-              image={storiesProphetsImg}
-            >
-              Delve into the inspiring Stories of the Prophets, exploring their
-              lives, lessons, and the timeless wisdom they offer.
-            </Lesson>
-
-            <Lesson
-              href={"/lessons/lectures"}
-              title="Lectures by Dr. Mawlana Nasser Rashid"
-              image={lecturesImg}
-            >
-              A collection of insightful lectures by Dr. Nasser Rashid, covering
-              a wide range of Islamic topics.
-            </Lesson>
+            {LESSON.map((lesson) => {
+              return (
+                <Lesson
+                  href={!lesson.external ? `/lessons/${lesson.slug}` : lesson.slug}
+                  title={lesson.title}
+                  external={lesson.external}
+                  image={lesson.image}
+                  key={lesson.id}
+                >
+                  {lesson.description}
+                </Lesson>
+              );
+            })}
           </section>
         </Container>
       </div>

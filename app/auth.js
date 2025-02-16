@@ -1,6 +1,13 @@
 import NextAuth from "next-auth";
 import MicrosoftEntraID from "next-auth/providers/microsoft-entra-id"
 
+const allowedUsers = [
+  'm.rauf@almasjid.co.uk',
+  'hamza.malik@almasjid.co.uk',
+  'ibrahim.rauf@almasjid.co.uk',
+  'hamza.rauf@almasjid.co.uk'
+]
+
 export const { handlers, signIn, signOut, auth } = NextAuth({
   providers: [
     MicrosoftEntraID({
@@ -14,8 +21,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
   },
   callbacks: {
     signIn({ profile }) {
-      console.log(profile)
-      return profile.unique_name.includes('@almasjid.co.uk');
+      return allowedUsers.includes(profile.unique_name);
     }
   }
 });

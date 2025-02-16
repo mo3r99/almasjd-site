@@ -89,6 +89,7 @@ export default function Home() {
                         key={index}
                         href={`/lessons/${lesson.slug}`}
                         title={lesson.title}
+                        image={lesson.image && lesson.image}
                       >
                         {lesson.description}
                       </Lesson>

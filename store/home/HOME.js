@@ -1,6 +1,3 @@
-import { Description } from "@radix-ui/react-dialog";
-import { backIn } from "motion";
-
 const HOME = {
   main: {
     hero: {
@@ -13,6 +10,7 @@ const HOME = {
     },
     sections: [
       {
+        id: 0,
         title: "Islamic Studies for Children",
         type: "l",
         link: "/classes/maktab",
@@ -21,6 +19,7 @@ const HOME = {
         text: "A well-structured program for children aged 7-14, guided by experienced teachers to nurture faith and learning.",
       },
       {
+        id: 1,
         title: "Arabic for Kids",
         type: "r",
         link: "/classes/arabicForKids",
@@ -32,25 +31,30 @@ const HOME = {
   },
   sections: [
     {
+        id: 0,
         title: 'Classes',
         type: 'classes',
         background: true,
     },
     {
+      id: 1,
         title: 'Featured Lessons',
         type: 'lessons',
         background: 'bg-zinc-900',
     },
     {
+      id: 2,
         title: 'Services',
         type: 'services',
         background: true,
     },
     {
+      id: 3,
         title: 'Live Stream',
         type: 'livestream'
     },
     {
+      id: 4,
         title: 'Sign Up Form',
         type: 'community'
     }

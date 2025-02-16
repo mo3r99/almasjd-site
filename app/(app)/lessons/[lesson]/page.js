@@ -1,11 +1,13 @@
 import Heading from "@/app/ui/heading/heading";
-import LESSONS from "@/store/lessons/lessons";
+import ls from "@/store/lessons/lessons";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Link from "next/link";
+
+const LESSON = ls.LESSON;
 
 function TitleHeader({ title, children, nop, ...props }) {
   return (
@@ -18,45 +20,61 @@ function TitleHeader({ title, children, nop, ...props }) {
 
       <span className="w-16 h-2 bg-weborange my-4 block"></span>
 
-      {!nop ? <p className="mt-6 font-[family-name:var(--font-montserrat)] mb-8 max-w-[80vw] m-auto">
-        {children}
-      </p> : children}
+      {!nop ? (
+        <p className="mt-6 font-[family-name:var(--font-montserrat)] mb-8 max-w-[80vw] m-auto">
+          {children}
+        </p>
+      ) : (
+        children
+      )}
     </section>
   );
 }
 
+export async function generateMetadata({ params }) {
+  let lesson = (await params).lesson;
+}
+
 export default async function Lesson({ params }) {
-  let lesson = await params.lesson;
+  let lesson = (await params).lesson;
 
   if (lesson === "links") {
     return notFound();
   }
 
-  for (let [link, title] of LESSONS.links) {
-    console.log(link, title, lesson);
-    if (link === lesson) {
-      lesson = title;
-      break;
-    }
-  }
+  const links = LESSON.map((lesson) => {
+    return lesson.slug;
+  });
 
-  if (!LESSONS[lesson]) {
+  console.log(links)
+
+  let validLink = [false, 0];
+  let index = 0;
+  links.forEach((link) => {
+    if (link === lesson) {
+      validLink = [true, index];
+    }
+    index++;
+})
+
+  if (!validLink) {
     return notFound();
   }
 
-  if (!LESSONS[lesson].soundcloud) {
+  console.log(validLink[1]);
+  index = validLink[1];
+
+  if (!LESSON[index].content?.soundcloud) {
     return (
       <>
-        <TitleHeader title={LESSONS[lesson].title} nop={true}>
+        <TitleHeader title={LESSON[index].content.title} nop={true}>
           <Markdown
             remarkPlugins={[remarkGfm]}
             components={{
-                h2(props) {
-                    const { node, ...rest } = props;
-                    return (
-                      <Heading className='text-xl mt-4' {...rest} />
-                    );
-                  },
+              h2(props) {
+                const { node, ...rest } = props;
+                return <Heading className="text-xl mt-4" {...rest} />;
+              },
               table(props) {
                 const { node, ...rest } = props;
                 return (
@@ -68,7 +86,12 @@ export default async function Lesson({ params }) {
               // Rewrite `em`s (`*like so*`) to `i` with a red foreground color.
               a(props) {
                 const { node, ...rest } = props;
-                return <Link className="text-cyan-700 hover:text-cyan-500" {...rest} />;
+                return (
+                  <Link
+                    className="text-cyan-700 hover:text-cyan-500"
+                    {...rest}
+                  />
+                );
               },
               img(props) {
                 const { node, src, ...rest } = props;
@@ -84,7 +107,7 @@ export default async function Lesson({ params }) {
               },
             }}
           >
-            {LESSONS[lesson].markdown}
+            {LESSON[index].content.markdown}
           </Markdown>
         </TitleHeader>
       </>
@@ -93,8 +116,8 @@ export default async function Lesson({ params }) {
 
   return (
     <>
-      <TitleHeader title={LESSONS[lesson].title}>
-        {LESSONS[lesson].description}
+      <TitleHeader title={LESSON[index].title}>
+        {LESSON[index].description}
       </TitleHeader>
       <section>
         <iframe
@@ -108,7 +131,7 @@ export default async function Lesson({ params }) {
           scrolling="no"
           frameBorder="no"
           allow="autoplay"
-          src={LESSONS[lesson].link}
+          src={LESSON[index].content.link}
         />
       </section>
     </>
