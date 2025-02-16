@@ -18,15 +18,15 @@ import Image from "next/image";
 export default function AudioPlayer({ className }) {
   const [tracks, setTracks] = useState([
     {
-      title: "Al Ma'idah",
+      title: "5 - Al Ma'idah",
       artist: "Summary of Meanings of Quran",
       src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/Surah-5-Al-Maidah-The-Table-Spread.mp3",
     },
     {
-      title: "Celebrate Humanity 2",
-      artist: "Ilyas Mao ft. Boona Mohammed",
-      src: "audio.mp3",
-    },
+        title: "6 - Al An'am",
+        artist: "Summary of Meanings of Quran",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/Surah-6-Al-Anam-The-Cattle.mp3",
+      },
   ]);
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
