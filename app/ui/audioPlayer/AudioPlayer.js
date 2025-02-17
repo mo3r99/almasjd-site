@@ -8,7 +8,7 @@ import {
   RewindIcon,
   PauseIcon,
   ChevronUp,
-  ChevronDown
+  ChevronDown,
 } from "lucide-react";
 
 import { Card, CardContent } from "@/components/ui/card";
@@ -40,7 +40,7 @@ export default function AudioPlayer({ className }) {
   const audioRef = useRef(null);
   const [fullPlayerOpen, setFullPlayerOpen] = useState(false);
 
-  const {windowWidth, windowHeight} = useWindowDimensions();
+  const { windowWidth, windowHeight } = useWindowDimensions();
 
   // Function to handle play/pause toggle
   const handlePlayPause = () => {
@@ -118,12 +118,25 @@ export default function AudioPlayer({ className }) {
   }, [currentTrackIndex, tracks]);
 
   const toggleFullPlayer = () => {
-    setFullPlayerOpen(!fullPlayerOpen);
-    console.log("opening full screen player");
+    setIsVisible(true);
+    setTimeout(() => setFullPlayerOpen(!fullPlayerOpen), 1);
   };
 
+  const [isVisible, setIsVisible] = useState(false);
+
   const fullPlayer = (
-    <div className={cn("absolute top-0 left-0 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1)] duration-500 w-screen h-screen bg-slate-100 z-50", fullPlayerOpen ? 'translate-y-0' : 'translate-y-[100vh]')}>
+    <div
+      className={cn(
+        "absolute top-0 left-0 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1)] duration-500 w-screen h-screen bg-slate-100 z-50",
+        fullPlayerOpen ? "translate-y-0" : "translate-y-[100vh]",
+        !fullPlayerOpen && !isVisible && "hidden"
+      )}
+      onTransitionEnd={() => {
+        if (!fullPlayerOpen) {
+          setIsVisible(false);
+        }
+      }}
+    >
       <Button
         variant="ghost"
         size="icon"
@@ -132,7 +145,11 @@ export default function AudioPlayer({ className }) {
       >
         <ChevronDown className="block" />
       </Button>
-      <div className={cn("max-w-[min(500px, 50vw)] flex flex-col align-center justify-center mx-auto px-12 mt-[120px]")}>
+      <div
+        className={cn(
+          "max-w-[min(500px, 50vw)] flex flex-col align-center justify-center mx-auto px-12 mt-[120px]"
+        )}
+      >
         <Image src={"/artwork.png"} width={500} height={500} alt="artwork" />
         <div
           id="title-art"
@@ -155,7 +172,7 @@ export default function AudioPlayer({ className }) {
             max={duration}
             step={1}
             className=""
-            bg='bg-zinc-300'
+            bg="bg-zinc-300"
           />
           <div className="text-sm text-muted-foreground justify-between flex mt-2">
             <span>{formatTime(currentTime)}</span>
@@ -164,17 +181,28 @@ export default function AudioPlayer({ className }) {
         </div>
 
         <div className="mt-12 w-full flex justify-center items-center gap-4 scale-125">
-          <Button className='w-12 h-12' variant="ghost" onClick={handlePrevTrack}>
+          <Button
+            className="w-12 h-12"
+            variant="ghost"
+            onClick={handlePrevTrack}
+          >
             <RewindIcon className="w-12 h-12" />
           </Button>
-          <Button className='w-12 h-12 rounded-full bg-weborange' onClick={handlePlayPause}>
+          <Button
+            className="w-12 h-12 rounded-full bg-weborange"
+            onClick={handlePlayPause}
+          >
             {isPlaying ? (
               <PauseIcon className="w-12 h-12" />
             ) : (
               <PlayIcon className="w-12 h-12" />
             )}
           </Button>
-          <Button className='w-12 h-12' variant="ghost" onClick={handleNextTrack}>
+          <Button
+            className="w-12 h-12"
+            variant="ghost"
+            onClick={handleNextTrack}
+          >
             <ForwardIcon className="w-12 h-12" />
           </Button>
         </div>
@@ -287,7 +315,7 @@ export default function AudioPlayer({ className }) {
         </div>
       </div>
 
-      {windowWidth < 767 && fullPlayer}
+      {fullPlayer}
     </>
   );
 }
