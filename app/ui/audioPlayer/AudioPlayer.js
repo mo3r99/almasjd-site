@@ -287,7 +287,7 @@ export default function AudioPlayer({ className }) {
         </div>
       </div>
 
-      {fullPlayer}
+      {windowWidth < 767 && fullPlayer}
     </>
   );
 }
