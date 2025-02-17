@@ -17,6 +17,7 @@ import { Slider } from "@/components/ui/slider";
 import { cn } from "@/lib/utils";
 
 import Image from "next/image";
+import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 export default function AudioPlayer({ className }) {
   const [tracks, setTracks] = useState([
@@ -38,6 +39,8 @@ export default function AudioPlayer({ className }) {
   const [duration, setDuration] = useState(0);
   const audioRef = useRef(null);
   const [fullPlayerOpen, setFullPlayerOpen] = useState(false);
+
+  const {windowWidth, windowHeight} = useWindowDimensions();
 
   // Function to handle play/pause toggle
   const handlePlayPause = () => {
@@ -109,7 +112,7 @@ export default function AudioPlayer({ className }) {
       setCurrentTime(0); // Reset the current time for the new track
       setProgress(0); // Reset the progress for the new track
       if (isPlaying) {
-        //audioRef.current.play();
+        audioRef.current.play();
       }
     }
   }, [currentTrackIndex, tracks]);
@@ -266,7 +269,7 @@ export default function AudioPlayer({ className }) {
                     max={duration}
                     step={1}
                     className="h-[1px]"
-                    disabled={window.innerWidth > 767 ? false : true}
+                    disabled={windowWidth > 767 ? false : true}
                   />
                   <div className="text-sm text-muted-foreground justify-between hidden md:flex mt-4">
                     <span>{formatTime(currentTime)}</span>
@@ -284,7 +287,7 @@ export default function AudioPlayer({ className }) {
         </div>
       </div>
 
-      {window?.innerWidth < 767 && fullPlayer}
+      {fullPlayer}
     </>
   );
 }
