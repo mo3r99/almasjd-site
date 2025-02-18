@@ -235,7 +235,7 @@ export default function AudioPlayer({ className }) {
   return (
     <>
       {tracks.length > 0 && (
-      <div className="flex flex-col w-screen items-center justify-center text-foreground max-h-[150px] md:max-h-[100px] fixed bottom-0 left-0">
+      <div className="z-[49] flex flex-col w-screen items-center justify-center text-foreground max-h-[150px] md:max-h-[100px] fixed bottom-0 left-0">
         <div className="max-w-screen w-full space-y-4">
           <Card>
             <CardContent className="px-2 py-4 md:p-0 grid grid-cols-4 md:grid-cols-4 gap-3 relative">

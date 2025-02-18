@@ -5,6 +5,7 @@ import { Play } from "lucide-react";
 import { Share } from "lucide-react";
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 import TracksRender from "@/app/ui/audioPlayer/tracks/TrackRender";
+import { notFound } from "next/navigation";
 
 export default async function AlbumPage({ params }) {
   const p = await params;
@@ -19,7 +20,7 @@ export default async function AlbumPage({ params }) {
   }
 
   if (!album) {
-    return <div>Playlist not found</div>;
+    notFound();
   }
 
   return (
