@@ -17,7 +17,6 @@ import { Slider } from "@/components/ui/slider";
 import { cn } from "@/lib/utils";
 
 import Image from "next/image";
-import useWindowDimensions from "@/hooks/useWindowDimensions";
 
 export default function AudioPlayer({ className }) {
   const [tracks, setTracks] = useState([
@@ -39,8 +38,6 @@ export default function AudioPlayer({ className }) {
   const [duration, setDuration] = useState(0);
   const audioRef = useRef(null);
   const [fullPlayerOpen, setFullPlayerOpen] = useState(false);
-
-  const { windowWidth, windowHeight } = useWindowDimensions();
 
   // Function to handle play/pause toggle
   const handlePlayPause = () => {
@@ -124,10 +121,12 @@ export default function AudioPlayer({ className }) {
 
   const [isVisible, setIsVisible] = useState(false);
 
+  const ratio = 0.5;
+
   const fullPlayer = (
     <div
       className={cn(
-        "absolute top-0 left-0 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1)] duration-500 w-screen h-screen bg-slate-100 z-50",
+        "fixed top-0 left-0 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1)] duration-500 w-screen h-screen bg-slate-100 z-50",
         fullPlayerOpen ? "translate-y-0" : "translate-y-[100vh]",
         !fullPlayerOpen && !isVisible && "hidden"
       )}
@@ -147,63 +146,66 @@ export default function AudioPlayer({ className }) {
       </Button>
       <div
         className={cn(
-          "max-w-[min(500px, 50vw)] flex flex-col align-center justify-center mx-auto px-12 mt-[120px]"
+          "w-[90%] md:w-[70%] lg:w-[50%] max-w-[500px] flex flex-col align-center justify-center mx-auto px-4 md:px-8 mt-[10vh]"
         )}
       >
-        <Image src={"/artwork.png"} width={500} height={500} alt="artwork" />
-        <div
-          id="title-art"
-          className="flex items-center gap-3 mt-4 text-center"
-        >
-          <div className="h-full flex flex-col justify-center text-center w-full">
-            <h2 className="text-2xl font-bold">
+        <Image
+          src={"/artwork.png"}
+          width={500}
+          height={500}
+          alt="artwork"
+          className="w-full aspect-square object-contain"
+        />
+        <div className="flex items-center gap-3 mt-4 w-full">
+          <div className="flex flex-col justify-center text-center w-full">
+            <h2 className="text-xl md:text-2xl font-bold truncate">
               {tracks[currentTrackIndex]?.title || "Audio Title"}
             </h2>
-            <p className="text-muted-foreground text-lg">
+            <p className="text-muted-foreground text-base md:text-lg truncate">
               {tracks[currentTrackIndex]?.artist || "Person Name"}
             </p>
           </div>
         </div>
 
-        <div id="progress" className="mt-12">
+        <div className="mt-8 md:mt-12 w-full">
           <Slider
             value={[progress]}
             onValueChange={handleProgressChange}
             max={duration}
             step={1}
-            className=""
             bg="bg-zinc-300"
+            disabled={true}
           />
-          <div className="text-sm text-muted-foreground justify-between flex mt-2">
+          <div className="text-sm md:text-base text-muted-foreground justify-between flex mt-2">
             <span>{formatTime(currentTime)}</span>
             <span>{formatTime(duration)}</span>
           </div>
         </div>
 
-        <div className="mt-12 w-full flex justify-center items-center gap-4 scale-125">
+        <div className="mt-8 md:mt-12 w-full flex justify-center items-center gap-4 scale-100 md:scale-125">
           <Button
-            className="w-12 h-12"
+            className="w-10 h-10 md:w-12 md:h-12"
             variant="ghost"
             onClick={handlePrevTrack}
           >
-            <RewindIcon className="w-12 h-12" />
+            <RewindIcon className="w-6 h-6 md:w-8 md:h-8" />
           </Button>
           <Button
-            className="w-12 h-12 rounded-full bg-weborange"
+            className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-weborange"
             onClick={handlePlayPause}
           >
             {isPlaying ? (
-              <PauseIcon className="w-12 h-12" />
+              <PauseIcon className="w-6 h-6 md:w-8 md:h-8" />
             ) : (
-              <PlayIcon className="w-12 h-12" />
+              <PlayIcon className="w-6 h-6 md:w-8 md:h-8" />
             )}
           </Button>
           <Button
-            className="w-12 h-12"
+            className="w-10 h-10 md:w-12 md:h-12"
             variant="ghost"
             onClick={handleNextTrack}
           >
-            <ForwardIcon className="w-12 h-12" />
+            <ForwardIcon className="w-6 h-6 md:w-8 md:h-8" />
           </Button>
         </div>
       </div>
@@ -297,7 +299,6 @@ export default function AudioPlayer({ className }) {
                     max={duration}
                     step={1}
                     className="h-[1px]"
-                    disabled={windowWidth > 767 ? false : true}
                   />
                   <div className="text-sm text-muted-foreground justify-between hidden md:flex mt-4">
                     <span>{formatTime(currentTime)}</span>

@@ -1,9 +1,11 @@
 import Image from "next/image";
-import { Link } from 'next-view-transitions'
+import { Link } from "next-view-transitions";
 import styles from "./footer.module.css";
 
+import links from "@/app/lib/links";
+
 export default function Footer() {
-  const currentYear =  new Date().getFullYear();
+  const currentYear = new Date().getFullYear();
 
   return (
     <footer
@@ -13,14 +15,18 @@ export default function Footer() {
         <div className="flex relative w-[190px] md:w-[270px] mb-4">
           <Image
             className="pointer-events-none hidden md:block w-auto h-auto"
-            src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/white-logo.png'}
+            src={
+              "https://almasjid-site.s3.eu-north-1.amazonaws.com/white-logo.png"
+            }
             width={75}
             height={83}
             alt={"Almasjid logo"}
           />
           <Image
             className="pointer-events-none block md:hidden w-auto h-auto"
-            src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/white-logo.png'}
+            src={
+              "https://almasjid-site.s3.eu-north-1.amazonaws.com/white-logo.png"
+            }
             width={63}
             height={69}
             alt={"Almasjid logo"}
@@ -31,56 +37,62 @@ export default function Footer() {
         </div>
         <div className="font-[family-name:var(--font-montserrat)] pb-4">
           <p className="pb-2">
-            © Copyright AlMasjid 2015-{currentYear}. All rights reserved.
+            © Copyright Al Masjid 2015-{currentYear}. All rights reserved.
           </p>
-          <p>Registered Charity <Link target='_blank' className="text-cyan-100 hover:text-cyan-300 transition-all ease-in-out duration-300 hover:underline" href={'https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC052744'}>SC052744</Link></p>
+          <p>
+            Registered Charity{" "}
+            <Link
+              target="_blank"
+              className="text-cyan-100 hover:text-cyan-200 transition-all ease-in-out duration-300"
+              href={
+                "https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC052744"
+              }
+            >
+              SC052744
+            </Link>
+          </p>
         </div>
       </div>
 
       <div className="md:col-span-1"></div>
 
       <div className="md:col-span-1">
-        <h3 className="text-xl font-[family-name:var(--font-raleway)] font-medium pb-3 mt-10">
+        <h3 className="text-xl font-[family-name:var(--font-raleway)] font-semibold pb-3 mt-10">
           Explore
         </h3>
         <ul className="font-[family-name:var(--font-montserrat)]">
-          <li>
-            <Link className="pb-1" href="/">
+        <li>
+            <Link className="pb-1 hover:underline hover:text-cyan-50" href="/">
               <p>Home</p>
             </Link>
           </li>
-          <li>
-            <Link className="pb-1" href="/classes">
-              <p>Classes</p>
-            </Link>
-          </li>
-          <li>
-            <Link className="pb-1" href="/lessons">
-              <p>Lessons</p>
-            </Link>
-          </li>
-          <li>
-            <Link className="pb-1" href="/donate">
-              <p>Donate</p>
-            </Link>
-          </li>
-          <li>
-            <Link className="pb-1" href="/about">
-              <p>About</p>
-            </Link>
-          </li>
+          {links.map((link) => {
+            return (
+              <li key={link.id}>
+                <Link
+                  className="pb-1 hover:underline hover:text-cyan-50"
+                  href={link.href}
+                >
+                  <p>{link.name}</p>
+                </Link>
+              </li>
+            );
+          })}
         </ul>
       </div>
 
       <div className="md:col-span-1">
-        <h3 className="text-xl font-[family-name:var(--font-raleway)] font-medium pb-3 mt-10">
+        <h3 className="text-xl font-[family-name:var(--font-raleway)] font-semibold pb-3 mt-10">
           Follow Us
         </h3>
         <ul className="flex mb-4">
-          <a target="_blank" href={"https://facebook.com/almasjid.co.uk.official"}>
+          <a
+            target="_blank"
+            href={"https://facebook.com/almasjid.co.uk.official"}
+          >
             <Image
               className="mx-1 w-auto h-auto"
-              src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/fb.png'}
+              src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/fb.png"}
               width={30}
               height={30}
               alt="facebook"
@@ -89,7 +101,7 @@ export default function Footer() {
           <a target="_blank" href={"https://x.com/AlMasjidOnline"}>
             <Image
               className="mx-1 w-auto h-auto"
-              src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/x.png'}
+              src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/x.png"}
               width={30}
               height={30}
               alt="Twitter/X"
@@ -98,7 +110,7 @@ export default function Footer() {
           <a target="_blank" href={"mailto:salam@almasjid.co.uk"}>
             <Image
               className="mx-1 w-auto h-auto"
-              src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/mail.png'}
+              src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/mail.png"}
               width={30}
               height={30}
               alt="E-Mail"
