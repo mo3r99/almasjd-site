@@ -1,5 +1,7 @@
 "use client";
 
+import AUDIO from "@/store/audio/audio";
+
 import { useState, useRef, useEffect } from "react";
 
 import {
@@ -17,25 +19,39 @@ import { Slider } from "@/components/ui/slider";
 import { cn } from "@/lib/utils";
 
 import Image from "next/image";
+import { useAudio } from "@/app/lib/AudioContext";
 
 export default function AudioPlayer({ className }) {
-  const [tracks, setTracks] = useState([
-    {
-      title: "5 - Al Ma'idah",
-      artist: "Summary of Meanings of Quran",
-      src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/Surah-5-Al-Maidah-The-Table-Spread.mp3",
-    },
-    {
-      title: "6 - Al An'am",
-      artist: "Summary of Meanings of Quran",
-      src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/Surah-6-Al-Anam-The-Cattle.mp3",
-    },
-  ]);
-  const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  const [isPlaying, setIsPlaying] = useState(false);
-  const [progress, setProgress] = useState(0);
+  /*   const [tracks, setTracks] = useState([
+  //     {
+  //       title: "5 - Al Ma'idah",
+  //       artist: "Summary of Meanings of Quran",
+  //       src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/Surah-5-Al-Maidah-The-Table-Spread.mp3",
+  //     },
+  //     {
+  //       title: "6 - Al An'am",
+  //       artist: "Summary of Meanings of Quran",
+  //       src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/Surah-6-Al-Anam-The-Cattle.mp3",
+  //     },
+  //   ]);
+  //   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
+  //   const [isPlaying, setIsPlaying] = useState(false);
+  //   const [progress, setProgress] = useState(0); */
+
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
+
+  const {
+    tracks,
+    setTracks,
+    currentTrackIndex,
+    setCurrentTrackIndex,
+    isPlaying,
+    setIsPlaying,
+    progress,
+    setProgress,
+  } = useAudio();
+
   const audioRef = useRef(null);
   const [fullPlayerOpen, setFullPlayerOpen] = useState(false);
 
@@ -98,6 +114,11 @@ export default function AudioPlayer({ className }) {
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   };
 
+  useEffect(() => {
+    console.log("tracks changed");
+    console.log(tracks);
+  }, [tracks]);
+
   // useEffect to handle track change
   useEffect(() => {
     console.log("running effect");
@@ -159,10 +180,10 @@ export default function AudioPlayer({ className }) {
         <div className="flex items-center gap-3 mt-4 w-full">
           <div className="flex flex-col justify-center text-center w-full">
             <h2 className="text-xl md:text-2xl font-bold truncate">
-              {tracks[currentTrackIndex]?.title || "Audio Title"}
+              {tracks[currentTrackIndex]?.title || ""}
             </h2>
             <p className="text-muted-foreground text-base md:text-lg truncate">
-              {tracks[currentTrackIndex]?.artist || "Person Name"}
+              {tracks[currentTrackIndex]?.artist || ""}
             </p>
           </div>
         </div>
@@ -213,6 +234,7 @@ export default function AudioPlayer({ className }) {
 
   return (
     <>
+      {tracks.length > 0 && (
       <div className="flex flex-col w-screen items-center justify-center text-foreground max-h-[150px] md:max-h-[100px] fixed bottom-0 left-0">
         <div className="max-w-screen w-full space-y-4">
           <Card>
@@ -239,10 +261,10 @@ export default function AudioPlayer({ className }) {
 
                 <div className="h-full flex flex-col justify-center">
                   <h2 className="text-lg font-bold">
-                    {tracks[currentTrackIndex]?.title || "Audio Title"}
+                    {tracks[currentTrackIndex]?.title || ""}
                   </h2>
                   <p className="text-muted-foreground text-sm hidden smd:block">
-                    {tracks[currentTrackIndex]?.artist || "Person Name"}
+                    {tracks[currentTrackIndex]?.artist || ""}
                   </p>
                 </div>
               </div>
@@ -278,9 +300,13 @@ export default function AudioPlayer({ className }) {
                     onClick={handlePlayPause}
                   >
                     {isPlaying ? (
-                      <PauseIcon className="w-6 h-6" />
+                      <PauseIcon
+                        className={cn("w-6 h-6", !tracks && "disabled")}
+                      />
                     ) : (
-                      <PlayIcon className="w-6 h-6" />
+                      <PlayIcon
+                        className={cn("w-6 h-6", !tracks && "disabled")}
+                      />
                     )}
                   </Button>
                   <Button variant="ghost" size="icon" onClick={handleNextTrack}>
@@ -313,7 +339,7 @@ export default function AudioPlayer({ className }) {
             </CardContent>
           </Card>
         </div>
-      </div>
+      </div>)}
 
       {fullPlayer}
     </>

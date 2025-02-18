@@ -9,6 +9,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import { ViewTransitions } from "next-view-transitions";
 import AudioPlayer from "@/app/ui/audioPlayer/AudioPlayer";
+import { AudioProvider } from "@/app/lib/AudioContext";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -46,9 +47,10 @@ export default function RootLayout({ children }) {
         >
           <span className="bg-neutral-100 fixed top-0 left-0 w-screen h-screen z-[-1]" />
           <Header />
-
-          {children}
-          <AudioPlayer />
+          <AudioProvider>
+            {children}
+            <AudioPlayer />
+          </AudioProvider>
         </body>
       </html>
     </ViewTransitions>

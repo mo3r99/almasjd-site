@@ -1,7 +1,31 @@
+"use client";
+
 import Album from "./Album";
 import { cn } from "@/lib/utils";
 
+import AUDIO from "@/store/audio/audio";
+import { useAudio } from "@/app/lib/AudioContext";
+
 export default function AlbumView({ albums, ...props }) {
+  const {
+    tracks,
+    setTracks,
+    currentTrackIndex,
+    setCurrentTrackIndex,
+    isPlaying,
+    setIsPlaying,
+    progress,
+    setProgress,
+  } = useAudio();
+
+  const handlePlayPlaylist = (id) => {
+    console.log("setting id to ", id - 1);
+    setTracks(AUDIO[id - 1].tracks);
+    console.log(tracks);
+    setCurrentTrackIndex(0);
+    setIsPlaying(true);
+  };
+
   return (
     <>
       <section className={cn("max-w-screen-lg mx-auto", props.className)}>
@@ -13,6 +37,7 @@ export default function AlbumView({ albums, ...props }) {
               artist={album.artist}
               coverUrl={album.cover}
               id={album.id}
+              handleThumbnailPlay={handlePlayPlaylist}
             />
           ))}
         </div>
