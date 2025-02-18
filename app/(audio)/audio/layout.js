@@ -8,6 +8,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 import Script from "next/script";
 import { ViewTransitions } from "next-view-transitions";
+import AudioPlayer from "@/app/ui/audioPlayer/AudioPlayer";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -20,7 +21,7 @@ const montserrat = Montserrat({
 });
 
 export const metadata = {
-  title: 'Audio Lectures | Al Masjid',
+  title: "Audio Lectures | Al Masjid",
   description: "Audio Lectures at Al Masjid",
 };
 
@@ -43,10 +44,11 @@ export default function RootLayout({ children }) {
         <body
           className={`${raleway.variable} ${montserrat.variable} antialiased min-h-[100vh] flex flex-col`}
         >
-
+          <span className="bg-gradient-to-tl from-[#ebf7f9] to-[#edecea] via-[#F3E9DE] fixed top-0 left-0 w-screen h-screen z-[-1]" />
           <Header />
 
           {children}
+          <AudioPlayer />
         </body>
       </html>
     </ViewTransitions>

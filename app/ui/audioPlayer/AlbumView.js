@@ -12,6 +12,7 @@ export default function AlbumView({ albums, ...props }) {
               title={album.title}
               artist={album.artist}
               coverUrl={album.cover}
+              id={album.id}
             />
           ))}
         </div>
