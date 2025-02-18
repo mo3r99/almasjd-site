@@ -174,7 +174,6 @@ export default function AudioPlayer({ className }) {
             max={duration}
             step={1}
             bg="bg-zinc-300"
-            disabled={true}
           />
           <div className="text-sm md:text-base text-muted-foreground justify-between flex mt-2">
             <span>{formatTime(currentTime)}</span>
@@ -298,7 +297,7 @@ export default function AudioPlayer({ className }) {
                     onValueChange={handleProgressChange}
                     max={duration}
                     step={1}
-                    className="h-[1px]"
+                    className="h-[1px] pointer-events-none md:pointer-events-auto touch-none md:touch-auto"
                   />
                   <div className="text-sm text-muted-foreground justify-between hidden md:flex mt-4">
                     <span>{formatTime(currentTime)}</span>
