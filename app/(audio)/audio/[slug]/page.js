@@ -25,8 +25,9 @@ export default async function AlbumPage({ params }) {
   return (
     <>
       <div className="container mx-auto px-4 py-8 max-w-5xl font-[family-name:var(--font-montserrat)] mb-[15vh]">
+        <Breadcrumbs className={'mb-8 max-w-[80vw] mx-auto'}/>
+
         <div className="flex flex-col md:flex-row gap-8 mb-8 max-w-[80vw] mx-auto">
-          <Breadcrumbs />
           {album.cover && (
             <div className="w-full md:w-64 h-64 aspect-square relative">
               <Image
