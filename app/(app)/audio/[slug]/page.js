@@ -6,6 +6,7 @@ import { Share } from "lucide-react";
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 import TracksRender from "@/app/ui/audioPlayer/tracks/TrackRender";
 import { notFound } from "next/navigation";
+import { PlayButtonMobile, PlayButttonDesktop } from "@/app/ui/audioPlayer/tracks/playButton/playButton";
 
 export default async function AlbumPage({ params }) {
   const p = await params;
@@ -55,17 +56,10 @@ export default async function AlbumPage({ params }) {
               </p>
             </div>
             <div className="hidden md:block md:ml-auto">
-              <Button className="rounded-full bg-tradewind p-3 scale-150">
-                <Play />
-              </Button>
+              <PlayButttonDesktop album={album} />
             </div>
             <div className="flex gap-4 items-center">
-              <Button className="rounded-full bg-tradewind hover:bg-[#4c8d7e] p-3 block md:hidden">
-                <Play />
-              </Button>
-              <Button className="rounded-full bg-neutral-300 hover:bg-neutral-400 p-3 block md:hidden">
-                <Share />
-              </Button>
+              <PlayButtonMobile album={album} />
             </div>
           </div>
         </div>
