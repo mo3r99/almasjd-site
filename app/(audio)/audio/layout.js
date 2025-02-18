@@ -44,7 +44,7 @@ export default function RootLayout({ children }) {
         <body
           className={`${raleway.variable} ${montserrat.variable} antialiased min-h-[100vh] flex flex-col`}
         >
-          <span className="bg-gradient-to-tl from-[#ebf7f9] to-[#edecea] via-[#F3E9DE] fixed top-0 left-0 w-screen h-screen z-[-1]" />
+          <span className="bg-neutral-100 fixed top-0 left-0 w-screen h-screen z-[-1]" />
           <Header />
 
           {children}

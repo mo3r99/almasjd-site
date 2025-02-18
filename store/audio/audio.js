@@ -2,7 +2,7 @@ const AUDIO = [
   {
     id: 1,
     title: "Summary of the Meanings of the Qur'an",
-    aritist: "Shaykh Habib Rauf",
+    artist: "Shaykh Habib Rauf",
     cover: "/quran.jpg",
     description:
       "Connect yourself with the Holy Qur’an this year. Listen to the verses at night and ponder over their meanings during the day.",
@@ -582,7 +582,7 @@ const AUDIO = [
   {
     id: 2,
     title: "Audio Lectures",
-    aritist: "Shaykh Habib Rauf",
+    artist: "Shaykh Habib Rauf",
     cover: "https://almasjid-site.s3.eu-north-1.amazonaws.com/reminders.jpg",
     tracks: [
       {
@@ -595,7 +595,7 @@ const AUDIO = [
   {
     id: 3,
     title: "Stories of the Prophets",
-    aritist: "Al Masjid",
+    artist: "Al Masjid",
     cover:
       "https://almasjid-site.s3.eu-north-1.amazonaws.com/stories-prophets.jpg",
     tracks: [
@@ -609,7 +609,7 @@ const AUDIO = [
   {
     id: 4,
     title: "Ramadhan Reminders",
-    aritist: "Dr. Nasser Rashid",
+    artist: "Dr. Nasser Rashid",
     cover: "https://almasjid-site.s3.eu-north-1.amazonaws.com/lectures.jpg",
     tracks: [
       {
@@ -622,7 +622,7 @@ const AUDIO = [
   {
     id: 5,
     title: "Tajweed Series",
-    aritist: "Mufti Qari Nabeel",
+    artist: "Mufti Qari Nabeel",
     cover:
       "https://almasjid-site.s3.eu-north-1.amazonaws.com/tajweed-series.jpg",
     tracks: [

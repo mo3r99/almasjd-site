@@ -49,6 +49,9 @@ export default function Breadcrumbs({className}) {
               case 'four-greatest-muslims':
                 path = "Stories of the Four Greatest Muslims"
                 break;
+              case '1':
+                path = 'Summary of Meanings of Quran'
+                break;
             }
 
             return (
