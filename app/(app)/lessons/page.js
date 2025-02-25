@@ -87,7 +87,7 @@ export default function Lessons() {
             All Lessons
           </Heading>
 
-          <section className="flex-wrap grid md:grid-cols-3 gap-x-8 gap-y-[3.3rem] mb-10 mx-6">
+          <section className="grid md:grid-cols-3 gap-x-8 gap-y-[3.3rem] mb-10 mx-6">
             {LESSON.map((lesson) => {
               return (
                 <Lesson

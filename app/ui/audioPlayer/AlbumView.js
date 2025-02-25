@@ -19,9 +19,7 @@ export default function AlbumView({ albums, ...props }) {
   } = useAudio();
 
   const handlePlayPlaylist = (id) => {
-    console.log("setting id to ", id - 1);
     setTracks(AUDIO[id - 1].tracks);
-    console.log(tracks);
     setCurrentTrackIndex(0);
     setIsPlaying(true);
   };

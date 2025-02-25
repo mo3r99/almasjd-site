@@ -1,9 +1,12 @@
 const classes = {
   alimiyyah: {
+    id: 1,
     title: "Advanced Islamic Sciences",
-    href: '/classes/alimiyyah',
+    href: "/classes/alimiyyah",
+    backgroundImage: "https://almasjid-site.s3.eu-north-1.amazonaws.com/1.png",
     advanced: true,
-    blurb: 'ʿĀlimiyyah Programme offering advanced Islamic Theology education for self-driven individuals.',
+    blurb:
+      "ʿĀlimiyyah Programme offering advanced Islamic Theology education for self-driven individuals.",
     description:
       "The online ʿĀlimiyyah Programme, based on the traditional Dars-e-Nizāmi syllabus, is designed comprehensively for graduates, college and university students, and self-driven individuals who wish to pursue an advanced course in Islamic Theology. The programme seeks to empower Muslims around the world in the field of Islamic Scholarship. ",
     sections: [
@@ -63,12 +66,18 @@ We use both summative assessments, which contribute to your final course outcome
 
 ## Need helping funding your studies?
 
-If you have the talent and drive, we want you to be able to study with us, whatever your financial circumstances. Please contact [courses@almasjid.co.uk](mailto:courses@almasjid.co.uk?subject=Help%20With%20Funding) with details of your circumstances, and a member of our team will be in touch.`,
+If you have the talent and drive, we want you to be able to study with us, whatever your financial circumstances. Please contact [classes@almasjid.co.uk](mailto:classes@almasjid.co.uk?subject=Help%20With%20Funding) with details of your circumstances, and a member of our team will be in touch.`,
       },
     ],
   },
   maktab: {
+    id: 2,
     title: "Qur’an and Islamic Studies (for kids)",
+    href: "/classes/maktab",
+    backgroundImage: "https://almasjid-site.s3.eu-north-1.amazonaws.com/2.png",
+    foundation: true,
+    blurb:
+      "A foundation program for children aged 7-14, guided by experienced teachers to nurture faith and learning.",
     description:
       "“Read! in the name of your Lord who has created,” is the very first revelation and instruction from Allāh Most High. In light of this Qur’anic instruction, it is crucial to meet the urgent need for elementary religious education within the Muslim community – learning to recite the Qur’an in its authentic form (in Arabic) and having knowledge of the essentials of Islam. The Al Masjid online Maktab programme is specifically designed to cater for the need of every growing Muslim in a structured manner. Beginning with the Arabic script (Qa’idah), students progress to fluent Qur’an recitation, while simultaneously gaining a solid grasp of key Islamic teachings. ",
     sections: [
@@ -116,16 +125,22 @@ We use both summative assessments, which contribute to the outcome at the end of
 # Fees & Funding
 £450 annually (one-time payment), or £40 per month spread over 12 months.
 ###
-All services and courses are free for the family of the Prophet ﷺ. Please state this in your application or get in touch at courses@almasjid.co.uk.`,
+All services and courses are free for the family of the Prophet ﷺ. Please state this in your application or get in touch at [classes@almasjid.co.uk](mailto:classes@almasjid.co.uk?subject=Help%20With%20Funding).`,
       },
     ],
   },
   arabicForKids: {
+    id: 3,
     title: "Arabic for Kids",
+    href: "/classes/arabicForKids",
+    backgroundImage: "https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png",
+    intermediate: true,
+    blurb:
+      "The basics of Arabic grammar and syntax to understand the Qur’an, hadith, as well as key texts in Islamic jurisprudence for teens aged 12-14.",
     description:
       "The Online Arabic for Kids Programme is tailored to provide a foundational understanding of classical Arabic through which students can access the Qur’an, Hadith, and key texts in Islamic jurisprudence. The course seeks to empower young learners with essential tools for living their lives with a deeper understanding of Islam. ",
     closed: false,
-      sections: [
+    sections: [
       {
         background: "#ffeccc",
         markdown: `# Course Overview
@@ -188,12 +203,17 @@ We employ both summative assessments, which contribute to your final course outc
 
 ## Need helping funding your studies?
 
-If you have the talent and drive, we want you to be able to study with us, whatever your financial circumstances. Please contact [courses@almasjid.co.uk](mailto:courses@almasjid.co.uk?subject=Help%20With%20Funding) with details of your circumstances, and a member of our team will be in touch.`,
+If you have the talent and drive, we want you to be able to study with us, whatever your financial circumstances. Please contact [classes@almasjid.co.uk](mailto:classes@almasjid.co.uk?subject=Help%20With%20Funding) with details of your circumstances, and a member of our team will be in touch.`,
       },
     ],
   },
   hifz: {
-    title: "Qur'an Memorisation Classes",
+    id: 4,
+    title: "Qur'an Memorisation",
+    blurb:
+      "Learn and memorise the Qur'an from the comfort of home, perfect for those without access to local facilities, with one-to-one classes.",
+    backgroundImage: "https://almasjid-site.s3.eu-north-1.amazonaws.com/4.png",
+    href: "/classes/hifz",
     description:
       "Memorising the Noble Quran takes effort and sincere commitment. However, Allah’s rewards are immense in this worldly life and the Hereafter. This online course is desgined for those who want to memorise the whole or part of the Holy Quran, especially for those without access to local classes.",
     sections: [
@@ -219,13 +239,43 @@ Class timings are 5 days a week for an hour daily. Apart from this, however, mem
         markdown: `# Benefits of memorising the Qur'an
 The Qur’aan is the speech of Allah SWT and our intention should be to please Allah (SWT) alone and gain closeness to Him.  Through memorising the Qur’an, our connection to it is strengthened and its recitation is made easy.  
 ###
-Ibn ‘Amr (RA) reported that the Prophet ﷺ said: “It will be said to the companion of the Qur’an after he has entered Paradise, ‘Recite, and rise!’ For every verse he recites he will rise one level (in Paradise), until he recites the last verse with him (i.e., in his memory).” (Abu Dawud)`
+Ibn ‘Amr (RA) reported that the Prophet ﷺ said: “It will be said to the companion of the Qur’an after he has entered Paradise, ‘Recite, and rise!’ For every verse he recites he will rise one level (in Paradise), until he recites the last verse with him (i.e., in his memory).” (Abu Dawud)`,
       },
       {
         background: "#fff",
         markdown: `
 # Fees & Funding
 £600 per year, payable as £50 per month for 12 months.`,
+      },
+    ],
+  },
+  tafseer: {
+    id: 5,
+    title: "Tafseer of Last 10 Surahs",
+    workshop: true,
+    blurb:
+      "Learn and understand our creator’s message for us this Ramadhan through this online course, specifically designed for young adults, with visuals, illustrations, practical advice and contemporary examples.",
+    backgroundImage: "/tafseer.png",
+    href: "/classes/tafseer",
+    description:
+      "We recite the last ten Surahs daily in Salah, but how much do we actually understand what Allah is telling us? Join us in learning the translation and meanings of these chapters of the Qur'an, with visuals, illustrations, practical advice for young Muslims, and contemporary examples. This course will this Ramadhan, from 9th March until 30th March 2025.",
+    sections: [
+      {
+        background: "#ffeccc",
+        markdown: `
+## Who is this course for?
+This program is open to both brothers and sisters, being designed mainly for young Muslims (from the ages of 13-18), but is open to all ages. Whether you have studied the Qur'an before or have not studied, we hope that this course will change the way that you approach your Qur'anic learning.
+
+## Timing
+The class will take place every Sunday in Ramadhan, beginning 9th March. `,
+      },
+      {
+        background: "#fff",
+        markdown: `
+# Fees & Funding
+This course is free for the first 20 people who sign up. Thereafter, a £20 fee will apply.
+We believe that everybody should be able to study regardless of financial circumstances. Please email [classes@almasjid.co.uk](mailto:classes@almasjid.co.uk?subject=Help%20With%20Funding) to see what help you can receive.
+Al Masjid is a non-profit organisation, and all proceeds will go towards enhancing our services.`,
       },
     ],
   },

@@ -32,7 +32,7 @@ export default function CarouselCard({
 
   return (
     <section
-      className="md:mt-[5%]"
+      className="md:mt-[5%] mx-auto"
     >
       
       <div

@@ -23,7 +23,6 @@ export default function Return({}) {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
         setStatus(data.status);
         setCustomerEmail(data.customer_email);
         setName(data.customer_name);

@@ -26,7 +26,6 @@ export default function HeroSection(props) {
         },
       },
     });
-    console.log(content);
   }
 
   function handleSlideChange(identifier, field, event) {

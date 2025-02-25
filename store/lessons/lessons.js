@@ -28,23 +28,23 @@ const LESSON = [
     image:
       "https://almasjid-site.s3.eu-north-1.amazonaws.com/pdf-library.png",
   },
-  {
-    id:4,
-    title: "Tajweed Series",
-    description:
-      "Enhance your Qur’anic recitation with audio lessons which will guide you through the rules and principles of Tajweed.",
-    slug: "tajweed-series",
-    external: false,
-    image:
-      "https://almasjid-site.s3.eu-north-1.amazonaws.com/tajweed-series.jpg",
-    content: {
-      title: "Tajweed Series",
-      description:
-        "Enhance your Qur’anic recitation with our Tajweed Series, featuring audio lessons which will guide you through the rules and principles of Tajweed.",
-      soundcloud: true,
-      link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1250268328%3Fsecret_token%3Ds-x2IoTxIyIRH&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
-    },
-  },
+  // {
+  //   id:4,
+  //   title: "Tajweed Series",
+  //   description:
+  //     "Enhance your Qur’anic recitation with audio lessons which will guide you through the rules and principles of Tajweed.",
+  //   slug: "tajweed-series",
+  //   external: false,
+  //   image:
+  //     "https://almasjid-site.s3.eu-north-1.amazonaws.com/tajweed-series.jpg",
+  //   content: {
+  //     title: "Tajweed Series",
+  //     description:
+  //       "Enhance your Qur’anic recitation with our Tajweed Series, featuring audio lessons which will guide you through the rules and principles of Tajweed.",
+  //     soundcloud: true,
+  //     link: "https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1250268328%3Fsecret_token%3Ds-x2IoTxIyIRH&color=%23ff9900&auto_play=false&hide_related=false&show_comments=true&show_user=true&show_reposts=false&show_teaser=true",
+  //   },
+  // },
   {
     id: 5,
     title: "Reminders",

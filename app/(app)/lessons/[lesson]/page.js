@@ -46,8 +46,6 @@ export default async function Lesson({ params }) {
     return lesson.slug;
   });
 
-  console.log(links)
-
   let validLink = [false, 0];
   let index = 0;
   links.forEach((link) => {
@@ -61,7 +59,6 @@ export default async function Lesson({ params }) {
     return notFound();
   }
 
-  console.log(validLink[1]);
   index = validLink[1];
 
   if (!LESSON[index].content?.soundcloud) {

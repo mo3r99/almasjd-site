@@ -3,7 +3,8 @@ import Button from "../button/button";
 import { cn } from "@/lib/utils";
 import Image from "next/image";
 
-const placeholder = "https://almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png";
+const placeholder =
+  "https://almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png";
 
 export default function Lesson({
   children,
@@ -12,24 +13,43 @@ export default function Lesson({
   href,
   external,
   image,
+  applicationsOpen,
+  newCourse
 }) {
   return (
-    <div className={cn("max-h-[450px] md:h-[50vh] relative max-w-[300px] m-auto", className, href)}>
-      <div className="w-[100%] h-[200px] mb-4 relative">
+    <div
+      className={cn(
+        "max-h-[450px] h-full w-full sm:max-w-[300px] relative m-auto",
+        className,
+        href
+      )}
+    >
+      <div className="w-full aspect-[3/2] mb-4 relative">
         <Image
           alt={title}
           src={image ? image : placeholder}
+          // style={{
+          //   clipPath:
+          //     "polygon(50% 0%, 80% 10%, 100% 35%, 100% 100%, 80% 100%, 50% 100%, 20% 100%, 0 100%, 0% 35%, 20% 10%)",
+          // }}
           style={{
-            clipPath:
-              "polygon(50% 0%, 80% 10%, 100% 35%, 100% 100%, 80% 100%, 50% 100%, 20% 100%, 0 100%, 0% 35%, 20% 10%)",
+            clipPath: "circle(70% at 50% 90%)",
           }}
           fill
-          //sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 300px"
+          className="object-cover"
         />
       </div>
-
-      <Heading className="text-lg">{title}</Heading>
-      <p className="font-[family-name:var(--font-montserrat)] mb-8">
+      <div className="mb-2">
+        {newCourse && <span className="font-[family-name:var(--font-montserrat)] bg-weborange p-1 rounded-md text-xs text-white uppercase mr-2">
+          New
+        </span>}
+        {applicationsOpen && <span className="font-[family-name:var(--font-montserrat)] bg-weborange p-1 rounded-md text-xs text-white uppercase">
+          Applications Open
+        </span>}
+      </div>
+      <Heading className="text-base sm:text-lg md:text-xl">{title}</Heading>
+      <p className="font-[family-name:var(--font-montserrat)] mb-4 sm:mb-8 text-sm sm:text-base">
         {children}
       </p>
       {external ? (
@@ -37,12 +57,16 @@ export default function Lesson({
           href={href}
           target="_blank"
           colour="black"
-          className="mt-4 md:mt-0"
+          className="w-full sm:w-auto mt-2 sm:mt-4 md:mt-0"
         >
           See More
         </Button>
       ) : (
-        <Button href={href} colour="black" className="md:mt-0">
+        <Button
+          href={href}
+          colour="black"
+          className="w-full sm:w-auto mt-2 sm:mt-4 md:mt-0"
+        >
           See More
         </Button>
       )}

@@ -1,7 +1,5 @@
 "use client";
 
-import AUDIO from "@/store/audio/audio";
-
 import { useState, useRef, useEffect } from "react";
 
 import {
@@ -22,22 +20,6 @@ import Image from "next/image";
 import { useAudio } from "@/app/lib/AudioContext";
 
 export default function AudioPlayer({ className }) {
-  /*   const [tracks, setTracks] = useState([
-  //     {
-  //       title: "5 - Al Ma'idah",
-  //       artist: "Summary of Meanings of Quran",
-  //       src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/Surah-5-Al-Maidah-The-Table-Spread.mp3",
-  //     },
-  //     {
-  //       title: "6 - Al An'am",
-  //       artist: "Summary of Meanings of Quran",
-  //       src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/Surah-6-Al-Anam-The-Cattle.mp3",
-  //     },
-  //   ]);
-  //   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
-  //   const [isPlaying, setIsPlaying] = useState(false);
-  //   const [progress, setProgress] = useState(0); */
-
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
@@ -114,14 +96,8 @@ export default function AudioPlayer({ className }) {
     return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
   };
 
-  useEffect(() => {
-    console.log("tracks changed");
-    console.log(tracks);
-  }, [tracks]);
-
   // useEffect to handle track change
   useEffect(() => {
-    console.log("running effect");
     if (audioRef.current) {
       //audioRef.current.pause();
       audioRef.current.src = tracks[currentTrackIndex]?.src || "";
@@ -134,6 +110,7 @@ export default function AudioPlayer({ className }) {
       }
     }
   }, [currentTrackIndex, tracks]);
+
 
   const toggleFullPlayer = () => {
     setIsVisible(true);
@@ -235,111 +212,130 @@ export default function AudioPlayer({ className }) {
   return (
     <>
       {tracks.length > 0 && (
-      <div className="z-[49] flex flex-col w-screen items-center justify-center text-foreground max-h-[150px] md:max-h-[100px] fixed bottom-0 left-0">
-        <div className="max-w-screen w-full space-y-4">
-          <Card>
-            <CardContent className="px-2 py-4 md:p-0 grid grid-cols-4 md:grid-cols-4 gap-3 relative">
-              <div
-                id="title-art"
-                className="col-span-3 md:col-span-1 flex items-center gap-3 pl-2"
-              >
-                <Button
-                  variant="ghost"
-                  size="icon"
-                  className="rounded-full flex md:hidden"
-                  onClick={toggleFullPlayer}
-                >
-                  <ChevronUp className="block" />
-                </Button>
-                <Image
-                  src="https://almasjid-site.s3.eu-north-1.amazonaws.com/quran.png"
-                  alt="Album Cover"
-                  width={25}
-                  height={25}
-                  className="rounded-full w-12 h-12 object-cover"
-                />
-
-                <div className="h-full flex flex-col justify-center">
-                  <h2 className="text-lg font-bold">
-                    {tracks[currentTrackIndex]?.title || ""}
-                  </h2>
-                  <p className="text-muted-foreground text-sm hidden smd:block">
-                    {tracks[currentTrackIndex]?.artist || ""}
-                  </p>
-                </div>
-              </div>
-
-              <div
-                id="controls-progress"
-                className="col-span-1 md:col-span-2 mr-2 flex flex-col items-center px-4 md:p-0"
-              >
-                {/* controls */}
-                <div id="controls-desktop" className="hidden md:block">
-                  <Button variant="ghost" size="icon" onClick={handlePrevTrack}>
-                    <RewindIcon className="w-6 h-6" />
-                  </Button>
-                  <Button variant="ghost" size="icon" onClick={handlePlayPause}>
-                    {isPlaying ? (
-                      <PauseIcon className="w-6 h-6" />
-                    ) : (
-                      <PlayIcon className="w-6 h-6" />
-                    )}
-                  </Button>
-                  <Button variant="ghost" size="icon" onClick={handleNextTrack}>
-                    <ForwardIcon className="w-6 h-6" />
-                  </Button>
-                </div>
-
+        <div className="z-[49] flex flex-col w-screen items-center justify-center text-foreground max-h-[150px] md:max-h-[100px] fixed bottom-0 left-0">
+          <div className="max-w-screen w-full space-y-4">
+            <Card>
+              <CardContent className="px-2 py-4 md:p-0 grid grid-cols-4 md:grid-cols-4 gap-3 relative">
                 <div
-                  id="controls-mobile"
-                  className="flex h-full items-center md:hidden"
+                  id="title-art"
+                  className="col-span-3 md:col-span-1 flex items-center gap-3 pl-2"
                 >
                   <Button
+                    variant="ghost"
                     size="icon"
-                    className="rounded-full mr-4"
-                    onClick={handlePlayPause}
+                    className="rounded-full flex md:hidden"
+                    onClick={toggleFullPlayer}
                   >
-                    {isPlaying ? (
-                      <PauseIcon
-                        className={cn("w-6 h-6", !tracks && "disabled")}
-                      />
-                    ) : (
-                      <PlayIcon
-                        className={cn("w-6 h-6", !tracks && "disabled")}
-                      />
-                    )}
+                    <ChevronUp className="block" />
                   </Button>
-                  <Button variant="ghost" size="icon" onClick={handleNextTrack}>
-                    <ForwardIcon className="w-6 h-6" />
-                  </Button>
+                  <Image
+                    src="https://almasjid-site.s3.eu-north-1.amazonaws.com/quran.png"
+                    alt="Album Cover"
+                    width={25}
+                    height={25}
+                    className="rounded-full w-12 h-12 object-cover"
+                  />
+
+                  <div className="h-full flex flex-col justify-center">
+                    <h2 className="text-lg font-bold">
+                      {tracks[currentTrackIndex]?.title || ""}
+                    </h2>
+                    <p className="text-muted-foreground text-sm hidden smd:block">
+                      {tracks[currentTrackIndex]?.artist || ""}
+                    </p>
+                  </div>
                 </div>
 
                 <div
-                  id="progress"
-                  className="w-full absolute top-0 left-0 md:relative"
+                  id="controls-progress"
+                  className="col-span-1 md:col-span-2 mr-2 flex flex-col items-center px-4 md:p-0"
                 >
-                  <Slider
-                    value={[progress]}
-                    onValueChange={handleProgressChange}
-                    max={duration}
-                    step={1}
-                    className="h-[1px] pointer-events-none md:pointer-events-auto touch-none md:touch-auto"
-                  />
-                  <div className="text-sm text-muted-foreground justify-between hidden md:flex mt-4">
-                    <span>{formatTime(currentTime)}</span>
-                    <span>{formatTime(duration)}</span>
+                  {/* controls */}
+                  <div id="controls-desktop" className="hidden md:block">
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={handlePrevTrack}
+                    >
+                      <RewindIcon className="w-6 h-6" />
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={handlePlayPause}
+                    >
+                      {isPlaying ? (
+                        <PauseIcon className="w-6 h-6" />
+                      ) : (
+                        <PlayIcon className="w-6 h-6" />
+                      )}
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={handleNextTrack}
+                    >
+                      <ForwardIcon className="w-6 h-6" />
+                    </Button>
+                  </div>
+
+                  <div
+                    id="controls-mobile"
+                    className="flex h-full items-center md:hidden"
+                  >
+                    <Button
+                      size="icon"
+                      className="rounded-full mr-4"
+                      onClick={handlePlayPause}
+                    >
+                      {isPlaying ? (
+                        <PauseIcon
+                          className={cn("w-6 h-6", !tracks && "disabled")}
+                        />
+                      ) : (
+                        <PlayIcon
+                          className={cn("w-6 h-6", !tracks && "disabled")}
+                        />
+                      )}
+                    </Button>
+                    <Button
+                      variant="ghost"
+                      size="icon"
+                      onClick={handleNextTrack}
+                    >
+                      <ForwardIcon className="w-6 h-6" />
+                    </Button>
+                  </div>
+
+                  <div
+                    id="progress"
+                    className="w-full absolute top-0 left-0 md:relative"
+                  >
+                    <Slider
+                      value={[progress]}
+                      onValueChange={handleProgressChange}
+                      max={duration}
+                      step={1}
+                      className="h-[1px] pointer-events-none md:pointer-events-auto touch-none md:touch-auto"
+                    />
+                    <div className="text-sm text-muted-foreground justify-between hidden md:flex mt-4">
+                      <span>{formatTime(currentTime)}</span>
+                      <span>{formatTime(duration)}</span>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <audio
-                ref={audioRef}
-                onTimeUpdate={handleTimeUpdate}
-                onLoadedMetadata={handleLoadedMetadata}
-              />
-            </CardContent>
-          </Card>
+                <audio
+                  ref={audioRef}
+                  onTimeUpdate={handleTimeUpdate}
+                  onLoadedMetadata={handleLoadedMetadata}
+                >
+                  Your browser does not support the audio element.
+                </audio>
+              </CardContent>
+            </Card>
+          </div>
         </div>
-      </div>)}
+      )}
 
       {fullPlayer}
     </>

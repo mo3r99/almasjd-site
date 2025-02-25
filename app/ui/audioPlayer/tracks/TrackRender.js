@@ -48,7 +48,7 @@ export default function TracksRender({ playlist, tracks, ...props }) {
               {track.title}
             </h3>
           </div>
-          {track.duration && (
+          {/* {track.duration && (
             <p className="text-sm text-gray-500 group-hover:-translate-x-6 hidden md:block">
               {Math.floor(track.duration / 60)}:
               {String(track.duration % 60).padStart(2, "0")}
@@ -58,7 +58,7 @@ export default function TracksRender({ playlist, tracks, ...props }) {
             <p className="text-sm text-gray-500 float-right group-hover:-translate-x-0 hidden md:block">
               {Math.floor(10000 / 60)}:{String(10000 % 60).padStart(2, "0")}
             </p>
-          )}
+          )} */}
         </div>
       ))}
     </>

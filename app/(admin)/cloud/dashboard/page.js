@@ -5,8 +5,7 @@ import HeroSection from "./components/heroSection/heroSection";
 
 export default async function LayoutDashboard() {
   const session = await auth();
-  if (session) {console.log(session)}
-
+  
   if (!session) {
     redirect('/auth');
   }

@@ -52,7 +52,6 @@ export async function GET(req) {
     const sessionId = url.searchParams.get('session_id');
     
     const session = await stripe.checkout.sessions.retrieve(sessionId);
-    console.log(session)
 
     return NextResponse.json({
       status: session.status,

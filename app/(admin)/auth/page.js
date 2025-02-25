@@ -1,19 +1,16 @@
 import Image from "next/image";
 
 import { LoginForm } from "./login-form";
-import { Link } from 'next-view-transitions';
+import { Link } from "next-view-transitions";
 import { redirect } from "next/navigation";
 
 import { auth } from "@/app/auth";
 
 export default async function LoginPage() {
-  const session = await auth()
+  const session = await auth();
 
   if (session) {
-    console.log(session)
-    if (session) {
-      redirect('/cloud')
-    }
+    redirect("/cloud");
   }
 
   return (
@@ -22,7 +19,14 @@ export default async function LoginPage() {
         <div className="flex h-9 justify-center gap-2 md:justify-start">
           <Link href="/" className="flex h-9 items-center gap-2 font-medium">
             <div className="flex items-center justify-center rounded-md text-primary-foreground">
-              <Image src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/logo.png'} width={40} height={40} alt="almasjid logo" />
+              <Image
+                src={
+                  "https://almasjid-site.s3.eu-north-1.amazonaws.com/logo.png"
+                }
+                width={40}
+                height={40}
+                alt="almasjid logo"
+              />
             </div>
             Al Masjid
           </Link>
@@ -35,7 +39,7 @@ export default async function LoginPage() {
       </div>
       <div className="relative hidden bg-muted lg:block">
         <Image
-          src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
+          src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png"}
           fill
           alt="Image"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
