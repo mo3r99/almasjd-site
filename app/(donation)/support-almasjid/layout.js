@@ -1,5 +1,10 @@
 import Image from 'next/image'
 
+export const metadata = {
+    title: 'Donate | Al Masjid',
+    description: 'Further our cause at Al Masjid by donating'
+}
+
 export default function Layout({children}) {
     return (
         <html lang="en">

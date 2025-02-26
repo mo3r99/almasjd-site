@@ -31,35 +31,63 @@ function TitleHeader({ title, children, nop, ...props }) {
   );
 }
 
-export async function generateMetadata({ params }) {
-  let lesson = (await params).lesson;
-}
-
-export default async function Lesson({ params }) {
-  let lesson = (await params).lesson;
-
-  if (lesson === "links") {
-    return notFound();
-  }
-
-  const links = LESSON.map((lesson) => {
-    return lesson.slug;
-  });
+function slugToIndex (slug) {
+  const links = LESSON.map((ls) => ls.slug);
 
   let validLink = [false, 0];
   let index = 0;
   links.forEach((link) => {
-    if (link === lesson) {
+    if (link === slug) {
       validLink = [true, index];
     }
     index++;
-})
+  })
 
   if (!validLink) {
     return notFound();
   }
 
-  index = validLink[1];
+  console.log(validLink);
+
+  return validLink[1];
+}
+
+export async function generateMetadata({ params }) {
+  let lesson = (await params).lesson;
+
+  const index = slugToIndex(lesson);
+
+  return {
+    title: LESSON[index].title,
+    description: LESSON[index].description
+  }
+}
+
+export default async function Lesson({ params }) {
+  let slug = (await params).lesson;
+
+  if (slug === "links") {
+    return notFound();
+  }
+
+  // const links = LESSON.map((lesson) => {
+  //   return lesson.slug;
+  // });
+
+  // let validLink = [false, 0];
+  // let index = 0;
+  // links.forEach((link) => {
+  //   if (link === lesson) {
+  //     validLink = [true, index];
+  //   }
+  //   index++;
+  // })
+
+  // if (!validLink) {
+  //   return notFound();
+  // }
+
+  const index = slugToIndex(slug);
 
   if (!LESSON[index].content?.soundcloud) {
     return (

@@ -1,12 +1,29 @@
 import Image from "next/image";
 import AUDIO from "@/store/audio/audio";
-import { Button } from "@/components/ui/button";
-import { Play } from "lucide-react";
-import { Share } from "lucide-react";
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 import TracksRender from "@/app/ui/audioPlayer/tracks/TrackRender";
 import { notFound } from "next/navigation";
-import { PlayButtonMobile, PlayButttonDesktop } from "@/app/ui/audioPlayer/tracks/playButton/playButton";
+import {
+  PlayButtonMobile,
+  PlayButttonDesktop,
+} from "@/app/ui/audioPlayer/tracks/playButton/playButton";
+
+export async function generateMetadata({params}) {
+  const albumID = (await params).slug;
+  console.log(albumID)
+  for (var playlist of AUDIO) {
+    console.log(playlist)
+    if (albumID == playlist.id) {
+      console.log(playlist)
+      return {
+        title: playlist.title,
+        description: playlist.description,
+      };
+    }
+  }
+
+  
+}
 
 export default async function AlbumPage({ params }) {
   const p = await params;

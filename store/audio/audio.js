@@ -722,6 +722,8 @@ const AUDIO = [
     id: 5,
     title: "Connecting with the Qur'an Series",
     artist: "Dr. Nasser Rashid",
+    description:
+      "A bitsize summary of the Quranic meanings, delivered by Shaykh Nasser Rashid during his Ramadhan Lectures at the Darnley Musalla.",
     cover:
       "https://almasjid-site.s3.eu-north-1.amazonaws.com/tajweed-series.jpg",
     tracks: [

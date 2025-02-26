@@ -3,6 +3,11 @@ import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 import YTLesson from "./YTLesson";
 import Community from "@/app/ui/community/community";
 
+export const metadata = {
+  title: 'Four Greatest Muslims',
+  description: 'Stories of the Four Greatest Muslims - The Rightly Guided Caliphs'
+}
+
 export default function FourGreatestMuslimsPage() {
   return (
     <>

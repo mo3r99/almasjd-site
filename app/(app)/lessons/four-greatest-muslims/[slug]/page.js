@@ -2,8 +2,26 @@ import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 import Button from "@/app/ui/button/button";
 import Heading from "@/app/ui/heading/heading";
 
+export async function generateMetadata ({params}) {
+  const slug = (await params).slug;
+
+  const title =
+    slug === "abu-bakr"
+      ? "Session 1: Abu Bakr (RA)"
+      : slug === "umar"
+      ? "Session 2: Umar (RA)"
+      : slug === "uthman"
+      ? "Session 3: Uthman (RA)"
+      : slug === "ali" && "Session 4: Ali (RA)";
+
+  return {
+    title: title,
+    description: `Stories of the Four Greatest Muslims - ${title.slice(0,8)}`
+  }
+}
+
 export default async function LessonPage({ params }) {
-  const slug = await params.slug;
+  const slug = (await params).slug;
 
   const title =
     slug === "abu-bakr"

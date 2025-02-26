@@ -11,6 +11,15 @@ import "./page.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 
+export async function generateMetadata({ params }) {
+  const whichClass = (await params).slug;
+
+  return {
+    title: classes[whichClass].title,
+    description: `Join our ${classes[whichClass.title]} class at Al Masjid`,
+  };
+}
+
 function isDark(color) {
   if (!color) {
     return false;
@@ -24,7 +33,7 @@ function isDark(color) {
 }
 
 export default async function ClassPage({ params }) {
-  const whichClass = await params.slug;
+  const whichClass = (await params).slug;
 
   if (!classes[whichClass]) {
     notFound();
@@ -43,8 +52,8 @@ export default async function ClassPage({ params }) {
         {!classes[whichClass].closed && (
           <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
             Admissions Open for {new Date().getFullYear()}
-          </span>)
-        }
+          </span>
+        )}
         <p className="mt-6 font-[family-name:var(--font-montserrat)] mb-8 max-w-[80vw] m-auto">
           {classes[whichClass].description}
         </p>

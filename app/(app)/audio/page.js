@@ -1,7 +1,11 @@
 import AlbumView from "@/app/ui/audioPlayer/AlbumView";
 
-import FullScreenPlayer from "@/app/ui/audioPlayer/FullScreenPlayer";
 import AUDIO from "@/store/audio/audio";
+
+export const metadata = {
+  title: 'Audio Lectures',
+  description: 'Audio Lectures at Al Masjid'
+}
 
 export default function AudioPage() {
   return (

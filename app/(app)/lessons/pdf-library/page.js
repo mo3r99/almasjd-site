@@ -5,6 +5,11 @@ import Image from "next/image";
 
 import styles from './pdf.module.css'
 
+export const metadata = {
+  title: 'PDF Library',
+  description: 'Explore our library of free PDF books'
+}
+
 function Book({ title, href, image, ...props }) {
   return (
     <div className={`${styles.book} w-[250px] h-[312px] smd:w-[200px] smd:h-[250px] bg-blue relative mb-12 book transition-all duration-200`}>
