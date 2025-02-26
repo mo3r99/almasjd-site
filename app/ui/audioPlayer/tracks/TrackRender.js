@@ -16,10 +16,14 @@ export default function TracksRender({ playlist, tracks, ...props }) {
     setIsPlaying,
     progress,
     setProgress,
+    artwork, 
+    setArtwork
   } = useAudio();
+
   const handleTrackPress = (track) => {
     setTracks(playlist.tracks);
     setCurrentTrackIndex(track.id-1);
+    setArtwork(playlist.cover)
     setIsPlaying(true);
   };
 

@@ -18,8 +18,14 @@ import { cn } from "@/lib/utils";
 
 import Image from "next/image";
 import { useAudio } from "@/app/lib/AudioContext";
+import FullScreenPlayer from "./FullScreenPlayer";
+
+import { formatTime } from "@/app/lib/formatDate";
 
 export default function AudioPlayer({ className }) {
+  // Add rate limiting - allow track change only every 500ms
+  const lastTrackChange = useRef(Date.now());
+
   const [currentTime, setCurrentTime] = useState(0);
   const [duration, setDuration] = useState(0);
 
@@ -32,6 +38,7 @@ export default function AudioPlayer({ className }) {
     setIsPlaying,
     progress,
     setProgress,
+    artwork
   } = useAudio();
 
   const audioRef = useRef(null);
@@ -89,28 +96,24 @@ export default function AudioPlayer({ className }) {
     }
   };
 
-  // Function to format time in minutes and seconds
-  const formatTime = (time) => {
-    const minutes = Math.floor(time / 60);
-    const seconds = Math.floor(time % 60);
-    return `${minutes}:${seconds < 10 ? "0" : ""}${seconds}`;
-  };
-
   // useEffect to handle track change
   useEffect(() => {
+    const now = Date.now();
+    if (now - lastTrackChange.current < 500) {
+      return; // Skip if changing tracks too fast
+    }
+    lastTrackChange.current = now;
+
     if (audioRef.current) {
-      //audioRef.current.pause();
       audioRef.current.src = tracks[currentTrackIndex]?.src || "";
-      //audioRef.current.load();
       audioRef.current.currentTime = 0;
-      setCurrentTime(0); // Reset the current time for the new track
-      setProgress(0); // Reset the progress for the new track
+      setCurrentTime(0);
+      setProgress(0);
       if (isPlaying) {
         audioRef.current.play();
       }
     }
   }, [currentTrackIndex, tracks]);
-
 
   const toggleFullPlayer = () => {
     setIsVisible(true);
@@ -119,106 +122,21 @@ export default function AudioPlayer({ className }) {
 
   const [isVisible, setIsVisible] = useState(false);
 
-  const ratio = 0.5;
-
-  const fullPlayer = (
-    <div
-      className={cn(
-        "fixed top-0 left-0 transition-all ease-[cubic-bezier(0.25,0.1,0.25,1)] duration-500 w-screen h-screen bg-slate-100 z-50",
-        fullPlayerOpen ? "translate-y-0" : "translate-y-[100vh]",
-        !fullPlayerOpen && !isVisible && "hidden"
-      )}
-      onTransitionEnd={() => {
-        if (!fullPlayerOpen) {
-          setIsVisible(false);
-        }
-      }}
-    >
-      <Button
-        variant="ghost"
-        size="icon"
-        className="rounded-full flex absolute bottom-[20px] left-[50%] translate-x-[-50%]"
-        onClick={toggleFullPlayer}
-      >
-        <ChevronDown className="block" />
-      </Button>
-      <div
-        className={cn(
-          "w-[90%] md:w-[70%] lg:w-[50%] max-w-[500px] flex flex-col align-center justify-center mx-auto px-4 md:px-8 mt-[10vh]"
-        )}
-      >
-        <Image
-          src={"/artwork.png"}
-          width={500}
-          height={500}
-          alt="artwork"
-          className="w-full aspect-square object-contain"
-        />
-        <div className="flex items-center gap-3 mt-4 w-full">
-          <div className="flex flex-col justify-center text-center w-full">
-            <h2 className="text-xl md:text-2xl font-bold truncate">
-              {tracks[currentTrackIndex]?.title || ""}
-            </h2>
-            <p className="text-muted-foreground text-base md:text-lg truncate">
-              {tracks[currentTrackIndex]?.artist || ""}
-            </p>
-          </div>
-        </div>
-
-        <div className="mt-8 md:mt-12 w-full">
-          <Slider
-            value={[progress]}
-            onValueChange={handleProgressChange}
-            max={duration}
-            step={1}
-            bg="bg-zinc-300"
-          />
-          <div className="text-sm md:text-base text-muted-foreground justify-between flex mt-2">
-            <span>{formatTime(currentTime)}</span>
-            <span>{formatTime(duration)}</span>
-          </div>
-        </div>
-
-        <div className="mt-8 md:mt-12 w-full flex justify-center items-center gap-4 scale-100 md:scale-125">
-          <Button
-            className="w-10 h-10 md:w-12 md:h-12"
-            variant="ghost"
-            onClick={handlePrevTrack}
-          >
-            <RewindIcon className="w-6 h-6 md:w-8 md:h-8" />
-          </Button>
-          <Button
-            className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-weborange"
-            onClick={handlePlayPause}
-          >
-            {isPlaying ? (
-              <PauseIcon className="w-6 h-6 md:w-8 md:h-8" />
-            ) : (
-              <PlayIcon className="w-6 h-6 md:w-8 md:h-8" />
-            )}
-          </Button>
-          <Button
-            className="w-10 h-10 md:w-12 md:h-12"
-            variant="ghost"
-            onClick={handleNextTrack}
-          >
-            <ForwardIcon className="w-6 h-6 md:w-8 md:h-8" />
-          </Button>
-        </div>
-      </div>
-    </div>
-  );
-
   return (
     <>
       {tracks.length > 0 && (
         <div className="z-[49] flex flex-col w-screen items-center justify-center text-foreground max-h-[150px] md:max-h-[100px] fixed bottom-0 left-0">
           <div className="max-w-screen w-full space-y-4">
-            <Card>
+            <Card
+              style={{
+                paddingBottom: "calc(env(safe-area-inset-bottom) - 1.3rem)",
+              }}
+            >
               <CardContent className="px-2 py-4 md:p-0 grid grid-cols-4 md:grid-cols-4 gap-3 relative">
                 <div
                   id="title-art"
                   className="col-span-3 md:col-span-1 flex items-center gap-3 pl-2"
+                  onClick={() => setFullPlayerOpen(true)}
                 >
                   <Button
                     variant="ghost"
@@ -229,15 +147,18 @@ export default function AudioPlayer({ className }) {
                     <ChevronUp className="block" />
                   </Button>
                   <Image
-                    src="https://almasjid-site.s3.eu-north-1.amazonaws.com/quran.png"
+                    src={artwork}
                     alt="Album Cover"
                     width={25}
                     height={25}
                     className="rounded-full w-12 h-12 object-cover"
                   />
 
-                  <div className="h-full flex flex-col justify-center">
-                    <h2 className="text-lg font-bold">
+                  <div
+                    className="h-full flex flex-col justify-center"
+                    onClick={() => setFullPlayerOpen(true)}
+                  >
+                    <h2 className="text-lg font-bold truncate max-w-[55%]">
                       {tracks[currentTrackIndex]?.title || ""}
                     </h2>
                     <p className="text-muted-foreground text-sm hidden smd:block">
@@ -337,7 +258,8 @@ export default function AudioPlayer({ className }) {
         </div>
       )}
 
-      {fullPlayer}
+      {/* {fullPlayer} */}
+      <FullScreenPlayer open={fullPlayerOpen} setOpen={setFullPlayerOpen} handleProgressChange={handleProgressChange} handleNextTrack={handleNextTrack} handlePrevTrack={handlePrevTrack} handlePlayPause={handlePlayPause} duration={duration} currentTime={currentTime} />
     </>
   );
 }

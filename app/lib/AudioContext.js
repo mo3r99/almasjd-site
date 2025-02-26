@@ -9,6 +9,7 @@ function AudioProvider({ children }) {
   const [currentTrackIndex, setCurrentTrackIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
+  const [artwork, setArtwork] = useState('/artwork.png');
 
   return (
     <AudioContext.Provider
@@ -21,6 +22,8 @@ function AudioProvider({ children }) {
         setIsPlaying,
         progress,
         setProgress,
+        artwork,
+        setArtwork
       }}
     >
       {children}

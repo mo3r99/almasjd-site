@@ -285,7 +285,7 @@ a p {
   margin: 0 0 1em 0 !important;
   text-align: center !important;
   font-weight: 400 !important;
-  font-family: 'Montserrat', sans-serif !important;
+  font-family: "Montserrat", sans-serif !important;
 }
 
 #mc_embed_signup form {
@@ -296,10 +296,46 @@ a p {
   padding: 0 !important;
 }
 
-.mce_inline_error[for='mce-EMAIL'] {
+.mce_inline_error[for="mce-EMAIL"] {
   display: none !important;
 }
 
 #branding-footer {
   display: none !important;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+  30% {
+    transform: translateX(0);
+    opacity: 100%;
+  }
+  60% {
+    transform: translateX(-105%);
+    opacity: 100%;
+  }
+  60.25% {
+    transform: translateX(-105%);
+    opacity: 0%;
+  }
+  60.5% {
+    transform: translateX(105%);
+    opacity: 0%;
+  }
+  61% {
+    transform: translateX(105%);
+    opacity: 100%;
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee 10s linear infinite;
+  display: inline-block;
+  white-space: nowrap;
 }

@@ -2,7 +2,7 @@
 
 import 'server-only'
 
-import formatDate from "@/app/lib/formatDate";
+import {formatDate} from "@/app/lib/formatDate";
 
 import MailerLite from '@mailerlite/mailerlite-nodejs';
 import { z } from 'zod';

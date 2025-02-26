@@ -1,5 +1,6 @@
 import AlbumView from "@/app/ui/audioPlayer/AlbumView";
-import AudioPlayer from "@/app/ui/audioPlayer/AudioPlayer.js";
+
+import FullScreenPlayer from "@/app/ui/audioPlayer/FullScreenPlayer";
 import AUDIO from "@/store/audio/audio";
 
 export default function AudioPage() {
