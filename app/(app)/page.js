@@ -12,8 +12,8 @@ import Container from "@/app/ui/container/container";
 import Button from "@/app/ui/button/button";
 
 export const metadata = {
-  title: "AlMasjid - Empowering Faith, Building Community, Inspiring Harmony",
-  description: "Serving the Community",
+  title: "AlMasjid - Your online Islamic hub",
+  description: "Your online hub for Islamic education, spiritual development and growth.",
 };
 
 const OPTIONS = { loop: true };
