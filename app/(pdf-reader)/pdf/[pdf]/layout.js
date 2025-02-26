@@ -1,6 +1,11 @@
 import { ArrowLeft } from "lucide-react";
 import '@/app/globals.css'
 
+export const metadata = {
+  title: 'PDF Reader | Al Masjid',
+  description: 'Read our free PDF books on our website'
+}
+
 export default function PDFLayout({ children }) {
   return (
     <html>
