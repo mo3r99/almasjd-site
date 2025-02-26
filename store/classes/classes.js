@@ -274,8 +274,12 @@ The class will take place every Sunday in Ramadhan, beginning 9th March. `,
         markdown: `
 # Fees & Funding
 This course is free for the first 20 people who sign up. Thereafter, a £20 fee will apply.
-We believe that everybody should be able to study regardless of financial circumstances. Please email [classes@almasjid.co.uk](mailto:classes@almasjid.co.uk?subject=Help%20With%20Funding) to see what help you can receive.
-Al Masjid is a non-profit organisation, and all proceeds will go towards enhancing our services.`,
+Al Masjid is a non-profit organisation, and all proceeds will go towards enhancing our services.
+
+## Available financial support
+
+If you require financial support, please email [classes@almasjid.co.uk](mailto:classes@almasjid.co.uk?subject=Help%20With%20Funding) to see what help you can receive.
+`,
       },
     ],
   },
