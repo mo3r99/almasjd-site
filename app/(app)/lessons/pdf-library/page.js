@@ -96,11 +96,6 @@ export default function PDFLib() {
             title="The Final Journey"
             image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
           />
-          <Book
-            href={"/pdf/1"}
-            title="Between the God of the Prophets & God of the Philosophers"
-            image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png'}
-          />
         </div>
       </main>
     </>
