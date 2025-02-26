@@ -258,7 +258,7 @@ Ibn ‘Amr (RA) reported that the Prophet ﷺ said: “It will be said to the co
     backgroundImage: "/tafseer.png",
     href: "/classes/tafseer",
     description:
-      "We recite the last ten Surahs daily in Salah, but how much do we actually understand what Allah is telling us? Join us in learning the translation and meanings of these chapters of the Qur'an, with visuals, illustrations, practical advice for young Muslims, and contemporary examples. This course will this Ramadhan, from 9th March until 30th March 2025.",
+      "We recite the last ten Surahs daily in Salah, but how much do we actually understand what Allah is telling us? Join us in learning the translation and meanings of these chapters of the Qur'an, with visuals, illustrations, practical advice for young Muslims, and contemporary examples. This course will run this Ramadhan every Sunday, from 9th March until 30th March 2025.",
     sections: [
       {
         background: "#ffeccc",
