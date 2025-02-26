@@ -16,7 +16,7 @@ export async function generateMetadata ({params}) {
 
   return {
     title: title,
-    description: `Stories of the Four Greatest Muslims - ${title.slice(0,8)}`
+    description: `Stories of the Four Greatest Muslims - ${title.slice(0,9)}`
   }
 }
 
