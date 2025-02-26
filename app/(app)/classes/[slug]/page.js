@@ -10,6 +10,7 @@ import Button from "@/app/ui/button/button";
 import "./page.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 
 export async function generateMetadata({ params }) {
   const whichClass = (await params).slug;
@@ -91,7 +92,7 @@ export default async function ClassPage({ params }) {
                     // Rewrite `em`s (`*like so*`) to `i` with a red foreground color.
                     a(props) {
                       const { node, ...rest } = props;
-                      return <a className="link" {...rest} />;
+                      return <Link className="link" {...rest} />;
                     },
                     img(props) {
                       const { node, src, ...rest } = props;
