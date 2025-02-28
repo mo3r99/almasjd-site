@@ -1,6 +1,11 @@
 import { Download } from "lucide-react";
 import Image from "next/image";
 
+export const metdata = {
+  title: 'Ramadhan Calendar',
+  description: 'The 2025 Ramadhan Calendar for Al Masjid'
+}
+
 export default function Calendar() {
   return (
     <>
