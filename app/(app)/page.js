@@ -13,19 +13,20 @@ import Button from "@/app/ui/button/button";
 
 export const metadata = {
   title: "AlMasjid - Your online Islamic hub",
-  description: "Your online hub for Islamic education, spiritual development and growth.",
+  description:
+    "Your online hub for Islamic education, spiritual development and growth.",
 };
 
 const OPTIONS = { loop: true };
 
 const bsmImg = "https://almasjid-site.s3.eu-north-1.amazonaws.com/bsm.png";
 
-
 import Slide1 from "@/app/ui/carousel/slides/Slide1";
 
 import HOME from "@/store/home/HOME";
 import LS from "@/store/lessons/lessons";
-const LESSON = LS.LESSON
+import Announcement from "../ui/announcement/Announcement";
+const LESSON = LS.LESSON;
 
 export default function Home() {
   return (
@@ -76,16 +77,51 @@ export default function Home() {
         switch (section.type) {
           case "classes":
             return <ClassesSection key={index} bg={section.background} />;
+          case "announcements":
+            return (
+              <section key={section.id} className="bg-dolphin pb-8">
+                <Container className="text-white max-w-5xl mx-auto">
+                  <Heading className="relative mx-6 md:mx-0 mt-10 mb-8 text-center">
+                    Announcements
+                  </Heading>
+                  <div className="grid grid-cols-1 lg:grid-cols-3 max-w-[80vw] mx-auto gap-4">
+                    <Announcement
+                      title={"Download our Ramadhan Timetable"}
+                      img={
+                        "https://almasjid-site.s3.eu-north-1.amazonaws.com/ramadhan.png"
+                      }
+                      btnText={"Download Now"}
+                      href="/ramadhan/calendar"
+                      className={"z-[2]"}
+                    >
+                    </Announcement>
+
+                    <Announcement
+                      title={"Ladies Taraweeh"}
+                      img={
+                        "/prayermat.png"
+                      }
+                      btnText={"View in maps"}
+                      href="https://maps.app.goo.gl/zcYnVw8yUrWzhtDu5"
+                      className={"z-[2]"}
+                    >
+                      Location of ladies taraweeh 149 Woodhead Rd, Glasgow G53
+                      7NN (Twisted Packaging Ltd)
+                    </Announcement>
+                  </div>
+                </Container>
+              </section>
+            );
           case "lessons":
             return (
-              <section key={index} className="w-[100%] bg-zinc-900">
+              <section key={section.id} className="w-[100%] bg-zinc-900">
                 <Container className="text-white max-w-5xl mx-auto">
                   <Heading className="relative mx-6 md:mx-0 mt-10 mb-8 text-center">
                     Featured Lessons
                   </Heading>
                   <div className="flex-wrap grid md:grid-cols-3 gap-x-8 gap-y-10 mb-10 mx-6 ">
                     {LESSON.slice(0, 3).map((lesson, index) => (
-                      <Lesson 
+                      <Lesson
                         key={index}
                         href={`/lessons/${lesson.slug}`}
                         title={lesson.title}
@@ -106,11 +142,11 @@ export default function Home() {
               </section>
             );
           case "services":
-            return <ServicesSection key={index} bg={section.background} />;
+            return <ServicesSection key={section.id} bg={section.background} />;
           case "livestream":
-            return <LiveStream key={index} />;
+            return <LiveStream key={section.id} />;
           case "community":
-            return <Community key={index} />;
+            return <Community key={section.id} />;
         }
       })}
     </>

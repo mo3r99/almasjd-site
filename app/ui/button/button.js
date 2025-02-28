@@ -25,7 +25,11 @@ export default function Button ({colour, href, children, className, back, ...pro
         style = style + ' text-dolphin ' + styles.purpleButton
         c = 'text-dolphin hover:text-[#423c5a] transition-all duration-300'
         color = '#458878'
-    }
+    } else if (colour === 'white') {
+      style = style + ' text-white ' + styles.whiteButton
+      c = 'text-white hover:text-white transition-all duration-300'
+      color = '#458878'
+  }
 
     return (
       <>

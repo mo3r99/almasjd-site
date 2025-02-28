@@ -13,6 +13,10 @@
     filter: invert(47%) sepia(6%) saturate(2504%) hue-rotate(115deg) brightness(98%) contrast(88%);
 }
 
+.whiteButton svg {
+    filter: invert(100%);
+}
+
 .orangeButton svg {
     filter: invert(68%) sepia(85%) saturate(803%) hue-rotate(340deg) brightness(98%) contrast(92%);
 }
