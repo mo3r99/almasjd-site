@@ -12,7 +12,7 @@ export default function Services() {
         <Breadcrumbs className='mx-auto mt-8'/>
     
     <ServicesSection style={{marginTop: 0, paddingTop: 0}}/>
-    <Community>Stay up to date about our latest services. We will never spam you.</Community>
+    <Community>Stay up to date about our latest services.</Community>
     </>
   );
 }

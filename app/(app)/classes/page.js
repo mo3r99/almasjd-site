@@ -69,7 +69,7 @@ export default function Classes() {
         </div>
       </div>
       <Community>
-        Stay up do date about our latest classes. We will never spam you.
+        Stay up do date about our latest classes.
       </Community>
     </>
   );
