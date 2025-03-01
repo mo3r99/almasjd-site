@@ -19,7 +19,9 @@ export const metadata = {
 
 const OPTIONS = { loop: true };
 
-const bsmImg = "https://almasjid-site.s3.eu-north-1.amazonaws.com/bsm.png";
+const bsmImgM = "https://almasjid-site.s3.eu-north-1.amazonaws.com/bsm-m.webp";
+const bsmImgDk = "https://almasjid-site.s3.eu-north-1.amazonaws.com/bsm.png";
+
 
 import Slide1 from "@/app/ui/carousel/slides/Slide1";
 
@@ -33,20 +35,24 @@ export default function Home() {
     <>
       <main className="items-center justify-items-center font-[family-name:var(--font-raleway)]">
         <Image
-          src={bsmImg}
+          src={bsmImgDk}
           width={500}
-          height={200}
+          height={101}
           alt="bismillah"
           className="hidden w-auto h-auto md:block mix-blend-multiply pointer-events-none pt-5 mx-auto"
+          style={{width: '500px', height: '101px'}}
+          unoptimized
           priority
         />
 
         <Image
-          src={bsmImg}
-          width={270}
-          height={108}
+          src={bsmImgM}
+          width={320}
+          height={73.5}
           alt="bismillah"
           className="block w-auto h-auto md:hidden mix-blend-multiply pointer-events-none pt-5 mx-auto"
+          style={{width: '320px', height: '73.5px'}}
+          unoptimized
           priority
         />
         <EmblaCarousel options={OPTIONS} className={"md:pt-0"}>

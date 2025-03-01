@@ -66,7 +66,8 @@ export default function CarouselCard({
               className={`hidden md:block self-center ${home && 'mix-blend-multiply'} w-auto h-auto pointer-events-none mx-6 smd:relative bottom-[30vh]}`}
               alt={title}
               priority={true}
-              style={{clipPath: clip && 'polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)'}}
+              style={{clipPath: clip && 'polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)', width: 309.4, height: 309.4}}
+              unoptimized
             />
             <Image
               src={image}
@@ -75,7 +76,8 @@ export default function CarouselCard({
               className={`block w-auto h-auto md:hidden self-center ${home && 'mix-blend-multiply'} w-auto h-auto pointer-events-none mx-6 smd:relative bottom-[30vh]}`}
               alt={title}
               priority={true}
-              style={{clipPath: clip && 'polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)'}}
+              style={{clipPath: clip && 'polygon(50% 0%, 80% 10%, 100% 35%, 100% 70%, 80% 90%, 50% 100%, 20% 90%, 0% 70%, 0% 35%, 20% 10%)', width: 'auto', height: 320, backgroundSize: 'contain', aspectRatio: '1 / 1'}}
+              unoptimized
             />
           </div>
         )}

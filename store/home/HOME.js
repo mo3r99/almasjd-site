@@ -6,7 +6,10 @@ const HOME = {
         "AlMasjid is your online hub for Islamic education, spiritual development and growth, managed by a panel of qualified Imams and experienced scholars. Explore our website to discover something for you.",
       button: "See our classes",
       buttonLink: "/classes",
-      image: "hero.png",
+      image: {
+        desktop: 'hero-dk.webp',
+        mobile: 'hero-m.webp'
+      },
     },
     sections: [
       {
