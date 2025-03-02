@@ -9,7 +9,8 @@ return (
             <Image 
                 width={200}
                 height={200}
-                src={img} 
+                unoptimized
+                src={`//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/${img}&w=200&h=200`} 
                 alt={title}
                 className="object-cover p-4 mx-auto"
                 //sizes="(max-width: 768px) 100vw, 768px"

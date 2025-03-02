@@ -94,7 +94,7 @@ export default function Home() {
                     <Announcement
                       title={"Download our Ramadhan Timetable"}
                       img={
-                        "https://almasjid-site.s3.eu-north-1.amazonaws.com/ramadhan.png"
+                        "ramadhan.png"
                       }
                       btnText={"Download Now"}
                       href="/ramadhan/calendar"
@@ -105,7 +105,7 @@ export default function Home() {
                     <Announcement
                       title={"Ladies Taraweeh"}
                       img={
-                        "/prayermat.png"
+                        "prayermat.png"
                       }
                       btnText={"View in maps"}
                       href="https://maps.app.goo.gl/zcYnVw8yUrWzhtDu5"
