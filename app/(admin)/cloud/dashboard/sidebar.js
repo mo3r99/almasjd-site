@@ -59,7 +59,7 @@ export async function AppSidebar() {
       <SidebarHeader className='relative top-4'>
         <ul>
           <li className="flex gap-2 items-center">
-            <Image src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/logo.png'} width={40} height={40} alt="almasjid logo" />
+            <Image src={'//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/logo.png&w=80&h=80'} width={40} height={40} alt="almasjid logo" unoptimized />
             <span className='truncate relative top-1'>
               <h2 className="font-semibold text-lg m-0 p-0">
                 Al Masjid Cloud

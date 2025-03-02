@@ -7,8 +7,8 @@ const HOME = {
       button: "See our classes",
       buttonLink: "/classes",
       image: {
-        desktop: 'hero-dk.webp',
-        mobile: 'hero-m.webp'
+        desktop: 'hero.png',
+        mobile: 'hero.png'
       },
     },
     sections: [

@@ -10,11 +10,8 @@ import {
 
 export async function generateMetadata({params}) {
   const albumID = (await params).slug;
-  console.log(albumID)
   for (var playlist of AUDIO) {
-    console.log(playlist)
     if (albumID == playlist.id) {
-      console.log(playlist)
       return {
         title: playlist.title,
         description: playlist.description,
@@ -50,10 +47,11 @@ export default async function AlbumPage({ params }) {
           {album.cover && (
             <div className="w-full md:w-64 h-64 aspect-square relative">
               <Image
-                src={album.cover}
+                src={`//wsrv.nl/?url=${album.cover}&w=300&h=300`}
+                unoptimized
                 alt={album.title}
                 fill
-                sizes="(max-width: 768px) 33vw, (max-width: 1200px) 25vw, 15vw"
+                //sizes="(max-width: 768px) 33vw, (max-width: 1200px) 25vw, 15vw"
                 className="object-cover rounded-lg"
               />
             </div>

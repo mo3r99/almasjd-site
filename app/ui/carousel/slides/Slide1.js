@@ -59,7 +59,7 @@ export default function Slide1() {
         transition={{ delay: 1, duration: 1 }}
       >
         <Image
-          src={`https://almasjid-site.s3.eu-north-1.amazonaws.com/${HOME.main.hero.image.desktop}`}
+          src={`//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/${HOME.main.hero.image.desktop}&w=700&h=700`}
           width={600}
           height={600}
           className="hidden md:block mix-blend-multiply w-auto h-auto absolute bottom-0 right-[-4em] z-0 pointer-events-none"
@@ -68,7 +68,7 @@ export default function Slide1() {
           unoptimized
         />
         <Image
-          src={`https://almasjid-site.s3.eu-north-1.amazonaws.com/${HOME.main.hero.image.desktop}`}
+          src={`//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/${HOME.main.hero.image.desktop}&w=500&h=500`}
           width={414}
           height={414}
           className="block md:hidden mix-blend-multiply w-auto h-auto absolute bottom-0 right-[-1em] z-0 pointer-events-none"

@@ -60,7 +60,7 @@ export default function CarouselCard({
         {image && (
           <div className={`flex justify-center items-center`}>
             <Image
-              src={image}
+              src={`//wsrv.nl/?url=${image}&w=320&h=320`}
               width={320}
               height={320}
               className={`hidden md:block self-center ${home && 'mix-blend-multiply'} w-auto h-auto pointer-events-none mx-6 smd:relative bottom-[30vh]}`}
@@ -70,7 +70,7 @@ export default function CarouselCard({
               unoptimized
             />
             <Image
-              src={image}
+              src={`//wsrv.nl/?url=${image}&w=300&h=300`}
               width={200}
               height={200}
               className={`block w-auto h-auto md:hidden self-center ${home && 'mix-blend-multiply'} w-auto h-auto pointer-events-none mx-6 smd:relative bottom-[30vh]}`}

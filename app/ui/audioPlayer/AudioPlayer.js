@@ -146,13 +146,14 @@ export default function AudioPlayer({ className }) {
                   >
                     <ChevronUp className="block" />
                   </Button>
-                  <Image
+                  {/* <Image
                     src={artwork}
+                    unoptimized
                     alt="Album Cover"
                     width={25}
                     height={25}
                     className="rounded-full w-12 h-12 object-cover"
-                  />
+                  /> */}
 
                   <div
                     className="h-full flex flex-col justify-center"

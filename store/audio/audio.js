@@ -3,7 +3,7 @@ const AUDIO = [
     id: 1,
     title: "Summary of the Meanings of the Qur'an",
     artist: "Shaykh Habib Rauf",
-    cover: "/quran.jpg",
+    cover: "https://almasjid-site.s3.eu-north-1.amazonaws.com/quran.jpg",
     description:
       "Connect yourself with the Holy Qur’an this year. Listen to the verses at night and ponder over their meanings during the day.",
     tracks: [
@@ -601,7 +601,7 @@ const AUDIO = [
       "Learn about the stories of the chosen men who were sent by Allah ﷻ and the lessons that can be learnt from their lives. This playlist is designed for children.",
 
     cover:
-      "https://almasjid-site.s3.eu-north-1.amazonaws.com/stories-prophets.jpg",
+      "almasjid-site.s3.eu-north-1.amazonaws.com/stories-prophets.jpg",
     tracks: [
       {
         id: 1,
@@ -725,7 +725,7 @@ const AUDIO = [
     description:
       "A bitsize summary of the Quranic meanings, delivered by Shaykh Nasser Rashid during his Ramadhan Lectures at the Darnley Musalla.",
     cover:
-      "https://almasjid-site.s3.eu-north-1.amazonaws.com/tajweed-series.jpg",
+      "almasjid-site.s3.eu-north-1.amazonaws.com/tajweed-series.jpg",
     tracks: [
       {
         id: 1,

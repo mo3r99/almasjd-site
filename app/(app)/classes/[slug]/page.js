@@ -99,7 +99,8 @@ export default async function ClassPage({ params }) {
                       return (
                         <Image
                           className="m-4 md:m-6"
-                          src={src}
+                          src={`//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/${src}&w=300&h=300`}
+                          unoptimized
                           {...rest}
                           width={300}
                           height={300}

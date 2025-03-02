@@ -7,7 +7,8 @@ export default function YTLesson({title, link, image}) {
     <div className="z-10">
       <Link href={link}>
         <Image
-          src={image}
+          src={`//wsrv.nl/?url=${image}&w=300&h=300`}
+          unoptimized
           alt={title}
           className="rounded-lg pointer-events-none hover:cursor-grab w-[300px] h-[168px] object-cover"
           width={300}

@@ -35,7 +35,7 @@ export default function Classes() {
               <Lesson
                 href={"/classes/tafseer"}
                 title="Tafseer of Last 10 Surahs"
-                image={"/tafseer.png"}
+                image={"almasjid-site.s3.eu-north-1.amazonaws.com/tafseer.png"}
                 newCourse={true}
                 applicationsOpen={true}
               >

@@ -16,7 +16,8 @@ const Album = ({ title, artist, coverUrl, id, handleThumbnailPlay }) => {
     >
       <div className="relative aspect-square w-full mb-4">
         <Image
-          src={coverUrl || "/default-album.png"}
+          src={`//wsrv.nl/?url=${coverUrl}&w=400&h=400`}
+          unoptimized
           alt={`${title} cover`}
           className="object-cover rounded-md shadow-lg"
           fill

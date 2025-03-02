@@ -19,8 +19,8 @@ export const metadata = {
 
 const OPTIONS = { loop: true };
 
-const bsmImgM = "https://almasjid-site.s3.eu-north-1.amazonaws.com/bsm-m.webp";
-const bsmImgDk = "https://almasjid-site.s3.eu-north-1.amazonaws.com/bsm.png";
+const bsmImgM = "//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/bsm-m.webp&w=520&h=124";
+const bsmImgDk = "//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/bsm.png&w=700&h=201";
 
 
 import Slide1 from "@/app/ui/carousel/slides/Slide1";
@@ -69,7 +69,7 @@ export default function Home() {
                   type={item.type}
                   link={item.link}
                   caption={item.caption}
-                  image={`https://almasjid-site.s3.eu-north-1.amazonaws.com/${item.image}`}
+                  image={`almasjid-site.s3.eu-north-1.amazonaws.com/${item.image}`}
                 >
                   {item.text}
                 </CarouselCard>

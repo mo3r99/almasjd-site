@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils";
 import Image from "next/image";
 
 const placeholder =
-  "https://almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png";
+  "almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png";
 
 export default function Lesson({
   children,
@@ -27,7 +27,7 @@ export default function Lesson({
       <div className="w-full aspect-[3/2] mb-4 relative">
         <Image
           alt={title}
-          src={image ? image : placeholder}
+          src={image ? `//wsrv.nl/?url=${image}&w=300&h=300` : `//wsrv.nl/?url=${placeholder}&w=300&h=300`}
           // style={{
           //   clipPath:
           //     "polygon(50% 0%, 80% 10%, 100% 35%, 100% 100%, 80% 100%, 50% 100%, 20% 100%, 0 100%, 0% 35%, 20% 10%)",
@@ -35,6 +35,7 @@ export default function Lesson({
           style={{
             clipPath: "circle(70% at 50% 90%)",
           }}
+          unoptimized
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 768px) 50vw, 300px"
           className="object-cover"

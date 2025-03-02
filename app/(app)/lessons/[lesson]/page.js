@@ -47,8 +47,6 @@ function slugToIndex (slug) {
     return notFound();
   }
 
-  console.log(validLink);
-
   return validLink[1];
 }
 

@@ -47,7 +47,7 @@ export default function VaulDrawer({
           "w-[90%] md:w-[70%] max-w-[500px] flex flex-col align-center justify-center mx-auto px-4 md:px-8 pb-8"
         )}
       >
-        <div className="w-full h-full">
+        {/* <div className="w-full h-full">
           <Image
             src={artwork}
             alt="artwork"
@@ -55,7 +55,7 @@ export default function VaulDrawer({
             width={500}
             height={500}
           />
-        </div>
+        </div> */}
         <div className="flex items-center gap-3 mt-4 w-full">
           <div className="flex flex-col justify-center text-center w-full overflow-hidden">
             <h2 className="text-xl md:text-2xl font-bold whitespace-nowrap animate-marquee md:animate-none">
