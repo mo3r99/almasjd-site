@@ -22,7 +22,8 @@ export default function Calendar() {
       <Image
         width={800}
         height={1200}
-        src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/calendar.jpeg"}
+        src={"//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/calendar.jpeg&w=1200&h=auto"}
+        unoptimized
         className="mx-auto hidden md:block my-4"
         alt='Ramadhan Calendar'
       />
@@ -30,7 +31,8 @@ export default function Calendar() {
       <Image
         width={500}
         height={900}
-        src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/calendar.jpeg"}
+        src={"//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/calendar.jpeg&w=900&h=auto"}
+        unoptimized
         className="mx-auto block md:hidden my-4"
         alt='Ramadhan Calendar'
       />
