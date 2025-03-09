@@ -58,6 +58,9 @@ export default function Breadcrumbs({ className }) {
             case "5":
               path = "Connecting With the Qur'an";
               break;
+            case "6":
+                path = "Summary of the Meanings of the Quran (Urdu)";
+                break;
           }
 
           return (
