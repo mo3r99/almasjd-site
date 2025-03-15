@@ -7,6 +7,8 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 import Link from "next/link";
 
+import Image from "next/image";
+
 const LESSON = ls.LESSON;
 
 function TitleHeader({ title, children, nop, ...props }) {

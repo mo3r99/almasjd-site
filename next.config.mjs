@@ -3,7 +3,6 @@ const nextConfig = {
   experimental: {
     viewTransition: true,
   },
-
   images: {
     unoptimized: false,
 
