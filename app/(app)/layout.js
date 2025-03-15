@@ -1,17 +1,17 @@
-import { Raleway, Montserrat } from "next/font/google";
+import { Raleway, Montserrat, Noto_Nastaliq_Urdu } from "next/font/google";
 import "@/app/globals.css";
 import Header from "../ui/header/header";
-import Footer from "../ui/footer/footer";
+import Footer from "@/app/ui/footer/footer";
 import Head from "next/head";
-import ParticlesComponent from "../ui/particles/particles";
+// import ParticlesComponent from "../ui/particles/particles";
 
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
-import { ViewTransitions } from "next-view-transitions";
 
 import { AudioProvider } from "../lib/AudioContext";
 import AudioPlayer from "../ui/audioPlayer/AudioPlayer";
+
+import { GCScript } from "next-goatcounter";
 
 const raleway = Raleway({
   variable: "--font-raleway",
@@ -21,6 +21,11 @@ const raleway = Raleway({
 const montserrat = Montserrat({
   variable: "--font-montserrat",
   subsets: ["latin"],
+});
+
+const nastaliq = Noto_Nastaliq_Urdu({
+  variable: "--font-nastaliq",
+  subsets: ["arabic"],
 });
 
 export const metadata = {
@@ -42,24 +47,19 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <ViewTransitions>
       <html lang="en">
         <Head>
           <meta name="apple-mobile-web-app-title" content="Almasjid" />
-          <Script
-            data-goatcounter="https://almasjid.goatcounter.com/count"
-            async
-            src="//gc.zgo.at/count.js"
-          />
         </Head>
 
-        <SpeedInsights />
+        {/* <SpeedInsights /> */}
         <Analytics />
 
         <body
-          className={`${raleway.variable} ${montserrat.variable} antialiased min-h-[100vh] flex flex-col`}
+          className={`${raleway.variable} ${nastaliq.variable} ${montserrat.variable} antialiased min-h-[100vh] flex flex-col`}
         >
-          <ParticlesComponent />
+          <GCScript siteUrl={"https://almasjid.goatcounter.com/count"} />
+          {/* <ParticlesComponent /> */}
 
           <Header />
 
@@ -70,6 +70,5 @@ export default function RootLayout({ children }) {
           <Footer />
         </body>
       </html>
-    </ViewTransitions>
   );
 }

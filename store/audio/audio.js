@@ -875,8 +875,8 @@ const AUDIO = [
     title: "Summary of the Meanings of the Qur'an - Urdu",
     artist: "Shaykh Habib Rauf",
     cover: "https://almasjid-site.s3.eu-north-1.amazonaws.com/quran-1.jpg",
-    description:
-      "Connect yourself with the Holy Qur’an this year. Listen to the verses at night and ponder over their meanings during the day.",
+    descriptionUrdu:
+      "اس سال قرآن پاک کے ساتھ اپنے آپ کو جوڑیں۔ رات کو آیات سنیں اور دن کے وقت ان کے معانی پر غور کریں۔",
     tracks: [
       {
         id: 1,

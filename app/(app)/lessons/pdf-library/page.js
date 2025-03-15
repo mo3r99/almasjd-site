@@ -1,7 +1,6 @@
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 import Heading from "@/app/ui/heading/heading";
-import { Link } from "next-view-transitions";
-import Image from "next/image";
+import Link from "next/link";import Image from "next/image";
 
 import styles from './pdf.module.css'
 

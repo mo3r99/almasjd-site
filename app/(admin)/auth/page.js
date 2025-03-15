@@ -1,8 +1,7 @@
 import Image from "next/image";
 
 import { LoginForm } from "./login-form";
-import { Link } from "next-view-transitions";
-import { redirect } from "next/navigation";
+import Link from "next/link";import { redirect } from "next/navigation";
 
 import { auth } from "@/app/auth";
 
