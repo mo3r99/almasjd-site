@@ -30,8 +30,8 @@ const nastaliq = Noto_Nastaliq_Urdu({
 
 export const metadata = {
   title: {
-    template: "%s | AlMasjid",
-    default: "AlMasjid",
+    template: "%s | Al Masjid",
+    default: "Al Masjid",
   },
   description: "Serving the Community",
   metadataBase: new URL("https://almasjid.co.uk"),
