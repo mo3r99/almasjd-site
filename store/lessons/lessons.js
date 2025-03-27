@@ -89,8 +89,8 @@ const LESSON = [
   //   image: "https://almasjid-site.s3.eu-north-1.amazonaws.com/lectures.jpg",
   //   content: {
   //     title: "Audio Lectures by Mawlana Nasser Rashid",
-  //     markdown: `Here you can find the short Tafseer reminders that were delivered by Molana Dr. Nasser Rashid at the AlMasjid Prayer Hall during the blessed month of Ramadhan 1443/2022. Please click a link to download/listen. \n
-  // Feel free to browse our website to find out more about AlMasjid. You may be interested in joining our volunteers’ team, where we offer you an opportunity to utilise whatever you can spare (time, skills, wisdom, space, or money) for the greater good of mankind. \n
+  //     markdown: `Here you can find the short Tafseer reminders that were delivered by Molana Dr. Nasser Rashid at the Al Masjid Prayer Hall during the blessed month of Ramadhan 1443/2022. Please click a link to download/listen. \n
+  // Feel free to browse our website to find out more about Al Masjid. You may be interested in joining our volunteers’ team, where we offer you an opportunity to utilise whatever you can spare (time, skills, wisdom, space, or money) for the greater good of mankind. \n
   // We have a 100% donation policy, where all of your donations are used to disseminate education of the Qur’an and Sunnah to mankind.
   
   // ## Eid Message – Appreciating the Blessing of Ramadhan

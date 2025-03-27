@@ -6,7 +6,7 @@ const classes = {
     backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/1.png",
     advanced: true,
     blurb:
-      "ʿĀlimiyyah Programme offering advanced Islamic Theology education for self-driven individuals.",
+      "Online ʿĀlimiyyah Programme offering advanced Islamic Theology education for self-driven individuals.",
     description:
       "The online ʿĀlimiyyah Programme, based on the traditional Dars-e-Nizāmi syllabus, is designed comprehensively for graduates, college and university students, and self-driven individuals who wish to pursue an advanced course in Islamic Theology. The programme seeks to empower Muslims around the world in the field of Islamic Scholarship. ",
     sections: [
@@ -43,7 +43,7 @@ The initial years of the course focus on building groundwork in Arabic, accessin
 
 Entry at any point beyond year 1 is subject to an eligibility assessment.
 
-The curriculum is continuously evolving and being refined, and every effort has been made to have the most up-to-date information available. AlMasjid is open to learners progressing at their own pace, with advancement through the stages dependent on a satisfactory understanding of course material.`,
+The curriculum is continuously evolving and being refined, and every effort has been made to have the most up-to-date information available. Al Masjid is open to learners progressing at their own pace, with advancement through the stages dependent on a satisfactory understanding of course material.`,
       },
       {
         background: "linear-gradient(0deg, #ffc161, #ffe4b9)",
@@ -77,7 +77,7 @@ If you have the talent and drive, we want you to be able to study with us, whate
     backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/2.png",
     foundation: true,
     blurb:
-      "A foundation program for children aged 7-14, guided by experienced teachers to nurture faith and learning.",
+      "An online foundation program for children aged 7-14, guided by experienced teachers to nurture faith and learning.",
     description:
       "“Read! in the name of your Lord who has created,” is the very first revelation and instruction from Allāh Most High. In light of this Qur’anic instruction, it is crucial to meet the urgent need for elementary religious education within the Muslim community – learning to recite the Qur’an in its authentic form (in Arabic) and having knowledge of the essentials of Islam. The Al Masjid online Maktab programme is specifically designed to cater for the need of every growing Muslim in a structured manner. Beginning with the Arabic script (Qa’idah), students progress to fluent Qur’an recitation, while simultaneously gaining a solid grasp of key Islamic teachings. ",
     sections: [
@@ -136,7 +136,7 @@ All services and courses are free for the family of the Prophet ﷺ. Please stat
     backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/3.png",
     intermediate: true,
     blurb:
-      "The basics of Arabic grammar and syntax to understand the Qur’an, hadith, as well as key texts in Islamic jurisprudence for teens aged 12-14.",
+      "An online course focusing on the basics of Arabic grammar and syntax to understand the Qur’an, hadith, as well as key texts in Islamic jurisprudence for teens aged 12-14.",
     description:
       "The Online Arabic for Kids Programme is tailored to provide a foundational understanding of classical Arabic through which students can access the Qur’an, Hadith, and key texts in Islamic jurisprudence. The course seeks to empower young learners with essential tools for living their lives with a deeper understanding of Islam. ",
     closed: false,

@@ -26,7 +26,7 @@ export default function LiveStream() {
             padding: "4px 0",
           }}
         >
-          AlMasjid is on Mixlr
+          Al Masjid is on Mixlr
         </a>
       </small>
     </section>

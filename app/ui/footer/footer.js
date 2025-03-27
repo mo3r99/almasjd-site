@@ -105,7 +105,7 @@ export default function Footer() {
               style={{width: '32px', height: '32px'}}
             />
           </a>
-          <a target="_blank" href={"https://x.com/AlMasjidOnline"}>
+          <a target="_blank" href={"https://x.com/Al MasjidOnline"}>
             <Image
               className="mx-1 w-auto h-auto"
               src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/x.png"}

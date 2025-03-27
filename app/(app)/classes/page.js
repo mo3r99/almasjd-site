@@ -6,6 +6,7 @@ import Heading from "../../ui/heading/heading";
 
 export const metadata = {
   title: "Classes",
+  descriptoion: "Learn and grow with our online courses, workshops and webinars, with classes for all ages and levels.",
 };
 
 export default function Classes() {

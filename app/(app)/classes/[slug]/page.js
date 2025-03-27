@@ -18,7 +18,7 @@ export async function generateMetadata({ params }) {
 
   return {
     title: classes[whichClass].title,
-    description: `Join our ${classes[whichClass].title} class at Al Masjid`,
+    description: `${classes[whichClass].blurb}`,
   };
 }
 
