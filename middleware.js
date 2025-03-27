@@ -12,6 +12,7 @@ export default async function middleware(req) {
   if (!session && !isPublicRoute) {
     return NextResponse.redirect(new URL("/auth", req.nextUrl));
   }
+  
   return NextResponse.next();
 }
 
