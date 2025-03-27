@@ -11,7 +11,7 @@ export default function Community({ children }) {
       <Heading className="pt-8 pb-2 text-center">Join Our Community</Heading>
       <p className="text-center font-[family-name:var(--font-montserrat)] pb-8">
         {!children
-          ? "Stay up to date about the latest that Almasjid is doing in your community. We will never spam you."
+          ? "Stay up to date about the latest that Almasjid is doing in your community."
           : children}
       </p>
 

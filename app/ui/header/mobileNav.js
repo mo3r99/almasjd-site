@@ -34,10 +34,12 @@ export default function MobileNav({links}) {
       >
         <Image
           className="pb-5 pointer-events-none block md:hidden w-auto h-auto"
-          src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/sm-logo.png'}
+          src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/sm-logo.webp'}
           width={60}
           height={66.07899255867201}
           alt={"Almasjid logo"}
+          unoptimized
+          style={{width: '64px', height: '84px'}}
         />
         <ul className="flex h-[50vh] justify-evenly flex-col items-center font-medium uppercase text-xl">
           <NavLinksMobile links={links} />

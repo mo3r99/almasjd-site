@@ -1,8 +1,7 @@
 import Image from "next/image";
 
 import { LoginForm } from "./login-form";
-import { Link } from "next-view-transitions";
-import { redirect } from "next/navigation";
+import Link from "next/link";import { redirect } from "next/navigation";
 
 import { auth } from "@/app/auth";
 
@@ -21,11 +20,12 @@ export default async function LoginPage() {
             <div className="flex items-center justify-center rounded-md text-primary-foreground">
               <Image
                 src={
-                  "https://almasjid-site.s3.eu-north-1.amazonaws.com/logo.png"
+                  "//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/logo.png&w=80&h=80"
                 }
                 width={40}
                 height={40}
                 alt="almasjid logo"
+                unoptimized
               />
             </div>
             Al Masjid
@@ -39,8 +39,9 @@ export default async function LoginPage() {
       </div>
       <div className="relative hidden bg-muted lg:block">
         <Image
-          src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png"}
+          src={"//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/3.png&w=500&h=700"}
           fill
+          unoptimized
           alt="Image"
           className="absolute inset-0 h-full w-full object-cover dark:brightness-[0.2] dark:grayscale"
         />

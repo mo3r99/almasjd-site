@@ -105,7 +105,7 @@ export default function Lessons() {
         </Container>
       </div>
       <Community>
-        Stay up to date about our latest lessons. We will never spam you.
+        Stay up to date about our latest lessons. 
       </Community>
     </>
   );

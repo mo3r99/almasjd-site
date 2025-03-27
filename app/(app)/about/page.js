@@ -27,10 +27,10 @@ export default function About() {
           spiritual institution, we are committed to nurturing faith, peace, and
           tolerance in all aspects of life. Our initiatives are inspired by the
           teachings and legacy of Shaykhul-Hadith Maulana Yusuf Motala, founder
-          of Darul Uloom Al Arabiyyah Al Islamiyyah, Bury (May Allah Ta’ala
+          of Darul Uloom Al Arabiyyah Al Islamiyyah, Bury (May Allah Ta&apos;ala
           illuminate his grave), whose vision saw the spread of Islam throughout
           the UK. AlMasjid offers a range of programs and services aimed at
-          empowering and educating individuals and families, including Qur'an
+          empowering and educating individuals and families, including Qur&apos;an
           memorisation, Islamic studies, and more advanced ʿĀlimiyyah classes.
           <br/>
           <br/>

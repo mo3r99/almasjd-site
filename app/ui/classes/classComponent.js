@@ -30,7 +30,8 @@ export default function ClassComponent({
         className={`${styles.img} w-[100%] h-[100%] relative`}
       >
         <Image
-          src={backgroundImage}
+          src={`//wsrv.nl/?url=${backgroundImage}&w=300&h=300&blur=3`}
+          unoptimized
           alt={title}
           fill
           sizes="300px"

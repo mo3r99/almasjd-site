@@ -16,7 +16,7 @@ const LESSON = [
     slug: "https://youtube.com/almasjid",
     external: true,
     image:
-      "https://almasjid-site.s3.eu-north-1.amazonaws.com/video-lessons.png",
+      "almasjid-site.s3.eu-north-1.amazonaws.com/video-lessons.png",
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const LESSON = [
     slug: "pdf-library",
     external: false,
     image:
-      "https://almasjid-site.s3.eu-north-1.amazonaws.com/pdf-library.png",
+      "almasjid-site.s3.eu-north-1.amazonaws.com/pdf-library.png",
   },
   // {
   //   id:4,
@@ -53,7 +53,7 @@ const LESSON = [
     slug: "reminders",
 
     external: false,
-    image: "https://almasjid-site.s3.eu-north-1.amazonaws.com/reminders.jpg",
+    image: "almasjid-site.s3.eu-north-1.amazonaws.com/reminders.jpg",
     content: {
       title: "Reminders",
       description:

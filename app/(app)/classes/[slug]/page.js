@@ -11,6 +11,7 @@ import "./page.css";
 import Image from "next/image";
 import { notFound } from "next/navigation";
 import Link from "next/link";
+import Community from "@/app/ui/community/community";
 
 export async function generateMetadata({ params }) {
   const whichClass = (await params).slug;
@@ -50,21 +51,34 @@ export default async function ClassPage({ params }) {
         </Heading>
 
         <span className="w-16 h-2 bg-weborange my-4 block"></span>
-        {!classes[whichClass].closed && (
+        {!classes[whichClass].closed ? (
           <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
             Admissions Open for {new Date().getFullYear()}
+          </span>) : ( <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
+            This course is now complete
           </span>
         )}
         <p className="mt-6 font-[family-name:var(--font-montserrat)] mb-8 max-w-[80vw] m-auto">
           {classes[whichClass].description}
         </p>
-        <Button
-          colour={"orange"}
-          href={`/classes/${whichClass}/apply`}
-          className={"min-w-[244px]"}
-        >
-          Apply for this course
-        </Button>
+        {!classes[whichClass].closed && (
+          <Button
+            colour={"orange"}
+            href={`/classes/${whichClass}/apply`}
+            className={"min-w-[244px]"}
+          >
+            Apply for this course
+          </Button>
+        )}
+        {classes[whichClass].closed && (
+          <Button
+            colour={"orange"}
+            href={`/classes/${whichClass}#community`}
+            className={"min-w-[264px]"}
+          >
+            Register your interest
+          </Button>
+        )}
       </section>
 
       {classes[whichClass].sections.map((item, index) => {
@@ -99,7 +113,8 @@ export default async function ClassPage({ params }) {
                       return (
                         <Image
                           className="m-4 md:m-6"
-                          src={src}
+                          src={`//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/${src}&w=300&h=300`}
+                          unoptimized
                           {...rest}
                           width={300}
                           height={300}
@@ -110,18 +125,26 @@ export default async function ClassPage({ params }) {
                 >
                   {item.markdown}
                 </Markdown>
-                <Button
-                  colour={btnColour}
-                  className={"mt-8 float-right"}
-                  href={`/classes/${whichClass}/apply`}
-                >
-                  apply
-                </Button>
+                {!classes[whichClass].closed && (
+                  <Button
+                    colour={btnColour}
+                    className={"mt-8 float-right"}
+                    href={`/classes/${whichClass}/apply`}
+                  >
+                    apply
+                  </Button>
+                )}
               </div>
             </div>
           </section>
         );
       })}
+
+      {classes[whichClass].closed && (
+        <div id="community">
+          <Community />
+        </div>
+      )}
     </>
   );
 }

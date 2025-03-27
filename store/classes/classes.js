@@ -3,7 +3,7 @@ const classes = {
     id: 1,
     title: "Advanced Islamic Sciences",
     href: "/classes/alimiyyah",
-    backgroundImage: "https://almasjid-site.s3.eu-north-1.amazonaws.com/1.png",
+    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/1.png",
     advanced: true,
     blurb:
       "ʿĀlimiyyah Programme offering advanced Islamic Theology education for self-driven individuals.",
@@ -74,7 +74,7 @@ If you have the talent and drive, we want you to be able to study with us, whate
     id: 2,
     title: "Qur’an and Islamic Studies (for kids)",
     href: "/classes/maktab",
-    backgroundImage: "https://almasjid-site.s3.eu-north-1.amazonaws.com/2.png",
+    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/2.png",
     foundation: true,
     blurb:
       "A foundation program for children aged 7-14, guided by experienced teachers to nurture faith and learning.",
@@ -106,9 +106,9 @@ This program is open to both boys and girls aged 7-15. Classes are separated by 
 The initial years focus on recognition of the Arabic alphabet, vowels, word formations and short Qur’anic verses along with basic rules of Tajweed, with extensive practice. At the end of this stage the student is expected to be able to recite the 30th Juz’ of the Holy Qur’an fluently. 
 ### 
 The following years reinforce the rules of Tajweed and develop confident recitation. At the end of this stage, students will have completed at least 15 Juz of the Noble Qur’an. They will be asked to memorize the last quarter of the 30th Juz.  In addition to the Qur’anic recitation, students will complete the rules of Tajweed book, from the Safar Learn to Read Series. 
-![](https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png/safar.png)
+![](safar.png)
 At the same time, children will study the basics of Islam from the An-Nasihah series of books, which are engaging and span across 8 years, specifically designed for the young Muslims of today.
-![](https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png/naseehah.png)
+![](naseehah.png)
 > The curriculum is continuously evolving and being refined, and every effort has been made to have the most up-to-date information available. `,
       },
       {
@@ -133,7 +133,7 @@ All services and courses are free for the family of the Prophet ﷺ. Please stat
     id: 3,
     title: "Arabic for Kids",
     href: "/classes/arabicForKids",
-    backgroundImage: "https://almasjid-site.s3.eu-north-1.amazonaws.com/3.png",
+    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/3.png",
     intermediate: true,
     blurb:
       "The basics of Arabic grammar and syntax to understand the Qur’an, hadith, as well as key texts in Islamic jurisprudence for teens aged 12-14.",
@@ -212,7 +212,7 @@ If you have the talent and drive, we want you to be able to study with us, whate
     title: "Qur'an Memorisation",
     blurb:
       "Learn and memorise the Qur'an from the comfort of home, perfect for those without access to local facilities, with one-to-one classes.",
-    backgroundImage: "https://almasjid-site.s3.eu-north-1.amazonaws.com/4.png",
+    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/4.png",
     href: "/classes/hifz",
     description:
       "Memorising the Noble Quran takes effort and sincere commitment. However, Allah’s rewards are immense in this worldly life and the Hereafter. This online course is desgined for those who want to memorise the whole or part of the Holy Quran, especially for those without access to local classes.",
@@ -253,12 +253,13 @@ Ibn ‘Amr (RA) reported that the Prophet ﷺ said: “It will be said to the co
     id: 5,
     title: "Tafseer of Last 10 Surahs",
     workshop: true,
+    closed: true,
     blurb:
-      "Learn and understand our creator’s message for us this Ramadhan through this online course, specifically designed for young adults, with visuals, illustrations, practical advice and contemporary examples.",
-    backgroundImage: "/tafseer.png",
+      "Learn and understand our creator’s message for us through this online course, specifically designed for young adults, with visuals, illustrations, practical advice and contemporary examples.",
+    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/tafseer.png",
     href: "/classes/tafseer",
     description:
-      "We recite the last ten Surahs daily in Salah, but how much do we actually understand what Allah is telling us? Join us in learning the translation and meanings of these chapters of the Qur'an, with visuals, illustrations, practical advice for young Muslims, and contemporary examples. This course will run this Ramadhan every Sunday, from 9th March until 30th March 2025.",
+      "We recite the last ten Surahs daily in Salah, but how much do we actually understand what Allah is telling us? Join us in learning the translation and meanings of these chapters of the Qur'an, with visuals, illustrations, practical advice for young Muslims, and contemporary examples. This course ran in Ramadhan 2025/1446 every Sunday, from 9th March until 30th March 2025.",
     sections: [
       {
         background: "#ffeccc",

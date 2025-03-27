@@ -146,19 +146,20 @@ export default function AudioPlayer({ className }) {
                   >
                     <ChevronUp className="block" />
                   </Button>
-                  <Image
+                  {/* <Image
                     src={artwork}
+                    unoptimized
                     alt="Album Cover"
                     width={25}
                     height={25}
                     className="rounded-full w-12 h-12 object-cover"
-                  />
+                  /> */}
 
                   <div
-                    className="h-full flex flex-col justify-center"
+                    className="h-full flex flex-col justify-center max-w-[60%] smd:max-w-[70%] lg:max-w-[90%]"
                     onClick={() => setFullPlayerOpen(true)}
                   >
-                    <h2 className="text-lg font-bold truncate max-w-[55%]">
+                    <h2 className="text-lg font-bold truncate">
                       {tracks[currentTrackIndex]?.title || ""}
                     </h2>
                     <p className="text-muted-foreground text-sm hidden smd:block">

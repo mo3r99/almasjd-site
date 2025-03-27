@@ -1,7 +1,6 @@
 import Breadcrumbs from "@/app/ui/breadcrumb/breadcrumbs";
 import Heading from "@/app/ui/heading/heading";
-import { Link } from "next-view-transitions";
-import Image from "next/image";
+import Link from "next/link";import Image from "next/image";
 
 import styles from './pdf.module.css'
 
@@ -44,7 +43,8 @@ export default function PDFLib() {
       <div className="absolute left-0 top-0 w-screen min-h-[525px] h-[calc(40vh+244px)] z-[-1] bg-[rgb(240,162,41,0.5)]">
         <div className="absolute left-0 top-0 w-screen min-h-[525px] h-[calc(40vh+244px)] bg-gradient-to-t from-[rgb(255,255,255)] via-[rgba(242,231,212,0.82)] to-[rgba(255,245,231,0.75)] backdrop-blur-sm z-0" />
         <Image
-          src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/books.jpg'}
+          src={'//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/books.jpg&w=500&h=400'}
+          unoptimized
           className="brightness-90 z-[-1]"
           fill
           sizes="1000px"

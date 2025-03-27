@@ -25,10 +25,10 @@ export default function FourGreatestMuslimsPage() {
       </section>
       <section className="bg-[rgb(56,143,122)] p-8">
         <div className="flex flex-wrap justify-center gap-4">
-          <YTLesson title="Session 1: Abu Bakr (RA)" image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/abu-bakr.png'} link={'/lessons/four-greatest-muslims/abu-bakr'} />
-          <YTLesson title="Session 2: Umar (RA)" image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/umar.png'} link={'/lessons/four-greatest-muslims/umar'} />
-          <YTLesson title="Session 3: Uthman (RA)" image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/uthman.png'} link={'/lessons/four-greatest-muslims/uthman'} />
-          <YTLesson title="Session 4: Ali (RA)" image={'https://almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png'} link={'/lessons/four-greatest-muslims/ali'} />
+          <YTLesson title="Session 1: Abu Bakr (RA)" image={'almasjid-site.s3.eu-north-1.amazonaws.com/abu-bakr.png'} link={'/lessons/four-greatest-muslims/abu-bakr'} />
+          <YTLesson title="Session 2: Umar (RA)" image={'almasjid-site.s3.eu-north-1.amazonaws.com/umar.png'} link={'/lessons/four-greatest-muslims/umar'} />
+          <YTLesson title="Session 3: Uthman (RA)" image={'almasjid-site.s3.eu-north-1.amazonaws.com/uthman.png'} link={'/lessons/four-greatest-muslims/uthman'} />
+          <YTLesson title="Session 4: Ali (RA)" image={'almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png'} link={'/lessons/four-greatest-muslims/ali'} />
         </div>
       </section>
 

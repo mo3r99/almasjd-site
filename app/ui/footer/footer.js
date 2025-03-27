@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Link } from "next-view-transitions";
+import Link from "next/link";
 import styles from "./footer.module.css";
 
 import links from "@/app/lib/links";
@@ -18,18 +18,22 @@ export default function Footer() {
             src={
               "https://almasjid-site.s3.eu-north-1.amazonaws.com/white-logo.png"
             }
-            width={75}
-            height={83}
+            width={128}
+            height={141}
             alt={"Almasjid logo"}
+            unoptimized
+            style={{width: '128px', height: '141px'}}
           />
           <Image
             className="pointer-events-none block md:hidden w-auto h-auto"
             src={
               "https://almasjid-site.s3.eu-north-1.amazonaws.com/white-logo.png"
             }
-            width={63}
-            height={69}
+            width={64}
+            height={64}
             alt={"Almasjid logo"}
+            unoptimized
+            style={{width: '64px', height: '70.5px'}}
           />
           {/* <h1 className="text-3xl md:text-4xl font-medium font-[family-name:var(--font-raleway)] absolute bottom-0 right-0">
             Almasjid
@@ -96,6 +100,9 @@ export default function Footer() {
               width={30}
               height={30}
               alt="facebook"
+
+              unoptimized
+              style={{width: '32px', height: '32px'}}
             />
           </a>
           <a target="_blank" href={"https://x.com/AlMasjidOnline"}>
@@ -105,6 +112,8 @@ export default function Footer() {
               width={30}
               height={30}
               alt="Twitter/X"
+              unoptimized
+              style={{width: '32px', height: '32px'}}
             />
           </a>
           <a target="_blank" href={"mailto:salam@almasjid.co.uk"}>
@@ -114,6 +123,8 @@ export default function Footer() {
               width={30}
               height={30}
               alt="E-Mail"
+              unoptimized
+              style={{width: '32px', height: '32px'}}
             />
           </a>
         </ul>

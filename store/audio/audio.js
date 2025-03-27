@@ -3,7 +3,7 @@ const AUDIO = [
     id: 1,
     title: "Summary of the Meanings of the Qur'an",
     artist: "Shaykh Habib Rauf",
-    cover: "/quran.jpg",
+    cover: "https://almasjid-site.s3.eu-north-1.amazonaws.com/quran.jpg",
     description:
       "Connect yourself with the Holy Qur’an this year. Listen to the verses at night and ponder over their meanings during the day.",
     tracks: [
@@ -601,7 +601,7 @@ const AUDIO = [
       "Learn about the stories of the chosen men who were sent by Allah ﷻ and the lessons that can be learnt from their lives. This playlist is designed for children.",
 
     cover:
-      "https://almasjid-site.s3.eu-north-1.amazonaws.com/stories-prophets.jpg",
+      "almasjid-site.s3.eu-north-1.amazonaws.com/stories-prophets.jpg",
     tracks: [
       {
         id: 1,
@@ -725,7 +725,7 @@ const AUDIO = [
     description:
       "A bitsize summary of the Quranic meanings, delivered by Shaykh Nasser Rashid during his Ramadhan Lectures at the Darnley Musalla.",
     cover:
-      "https://almasjid-site.s3.eu-north-1.amazonaws.com/tajweed-series.jpg",
+      "almasjid-site.s3.eu-north-1.amazonaws.com/tajweed-series.jpg",
     tracks: [
       {
         id: 1,
@@ -867,6 +867,587 @@ const AUDIO = [
         id: 29,
         title: "The Value of Time & 4 Principles to Become a Winner",
         src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/29.m4a",
+      },
+    ],
+  },
+  {
+    id: 6,
+    title: "Summary of the Meanings of the Qur'an - Urdu",
+    artist: "Shaykh Habib Rauf",
+    cover: "https://almasjid-site.s3.eu-north-1.amazonaws.com/quran-1.jpg",
+    descriptionUrdu:
+      "اس سال قرآن پاک کے ساتھ اپنے آپ کو جوڑیں۔ رات کو آیات سنیں اور دن کے وقت ان کے معانی پر غور کریں۔",
+    tracks: [
+      {
+        id: 1,
+        title: "Surah 1 - Al Fatihah (The Opening)",
+        // src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQ1.m4a",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU1.m4a",
+      },
+      {
+        id: 2,
+        title: "Surah 2 - Al Baqarah (The Cow)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU2.m4a",
+      },
+      {
+        id: 3,
+        title: "Surah 3 - Aal Imran (The Family of Imran)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU3.m4a",
+      },
+      {
+        id: 4,
+        title: "Surah 4 - An Nisa (The Women)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU4.m4a",
+      },
+      {
+        id: 5,
+        title: "Surah 5 - Al Ma'idah (The Tablespread)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU5.m4a",
+      },
+      {
+        id: 6,
+        title: "Surah 6 - Al An'am (The Cattle)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU6.m4a",
+      },
+      {
+        id: 7,
+        title: "Surah 7 - Al A'raf (The Heights)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU7.m4a",
+      },
+      {
+        id: 8,
+        title: "Surah 8 - Al Anfal (The Spoils of War)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU8.m4a",
+      },
+      {
+        id: 9,
+        title: "Surah 9 - At Tawbah (The Repentance)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU9.m4a",
+      },
+      {
+        id: 10,
+        title: "Surah 10 - Yunus (Jonah)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU10.m4a",
+      },
+      {
+        id: 11,
+        title: "Surah 11 - Hud",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU11.m4a",
+      },
+      {
+        id: 12,
+        title: "Surah 12 - Yusuf (Joseph)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU12.m4a",
+      },
+      {
+        id: 13,
+        title: "Surah 13 - Ar Ra'd (The Thunder)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU13.m4a",
+      },
+      {
+        id: 14,
+        title: "Surah 14 - Ibrahim (Abraham)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU14.m4a",
+      },
+      {
+        id: 15,
+        title: "Surah 15 - Al Hijr (The Rocky Tract)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU15.m4a",
+      },
+      {
+        id: 16,
+        title: "Surah 16 - An Nahl (The Bee)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU16.m4a",
+      },
+      {
+        id: 17,
+        title: "Surah 17 - Al Isra (The Night Journey)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU17.m4a",
+      },
+      {
+        id: 18,
+        title: "Surah 18 - Al Kahf (The Cave)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU18.m4a",
+      },
+      {
+        id: 19,
+        title: "Surah 19 - Maryam (Mary)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU19.m4a",
+      },
+      {
+        id: 20,
+        title: "Surah 20 - Ta-Ha",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU20.m4a",
+      },
+      {
+        id: 21,
+        title: "Surah 21 - Al Anbiya (The Prophets)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU21.m4a",
+      },
+      {
+        id: 22,
+        title: "Surah 22 - Al Hajj (The Pilgrimage)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU22.m4a",
+      },
+      {
+        id: 23,
+        title: "Surah 23 - Al Mu'minun (The Believers)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU23.m4a",
+      },
+      {
+        id: 24,
+        title: "Surah 24 - An Nur (The Light)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU24.m4a",
+      },
+      {
+        id: 25,
+        title: "Surah 25 - Al Furqan (The Criterion)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU25.m4a",
+      },
+      {
+        id: 26,
+        title: "Surah 26 - Ash Shu'ara (The Poets)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU26.m4a",
+      },
+      {
+        id: 27,
+        title: "Surah 27 - An Naml (The Ant)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU27.m4a",
+      },
+      {
+        id: 28,
+        title: "Surah 28 - Al Qasas (The Stories)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU28.m4a",
+      },
+      {
+        id: 29,
+        title: "Surah 29 - Al Ankabut (The Spider)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU29.m4a",
+      },
+      {
+        id: 30,
+        title: "Surah 30 - Ar Rum (The Romans)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU30.m4a",
+      },
+      {
+        id: 31,
+        title: "Surah 31 - Luqman",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU31.m4a",
+      },
+      {
+        id: 32,
+        title: "Surah 32 - As Sajdah (The Prostration)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU32.m4a",
+      },
+      {
+        id: 33,
+        title: "Surah 33 - Al Ahzab (The Combined Forces)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU33.m4a",
+      },
+      {
+        id: 34,
+        title: "Surah 34 - Saba' (Sheba)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU34.m4a",
+      },
+      {
+        id: 35,
+        title: "Surah 35 - Fatir (Originator)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU35.m4a",
+      },
+      {
+        id: 36,
+        title: "Surah 36 - Ya-Sin",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU36.m4a",
+      },
+      {
+        id: 37,
+        title: "Surah 37 - As Saffat (Those who set the ranks)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU37.m4a",
+      },
+      {
+        id: 38,
+        title: "Surah 38 - Sad",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU38.m4a",
+      },
+      {
+        id: 39,
+        title: "Surah 39 - Az Zumar (The Groups)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU39.m4a",
+      },
+      {
+        id: 40,
+        title: "Surah 40 - Al Mu'min (The Believer)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU40.m4a",
+      },
+      {
+        id: 41,
+        title: "Surah 41 - Fussilat (Explained in Detail)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU41.m4a",
+      },
+      {
+        id: 42,
+        title: "Surah 42 - Ash Shura (The Consultation)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU42.m4a",
+      },
+      {
+        id: 43,
+        title: "Surah 43 - Az Zukhruf (The Ornaments of Gold)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU43.m4a",
+      },
+      {
+        id: 44,
+        title: "Surah 44 - Ad Dukhan (The Smoke)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU44.m4a",
+      },
+      {
+        id: 45,
+        title: "Surah 45 - Al Jathiyah (The Crouching)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU45.m4a",
+      },
+      {
+        id: 46,
+        title: "Surah 46 - Al Ahqaf (The Wind-Curved Sandhills)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU46.m4a",
+      },
+      {
+        id: 47,
+        title: "Surah 47 - Muhammad",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU47.m4a",
+      },
+      {
+        id: 48,
+        title: "Surah 48 - Al Fath (The Victory)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU48.m4a",
+      },
+      {
+        id: 49,
+        title: "Surah 49 - Al Hujurat (The Dwellings)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU49.m4a",
+      },
+      {
+        id: 50,
+        title: "Surah 50 - Qaf",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU50.m4a",
+      },
+      {
+        id: 51,
+        title: "Surah 51 - Adh Dhariyat (The Winnowing Winds)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU51.m4a",
+      },
+      {
+        id: 52,
+        title: "Surah 52 - At Tur (The Mount)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU52.m4a",
+      },
+      {
+        id: 53,
+        title: "Surah 53 - An Najm (The Star)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU53.m4a",
+      },
+      {
+        id: 54,
+        title: "Surah 54 - Al Qamar (The Moon)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU54.m4a",
+      },
+      {
+        id: 55,
+        title: "Surah 55 - Ar Rahman (The Most Gracious)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU55.m4a",
+      },
+      {
+        id: 56,
+        title: "Surah 56 - Al Waqi'ah (The Event)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU56.m4a",
+      },
+      {
+        id: 57,
+        title: "Surah 57 - Al Hadid (The Iron)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU57.m4a",
+      },
+      {
+        id: 58,
+        title: "Surah 58 - Al Mujadila (The Pleading Woman)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU58.m4a",
+      },
+      {
+        id: 59,
+        title: "Surah 59 - Al Hashr (The Gathering)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU59.m4a",
+      },
+      {
+        id: 60,
+        title: "Surah 60 - Al Mumtahanah (The Woman to be Examined)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU60.m4a",
+      },
+      {
+        id: 61,
+        title: "Surah 61 - As Saff (The Row)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU61.m4a",
+      },
+      {
+        id: 62,
+        title: "Surah 62 - Al Jumu'ah (Friday)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU62.m4a",
+      },
+      {
+        id: 63,
+        title: "Surah 63 - Al Munafiqun (The Hypocrites)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU63.m4a",
+      },
+      {
+        id: 64,
+        title: "Surah 64 - At Taghabun (The Loss and Gain)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU64.m4a",
+      },
+      {
+        id: 65,
+        title: "Surah 65 - At Talaq (The Divorce)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU65.m4a",
+      },
+      {
+        id: 66,
+        title: "Surah 66 - At Tahrim (The Prohibition)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU66.m4a",
+      },
+      {
+        id: 67,
+        title: "Surah 67 - Al Mulk (The Dominion)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU67.m4a",
+      },
+      {
+        id: 68,
+        title: "Surah 68 - Al Qalam (The Pen)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU68.m4a",
+      },
+      {
+        id: 69,
+        title: "Surah 69 - Al Haqqah (The Inevitable)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU69.m4a",
+      },
+      {
+        id: 70,
+        title: "Surah 70 - Al Ma'arij (The Ascending Stairways)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU70.m4a",
+      },
+      {
+        id: 71,
+        title: "Surah 71 - Nuh (Noah)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU71.m4a",
+      },
+      {
+        id: 72,
+        title: "Surah 72 - Al Jinn (The Jinn)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU72.m4a",
+      },
+      {
+        id: 73,
+        title: "Surah 73 - Al Muzzammil (The Enshrouded One)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU73.m4a",
+      },
+      {
+        id: 74,
+        title: "Surah 74 - Al Muddaththir (The Cloaked One)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU74.m4a",
+      },
+      {
+        id: 75,
+        title: "Surah 75 - Al Qiyamah (The Resurrection)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU75.m4a",
+      },
+      {
+        id: 76,
+        title: "Surah 76 - Al Insan (The Man)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU76.m4a",
+      },
+      {
+        id: 77,
+        title: "Surah 77 - Al Mursalat (Those Sent Forth)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU77.m4a",
+      },
+      {
+        id: 78,
+        title: "Surah 78 - An Naba' (The Great News)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU78.m4a",
+      },
+      {
+        id: 79,
+        title: "Surah 79 - An Nazi'at (Those Who Pull Out)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU79.m4a",
+      },
+      {
+        id: 80,
+        title: "Surah 80 - Abasa (He Frowned)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU80.m4a",
+      },
+      {
+        id: 81,
+        title: "Surah 81 - At Takwir (The Overthrowing)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU81.m4a",
+      },
+      {
+        id: 82,
+        title: "Surah 82 - Al Infitar (The Cleaving Asunder)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU82.m4a",
+      },
+      {
+        id: 83,
+        title: "Surah 83 - Al Mutaffifin (Those Who Deal in Fraud)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU83.m4a",
+      },
+      {
+        id: 84,
+        title: "Surah 84 - Al Inshiqaq (The Bursting Asunder)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU84.m4a",
+      },
+      {
+        id: 85,
+        title: "Surah 85 - Al Buruj (The Constellations)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU85.m4a",
+      },
+      {
+        id: 86,
+        title: "Surah 86 - At Tariq (The Nightcomer)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU86.m4a",
+      },
+      {
+        id: 87,
+        title: "Surah 87 - Al A'la (The Most High)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU87.m4a",
+      },
+      {
+        id: 88,
+        title: "Surah 88 - Al Ghashiyah (The Overwhelming)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU88.m4a",
+      },
+      {
+        id: 89,
+        title: "Surah 89 - Al Fajr (The Dawn)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU89.m4a",
+      },
+      {
+        id: 90,
+        title: "Surah 90 - Al Balad (The City)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU90.m4a",
+      },
+      {
+        id: 91,
+        title: "Surah 91 - Ash Shams (The Sun)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU91.m4a",
+      },
+      {
+        id: 92,
+        title: "Surah 92 - Al Lail (The Night)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU92.m4a",
+      },
+      {
+        id: 93,
+        title: "Surah 93 - Ad Duha (The Forenoon)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU93.m4a",
+      },
+      {
+        id: 94,
+        title: "Surah 94 - Ash Sharh (The Relief)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU94.m4a",
+      },
+      {
+        id: 95,
+        title: "Surah 95 - At Tin (The Fig)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU95.m4a",
+      },
+      {
+        id: 96,
+        title: "Surah 96 - Al Alaq (The Clot)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU96.m4a",
+      },
+      {
+        id: 97,
+        title: "Surah 97 - Al Qadr (The Night of Decree)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU97.m4a",
+      },
+      {
+        id: 98,
+        title: "Surah 98 - Al Bayyinah (The Clear Proof)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU98.m4a",
+      },
+      {
+        id: 99,
+        title: "Surah 99 - Az Zalzalah (The Earthquake)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU99.m4a",
+      },
+      {
+        id: 100,
+        title: "Surah 100 - Al Adiyat (Those Courser)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU100.m4a",
+      },
+      {
+        id: 101,
+        title: "Surah 101 - Al Qari'ah (The Striking Hour)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU101.m4a",
+      },
+      {
+        id: 102,
+        title: "Surah 102 - At Takathur (The Piling Up)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU102.m4a",
+      },
+      {
+        id: 103,
+        title: "Surah 103 - Al Asr (The Time)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU103.m4a",
+      },
+      {
+        id: 104,
+        title: "Surah 104 - Al Humazah (The Slanderer)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU104.m4a",
+      },
+      {
+        id: 105,
+        title: "Surah 105 - Al Fil (The Elephant)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU105.m4a",
+      },
+      {
+        id: 106,
+        title: "Surah 106 - Quraysh",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU106.m4a",
+      },
+      {
+        id: 107,
+        title: "Surah 107 - Al Ma'un (The Small Kindnesses)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU107.m4a",
+      },
+      {
+        id: 108,
+        title: "Surah 108 - Al Kawthar (The Abundance)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU108.m4a",
+      },
+      {
+        id: 109,
+        title: "Surah 109 - Al Kafirun (The Disbelievers)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU109.m4a",
+      },
+      {
+        id: 110,
+        title: "Surah 110 - An Nasr (The Help)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU110.m4a",
+      },
+      {
+        id: 111,
+        title: "Surah 111 - Al Masad (The Palm Fiber)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU111.m4a",
+      },
+      {
+        id: 112,
+        title: "Surah 112 - Al Ikhlas (The Sincerity)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU112.m4a",
+      },
+      {
+        id: 113,
+        title: "Surah 113 - Al Falaq (The Daybreak)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU113.m4a",
+      },
+      {
+        id: 114,
+        title: "Surah 114 - An Nas (Mankind)",
+        src: "https://almasjid-site.s3.eu-north-1.amazonaws.com/m4a/SMQU114.m4a",
       },
     ],
   },

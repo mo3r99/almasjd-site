@@ -1,6 +1,6 @@
 'use client'
 
-import { Link } from 'next-view-transitions'
+import Link from 'next/link'
 import Image from "next/image";
 
 import links from "../../lib/links";
@@ -22,19 +22,23 @@ export default function Header() {
         <Link href={"/"}>
           <Image
             className="pb-5 w-auto h-auto pointer-events-none hidden md:block"
-            src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/logo.png'}
+            src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/logo-dk.webp'}
             width={66}
             height={73}
             alt={"Almasjid logo"}
             priority
+            unoptimized
+            style={{width: '128px', height: '161px'}}
           />
           <Image
             className="pb-5 pointer-events-none block md:hidden w-auto h-auto"
-            src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/logo.png'}
+            src={'https://almasjid-site.s3.eu-north-1.amazonaws.com/logo-m.webp'}
             width={60}
             height={66.07899255867201}
             alt={"Almasjid logo"}
             priority
+            unoptimized
+            style={{width: '64px', height: '90.5'}}
           />
         </Link>
         <motion.div initial={{ y: -10, opacity: 0 }}
