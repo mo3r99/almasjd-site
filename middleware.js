@@ -12,10 +12,9 @@ export default async function middleware(req) {
   if (!session && !isPublicRoute) {
     return NextResponse.redirect(new URL("/auth", req.nextUrl));
   }
-
   return NextResponse.next();
 }
 
 export const config = {
-  matcher: ["/((?!api|_next/static|_next/image|.*\\.png$).*)"],
+  matcher: ["/((?!api|_next/static|_next/image|.*\\.png$).*)"], 
 };
