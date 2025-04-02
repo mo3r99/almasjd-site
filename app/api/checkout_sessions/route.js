@@ -1,4 +1,4 @@
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEYA);
 
 import { formatAmount } from '@/app/lib/formatAmount';
 import { NextResponse } from 'next/server';
@@ -6,14 +6,15 @@ import { NextResponse } from 'next/server';
 export async function GET(req) {
   try {
     const url = new URL(req.url);
-    const sessionId = url.searchParams.get('session_id');
+    const sessionId = url.searchParams.get('payment_intent');
     
-    const session = await stripe.checkout.sessions.retrieve(sessionId);
+    const session = await stripe.paymentIntents.retrieve(sessionId);
+    console.log(session);
 
     return NextResponse.json({
       status: session.status,
-      customer_email: session.customer_details.email,
-      customer_name: session.customer_details.name
+      customer_email: session.receipt_email,
+      customer_name: session.description.split(' - ')[1]
     });
   } catch (err) {
     return NextResponse.json(
@@ -32,16 +33,18 @@ export async function POST(req) {
     //console.log(type, amount, email, address, mode);
 
     let des;
-    if (type == 'donation') {
+    if (type == 'support') {
       des = 'Donation to Al Masjid';
+    } else if (type=='sadaqah') {
+      des = 'Sadaqah Donation';
     }
 
     let description = des;
-    if (type == 'donation' && address) {
-      description = `Support Al Masjid - Gift Aid Eligible - £${formatAmount(amount)} - ${name}`;
-    } else if (type == 'donation' && !address) {
-      description = `Support Al Masjid - £${formatAmount(amount)} - ${name}`;
-    }
+    description = description + ' - ' + name + ' - ' + formatAmount(amount)
+
+    if (address) {
+      description = description + ' - Gift Aid Eligible'
+    } 
 
     const session = await stripe.paymentIntents.create({
       amount: amount*100,

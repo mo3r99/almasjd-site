@@ -3,8 +3,8 @@
 import { useState } from "react";
 import { startTransition } from "react";
 
-import GiftAidForm from "./GiftAidForm";
-import PriceSelect from "./PriceSelect";
+import GiftAidForm from "@/app/ui/donationComponents/GiftAidForm";
+import PriceSelect from "@/app/ui/donationComponents/PriceSelect";
 
 import { Input } from "@/components/ui/input";
 import { Checkbox } from "@/components/ui/checkbox";
@@ -12,7 +12,7 @@ import { Button } from "@/components/ui/button";
 import { verifyEmail, verifyPostcode } from "@/app/lib/verifyInput";
 import { formatAmount, unFormatAmount } from "@/app/lib/formatAmount";
 
-export default function DonationForm({ action }) {
+export default function DonationForm({ action, giftAidEligible, type }) {
   const [amount, setAmount] = useState(0);
   const [formattedAmount, setFormattedAmount] = useState(amount);
   const [error, setError] = useState({
@@ -76,7 +76,7 @@ export default function DonationForm({ action }) {
         }}
       >
         <input type="hidden" name="amount" value={amount} />
-        <input type="hidden" name="type" value={"donation"} />
+        <input type="hidden" name="type" value={type} />
 
         <div className="mt-8">
           <label htmlFor="name" className="mt-8 pt-8">
@@ -130,7 +130,7 @@ export default function DonationForm({ action }) {
             Opt me in for Gift Aid
           </label>
         </div>
-        {giftAid && (
+        {giftAid && giftAidEligible && (
           <GiftAidForm
             amount={amount}
             postcode={postcode}

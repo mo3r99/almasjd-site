@@ -5,8 +5,7 @@ export default function GiftAidForm({ amount, postcode, setPostcode, validatePos
     <>
       <p className="text-sm mt-4">
         If you have paid at least £{amount} or more in income tax or capital
-        gains tax this year, then opting into gift aid means that Al Masjid can
-        claim 25% more from HMRC.
+        gains tax this year, then opting into gift aid means HMRC can increase your donation by 25%.
       </p>
       <div className="mt-4 grid grid-cols-2 md:grid-cols-4 grid-rows-4 md:grid-rows-3 gap-x-8 gap-y-2 md:gap-y-4 mb-2">
         <div className="col-span-2 md:col-span-3">
