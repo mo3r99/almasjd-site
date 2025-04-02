@@ -25,9 +25,9 @@ export default function CheckoutForm({ type, amount, address, email, name }) {
 
   useEffect(() => {
     setTimeout(() => {
-      setCopied(false)
-    }, 2000)
-  }, [copied])
+      setCopied(false);
+    }, 2000);
+  }, [copied]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -127,10 +127,13 @@ export default function CheckoutForm({ type, amount, address, email, name }) {
                   <span className="border-b-2 border-neutral-200" />
                   <p className="text-gray-700">
                     <span className="font-bold">Reference:</span>{" "}
-                    {(type.toUpperCase() + ' ' +
-                    name.split(" ")[0][0].toUpperCase() +
+                    {(
+                      type.toUpperCase() +
                       " " +
-                      name.split(" ")[1].toUpperCase()).slice(0,18)}
+                      name.split(" ")[0][0].toUpperCase() +
+                      " " +
+                      name.split(" ")[1].toUpperCase()
+                    ).slice(0, 18)}
                   </p>
                 </div>
               </div>
@@ -144,25 +147,41 @@ export default function CheckoutForm({ type, amount, address, email, name }) {
                   navigator.clipboard.writeText(`Bank: Natwest
               Account Name: Al Masjid SCIO
               Account No.: 48421057
-              Sort Code: 52-41-56`);
-              setCopied(true);
+              Sort Code: 52-41-56
+              Reference: ${(
+                type.toUpperCase() +
+                " " +
+                name.split(" ")[0][0].toUpperCase() +
+                " " +
+                name.split(" ")[1].toUpperCase()
+              ).slice(0, 18)}`);
+                  setCopied(true);
                 }}
               >
-                {!copied ? 'Copy Details' : 'Copied'}
-                {!copied && <svg
-                  fill="none"
-                  height="16"
-                  stroke="currentColor"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  strokeWidth="2"
-                  viewBox="0 0 24 24"
-                  width="16"
-                  className="w-3 h-3 ml-1"
-                >
-                  <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
-                  <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
-                </svg>}
+                {!copied ? "Copy Details" : "Copied"}
+                {!copied && (
+                  <svg
+                    fill="none"
+                    height="16"
+                    stroke="currentColor"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth="2"
+                    viewBox="0 0 24 24"
+                    width="16"
+                    className="w-3 h-3 ml-1"
+                  >
+                    <rect
+                      x="9"
+                      y="9"
+                      width="13"
+                      height="13"
+                      rx="2"
+                      ry="2"
+                    ></rect>
+                    <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                  </svg>
+                )}
                 {copied && (
                   <svg
                     fill="none"
@@ -224,7 +243,12 @@ export default function CheckoutForm({ type, amount, address, email, name }) {
                     <p className="text-sm">
                       Please note, after processing fees are deducted, your
                       donation will be{" "}
-                      {formatAmount(parseFloat(unFormatAmount(amount)) - (0.015 * parseFloat(unFormatAmount(amount))) - 0.25)}.{" "}
+                      {formatAmount(
+                        parseFloat(unFormatAmount(amount)) -
+                          0.015 * parseFloat(unFormatAmount(amount)) -
+                          0.25
+                      )}
+                      .{" "}
                       {!address && (
                         <>
                           If you would like your whole donation to reach us,
