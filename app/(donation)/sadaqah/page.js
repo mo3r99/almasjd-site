@@ -3,7 +3,7 @@
 import { handlePayment } from '@/actions/handlePayment';
 import DonationForm from "../../ui/donationComponents/DonationForm";
 
-export default function SupportAM() {
+export default function Sadaqah() {
   return (
     <div
       id="checkout"
@@ -11,7 +11,7 @@ export default function SupportAM() {
     >
       <div className="w-full flex flex-col gap-8 max-w-3xl mx-auto">
         <div className="w-full">
-          <DonationForm action={handlePayment} giftAidEligible={true} type={'support'} />
+          <DonationForm action={handlePayment} giftAidEligible={true} type={'sadaqah'} />
         </div>
       </div>
     </div>

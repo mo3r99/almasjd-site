@@ -16,9 +16,10 @@ export default function Return({}) {
   useEffect(() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
-    const sessionId = urlParams.get("session_id");
+    const paymentIntent = urlParams.get("payment_intent");
+    const secret = urlParams.get("payment_intent_client_secret");
 
-    fetch(`/api/checkout_sessions?session_id=${sessionId}`, {
+    fetch(`/api/checkout_sessions?payment_intent=${paymentIntent}&secret=${secret}`, {
       method: "GET",
     })
       .then((res) => res.json())
@@ -29,11 +30,11 @@ export default function Return({}) {
       });
   }, []);
 
-  if (status === "open") {
-    return redirect("/donate");
+  if (status === "requires_payment_method") {
+    return redirect("/error");
   }
 
-  if (status === "complete") {
+  if (status === "succeeded") {
     return (
       <Container>
         <section
@@ -57,9 +58,9 @@ export default function Return({}) {
           />
 
           <div className="w-full md:w-[50%] my-auto">
-            <Heading className="mb-4 md:text-6xl">Thank you, {name.split(" ")[0]}!</Heading>
+            <Heading className="mb-4 md:text-6xl">Thank you, {name.split(" ")[0]}.</Heading>
             <p className="font-[family-name:var(--font-montserrat)]">
-              Your donation has been received! Jazākallahu Khayrā! A
+              Your payment was successful. A
               confirmation email will be sent to {customerEmail}. If you have
               any questions, please email{" "}
               <a
@@ -75,6 +76,4 @@ export default function Return({}) {
       </Container>
     );
   }
-
-  return null;
 }

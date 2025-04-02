@@ -92,7 +92,7 @@ const sadqah = (
       The Prophet ﷺ said: “The believer’s shade on the Day of Resurrection will
       be his Sadaqah.” (Al-Tirmidhi).
     </p>
-    <Button colour={"blue"} href={""} className={"max-w-72 mt-4 justify-center mx-auto smd:float-left smd:justify-start"}>
+    <Button colour={"blue"} href={"/sadaqah"} className={"max-w-72 mt-4 justify-center mx-auto smd:float-left smd:justify-start"}>
       Give Sadaqah
     </Button>
     </div>
