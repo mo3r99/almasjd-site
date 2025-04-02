@@ -1,4 +1,4 @@
-const stripe = require("stripe")(process.env.STRIPE_SECRET_KEYA);
+const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 
 import { formatAmount } from '@/app/lib/formatAmount';
 import { NextResponse } from 'next/server';
