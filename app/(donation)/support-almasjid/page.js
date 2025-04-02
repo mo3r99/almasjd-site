@@ -1,34 +1,19 @@
 "use client";
 
-import { useCallback } from 'react';
-import { loadStripe } from '@stripe/stripe-js';
-import {
-  EmbeddedCheckoutProvider,
-  EmbeddedCheckout
-} from '@stripe/react-stripe-js/';
-
-const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
+import { handlePayment } from '@/actions/handlePayment';
+import DonationForm from "./donationComponents/DonationForm";
 
 export default function SupportAM() {
-  const fetchClientSecret = useCallback(async () => {
-    // Create a Checkout Session
-    return fetch("/api/checkout_sessions", {
-      method: "POST",
-    })
-      .then((res) => res.json())
-      .then((data) => data.clientSecret);
-  }, []);
-
-  const options = {fetchClientSecret};
-
   return (
-    <div id="checkout">
-      <EmbeddedCheckoutProvider
-        stripe={stripePromise}
-        options={options}
-      >
-        <EmbeddedCheckout />
-      </EmbeddedCheckoutProvider>
+    <div
+      id="checkout"
+      className="max-w-[80vw] w-full mx-auto font-[family-name:var(--font-montserrat)]"
+    >
+      <div className="w-full flex flex-col gap-8 max-w-3xl mx-auto">
+        <div className="w-full">
+          <DonationForm action={handlePayment} />
+        </div>
+      </div>
     </div>
-  )
+  );
 }
