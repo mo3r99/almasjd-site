@@ -83,41 +83,28 @@ export default function Home() {
         switch (section.type) {
           case "classes":
             return <ClassesSection key={index} bg={section.background} />;
-          case "announcements":
-            return (
-              <section key={section.id} className="bg-dolphin pb-8">
-                <Container className="text-white max-w-5xl mx-auto">
-                  <Heading className="relative mx-6 md:mx-0 mt-10 mb-8 text-center">
-                    Announcements
-                  </Heading>
-                  <div className="grid grid-cols-1 lg:grid-cols-3 max-w-[80vw] mx-auto gap-4">
-                    <Announcement
-                      title={"Download our Ramadhan Timetable"}
-                      img={
-                        "ramadhan.png"
-                      }
-                      btnText={"Download Now"}
-                      href="/ramadhan/calendar"
-                      className={"z-[2]"}
-                    >
-                    </Announcement>
-
-                    <Announcement
-                      title={"Ladies Taraweeh"}
-                      img={
-                        "prayermat.png"
-                      }
-                      btnText={"View in maps"}
-                      href="https://maps.app.goo.gl/zcYnVw8yUrWzhtDu5"
-                      className={"z-[2]"}
-                    >
-                      Location of ladies taraweeh 149 Woodhead Rd, Glasgow G53
-                      7NN (Twisted Packaging Ltd)
-                    </Announcement>
-                  </div>
-                </Container>
-              </section>
-            );
+          // case "announcements":
+          //   return (
+          //     <section key={section.id} className="bg-dolphin pb-8">
+          //       <Container className="text-white max-w-5xl mx-auto">
+          //         <Heading className="relative mx-6 md:mx-0 mt-10 mb-8 text-center">
+          //           Announcements
+          //         </Heading>
+          //         <div className="grid grid-cols-1 lg:grid-cols-3 max-w-[80vw] mx-auto gap-4">
+          //           <Announcement
+          //             title={"Download our Ramadhan Timetable"}
+          //             img={
+          //               "ramadhan.png"
+          //             }
+          //             btnText={"Download Now"}
+          //             href="/ramadhan/calendar"
+          //             className={"z-[2]"}
+          //           >
+          //           </Announcement>
+          //         </div>
+          //       </Container>
+          //     </section>
+          //   );
           case "lessons":
             return (
               <section key={section.id} className="w-[100%] bg-zinc-900">
