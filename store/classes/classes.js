@@ -94,7 +94,7 @@ This course will drive children to achieve their full potential and apply their 
 The course aims to ensure that, by the time of completion, all students are able to recite the whole Qur’an fluently in its authentic Arabic form. For this, it is essential to have good theoretical knowledge of Tajweed rules as well as the skills to practically apply them. In addition to this, young Muslims should be well-grounded in their beliefs, able to apply the laws of Allah and His Messenger ﷺ to their everyday lives and draw examples from the esteemed Sahabah (companions) and salaf salihoon (pious predecessors), as well as our rich Islamic history.
 
 ## Timing
-5 days a week in the evening for one hour. Timings TBC.
+3 days a week from 5-7pm.
 
 ## Who is this course for?
 This program is open to both boys and girls aged 7-15. Classes are separated by age, ability and gender, with girls taught by female teachers, so your child will be placed in the most appropriate class to ensure they meet their full potential.`,
