@@ -25,7 +25,7 @@ This program is open to both brothers and sisters (with sisters taught by female
 -   Be able to recite the Qur’an fluently and recognise the Arabic script.
 
 ## Timing
-5 days a week, 7-10 pm. This is a live course, thus there will be no recordings.`,
+3 days a week, 7-9 pm. This is a live course, thus there will be no recordings.`,
       },
       {
         background: "#03736b",
