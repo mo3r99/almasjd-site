@@ -86,7 +86,7 @@ export default async function ClassPage({ params }) {
         </Heading>
 
         <span className="w-16 h-2 bg-weborange my-4 block"></span>
-        {!classes[whichClass].closed ? (
+        {!classes[whichClass].closed && !classes[whichClass].workshop ? (
           <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
             Admissions Open for {new Date().getFullYear()}
           </span>
