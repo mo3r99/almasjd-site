@@ -90,7 +90,7 @@ export default async function ClassPage({ params }) {
           <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
             Admissions Open for {new Date().getFullYear()}
           </span>
-        ) : (
+        ) : !classes[whichClass].workshop && (
           <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
             This course is now complete
           </span>
