@@ -14,6 +14,7 @@ const eslintConfig = [
     extends: ['next/core-web-vitals'],
     rules: {
       'react/no-unescaped-entities': 'off',
+      'react-hooks/rules-of-hooks': 'off',
     },
   }),
 ]

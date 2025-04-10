@@ -127,6 +127,7 @@ export default async function Lesson({ params }) {
                     {...rest}
                     width={300}
                     height={300}
+                    alt={''}
                   />
                 );
               },

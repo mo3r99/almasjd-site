@@ -113,7 +113,7 @@ export default function AudioPlayer({ className }) {
         audioRef.current.play();
       }
     }
-  }, [currentTrackIndex, tracks]);
+  }, [currentTrackIndex, tracks, isPlaying, setProgress]);
 
   const toggleFullPlayer = () => {
     setIsVisible(true);

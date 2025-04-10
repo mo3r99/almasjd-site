@@ -78,7 +78,7 @@ export default function CheckoutForm({ type, amount, address, email, name }) {
     })
       .then((res) => res.json())
       .then((res) => setClientSecret(res.clientSecret));
-  }, [amount, amount, address, email]);
+  }, [amount, address, email, name, type]);
 
   if (!clientSecret || !stripe || !elements) {
     return (

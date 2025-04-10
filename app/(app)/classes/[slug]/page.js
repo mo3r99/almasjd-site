@@ -155,6 +155,7 @@ export default async function ClassPage({ params }) {
                           {...rest}
                           width={300}
                           height={300}
+                          alt={'Image of ' + src}
                         />
                       );
                     },

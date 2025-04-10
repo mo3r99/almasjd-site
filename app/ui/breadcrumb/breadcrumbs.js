@@ -14,7 +14,7 @@ import { cn } from "@/lib/utils";
 
 export default function Breadcrumbs({ className }) {
   const paths = usePathname();
-  const pathNames = paths.split("/").filter((path) => path);
+  const pathNames = paths.split("/").filter((segment) => segment);
 
   let allPaths = [];
   let currentPath = "";
