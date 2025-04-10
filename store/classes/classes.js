@@ -284,6 +284,60 @@ We believe that everybody should be able to study regardless of financial circum
       },
     ],
   },
+  hygiene: {
+    id: 6,
+    title: "Male Hygiene Workshop",
+    workshop: true,
+    closed: false,
+    blurb:
+        "A weekend course on male hygiene in Islam, covering important topics such as maturity, hair removal, and problems young people face.",
+    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/hygiene-banner",
+    bannerImage: "almasjid-site.s3.eu-north-1.amazonaws.com/water.png",
+    href: "/classes/hygiene",
+    description:
+        "A weekend course covering the essentials of male hygiene in Islam - coming of age, removing hair, performing ghusl (the ritual bath), performing Istinjaa', and more.",
+    sections: [
+      {
+        background: "#ffeccc",
+        markdown: `
+## Who is this course for?
+This program is open to brothers only. We encourage fathers and sons to attend together.
+
+## Course instructor
+The course will be led by Mawlana Dr. Nasser Rashid and other esteemed scholars.
+
+## Location and Timing
+This course will be held at the Al Masjid Darnley Musalla on Saturday 19th April and Sunday 20th April, from 2pm to 4pm. Dhuhr prayer is at 1.45pm.`,
+      },
+      {
+        background: "#fff",
+        markdown: `
+# Topics to be covered
+The following subjects will be covered over the two day course:
+- **Introduction to cleanliness in Islam:** Understanding the significance and fundamental principles of Taharah.
+- **Coming of age in Islam:** Exploring the meaning, signs, and importance of reaching maturity in Islamic teachings.
+- **How to perform Istinjaa' properly:** Learning the correct method and its crucial importance.
+- **Ghusl (the ritual bath):** A guide to the proper way of bathing according to the Sunnah.
+- **Hair removal:** Understanding the Islamic guidelines on when, why, and how.
+- **Practical method of doing Wudhu & Ghusl:** An interactive workshop demonstrating the correct performance of ablution and ritual bathing.
+- **Masah over socks:** Understanding its permissibility and the duration for which it is valid.
+- **Masa'il for young people:** Addressing common issues and rulings related to Taharah (cleanliness and purity) in their daily lives.
+- **Masa'il for the school and workplace:** Exploring practical Islamic rulings concerning cleanliness, prayer, and related matters in these environments.
+- **Advice to parents:** Guidance on effectively teaching children about Taharah, puberty-related rulings, and other relevant Islamic principles.
+
+`,
+      },
+      
+    ],
+  },
+  fourGreatestMuslims: {
+    id: 7,
+    href: "/lessons/four-greatest-muslims",
+    title: "Stories of the Four Greatest Muslims",
+    workshop: true,
+    closed: true,
+    blurb: "Learn why Allāh granted them the seal of approval and why the Muslim ummah has held them in the highest regard for over 14 centuries."
+  },
 };
 
 export default classes;

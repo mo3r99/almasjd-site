@@ -116,9 +116,10 @@ export default function Home() {
                     {LESSON.slice(0, 3).map((lesson, index) => (
                       <Lesson
                         key={index}
-                        href={`/lessons/${lesson.slug}`}
+                        href={!lesson.external ? `/lessons/${lesson.slug}` : lesson.slug}
                         title={lesson.title}
                         image={lesson.image && lesson.image}
+                        external={lesson.external}
                       >
                         {lesson.description}
                       </Lesson>

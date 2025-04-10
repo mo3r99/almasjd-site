@@ -13,7 +13,7 @@ const LESSON = [
     title: "Video Lessons",
     description:
       "Join our YouTube channel for regular video lessons which cover a range of topics.",
-    slug: "https://youtube.com/almasjid",
+    slug: "https://www.youtube.com/almasjid",
     external: true,
     image:
       "almasjid-site.s3.eu-north-1.amazonaws.com/video-lessons.png",

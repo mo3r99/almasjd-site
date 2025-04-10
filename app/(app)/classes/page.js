@@ -4,37 +4,27 @@ import Breadcrumbs from "../../ui/breadcrumb/breadcrumbs";
 import Lesson from "../../ui/lesson/lesson";
 import Heading from "../../ui/heading/heading";
 
+import classes from '@/store/classes/classes'
+
 export const metadata = {
   title: "Classes",
-  descriptoion: "Learn and grow with our online courses, workshops and webinars, with classes for all ages and levels.",
+  description: "Learn and grow with our online courses, workshops and webinars, with classes for all ages and levels.",
 };
 
 export default function Classes() {
-  const newCourses = [
-    // Add new courses here
-    /* Example structure:
-    {
-      href: "/classes/tafseer",
-      title: "Tafseer of Last 10 Surahs",
-      image: "almasjid-site.s3.eu-north-1.amazonaws.com/tafseer.png",
-      description: "Course description here"
-    }
-    */
-  ];
+  const newCourses = Object.values(classes).filter(course => 
+    course.workshop && !course.closed
+  );
 
-  const completedCourses = [
-    {
-      href: "/lessons/four-greatest-muslims",
-      title: "Stories of the Four Greatest Muslims",
-      description: "Learn why Allāh granted them the seal of approval and why the Muslim ummah has held them in the highest regard for over 14 centuries."
-    },
-    {
-      href: "/classes/tafseer",
-      title: "Tafseer of Last 10 Surahs",
-      image: "almasjid-site.s3.eu-north-1.amazonaws.com/tafseer.png",
-      description: "Learning and understand our creator's message for us this Ramadhan through this online course, specifically designed for young adults, with visuals, illustrations, practical advice and contemporary examples."
+  const completedCourses = Object.values(classes).filter(course => {
+    if (course.workshop && course.closed) {
+      return course
+    } else {
+      return;
     }
-  ];
+  })
+
+  console.log(newCourses, completedCourses)
 
   return (
     <>
@@ -51,10 +41,10 @@ export default function Classes() {
 
         <span className="w-[80vw] h-[1px] bg-[rgb(217,204,187)] m-auto my-8 block" />
 
-        <div className={`grid ${newCourses.length > 0 ? 'grid-rows-2 grid-cols-1 gap-20 md:gap-2 md:grid-cols-2 md:grid-rows-1' : ''} max-w-screen-2xl mx-auto mb-16 relative`}>
+        <div className={`grid ${newCourses.length > 0 ? 'grid-cols-1 gap-20 md:gap-2 md:grid-cols-2 grid-rows-1' : ''} max-w-screen-2xl mx-auto mb-16 relative`}>
           {newCourses.length > 0 && (
             <>
-              <section className="m-auto h-full">
+              <section className="m-auto">
                 <Heading className="text-xl mb-8 mt-4 mx-auto text-center">
                   New & Ongoing Workshops
                 </Heading>
@@ -64,9 +54,11 @@ export default function Classes() {
                       key={index}
                       href={course.href}
                       title={course.title}
-                      image={course.image}
+                      image={course.backgroundImage}
+                      newCourse={true}
+                      applicationsOpen={true}
                     >
-                      {course.description}
+                      {course.blurb}
                     </Lesson>
                   ))}
                 </section>
@@ -87,9 +79,9 @@ export default function Classes() {
                   key={index}
                   href={course.href}
                   title={course.title}
-                  image={course.image}
+                  image={course.backgroundImage}
                 >
-                  {course.description}
+                  {course.blurb}
                 </Lesson>
               ))}
             </section>

@@ -15,7 +15,7 @@ const nextConfig = {
       },
       {
         protocol: "https",
-        hostname: "wsrv.nl/",
+        hostname: "wsrv.nl",
         port: "",
         pathname: "/**",
       },

@@ -43,6 +43,10 @@ export default async function ApplyPage({ params }) {
       iframeUrl =
         "https://forms.office.com/Pages/ResponsePage.aspx?id=ZOrjoRGHW0a27251DWrQb7SjwJ0Q6f1Dm73UP8eB77pUNU8zN0I1MjVGWUlFWldGQjcwSjRRSFVZUi4u&embed=true";
       break;
+    case "hygiene":
+      whichClassTitle = "Male Hygiene Course";
+      iframeUrl = "https://forms.office.com/Pages/ResponsePage.aspx?id=ZOrjoRGHW0a27251DWrQb7SjwJ0Q6f1Dm73UP8eB77pUN1Q2SkxaN1FRUUNNM1hVTkQ5VTc1N0haMC4u&embed=true";
+      break;
     default:
       return notFound();
   }

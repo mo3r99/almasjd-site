@@ -56,6 +56,7 @@ export default function Lesson({
       {external ? (
         <Button
           href={href}
+          external={true}
           target="_blank"
           colour="black"
           className="w-full sm:w-auto mt-2 sm:mt-4 md:mt-0"

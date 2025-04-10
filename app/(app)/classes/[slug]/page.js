@@ -41,8 +41,43 @@ export default async function ClassPage({ params }) {
     notFound();
   }
 
+  const placeholder =
+    "almasjid-site.s3.eu-north-1.amazonaws.com/placeholder.png";
+
   return (
     <>
+      <div className="relative">
+        <div className="absolute top-4 left-0 w-screen h-[1000px] opacity-50 z-[-1] mix-blend-multiply brightness-105 blur-sm">
+          <div className="absolute inset-0 bg-gradient-to-b from-white via-[rgba(255, 255, 255, 0.5)] to-transparent z-10"></div>
+          <Image
+            src={
+              classes[whichClass].bannerImage
+                ? `https://wsrv.nl/?url=${classes[whichClass].bannerImage}&w=960&h=540`
+                : classes[whichClass].backgroundImage
+                ? `https://wsrv.nl/?url=${classes[whichClass].backgroundImage}&w=960&h=540`
+                : `https://wsrv.nl/?url=${placeholder}&w=960&h=540`
+            }
+            alt={classes[whichClass].title}
+            fill
+            className="object-cover object-center hidden md:block"
+            priority
+          />
+          <Image
+            src={
+              classes[whichClass].bannerImage
+                ? `https://wsrv.nl/?url=${classes[whichClass].bannerImage}&w=640&h=360`
+                : classes[whichClass].backgroundImage
+                ? `https://wsrv.nl/?url=${classes[whichClass].backgroundImage}&w=640&h=360`
+                : `https://wsrv.nl/?url=${placeholder}&w=640&h=360`
+            }
+            alt={classes[whichClass].title}
+            fill
+            className="object-cover object-center block md:hidden"
+            priority
+          />
+        </div>
+      </div>
+
       <section className="h-auto max-w-5xl mx-auto my-4 mb-10 mt-16">
         <Breadcrumbs className="mt-8 mb-4" />
 
@@ -54,7 +89,9 @@ export default async function ClassPage({ params }) {
         {!classes[whichClass].closed ? (
           <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
             Admissions Open for {new Date().getFullYear()}
-          </span>) : ( <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
+          </span>
+        ) : (
+          <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
             This course is now complete
           </span>
         )}
