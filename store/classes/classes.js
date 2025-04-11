@@ -295,8 +295,9 @@ We believe that everybody should be able to study regardless of financial circum
     bannerImage: "almasjid-site.s3.eu-north-1.amazonaws.com/water.png",
     href: "/classes/hygiene",
     description:
-        "A weekend course covering the essentials of male hygiene in Islam - coming of age, removing hair, performing ghusl (the ritual bath), performing Istinjaa', and more.",
-    sections: [
+        "A weekend course covering the essentials of male hygiene in Islam - coming of age, removing hair, performing ghusl (the ritual bath), performing Istinjaa', and more. This free one day course is a must for Muslim males of all ages, being particularly useful for those young men who are approaching the age of puberty and aims to discuss some of the changes in the male body during the period of adolescence and impart the related Islamic rulings in a sensitive and supportive environment. There will also be an opportunity for Q&A with the Shaykh.",
+    descriptors: ['Free', '2-day course'],
+        sections: [
       {
         background: "#ffeccc",
         markdown: `
@@ -306,13 +307,34 @@ This program is open to brothers only. We encourage fathers and sons to attend t
 ## Course instructor
 The course will be led by Mawlana Dr. Nasser Rashid and other esteemed scholars.
 
-## Location and Timing
-This course will be held at the Al Masjid Darnley Musalla on Saturday 19th April and Sunday 20th April, from 2pm to 4pm. Dhuhr prayer is at 1.45pm.`,
+## Location
+This course will be held at the [Al Masjid Darnley Musalla](https://maps.app.goo.gl/pq1xkCso4RHrnZCJ7) (70 Woodhead Rd, Glasgow G53 7NN). 
+
+## Date & Time
+Saturday 19th April and Sunday 20th April, from 2pm to 4pm. Dhuhr prayer is at 1.45pm. This includes time for Q&A`,
+      },
+      {
+        background: '#333333',
+        markdown: `
+# About the speaker
+Mawlāna Dr. Nasser Rashid is a Scottish-born Muslim scholar who completed the ‘Alimiyyah program at Darul Uloom Islamic College (Bury, UK) where he graduated with distinction. 
+###
+He has ijāzah (formal authorisation) to teach all major books of hadith including the Ṣiḥāḥ Sittah, Muwattas of Imām Mālik & Muḥammad and other texts from his senior teachers of ḥadith at Darul Uloom Bury. 
+###
+Additionally, he also has similar ijāzāh of ḥadith from many senior scholars of our time, most notably the late Shaykh al-Ḥadith Mawlāna Yusuf Motāla raḥimahullah (UK), Shaykh al-Ḥadith Mawlāna Taqiuddin Nadwi (UAE) and Shaykh al-Islām Mufti Muḥammad Taqi Usmāni (Pakistan).
+###
+He completed a BSc (Hons) degree from the University of St Andrews where he held the position of Vice President at the University Islamic Society and where he also served as a regional representative to a national umbrella organisation for Muslim University students in the UK. He then went on to further pursue studies in Medicine at the University of Glasgow where he graduated as a medical doctor with a Bachelors in Medicine and Surgery. He currently works as a practicing medical doctor in the UK. 
+###
+Alongside his clinical commitments, Mawlāna Dr Nasser maintains a keen interest in contemporary and medical-related fiqh and currently teaches the Arabic language, Usool al-Fiqh and ḥadith at a part-time Islamic seminary in Glasgow. 
+###
+Lastly, in the field of Islamic spirituality (tazkiyah), he is a student of his spiritual guide and mentor Shaykh Mufti Tauqeer - a traditionally trained Shaykh and ‘Aālim residing in Dubai (UAE) who is authorised to mentor students in the path of self-purification & Islamic spirituality.
+        `,
+
       },
       {
         background: "#fff",
         markdown: `
-# Topics to be covered
+# Topics & Content
 The following subjects will be covered over the two day course:
 - **Introduction to cleanliness in Islam:** Understanding the significance and fundamental principles of Taharah.
 - **Coming of age in Islam:** Exploring the meaning, signs, and importance of reaching maturity in Islamic teachings.

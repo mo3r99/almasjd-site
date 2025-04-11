@@ -95,6 +95,11 @@ export default async function ClassPage({ params }) {
             This course is now complete
           </span>
         )}
+        {classes[whichClass].descriptors?.map((descriptor, index) => {
+          return <span className="font-[family-name:var(--font-montserrat)] bg-tradewind p-[0.3rem] rounded-md text-sm font-bold text-white uppercase mr-2">
+          {descriptor}
+        </span>
+        })}
         <p className="mt-6 font-[family-name:var(--font-montserrat)] mb-8 max-w-[80vw] m-auto">
           {classes[whichClass].description}
         </p>
@@ -104,7 +109,7 @@ export default async function ClassPage({ params }) {
             href={`/classes/${whichClass}/apply`}
             className={"min-w-[244px]"}
           >
-            Apply for this course
+            {classes[whichClass].workshop ? 'Register Now' : 'Apply for this course'}
           </Button>
         )}
         {classes[whichClass].closed && (
@@ -169,7 +174,7 @@ export default async function ClassPage({ params }) {
                     className={"mt-8 float-right"}
                     href={`/classes/${whichClass}/apply`}
                   >
-                    apply
+                    {classes[whichClass].workshop ? 'Register' : 'Apply'}
                   </Button>
                 )}
               </div>
