@@ -295,7 +295,7 @@ We believe that everybody should be able to study regardless of financial circum
     bannerImage: "almasjid-site.s3.eu-north-1.amazonaws.com/water.png",
     href: "/classes/hygiene",
     description:
-        "A weekend course covering the essentials of male hygiene in Islam - coming of age, removing hair, performing ghusl (the ritual bath), performing Istinjaa', and more. This free one day course is a must for Muslim males of all ages, being particularly useful for those young men who are approaching the age of puberty and aims to discuss some of the changes in the male body during the period of adolescence and impart the related Islamic rulings in a sensitive and supportive environment. There will also be an opportunity for Q&A with the Shaykh.",
+        "A weekend course covering the essentials of male hygiene in Islam - coming of age, removing hair, performing ghusl (the ritual bath), performing Istinjaa', and more. This free two day course is a must for Muslim males of all ages, being particularly useful for those young men who are approaching the age of puberty and aims to discuss some of the changes in the male body during the period of adolescence and impart the related Islamic rulings in a sensitive and supportive environment. There will also be an opportunity for Q&A with the Shaykh.",
     descriptors: ['Free', '2-day course'],
         sections: [
       {
