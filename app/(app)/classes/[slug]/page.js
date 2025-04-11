@@ -96,7 +96,7 @@ export default async function ClassPage({ params }) {
           </span>
         )}
         {classes[whichClass].descriptors?.map((descriptor, index) => {
-          return <span className="font-[family-name:var(--font-montserrat)] bg-tradewind p-[0.3rem] rounded-md text-sm font-bold text-white uppercase mr-2">
+          return <span key={index} className="font-[family-name:var(--font-montserrat)] bg-tradewind p-[0.3rem] rounded-md text-sm font-bold text-white uppercase mr-2">
           {descriptor}
         </span>
         })}
