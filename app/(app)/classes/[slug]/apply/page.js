@@ -47,13 +47,10 @@ export default async function ApplyPage({ params }) {
       whichClassTitle = "Male Hygiene Course";
       iframeUrl = "https://forms.office.com/Pages/ResponsePage.aspx?id=ZOrjoRGHW0a27251DWrQb7SjwJ0Q6f1Dm73UP8eB77pUN1Q2SkxaN1FRUUNNM1hVTkQ5VTc1N0haMC4u&embed=true";
       break;
-<<<<<<< HEAD
     case "female-hygiene":
       whichClassTitle = "Female Hygiene Course";
       iframeUrl = "https://forms.gle/MyVwuX1ZHh3Bae3T6";
       break;
-=======
->>>>>>> a7c90fdbae6fe97b512c3f5211c8d80687ab279b
     default:
       return notFound();
   }
