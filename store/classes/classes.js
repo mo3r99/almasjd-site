@@ -352,6 +352,7 @@ The following subjects will be covered over the two day course:
       
     ],
   },
+<<<<<<< HEAD
   'female-hygiene': {
     id: 6,
     title: "Female Hygiene Workshop",
@@ -418,6 +419,8 @@ The following subjects will be covered over the two day course:
       
     ],
   },
+=======
+>>>>>>> a7c90fdbae6fe97b512c3f5211c8d80687ab279b
   fourGreatestMuslims: {
     id: 7,
     href: "/lessons/four-greatest-muslims",
