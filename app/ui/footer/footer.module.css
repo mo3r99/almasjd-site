@@ -1,0 +1,7 @@
+.footer {
+    background-image: url('https://almasjid-site.s3.eu-north-1.amazonaws.com/texture2.png');
+    background-repeat: repeat;
+    /* flex-grow: 1; */
+    margin-top: auto;
+    width: 100%;
+}

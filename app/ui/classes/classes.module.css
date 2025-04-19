@@ -1,0 +1,10 @@
+.classesContaineBg {
+    background-image: url('https://almasjid-site.s3.eu-north-1.amazonaws.com/bg.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    backdrop-filter: brightness(90%);
+}
+
+.classesContaineNoBg {
+    background: none;
+}

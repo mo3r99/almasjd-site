@@ -1,0 +1,142 @@
+.markdown {
+    z-index: 1;
+}
+
+.markdown h1 {
+    font-size: xx-large;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    padding: 1.5em 0 0.3em 0;
+}
+
+.markdown h2 {
+    font-size: larger;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    padding: 1.5em 0 0.3em 0;
+}
+
+.markdown h3 {
+    font-size: large;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+    padding: 0.7em 0 0.3em 0;
+}
+
+.markdown p, .markdown ul {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.markdown ul > li {
+    list-style: circle;
+    text-indent: 1em;
+    margin: 0.1em 0 0 1.5em;
+}
+
+.markdown blockquote {
+    margin-top: 2em;
+    font-size: small;;
+}
+
+table {
+    font-family: 'Montserrat', sans-serif;
+    text-align: left;
+    border-collapse: collapse;
+    margin: 2em 0;
+}
+
+.table-wrapper {
+    max-width: 1024px;
+    max-height: 90vh;
+    overflow-x: scroll;
+}
+
+th:first-child {
+	position: sticky;
+	left: 0;
+	border-inline-end: none;
+    z-index: 1;
+}
+
+thead {
+    position: sticky;
+	top: 0;
+	border-inline-end: none;
+    backdrop-filter: blur(15px);
+}
+
+tbody th {
+	background: rgba(255, 255, 255, 0.239);
+}
+
+thead th,
+tfoot th {
+	background: rgba(245, 245, 245, 0.411);
+}
+
+td:first-of-type,
+:where(thead, tfoot) th:nth-child(2) {
+	border-inline-start: none;
+    position: sticky;
+	left: 0;
+    background-color: rgba(245, 245, 245, 0.2);
+    backdrop-filter: blur(15px);
+}
+
+th:first-child::after {
+	content: '';
+	position: absolute;
+	inset-block-start: 0;
+	inset-inline-end: 0;
+	width: 1px;
+	height: 100%;
+	background: lightgrey;
+}
+
+th,
+caption {
+	text-align: start;
+}
+
+thead th:not(:first-child),
+td {
+	text-align: start;
+}
+
+thead {
+	border-block-end: 2px solid;
+	background: whitesmoke;
+}
+
+tfoot {
+	border-block: 2px solid;
+	background: whitesmoke;
+}
+
+th,
+td {
+	border: 1px solid #d3d3d373;
+	padding: 0.25rem 0.75rem;
+    min-width: 90px;
+}
+
+table {
+	--color: rgba(241, 205, 148, 0.292);
+}
+
+thead,
+tfoot {
+	background: var(--color);
+}
+
+tbody tr:nth-child(even) {
+	background: color-mix(in srgb, var(--color), transparent 60%);
+}
+
+.link {
+    color: rgb(46, 189, 175);
+}
+
+.link:hover {
+    color: rgb(46, 151, 189);
+}

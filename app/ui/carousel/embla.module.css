@@ -1,0 +1,30 @@
+.embla {
+  overflow: hidden;
+}
+
+.embla_container {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 90%;
+  width: 90vw;
+  max-width: 1024px;
+  grid-column-gap: 20px;
+}
+
+.embla__slide {
+  min-width: 0;
+  height: 90vh;
+  max-height: 900px;
+}
+
+.embla__slide:last-child {
+  background-color: aqua;
+  margin-right: 20px;
+}
+
+.embla__slide:nth-child(1) {
+  background-color: aquamarine;
+}
+.embla__slide:nth-child(2) {
+  background-color: darkturquoise;
+}

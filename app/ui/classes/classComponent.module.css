@@ -1,0 +1,59 @@
+.container {
+    position: relative;
+}
+
+.img {
+    position: relative;
+    mask-image: url('https://almasjid-site.s3.eu-north-1.amazonaws.com/mask.png');
+    mask-size: contain;
+    mask-repeat: no-repeat;
+
+    transition: 300ms all cubic-bezier(0.77, 0.2, 0.05, 1);
+    background-repeat: no-repeat;
+}
+
+.image {
+    box-shadow: 0 10px 16px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19) !important;;
+}
+
+/* .container:hover .innerContainer {
+    bottom: 0em;
+} */
+
+.innerContainer {
+    position: absolute;
+    bottom: -1em;
+    left: -1.75em;
+    margin: 1.75em;
+    transition: 300ms all cubic-bezier(0.77, 0.2, 0.05, 1);
+    padding: 1em;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    min-height: 232px;
+    border-radius: 1.5em;
+}
+
+.img:hover ~ .innerContainer, .innerContainer:hover  {
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.65);
+}
+
+/* 
+.mark {
+    margin: 0 -0.4em;
+    padding: 0.05em 0.4em;
+    border-radius: 0.8em 0.3em;
+    background: transparent;
+    background-image: linear-gradient(
+      to right,
+      #f8dbaf30,
+      #f6cd8f3c 4%,
+      #ffdeac3d
+    );
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+    transition: 300ms all cubic-bezier(0.77, 0.2, 0.05, 1);
+    opacity: 85%;
+  } */
