@@ -126,13 +126,13 @@ export default function CheckoutForm({ type, amount, address, email, name }) {
                   </p>
                   <span className="border-b-2 border-neutral-200" />
                   <p className="text-gray-700">
-                    <span className="font-bold">Reference:</span>{" "}
+                    <span className="font-bold">Reference:</span>
                     {(
                       type.toUpperCase() +
                       " " +
-                      name.split(" ")[0][0].toUpperCase() +
+                      (name?.split(" ")[0]?.[0]?.toUpperCase() || "") +
                       " " +
-                      name.split(" ")[1].toUpperCase()
+                      (name?.split(" ")[1]?.toUpperCase() || "")
                     ).slice(0, 18)}
                   </p>
                 </div>
