@@ -379,7 +379,7 @@ The course will be led by Ustadha Asia Hussain and Ustadha Bareera Riaz, graduat
 This course will be held at the [Al Masjid Darnley Musalla](https://maps.app.goo.gl/pq1xkCso4RHrnZCJ7) (70 Woodhead Rd, Glasgow G53 7NN). 
 
 ## Date & Time
-Saturday 26th April and Sunday 27th April, from 3pm to 6pm. This includes time for Q&A and comfort breaks.`,
+Saturday 17th May 2025 & Sunday 18th May 2025, from 3pm to 6pm. This includes time for Q&A and comfort breaks.`,
       },
 //       {
 //         background: '#333333',
