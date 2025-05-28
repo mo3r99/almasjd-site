@@ -1,0 +1,5 @@
+﻿{
+  "Description": "Domain ownership verification file for Microsoft 365 - place in the website root",
+  "Domain": "almasjid.co.uk",
+  "Id": "fd075b43-1f25-46aa-8bc6-e9748eaf6cc9"
+}
