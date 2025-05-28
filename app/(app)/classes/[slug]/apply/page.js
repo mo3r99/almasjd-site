@@ -51,6 +51,10 @@ export default async function ApplyPage({ params }) {
       whichClassTitle = "Female Hygiene Course";
       iframeUrl = "https://forms.gle/MyVwuX1ZHh3Bae3T6";
       break;
+    case "tafseer-surahs":
+      whichClassTitle = "Tafseer Course - Sisters 14+";
+      iframeUrl = "https://forms.office.com/Pages/ResponsePage.aspx?id=ZOrjoRGHW0a27251DWrQb7SjwJ0Q6f1Dm73UP8eB77pUM0FHOFpGMFhRUlVXOFNaU0QxNzJVU0xUWi4u&embed=true";
+      break;
     default:
       return notFound();
   }

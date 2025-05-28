@@ -352,70 +352,29 @@ We believe that everybody should be able to study regardless of financial circum
       
 //     ],
 //   },
-  'female-hygiene': {
-    id: 6,
-    title: "Female Hygiene Workshop",
+  'tafseer-surahs': {
+    id: 9,
+    title: "Tasfeer of Last 10 Surahs",
     workshop: true,
     closed: false,
     blurb:
-        "A comprehensive two part workshop for ladies of all ages to learn about the practically relevant aspects of female hygiene in Islam.",
-    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/female-hygiene-banner.png",
-    bannerImage: "almasjid-site.s3.eu-north-1.amazonaws.com/water.png",
-    href: "/classes/female-hygiene",
+        "A comprehensive workshop for women and girls aged 14+ to learn about the tafseer of the last 10 Surahs.",
+    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/Last+10+Surahs+Banner.png",
+    bannerImage: "almasjid-site.s3.eu-north-1.amazonaws.com/Last+10+Surahs+Banner.png",
+    href: "/classes/tafseer-surahs",
     description:
-        "A weekend course covering the essentials of female hygiene in Islam - coming of age, removing hair, performing ghusl (the ritual bath), haydh, istihadha and nifas. This free two day course is a must for Muslim girls and women of all ages, being particularly useful for those young women who are approaching the age of puberty and aims to discuss some of the changes in the female body during the period of adolescence and impart the related Islamic rulings in a sensitive and supportive environment. There will also be an opportunity for Q&A with the esteemed teachers.",
-    descriptors: ['Free', '2-day course', 'Females Only'],
+        "This free course is a must for women and girls aged 14+, with the purpose of building our connection with the Qur'an. We will study the last 10 Surahs, considering their translation, tafseer and historical contexts, as well as the lessons contained within.",
+    descriptors: ['Free', 'Women Only'],
         sections: [
       {
         background: "#ffdee0",
         markdown: `
 ## Who is this course for?
-This program is open to sisters only. We encourage mothers and daughters to attend together.
-
-## Course instructor
-The course will be led by Ustadha Asia Hussain and Ustadha Bareera Riaz, graduates of Nur ul Ilm Academy (UAE).
-
-## Location
-This course will be held at the [Al Masjid Darnley Musalla](https://maps.app.goo.gl/pq1xkCso4RHrnZCJ7) (70 Woodhead Rd, Glasgow G53 7NN). 
+This program is open to sisters only, aged 14+.
 
 ## Date & Time
-Saturday 17th May 2025 & Sunday 18th May 2025, from 3pm to 6pm. This includes time for Q&A and comfort breaks.`,
+Every Wednesday, beginning 28th May 2025, for 5 weeks until 25th June.`,
       },
-//       {
-//         background: '#333333',
-//         markdown: `
-// # About the speaker
-// Mawlāna Dr. Nasser Rashid is a Scottish-born Muslim scholar who completed the ‘Alimiyyah program at Darul Uloom Islamic College (Bury, UK) where he graduated with distinction. 
-// ###
-// He has ijāzah (formal authorisation) to teach all major books of hadith including the Ṣiḥāḥ Sittah, Muwattas of Imām Mālik & Muḥammad and other texts from his senior teachers of ḥadith at Darul Uloom Bury. 
-// ###
-// Additionally, he also has similar ijāzāh of ḥadith from many senior scholars of our time, most notably the late Shaykh al-Ḥadith Mawlāna Yusuf Motāla raḥimahullah (UK), Shaykh al-Ḥadith Mawlāna Taqiuddin Nadwi (UAE) and Shaykh al-Islām Mufti Muḥammad Taqi Usmāni (Pakistan).
-// ###
-// He completed a BSc (Hons) degree from the University of St Andrews where he held the position of Vice President at the University Islamic Society and where he also served as a regional representative to a national umbrella organisation for Muslim University students in the UK. He then went on to further pursue studies in Medicine at the University of Glasgow where he graduated as a medical doctor with a Bachelors in Medicine and Surgery. He currently works as a practicing medical doctor in the UK. 
-// ###
-// Alongside his clinical commitments, Mawlāna Dr Nasser maintains a keen interest in contemporary and medical-related fiqh and currently teaches the Arabic language, Usool al-Fiqh and ḥadith at a part-time Islamic seminary in Glasgow. 
-// ###
-// Lastly, in the field of Islamic spirituality (tazkiyah), he is a student of his spiritual guide and mentor Shaykh Mufti Tauqeer - a traditionally trained Shaykh and ‘Aālim residing in Dubai (UAE) who is authorised to mentor students in the path of self-purification & Islamic spirituality.
-//         `,
-
-//       },
-      {
-        background: "#fff",
-        markdown: `
-# Topics & Content
-The following subjects will be covered over the two day course:
-- **Coming of age in Islam:** Exploring the meaning, signs, and importance of reaching maturity in Islamic teachings.
-- **How to perform Istinjaa' properly:** Learning the correct method and its crucial importance.
-- **Wudhu (ablution) and Ghusl (the ritual bath):** A guide to the proper way of bathing according to the Sunnah.
-- **Ḥayḍ, Istiḥāḍa and Nifās:** Understanding the rulings related to menstruation, non-menstrual bleeding, and postpartum bleeding in Islam.
-- **Hair removal:** Understanding the Islamic guidelines on when, why, and how.
-- **Masa'il for young people:** Addressing common issues and rulings related to Taharah (cleanliness and purity) in their daily lives.
-- **Masa'il for the school and workplace:** Exploring practical Islamic rulings concerning cleanliness, prayer, and related matters in these environments.
-- **Advice to parents:** Guidance on effectively teaching children about Taharah, puberty-related rulings, and other relevant Islamic principles.
-
-`,
-      },
-      
     ],
   },
   fourGreatestMuslims: {
