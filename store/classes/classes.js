@@ -358,7 +358,7 @@ We believe that everybody should be able to study regardless of financial circum
     workshop: true,
     closed: false,
     blurb:
-        "A comprehensive workshop for women and girls aged 14+ to learn about the tafseer of the last 10 Surahs.",
+        "A comprehensive workshop for women and girls aged 14+ç to learn about the tafseer of the last 10 Surahs.",
     backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/Last+10+Surahs+Banner.png",
     bannerImage: "almasjid-site.s3.eu-north-1.amazonaws.com/Last+10+Surahs+Banner.png",
     href: "/classes/tafseer-surahs",
