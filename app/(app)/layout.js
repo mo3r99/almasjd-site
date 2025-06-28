@@ -3,9 +3,7 @@ import "@/app/globals.css";
 import Header from "../ui/header/header";
 import Footer from "@/app/ui/footer/footer";
 import Head from "next/head";
-// import ParticlesComponent from "../ui/particles/particles";
 
-import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Analytics } from "@vercel/analytics/react";
 
 import { AudioProvider } from "../lib/AudioContext";
@@ -52,7 +50,6 @@ export default function RootLayout({ children }) {
           <meta name="apple-mobile-web-app-title" content="Almasjid" />
         </Head>
 
-        {/* <SpeedInsights /> */}
         <Analytics />
 
         <body
