@@ -22,7 +22,7 @@ export default function Footer() {
             height={141}
             alt={"Almasjid logo"}
             unoptimized
-            style={{width: '128px', height: '141px'}}
+            style={{ width: "128px", height: "141px" }}
           />
           <Image
             className="pointer-events-none block md:hidden w-auto h-auto"
@@ -33,7 +33,7 @@ export default function Footer() {
             height={64}
             alt={"Almasjid logo"}
             unoptimized
-            style={{width: '64px', height: '70.5px'}}
+            style={{ width: "64px", height: "70.5px" }}
           />
           {/* <h1 className="text-3xl md:text-4xl font-medium font-[family-name:var(--font-raleway)] absolute bottom-0 right-0">
             Almasjid
@@ -43,18 +43,21 @@ export default function Footer() {
           <p className="pb-2">
             © Copyright Al Masjid 2015-{currentYear}. All rights reserved.
           </p>
-          <p>
-            Registered Charity{" "}
-            <Link
-              target="_blank"
-              className="text-cyan-100 hover:text-cyan-200 transition-all ease-in-out duration-300"
-              href={
-                "https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC052744"
-              }
-            >
-              SC052744
-            </Link>
-          </p>
+          <Link
+            target="_blank"
+            href={
+              "https://www.oscr.org.uk/about-charities/search-the-register/charity-details?number=SC052744"
+            }
+          >
+            <Image
+              src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/small-green-landscape.png"}
+              width={250}
+              height={87.5}
+              unoptimized
+              style={{ width: "250px", height: "87.5px" }}
+              alt="Al Masjid OSCR Logo"
+            />
+          </Link>
         </div>
       </div>
 
@@ -65,7 +68,7 @@ export default function Footer() {
           Explore
         </h3>
         <ul className="font-[family-name:var(--font-montserrat)]">
-        <li>
+          <li>
             <Link className="pb-1 hover:underline hover:text-cyan-50" href="/">
               <p>Home</p>
             </Link>
@@ -100,9 +103,8 @@ export default function Footer() {
               width={30}
               height={30}
               alt="facebook"
-
               unoptimized
-              style={{width: '32px', height: '32px'}}
+              style={{ width: "32px", height: "32px" }}
             />
           </a>
           <a target="_blank" href={"https://x.com/Al MasjidOnline"}>
@@ -113,7 +115,7 @@ export default function Footer() {
               height={30}
               alt="Twitter/X"
               unoptimized
-              style={{width: '32px', height: '32px'}}
+              style={{ width: "32px", height: "32px" }}
             />
           </a>
           <a target="_blank" href={"mailto:salam@almasjid.co.uk"}>
@@ -124,7 +126,7 @@ export default function Footer() {
               height={30}
               alt="E-Mail"
               unoptimized
-              style={{width: '32px', height: '32px'}}
+              style={{ width: "32px", height: "32px" }}
             />
           </a>
         </ul>
