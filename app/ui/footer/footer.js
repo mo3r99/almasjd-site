@@ -107,13 +107,24 @@ export default function Footer() {
               style={{ width: "32px", height: "32px" }}
             />
           </a>
-          <a target="_blank" href={"https://x.com/Al MasjidOnline"}>
+          <a target="_blank" href={"https://x.com/AlMasjidOnline"}>
             <Image
               className="mx-1 w-auto h-auto"
               src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/x.png"}
               width={30}
               height={30}
               alt="Twitter/X"
+              unoptimized
+              style={{ width: "32px", height: "32px" }}
+            />
+          </a>
+          <a target="_blank" href={"https://whatsapp.com/channel/0029VaxQMtW6LwHl1qEtBY0x"}>
+            <Image
+              className="mx-1 w-auto h-auto invert"
+              src={"https://almasjid-site.s3.eu-north-1.amazonaws.com/Whatsapp.png"}
+              width={30}
+              height={30}
+              alt="WhatsApp"
               unoptimized
               style={{ width: "32px", height: "32px" }}
             />
