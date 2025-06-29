@@ -24,6 +24,7 @@ export default async function newSubscriber(prevState, formData) {
   const params = {
     email: emailSafe.data,
     subscribed_at: formatDate(new Date()),
+    groups: ['142960243307972309']
   };
 
   const response = await mailerlite.subscribers.createOrUpdate(params);
