@@ -14,12 +14,12 @@ const HOME = {
     sections: [
       {
         id: 0,
-        title: "Islamic Studies for Children",
+        title: "Sanatayn Course for Sisters",
         type: "l",
-        link: "/classes/maktab",
+        link: "/classes/sanatayn",
         caption: "Limited spaces",
         image: "quran.png",
-        text: "A well-structured program for children aged 7-14, guided by experienced teachers to nurture faith and learning.",
+        text: "Online 2-year Sanatayn Programme offering a beginners' Islamic Studies course for sisters.",
       },
       {
         id: 1,

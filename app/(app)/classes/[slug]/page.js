@@ -129,7 +129,7 @@ export default async function ClassPage({ params }) {
         return (
           <section
             key={index}
-            className={"pb-12 markdown"}
+            className={!item.highQualityImage ? "pb-12 markdown" : "markdown"}
             style={{ background: item.background }}
           >
             <div className="max-w-5xl m-auto mx-auto" style={{ color: font }}>
@@ -154,12 +154,12 @@ export default async function ClassPage({ params }) {
                       const { node, src, ...rest } = props;
                       return (
                         <Image
-                          className="m-4 md:m-6"
-                          src={`//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/${src}&w=300&h=300`}
+                          className="my-4 md:my-6 mx-auto"
+                          src={`//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/${src}&w=${item.highQualityImage ? '1000&h=1000' : '300&h=300'}`}
                           unoptimized
                           {...rest}
-                          width={300}
-                          height={300}
+                          width={item.highQualityImage ? 600 : 300}
+                          height={item.highQualityImage ? 600 : 300}
                           alt={'Image of ' + src}
                         />
                       );
@@ -168,7 +168,7 @@ export default async function ClassPage({ params }) {
                 >
                   {item.markdown}
                 </Markdown>
-                {!classes[whichClass].closed && (
+                {!classes[whichClass].closed && !item.noapply && (
                   <Button
                     colour={btnColour}
                     className={"mt-8 float-right"}

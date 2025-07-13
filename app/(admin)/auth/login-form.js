@@ -6,7 +6,7 @@ export async function LoginForm({ className, ...props }) {
 
   const submitHandler = async () => {
     "use server"
-    await signIn();
+    await signIn("microsoft-entra-id", { redirectTo: "/cloud" })
   }
 
   return (

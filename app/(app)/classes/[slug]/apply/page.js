@@ -55,6 +55,10 @@ export default async function ApplyPage({ params }) {
       whichClassTitle = "Tafseer Course - Sisters 14+";
       iframeUrl = "https://forms.office.com/Pages/ResponsePage.aspx?id=ZOrjoRGHW0a27251DWrQb7SjwJ0Q6f1Dm73UP8eB77pUM0FHOFpGMFhRUlVXOFNaU0QxNzJVU0xUWi4u&embed=true";
       break;
+    case "sanatayn":
+      whichClassTitle = "Online Sanatayn Course for Sisters";
+      iframeUrl = 'https://forms.cloud.microsoft/Pages/ResponsePage.aspx?id=Q1sH_SUfqkaLxul0jq9syeD8k54sSshHudLQ7gjCZlRUNzhOOVVDUkI5MDdVNEVZSFk1OU5YRkkyVy4u';
+      break;
     default:
       return notFound();
   }

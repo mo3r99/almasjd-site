@@ -70,6 +70,84 @@ If you have the talent and drive, we want you to be able to study with us, whate
       },
     ],
   },
+  sanatayn: {
+    id: 12,
+    title: "Online Sanatayn Course for Sisters",
+    href: "/classes/sanatayn",
+    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/Sanatayn.png",
+    advanced: false,
+    blurb:
+      "Online 2-year Sanatayn Programme offering a beginners' Islamic Studies course for sisters.",
+    description:
+      "The online Sanatayn Programme is designed for sisters aged 14+ who wish to enrich their knowledge of Islam in a practical and relatable way which fits around a busy lifestyle.",
+    sections: [
+      {
+        background: "linear-gradient(0deg, #FFFFFFFF 0%, #FFFFFF00 100%)",
+    markdown: `![Course Overview](dpw2.png "course overview")`,
+    noapply: true,
+    highQualityImage: true,
+      },
+      {
+        background: "#ffeccc",
+        markdown: `# Course Overview
+This fully online program covers essential Islamic studies in an accessible manner, with no prior knowledge required. It is delivered with a personal development approach by promoting the application of delivered material through mentorship by qualified female Alimahs and experienced tutors.
+
+## Course objectives
+The course aims that, upon successful completion, the student is grounded in their basic Islamic knowledge which is mandatory for all Muslims and through which they can attain nearness to their Lord, taking examples from the life of the beloved Prophet Muhammad ﷺ. Students will develop foundational theological and jurisprudential knowledge, by which they can live their lives as Muslimahs, and have the necessary tools to progress to more advanced study if they choose.
+
+## Who is this course for?
+This program is open to all sisters aged 14+ who are able to commit to regular attendance and consistent study.
+
+## Timing
+2 days a week in the evenings for 2 and a half hours, for 40 weeks per year (approx).`,
+      },
+      {
+        background: "#03736b",
+        markdown: `# Curriculum
+The first year of focuses on building groundwork in Quranic recitation and Tajweed, focussing on pronunciation of letters (makharij), correcting stretches (Madd, Ghunnah, Ikhfa', etc.), and improving fluency. Tafseer (exegesis) of the Last 10 Surahs and Surah Ya-Sin will be explored, and students will access an English primer in the Hanafi school of thought. Seerah will be taught through the book Seeratul Mustafa ﷺ by the esteemed Mawlana Idrees Kandhalwi (may Allah have mercy on him).
+###
+
+The second year continues with these objectives and focuses on building upon Tafseer knowledge through Surah Waqi'ah, Rahman, Mulk, and other selected Surahs.
+
+## Key Modules
+- Tafseer
+- Quranic Recitation & Tajweed
+- Seerah (study of the life of the Prophet ﷺ)
+- Introductory Hanafi Fiqh
+
+## Course Content
+| Year | Tafseer | Seerah | Tajweed | Fiqh |
+|--|--|--|--|--|
+| Year 1 | Tafseer of Last 10 Surahs | Seeratul Mustafa ﷺ (Part 1) | Ahsanul Qawa'id, focusing on perfecting the pronunciation of each letter, implementing the rules of Tajweed, as well as recitation of the last 10 Surahs  | Ascent to Felicity - Chapters of Creed, Purification and select portions of Salah |
+| Year 2 | Tafseer of Selected Surahs | Seeratul Mustafa ﷺ (Parts 2 & 3) | Perfecting recitation of selected Surahs | Ascent to Felicity - Chapters of Sawm, Hajj, and select portions of Salah |
+
+The curriculum is continuously evolving and being refined, and every effort has been made to have the most up-to-date information available.`,
+      },
+      {
+        background: "linear-gradient(0deg, #ffc161, #ffe4b9)",
+        markdown: `# Unique Opportunities for Graduates
+Attain a certificate of completion and develop the skills to pursue a higher level of education in more advanced Islamic sciences, such as Alimiyyah.`,
+      },
+      {
+        background: "#333333",
+        markdown: `# Exams & Assignments
+The assessment structure for the course is tailored to the academic year and students' abilities, with variations in format and content to allow learners to excel. These may include oral assessments, as well as written examinations. Teachers will assess your work and provide constructive feedback, highlighting your strengths, areas for improvement, and opportunities for further growth.`,
+      },
+      {
+        background: "#fff",
+        markdown: `
+# Fees & Funding
+There are three payment options to pay the Al Masjid class fees:
+- **Option 1:** A single payment of £600 per year.
+- **Option 2:** Four payments of £160 (totalling £640 over the year).
+- **Option 3:** Twelve payments of £55 (totalling £660 over the year).
+
+## Need helping funding your studies?
+
+If you have the talent and drive, we want you to be able to study with us, whatever your financial circumstances. Please contact [classes@almasjid.co.uk](mailto:classes@almasjid.co.uk?subject=Help%20With%20Funding) with details of your circumstances, and a member of our team will be in touch if you are eligible for aid.`,
+      },
+    ],
+  },
   maktab: {
     id: 2,
     title: "Qur’an and Islamic Studies (for kids)",
@@ -207,83 +285,83 @@ If you have the talent and drive, we want you to be able to study with us, whate
       },
     ],
   },
-  hifz: {
-    id: 4,
-    title: "Qur'an Memorisation",
-    blurb:
-      "Learn and memorise the Qur'an from the comfort of home, perfect for those without access to local facilities, with one-to-one classes.",
-    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/4.png",
-    href: "/classes/hifz",
-    description:
-      "Memorising the Noble Quran takes effort and sincere commitment. However, Allah’s rewards are immense in this worldly life and the Hereafter. This online course is desgined for those who want to memorise the whole or part of the Holy Quran, especially for those without access to local classes.",
-    sections: [
-      {
-        background: "#ffeccc",
-        markdown: `# Course Overview
-Our hifdh programme is divided into 2 parts: pre-hifdh, where 1 Juz' is memorised and the learner's ability is determined; and full-hifdh, which the learner is admitted into after passing a test. 
+//   hifz: {
+//     id: 4,
+//     title: "Qur'an Memorisation",
+//     blurb:
+//       "Learn and memorise the Qur'an from the comfort of home, perfect for those without access to local facilities, with one-to-one classes.",
+//     backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/4.png",
+//     href: "/classes/hifz",
+//     description:
+//       "Memorising the Noble Quran takes effort and sincere commitment. However, Allah’s rewards are immense in this worldly life and the Hereafter. This online course is desgined for those who want to memorise the whole or part of the Holy Quran, especially for those without access to local classes.",
+//     sections: [
+//       {
+//         background: "#ffeccc",
+//         markdown: `# Course Overview
+// Our hifdh programme is divided into 2 parts: pre-hifdh, where 1 Juz' is memorised and the learner's ability is determined; and full-hifdh, which the learner is admitted into after passing a test. 
 
-## Who is this course for?
-This program is open to both brothers and sisters (with sisters taught by female academics) who meet the following criteria:
--   Children must at least 8 years old
--   Reading of the Qur’aan should be fluent with correct recognition of the letters and basic pronounciation.
--   3 hours must be spent at home daily learning the new lesson (sabaq), recently learned lesson (sabaq dhor) and revision (dhor)
--   Children should be fully supervised whilst reading to their teacher. 
--   Parents must be committed to helping and listening to their child every day at home. 
-The rewards for the parents of a haafidh are great, but the effort behind it is also a great task.
+// ## Who is this course for?
+// This program is open to both brothers and sisters (with sisters taught by female academics) who meet the following criteria:
+// -   Children must at least 8 years old
+// -   Reading of the Qur’aan should be fluent with correct recognition of the letters and basic pronounciation.
+// -   3 hours must be spent at home daily learning the new lesson (sabaq), recently learned lesson (sabaq dhor) and revision (dhor)
+// -   Children should be fully supervised whilst reading to their teacher. 
+// -   Parents must be committed to helping and listening to their child every day at home. 
+// The rewards for the parents of a haafidh are great, but the effort behind it is also a great task.
 
-## Timing
-Class timings are 5 days a week for an hour daily. Apart from this, however, memorising the Qur'an is a full-time commitment, and students are expected to spend at least 3 hours daily at home learning.`,
-      },
-      {
-        background: "linear-gradient(0deg, #ffc161, #ffe4b9)",
-        markdown: `# Benefits of memorising the Qur'an
-The Qur’aan is the speech of Allah SWT and our intention should be to please Allah (SWT) alone and gain closeness to Him.  Through memorising the Qur’an, our connection to it is strengthened and its recitation is made easy.  
-###
-Ibn ‘Amr (RA) reported that the Prophet ﷺ said: “It will be said to the companion of the Qur’an after he has entered Paradise, ‘Recite, and rise!’ For every verse he recites he will rise one level (in Paradise), until he recites the last verse with him (i.e., in his memory).” (Abu Dawud)`,
-      },
-      {
-        background: "#fff",
-        markdown: `
-# Fees & Funding
-£600 per year, payable as £50 per month for 12 months.`,
-      },
-    ],
-  },
-  tafseer: {
-    id: 5,
-    title: "Tafseer of Last 10 Surahs",
-    workshop: true,
-    closed: true,
-    blurb:
-      "Learn and understand our creator’s message for us through this online course, specifically designed for young adults, with visuals, illustrations, practical advice and contemporary examples.",
-    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/tafseer.png",
-    href: "/classes/tafseer",
-    description:
-      "We recite the last ten Surahs daily in Salah, but how much do we actually understand what Allah is telling us? Join us in learning the translation and meanings of these chapters of the Qur'an, with visuals, illustrations, practical advice for young Muslims, and contemporary examples. This course ran in Ramadhan 2025/1446 every Sunday, from 9th March until 30th March 2025.",
-    sections: [
-      {
-        background: "#ffeccc",
-        markdown: `
-## Who is this course for?
-This program is open to both brothers and sisters, being designed mainly for young Muslims (from the ages of 13-18), but is open to all ages. Whether you have studied the Qur'an before or have not studied, we hope that this course will change the way that you approach your Qur'anic learning.
+// ## Timing
+// Class timings are 5 days a week for an hour daily. Apart from this, however, memorising the Qur'an is a full-time commitment, and students are expected to spend at least 3 hours daily at home learning.`,
+//       },
+//       {
+//         background: "linear-gradient(0deg, #ffc161, #ffe4b9)",
+//         markdown: `# Benefits of memorising the Qur'an
+// The Qur’aan is the speech of Allah SWT and our intention should be to please Allah (SWT) alone and gain closeness to Him.  Through memorising the Qur’an, our connection to it is strengthened and its recitation is made easy.  
+// ###
+// Ibn ‘Amr (RA) reported that the Prophet ﷺ said: “It will be said to the companion of the Qur’an after he has entered Paradise, ‘Recite, and rise!’ For every verse he recites he will rise one level (in Paradise), until he recites the last verse with him (i.e., in his memory).” (Abu Dawud)`,
+//       },
+//       {
+//         background: "#fff",
+//         markdown: `
+// # Fees & Funding
+// £600 per year, payable as £50 per month for 12 months.`,
+//       },
+//     ],
+//   },
+//   tafseer: {
+//     id: 5,
+//     title: "Tafseer of Last 10 Surahs",
+//     workshop: true,
+//     closed: true,
+//     blurb:
+//       "Learn and understand our creator’s message for us through this online course, specifically designed for young adults, with visuals, illustrations, practical advice and contemporary examples.",
+//     backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/tafseer.png",
+//     href: "/classes/tafseer",
+//     description:
+//       "We recite the last ten Surahs daily in Salah, but how much do we actually understand what Allah is telling us? Join us in learning the translation and meanings of these chapters of the Qur'an, with visuals, illustrations, practical advice for young Muslims, and contemporary examples. This course ran in Ramadhan 2025/1446 every Sunday, from 9th March until 30th March 2025.",
+//     sections: [
+//       {
+//         background: "#ffeccc",
+//         markdown: `
+// ## Who is this course for?
+// This program is open to both brothers and sisters, being designed mainly for young Muslims (from the ages of 13-18), but is open to all ages. Whether you have studied the Qur'an before or have not studied, we hope that this course will change the way that you approach your Qur'anic learning.
 
-## Timing
-The class will take place every Sunday in Ramadhan, beginning 9th March. `,
-      },
-      {
-        background: "#fff",
-        markdown: `
-# Fees & Funding
-This course is free for the first 20 people who sign up. Thereafter, a £20 fee will apply.
-Al Masjid is a registered charity in Scotland. All proceeds from our services go towards enhancing our work. Please consider supporting our services and help us deliver to the poor, like refugee families and those in marginalised areas, many of whom can not afford to pay. Find out more at [the About Al Masjid page](/about).
+// ## Timing
+// The class will take place every Sunday in Ramadhan, beginning 9th March. `,
+//       },
+//       {
+//         background: "#fff",
+//         markdown: `
+// # Fees & Funding
+// This course is free for the first 20 people who sign up. Thereafter, a £20 fee will apply.
+// Al Masjid is a registered charity in Scotland. All proceeds from our services go towards enhancing our work. Please consider supporting our services and help us deliver to the poor, like refugee families and those in marginalised areas, many of whom can not afford to pay. Find out more at [the About Al Masjid page](/about).
 
-## Available financial support
-We believe that everybody should be able to study regardless of financial circumstances. So if you are unable to pay because of your financial circumstances, please ask us for help by sending an email to [classes@almasjid.co.uk](mailto:classes@almasjid.co.uk?subject=Help%20With%20Funding). We may be able to help you if you meet our eligibility criteria.
+// ## Available financial support
+// We believe that everybody should be able to study regardless of financial circumstances. So if you are unable to pay because of your financial circumstances, please ask us for help by sending an email to [classes@almasjid.co.uk](mailto:classes@almasjid.co.uk?subject=Help%20With%20Funding). We may be able to help you if you meet our eligibility criteria.
 
-`,
-      },
-    ],
-  },
+// `,
+//       },
+//     ],
+//   },
   hygiene: {
     id: 6,
     title: "Male Hygiene in Islam",

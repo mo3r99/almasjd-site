@@ -70,6 +70,9 @@ export default function Breadcrumbs({ className }) {
             case "tafseer-surahs":
               path = "Female Tafseer Course";
               break;
+            case "sanatayn":
+              path = "Sanatayn Course for Sisters";
+              break;
           }
 
           return (
