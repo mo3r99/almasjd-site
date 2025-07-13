@@ -74,7 +74,7 @@ If you have the talent and drive, we want you to be able to study with us, whate
     id: 12,
     title: "Online Sanatayn Course for Sisters",
     href: "/classes/sanatayn",
-    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/Sanatayn.png",
+    backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/pexels-timfuzail-2349168.jpg",
     advanced: false,
     blurb:
       "Online 2-year Sanatayn Programme offering a beginners' Islamic Studies course for sisters.",
