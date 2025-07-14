@@ -62,7 +62,10 @@ We use both summative assessments, which contribute to your final course outcome
         background: "#fff",
         markdown: `
 # Fees & Funding
-£600 per year, payable as £50 per month for 12 months.
+There are three payment options to pay the Al Masjid class fees:
+- **Option 1:** A single payment of £600 per year.
+- **Option 2:** Four payments of £160 (totalling £640 over the year).
+- **Option 3:** Twelve payments of £55 (totalling £660 over the year).
 
 ## Need helping funding your studies?
 
@@ -201,9 +204,10 @@ We use both summative assessments, which contribute to the outcome at the end of
         background: "#fff",
         markdown: `
 # Fees & Funding
-£450 annually (one-time payment), or £40 per month spread over 12 months.
-###
-All services and courses are free for the family of the Prophet ﷺ. Please state this in your application or get in touch at [classes@almasjid.co.uk](mailto:classes@almasjid.co.uk?subject=Help%20With%20Funding).`,
+There are three payment options to pay the Al Masjid class fees:
+- **Option 1:** A single payment of £600 per year.
+- **Option 2:** Four payments of £160 (totalling £640 over the year).
+- **Option 3:** Twelve payments of £55 (totalling £660 over the year).`
       },
     ],
   },
@@ -277,7 +281,10 @@ We employ both summative assessments, which contribute to your final course outc
         background: "#fff",
         markdown: `
 # Fees & Funding
-£600 per year, payable as £50 per month for 12 months.
+There are three payment options to pay the Al Masjid class fees:
+- **Option 1:** A single payment of £600 per year.
+- **Option 2:** Four payments of £160 (totalling £640 over the year).
+- **Option 3:** Twelve payments of £55 (totalling £660 over the year).
 
 ## Need helping funding your studies?
 
