@@ -4,6 +4,9 @@ import { redirect } from "next/navigation";
 import HeroSection from "./components/heroSection/heroSection";
 import SalahTimes from "./components/salahTimes/salahTimes";
 
+export const metadata = {
+  title: 'Al Masjid Admin Dashboard',
+}
 export default async function LayoutDashboard() {
   const session = await auth();
   
