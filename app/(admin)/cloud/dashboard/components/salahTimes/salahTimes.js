@@ -59,7 +59,7 @@ export default function SalahTimes() {
       <h1 className="text-lg mb-4">
         Darnley Musalla Salah Times {loading && `... Updating`}
       </h1>
-      <Form className={'pt-4 flex flex-column gap-4'} action={saveSalahTimes} showContentOnSubmit={true}>
+      <Form className={'pt-4 flex flex-row gap-4'} action={saveSalahTimes} showContentOnSubmit={true}>
         <div>
           <label htmlFor="fajr">Fajr</label>
           <Input

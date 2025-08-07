@@ -84,7 +84,7 @@ export default function Home() {
 
       <div className="w-full px-8 pt-4 pb-8">
         <div className="max-w-3xl mx-auto text-center">
-          <Heading className="m-4 text-xl md:text-[1.75rem]">
+          <Heading id="salah" className="m-4 text-xl md:text-[1.75rem]">
             Darnley Musalla Salah Timings
           </Heading>
           <PrayerTimesTable />
