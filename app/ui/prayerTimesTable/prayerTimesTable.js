@@ -11,6 +11,7 @@ import {
 } from "@/components/ui/table";
 import prayTimes from "@/app/lib/prayerTimes";
 import { getSalahTimes } from "@/app/lib/databaseConnections";
+import to12h from "@/app/lib/to12h";
 
 export default function PrayerTimesTable() {
   const [times, setTimes] = useState({
@@ -19,7 +20,8 @@ export default function PrayerTimesTable() {
     asr: "",
     maghrib: "",
     isha: "",
-    jumuah: "",
+    jumuah1: "",
+    jumuah2: "",
   });
 
   const [loading, setLoading] = useState(true);
@@ -52,7 +54,8 @@ export default function PrayerTimesTable() {
             d.getMinutes()
           ).padStart(2, "0")}`,
           isha: times.isha,
-          jumuah: times.jumuah,
+          jumuah1: times.jumuah1,
+          jumuah2: times.jumuah2,
         });
         setLoading(false);
       })
@@ -74,12 +77,13 @@ export default function PrayerTimesTable() {
     // },
     {
       type: "JAMAAT",
-      fajr: loading ? "--:--" : times.fajr.substring(0, 5),
-      zuhr: loading ? "--:--" : times.zuhr.substring(0, 5),
-      asr: loading ? "--:--" : times.asr.substring(0, 5),
-      maghrib: loading ? "--:--" : times.maghrib.substring(0, 5),
-      isha: loading ? "--:--" : times.isha.substring(0, 5),
-      Jumuʿah: loading ? "--:--" : times.jumuah.substring(0, 5),
+      fajr: loading ? "--:--" : to12h(times.fajr.substring(0, 5)),
+      zuhr: loading ? "--:--" : to12h(times.zuhr.substring(0, 5)),
+      asr: loading ? "--:--" : to12h(times.asr.substring(0, 5)),
+      maghrib: loading ? "--:--" : to12h(times.maghrib.substring(0, 5)),
+      isha: loading ? "--:--" : to12h(times.isha.substring(0, 5)),
+      jumuah1: loading ? "--:--" : to12h(times.jumuah1.substring(0, 5)),
+      jumuah2: loading ? "--:--" : to12h(times.jumuah2.substring(0, 5)),
     },
   ];
 
@@ -107,7 +111,10 @@ export default function PrayerTimesTable() {
               ISHA
             </TableHead>
             <TableHead className="text-center p-2 font-semibold text-tradewind">
-              JUMUʿAH
+              JUMUʿAH 1
+            </TableHead>
+            <TableHead className="text-center p-2 font-semibold text-tradewind">
+              JUMUʿAH 2
             </TableHead>
           </TableRow>
         </TableHeader>
@@ -133,7 +140,10 @@ export default function PrayerTimesTable() {
                 {row.isha}
               </TableCell>
               <TableCell className="text-center p-2 font-medium text-gray-700 ">
-                {row.Jumuʿah}
+                {row.jumuah1}
+              </TableCell>
+              <TableCell className="text-center p-2 font-medium text-gray-700 ">
+                {row.jumuah2}
               </TableCell>
             </TableRow>
           ))}

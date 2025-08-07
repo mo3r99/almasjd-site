@@ -15,7 +15,9 @@ export async function getSalahTimes() {
       .salah_time,
     isha: (await sql`SELECT salah_time FROM salah_times WHERE id=5`)[0]
       .salah_time,
-    jumuah: (await sql`SELECT salah_time FROM salah_times WHERE id=6`)[0]
+    jumuah1: (await sql`SELECT salah_time FROM salah_times WHERE id=6`)[0]
+      .salah_time,
+    jumuah2: (await sql`SELECT salah_time FROM salah_times WHERE id=7`)[0]
       .salah_time,
   };
 }
@@ -31,7 +33,9 @@ export async function saveSalahTimes(prevState, formData) {
     await sql`UPDATE salah_times SET salah_time = ${formData.get("asr")} WHERE id = 3`;
     await sql`UPDATE salah_times SET salah_time = ${formData.get("maghrib")} WHERE id = 4`;
     await sql`UPDATE salah_times SET salah_time = ${formData.get("isha")} WHERE id = 5`;
-    await sql`UPDATE salah_times SET salah_time = ${formData.get("jumuah")} WHERE id = 6`;
+    await sql`UPDATE salah_times SET salah_time = ${formData.get("jumuah1")} WHERE id = 6`;
+    await sql`UPDATE salah_times SET salah_time = ${formData.get("jumuah2")} WHERE id = 7`;
+
 
     return { message: "Times Saved." };
   } catch (err) {

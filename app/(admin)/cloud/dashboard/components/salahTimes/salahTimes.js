@@ -13,7 +13,8 @@ export default function SalahTimes() {
     asr: new Date().setHours(1, 0, 0, 0),
     maghrib: new Date().setHours(1, 0, 0, 0),
     isha: new Date().setHours(1, 0, 0, 0),
-    jumuah: new Date().setHours(14, 45, 0, 0),
+    jumuah1: new Date().setHours(14, 45, 0, 0),
+    jumuah2: new Date().setHours(14, 45, 0, 0),
   });
 
   const [loading, setLoading] = useState(true);
@@ -23,7 +24,7 @@ export default function SalahTimes() {
     async function getTimes() {
       return await getSalahTimes();
     }
-    const times = getTimes()
+    getTimes()
       .then((times) => {
         console.log(times);
         setTimes({
@@ -32,7 +33,8 @@ export default function SalahTimes() {
           asr: times.asr,
           maghrib: times.maghrib,
           isha: times.isha,
-          jumuah: times.jumuah,
+          jumuah1: times.jumuah1,
+          jumuah2: times.jumuah2,
         });
         setLoading(false);
       })
@@ -59,7 +61,7 @@ export default function SalahTimes() {
       <h1 className="text-lg mb-4">
         Darnley Musalla Salah Times {loading && `... Updating`}
       </h1>
-      <Form className={'pt-4 flex flex-row gap-4'} action={saveSalahTimes} showContentOnSubmit={true}>
+      <Form className={'pt-4 flex flex-col gap-4'} action={saveSalahTimes} showContentOnSubmit={true}>
         <div>
           <label htmlFor="fajr">Fajr</label>
           <Input
@@ -114,7 +116,6 @@ export default function SalahTimes() {
                 : new Date(times.maghrib).toISOString().substring(11, 16)
             }
             onChange={(e) => changeTime(e, "maghrib")}
-            disabled
           />
         </div>
         <div>
@@ -132,17 +133,31 @@ export default function SalahTimes() {
           />
         </div>
         <div>
-          <label htmlFor="jumuah">Jumu'ah</label>
+          <label htmlFor="jumuah">Jumu'ah 1</label>
           <Input
             type="time"
-            id="jumuah"
-            name="jumuah"
+            id="jumuah1"
+            name="jumuah1"
             value={
-              typeof times.jumuah === "string"
-                ? times.jumuah
-                : new Date(times.jumuah).toISOString().substring(11, 16)
+              typeof times.jumuah1 === "string"
+                ? times.jumuah1
+                : new Date(times.jumuah1).toISOString().substring(11, 16)
             }
-            onChange={(e) => changeTime(e, "jumuah")}
+            onChange={(e) => changeTime(e, "jumuah1")}
+          />
+        </div>
+        <div>
+          <label htmlFor="jumuah">Jumu'ah 2</label>
+          <Input
+            type="time"
+            id="jumuah2"
+            name="jumuah2"
+            value={
+              typeof times.jumuah2 === "string"
+                ? times.jumuah2
+                : new Date(times.jumuah1).toISOString().substring(11, 16)
+            }
+            onChange={(e) => changeTime(e, "jumuah2")}
           />
         </div>
 
