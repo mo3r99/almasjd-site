@@ -1,25 +1,20 @@
 import NextAuth from "next-auth";
-import MicrosoftEntraID from "next-auth/providers/microsoft-entra-id"
+import GitHub from "next-auth/providers/github";
 
 const allowedUsers = [
   "m.rauf@almasjid.co.uk",
   "hamza.malik@almasjid.co.uk",
   "ibrahim.rauf@almasjid.co.uk",
   "hamza.rauf@almasjid.co.uk",
+  "mo3r99@gmail.com"
 ];
 
 export const { handlers, signIn, signOut, auth } = NextAuth({
-  providers: [
-    MicrosoftEntraID
-  ],
-  pages: {
-    error: "/error",
-    signIn: "/auth",
-  },
+  debug: true,
+  providers: [GitHub],
   callbacks: {
-    signIn({ profile }) {
-      console.log(profile);
-      return allowedUsers.includes(profile.unique_name);
+    async signIn({ profile }) {
+      return allowedUsers.includes(profile.email);
     },
   },
 });

@@ -2,7 +2,12 @@
 
 import { useActionState } from "react";
 
-export default function Form({ action, className, children }) {
+export default function Form({
+  action,
+  className,
+  showContentOnSubmit,
+  children,
+}) {
   const [state, formAction, isPending] = useActionState(action, {});
 
   return (
@@ -10,18 +15,24 @@ export default function Form({ action, className, children }) {
       {!state.message && !isPending ? (
         children
       ) : state.message && !isPending ? (
-        <p className="text-center w-full font-[family-name:var(--font-montserrat)] text-green-400 pb-8">
-          {state.message}
-        </p>
+        <>
+          {showContentOnSubmit && children}
+          <p className="text-center w-full font-[family-name:var(--font-montserrat)] text-green-400 pb-8">
+            {state.message}
+          </p>
+        </>
       ) : (
-        <p className="text-center w-full font-[family-name:var(--font-montserrat)] pb-8">
-          Loading...
-        </p>
+        <>
+          {showContentOnSubmit && children}
+          <p className="text-center w-full font-[family-name:var(--font-montserrat)] pb-8">
+            Loading...
+          </p>
+        </>
       )}
       {state.error ? (
-        <p className="text-center w-full font-[family-name:var(--font-montserrat)] text-red-400 pb-8">
-          {state.error}
-        </p>
+          <p className="text-center w-full font-[family-name:var(--font-montserrat)] text-red-400 pb-8">
+            {state.error}
+          </p>
       ) : null}
     </form>
   );

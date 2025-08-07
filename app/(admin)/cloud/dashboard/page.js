@@ -1,7 +1,8 @@
-import { auth } from "@/app/auth";
+import { auth } from "@/auth";
 import { redirect } from "next/navigation";
 
 import HeroSection from "./components/heroSection/heroSection";
+import SalahTimes from "./components/salahTimes/salahTimes";
 
 export default async function LayoutDashboard() {
   const session = await auth();
@@ -12,9 +13,10 @@ export default async function LayoutDashboard() {
 
   return <>
     <section className="p-6 w-full">
-      <h2 className="text-lg mb-4">Home</h2>
+      {/* <h2 className="text-lg mb-4">Salah Times</h2> */}
 
-      <HeroSection />
+      {/* <HeroSection /> */}
+      <SalahTimes />
     </section>
   </>;
 }

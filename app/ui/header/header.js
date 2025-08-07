@@ -9,6 +9,7 @@ import { NavLinksDesktop, NavLinksMobile } from "./navLink";
 import MobileNav from "./mobileNav";
 
 import { motion } from "motion/react";
+import PrayerTimesTable from '../prayerTimesTable/prayerTimesTable';
 
 export default function Header() {
   return (

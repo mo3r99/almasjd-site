@@ -51,11 +51,12 @@ const EmblaCarousel = ({ slides, options, children, className, ...props }) => {
     <motion.section
     initial={{opacity: 0}}
     animate={{opacity: 1}}
+    style={{maxWidth: '100vw'}}
       className={cn("embla md:px-8 md:pb-8 p-2 relative", className)}
       {...props}
     >
       <div className="embla__viewport" ref={emblaRef}>
-        <div className="embla__container">{children}</div>
+        <div className="embla__container" style={{maxWidth: '1024px'}}>{children}</div>
       </div>
 
       <div className="embla__controls">

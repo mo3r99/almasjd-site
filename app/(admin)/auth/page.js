@@ -5,7 +5,7 @@ import Link from "next/link";
 
 import { redirect } from "next/navigation";
 
-import { auth } from "@/app/auth";
+import { auth } from "@/auth";
 
 export default async function LoginPage() {
   const session = await auth();

@@ -1,6 +1,6 @@
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-import { signIn } from "@/app/auth";
+import { signIn } from "@/auth";
 
 export async function LoginForm({ className, ...props }) {
 

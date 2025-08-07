@@ -19,15 +19,18 @@ export const metadata = {
 
 const OPTIONS = { loop: true };
 
-const bsmImgM = "//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/bsm-m.webp&w=520&h=124";
-const bsmImgDk = "//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/bsm.png&w=700&h=201";
-
+const bsmImgM =
+  "//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/bsm-m.webp&w=520&h=124";
+const bsmImgDk =
+  "//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/bsm.png&w=700&h=201";
 
 import Slide1 from "@/app/ui/carousel/slides/Slide1";
 
 import HOME from "@/store/home/HOME";
 import LS from "@/store/lessons/lessons";
 import Announcement from "../ui/announcement/Announcement";
+import PrayerTimesTable from "../ui/prayerTimesTable/prayerTimesTable";
+import Link from "next/link";
 const LESSON = LS.LESSON;
 
 export default function Home() {
@@ -40,7 +43,7 @@ export default function Home() {
           height={101}
           alt="bismillah"
           className="hidden w-auto h-auto md:block mix-blend-multiply pointer-events-none pt-5 mx-auto"
-          style={{width: '500px', height: '101px'}}
+          style={{ width: "500px", height: "101px" }}
           unoptimized
           priority
         />
@@ -51,7 +54,7 @@ export default function Home() {
           height={73.5}
           alt="bismillah"
           className="block w-auto h-auto md:hidden mix-blend-multiply pointer-events-none pt-5 mx-auto"
-          style={{width: '320px', height: '73.5px'}}
+          style={{ width: "320px", height: "73.5px" }}
           unoptimized
           priority
         />
@@ -78,6 +81,21 @@ export default function Home() {
           })}
         </EmblaCarousel>
       </main>
+
+      <div className="w-full px-8 pt-4 pb-8">
+        <div className="max-w-3xl mx-auto text-center">
+          <Heading className="m-4 text-xl md:text-[1.75rem]">
+            Darnley Musalla Salah Timings
+          </Heading>
+          <PrayerTimesTable />
+          <a
+            href={"https://maps.app.goo.gl/NfZQHqY3bLwUvgSN7"}
+            className="font-[family-name:var(--font-montserrat)] font-light mt-4 block"
+          >
+            70 Woodhead Road, Glasgow, G53 7NN
+          </a>
+        </div>
+      </div>
 
       {HOME.sections.map((section, index) => {
         switch (section.type) {
@@ -116,7 +134,11 @@ export default function Home() {
                     {LESSON.slice(0, 3).map((lesson, index) => (
                       <Lesson
                         key={index}
-                        href={!lesson.external ? `/lessons/${lesson.slug}` : lesson.slug}
+                        href={
+                          !lesson.external
+                            ? `/lessons/${lesson.slug}`
+                            : lesson.slug
+                        }
                         title={lesson.title}
                         image={lesson.image && lesson.image}
                         external={lesson.external}

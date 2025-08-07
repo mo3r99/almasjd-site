@@ -1,4 +1,4 @@
-import { Home, BookOpenCheck, School, FileText, BrainCog } from "lucide-react";
+import { Home, BookOpenCheck, School, FileText, BrainCog, Clock } from "lucide-react";
 
 import { SidebarTrigger } from "@/components/ui/sidebar";
 
@@ -19,36 +19,42 @@ import {
 import Link from 'next/link'
 import { SignOut } from "./sign-out";
 
-import { auth } from "@/app/auth";
+import { auth } from "@/auth";
 
 // Menu items.
-const items = [
-  {
-    title: "Home",
-    url: "/cloud/dashboard",
-    icon: Home,
-  },
-  {
-    title: "Classes",
-    url: "/cloud/dashboard/classes",
-    icon: School,
-  },
-  {
-    title: "Services",
-    url: "/cloud/dashboard/services",
-    icon: BrainCog,
-  },
-  {
-    title: "Lessons",
-    url: "/cloud/dashboard/lessons",
-    icon: BookOpenCheck,
-  },
-  {
-    title: "About",
-    url: "/cloud/dashboard/about",
-    icon: FileText,
-  },
-];
+// const items = [
+//   {
+//     title: "Home",
+//     url: "/cloud/dashboard",
+//     icon: Home,
+//   },
+//   {
+//     title: "Classes",
+//     url: "/cloud/dashboard/classes",
+//     icon: School,
+//   },
+//   {
+//     title: "Services",
+//     url: "/cloud/dashboard/services",
+//     icon: BrainCog,
+//   },
+//   {
+//     title: "Lessons",
+//     url: "/cloud/dashboard/lessons",
+//     icon: BookOpenCheck,
+//   },
+//   {
+//     title: "About",
+//     url: "/cloud/dashboard/about",
+//     icon: FileText,
+//   },
+// ];
+
+const items = [{
+    title: "Salah Times",
+    url: "/cloud/dashboard/salahtimes",
+    icon: Clock,
+  },]
 
 export async function AppSidebar() {
   const session = await auth();

@@ -373,7 +373,7 @@ If you have the talent and drive, we want you to be able to study with us, whate
     id: 6,
     title: "Male Hygiene in Islam",
     workshop: true,
-    closed: false,
+    closed: true,
     blurb:
       "A 2 day course on male hygiene in Islam, covering important topics such as maturity, hair removal, and problems young people face.",
     backgroundImage: "almasjid-site.s3.eu-north-1.amazonaws.com/HMCThygiene.png",
