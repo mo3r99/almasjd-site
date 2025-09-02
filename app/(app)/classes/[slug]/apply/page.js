@@ -26,7 +26,7 @@ export default async function ApplyPage({ params }) {
     case "arabicForKids":
       whichClassTitle = "Arabic for Kids";
       iframeUrl =
-        "https://forms.office.com/Pages/ResponsePage.aspx?id=ZOrjoRGHW0a27251DWrQb7SjwJ0Q6f1Dm73UP8eB77pUNkU1VjlRU1pLVVhTRFNZRVQyWkNXWE85Ry4u&embed=true";
+        "https://forms.office.com/Pages/ResponsePage.aspx?id=Q1sH_SUfqkaLxul0jq9syeD8k54sSshHudLQ7gjCZlRUNEY4RzdMNVNIMUQzM09KWDNGVUZWSjFSWi4u&embed=true";
       break;
     case "alimiyyah":
       whichClassTitle = "Advanced Islamic Sciences";
