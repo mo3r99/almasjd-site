@@ -88,17 +88,24 @@ export default async function ClassPage({ params }) {
         <span className="w-16 h-2 bg-weborange my-4 block"></span>
         {!classes[whichClass].closed && !classes[whichClass].workshop ? (
           <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
-            Admissions Open for September 2025
+            Admissions Open
           </span>
-        ) : !classes[whichClass].workshop && (
-          <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
-            This course is now complete
-          </span>
+        ) : (
+          !classes[whichClass].workshop && (
+            <span className="font-bold uppercase text-tradewind text-sm font-[family-name:var(--font-montserrat)] h-7 pt-8">
+              This course is now complete
+            </span>
+          )
         )}
         {classes[whichClass].descriptors?.map((descriptor, index) => {
-          return <span key={index} className="font-[family-name:var(--font-montserrat)] bg-tradewind p-[0.3rem] rounded-md text-sm font-bold text-white uppercase mr-2">
-          {descriptor}
-        </span>
+          return (
+            <span
+              key={index}
+              className="font-[family-name:var(--font-montserrat)] bg-tradewind p-[0.3rem] rounded-md text-sm font-bold text-white uppercase mr-2"
+            >
+              {descriptor}
+            </span>
+          );
         })}
         <p className="mt-6 font-[family-name:var(--font-montserrat)] mb-8 max-w-[80vw] m-auto">
           {classes[whichClass].description}
@@ -109,7 +116,9 @@ export default async function ClassPage({ params }) {
             href={`/classes/${whichClass}/apply`}
             className={"min-w-[244px]"}
           >
-            {classes[whichClass].workshop ? 'Register Now' : 'Apply for this course'}
+            {classes[whichClass].workshop
+              ? "Register Now"
+              : "Apply for this course"}
           </Button>
         )}
         {classes[whichClass].closed && (
@@ -155,12 +164,14 @@ export default async function ClassPage({ params }) {
                       return (
                         <Image
                           className="my-4 md:my-6 mx-auto"
-                          src={`//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/${src}&w=${item.highQualityImage ? '1000&h=1000' : '300&h=300'}`}
+                          src={`//wsrv.nl/?url=almasjid-site.s3.eu-north-1.amazonaws.com/${src}&w=${
+                            item.highQualityImage ? "1000&h=1000" : "300&h=300"
+                          }`}
                           unoptimized
                           {...rest}
                           width={item.highQualityImage ? 600 : 300}
                           height={item.highQualityImage ? 600 : 300}
-                          alt={'Image of ' + src}
+                          alt={"Image of " + src}
                         />
                       );
                     },
@@ -174,7 +185,7 @@ export default async function ClassPage({ params }) {
                     className={"mt-8 float-right"}
                     href={`/classes/${whichClass}/apply`}
                   >
-                    {classes[whichClass].workshop ? 'Register' : 'Apply'}
+                    {classes[whichClass].workshop ? "Register" : "Apply"}
                   </Button>
                 )}
               </div>
