@@ -7,5 +7,5 @@ export default function to12h(time) {
         suffix = 'pm';
     }
 
-    return `${h}:${m == 0 ? '00' : m} ${suffix}`;
+    return `${h}:${m < 10 ? '0' + m : m } ${suffix}`;
 }

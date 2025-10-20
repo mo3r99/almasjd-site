@@ -21,17 +21,17 @@ export default async function ApplyPage({ params }) {
     case "maktab":
       whichClassTitle = "Qur'an & Islamic Studies";
       iframeUrl =
-        "https://forms.office.com/Pages/ResponsePage.aspx?id=ZOrjoRGHW0a27251DWrQb7SjwJ0Q6f1Dm73UP8eB77pUNlRHRzJEQVZYVEU5WlVWVzJVRTVXTTMwOC4u&embed=true";
+        "https://forms.office.com/Pages/ResponsePage.aspx?id=Q1sH_SUfqkaLxul0jq9syeD8k54sSshHudLQ7gjCZlRUNFZMRzJHWkRTSzdIUVg4TEFTSkVYMkZVSi4u&embed=true";
       break;
     case "arabicForKids":
       whichClassTitle = "Arabic for Kids";
       iframeUrl =
-        "https://forms.office.com/Pages/ResponsePage.aspx?id=ZOrjoRGHW0a27251DWrQb7SjwJ0Q6f1Dm73UP8eB77pUNkU1VjlRU1pLVVhTRFNZRVQyWkNXWE85Ry4u&embed=true";
+        "https://forms.office.com/Pages/ResponsePage.aspx?id=Q1sH_SUfqkaLxul0jq9syeD8k54sSshHudLQ7gjCZlRUNEY4RzdMNVNIMUQzM09KWDNGVUZWSjFSWi4u&embed=true";
       break;
     case "alimiyyah":
       whichClassTitle = "Advanced Islamic Sciences";
       iframeUrl =
-        "https://forms.office.com/Pages/ResponsePage.aspx?id=ZOrjoRGHW0a27251DWrQb7SjwJ0Q6f1Dm73UP8eB77pUMEdEUFVXVjk3RlVPQlVHUUsxVDJNWkpFOS4u&embed=true";
+        "https://forms.office.com/Pages/ResponsePage.aspx?id=Q1sH_SUfqkaLxul0jq9syeD8k54sSshHudLQ7gjCZlRUMjVQSklUOEk2Rk4zWFJLTVI5R1BZTEJOVi4u&embed=true";
       break;
     case "tafseer":
       whichClassTitle = "Tafseer of Last 10 Surahs";
