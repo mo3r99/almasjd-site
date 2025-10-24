@@ -12,7 +12,7 @@ export default function About() {
       <Container>
         <Breadcrumbs className='mt-10 mb-4' />
         <h1 className="font-[family-name:var(--font-raleway)] font-medium text-5xl pb-7">
-          About Almasjid
+          About Al Masjid
         </h1>
         <p className="font-[family-name:var(--font-montserrat)] max-w-3xl">
           Al Masjid is a nonprofit organisation dedicated to supporting families
