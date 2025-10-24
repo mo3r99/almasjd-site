@@ -22,8 +22,6 @@ export default function Classes() {
   const completedCourses = Object.values(classes).filter((course) => {
     if (course.workshop && course.closed) {
       return course;
-    } else {
-      return;
     }
   });
 
