@@ -44,7 +44,7 @@ export default function PrayerTimesTable() {
         );
         const [h, m] = timings.maghrib.split(":").map(Number);
         const d = new Date();
-        d.setHours(h, m + 7, 0, 0);
+        d.setHours(h - 1, m + 7, 0, 0);
 
         setTimes({
           fajr: times.fajr,
