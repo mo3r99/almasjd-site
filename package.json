@@ -35,7 +35,7 @@
     "jquery": "^3.7.1",
     "lucide-react": "^0.469.0",
     "motion": "^12.23.0",
-    "next": "15.3.5",
+    "next": "15.3.8",
     "next-auth": "5.0.0-beta.25",
     "next-goatcounter": "^1.0.6",
     "next-sitemap": "^4.2.3",
