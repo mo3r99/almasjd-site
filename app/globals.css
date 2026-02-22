@@ -343,3 +343,19 @@ a p {
   display: inline-block;
   white-space: nowrap;
 }
+
+#daily {
+  display: block; /* iframes are inline by default */
+  height: 560px; /* Set height to 100% of the viewport height */
+  width: 100%;
+  max-width: 56em; /* Set width to 100% of the viewport width */
+  margin: auto;
+  border: none; /* Remove default border */
+  mix-blend-mode: darken;
+}
+
+@media (max-width: 600px) {
+  #daily {
+    width: 100vw; /* Set width to 100% of the viewport width */
+  }
+}

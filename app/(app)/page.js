@@ -31,6 +31,7 @@ import LS from "@/store/lessons/lessons";
 import Announcement from "../ui/announcement/Announcement";
 import PrayerTimesTable from "../ui/prayerTimesTable/prayerTimesTable";
 import Link from "next/link";
+import PrayerTimesTableNew from "../ui/prayerTimesTable/PrayerTimesTableNew";
 const LESSON = LS.LESSON;
 
 export default function Home() {
@@ -82,12 +83,12 @@ export default function Home() {
         </EmblaCarousel>
       </main>
 
-      <div className="w-full px-8 pt-4 pb-8">
-        <div className="max-w-3xl mx-auto text-center">
+      <div className="w-full pt-4 pb-8">
+        <div className="mx-auto text-center">
           <Heading id="salah" className="m-4 text-xl md:text-[1.75rem]">
             Darnley Musalla Salah Timings
           </Heading>
-          <PrayerTimesTable />
+          <PrayerTimesTableNew />
           <a
             href={"https://maps.app.goo.gl/NfZQHqY3bLwUvgSN7"}
             className="font-[family-name:var(--font-montserrat)] font-light mt-4 block"
